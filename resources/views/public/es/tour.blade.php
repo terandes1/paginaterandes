@@ -114,7 +114,7 @@
               <td>Nov 18, 2017</td>
             </tr>
           </table>
-        </div>
+        </div></br>
         <!--====== DURATION ==========-->
         <div class="tour_head1 l-info-pack-days days">
           
@@ -146,6 +146,9 @@
                   <p>Mañana con sus anfitriones que le hacen descubrir su forma de vida local. Por la tarde, salida hacia Cabanaconde para un corto paseo hasta el mirador de Achachiua, desde donde se tiene una magnífica vista del cañón y del río Colca. Retorno al final del día al pueblo e instalación en su hotel. Noche en el hotel en el Cañón del Colca.</p>
                 </li>
               </ul>
+
+              
+
                 </div>
                 <div id="menu1" class="tab-pane fade">
                   <div class="row">

@@ -67,7 +67,7 @@
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="tour-details.html">Rio de Janeiro<span class="v_pl_name">(Brazil)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">Rio de Janeiro<span class="v_pl_name">(Brazil)</span></a></h4>
                         </div>
                         <!-- TOUR ICONS -->
                         <div class="col-md-4 col-sm-4 pack_icon">
@@ -98,7 +98,7 @@
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="tour-details.html">Paris<span class="v_pl_name">(England)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">Paris<span class="v_pl_name">(England)</span></a></h4>
                         </div>
                         <!-- TOUR ICONS -->
                         <div class="col-md-4 col-sm-4 pack_icon">
@@ -124,7 +124,7 @@
                     <div class="v_place_img"><img src="/imagenesprueba/peques/03.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="tour-details.html">South India<span class="v_pl_name">(India)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">South India<span class="v_pl_name">(India)</span></a></h4>
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
                             <ul>
@@ -149,7 +149,7 @@
                     <div class="v_place_img"><img src="/imagenesprueba/peques/04.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="tour-details.html">The Great Wall<span class="v_pl_name">(China)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">The Great Wall<span class="v_pl_name">(China)</span></a></h4>
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
                             <ul>
@@ -174,7 +174,7 @@
                     <div class="v_place_img"><img src="/imagenesprueba/peques/05.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="tour-details.html">Nail Island<span class="v_pl_name">(Andaman)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">Nail Island<span class="v_pl_name">(Andaman)</span></a></h4>
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
                             <ul>
@@ -199,7 +199,7 @@
                     <div class="v_place_img"><img src="/imagenesprueba/peques/06.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="tour-details.html">Mauritius<span class="v_pl_name">(Indiana)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">Mauritius<span class="v_pl_name">(Indiana)</span></a></h4>
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
                             <ul>
@@ -239,7 +239,7 @@
             </div>
             <!-- CITY -->
             <div class="col-md-6">
-                <a href="tour-details.html">
+                <a href="{{'paquetes'}}">
                     <div class="tour-mig-like-com">
                         <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/03.png" alt=""> </div>
                         <div class="tour-mig-lc-con">
@@ -250,7 +250,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="tour-details.html">
+                <a href="{{'paquetes'}}">
                     <div class="tour-mig-like-com">
                         <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/01.png" alt=""> </div>
                         <div class="tour-mig-lc-con tour-mig-lc-con2">
@@ -261,7 +261,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="tour-details.html">
+                <a href="{{'paquetes'}}">
                     <div class="tour-mig-like-com">
                         <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/02.png" alt=""> </div>
                         <div class="tour-mig-lc-con tour-mig-lc-con2">
@@ -272,7 +272,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="tour-details.html">
+                <a href="{{'paquetes'}}">
                     <div class="tour-mig-like-com">
                         <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/03.png" alt=""> </div>
                         <div class="tour-mig-lc-con tour-mig-lc-con2">
@@ -283,7 +283,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="tour-details.html">
+                <a href="{{'paquetes'}}">
                     <div class="tour-mig-like-com">
                         <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/04.png" alt=""> </div>
                         <div class="tour-mig-lc-con tour-mig-lc-con2">
@@ -464,14 +464,14 @@
                     <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/04.png" alt="" /> </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3><span>Honeymoon Package</span> 7 Days / 6 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="tour-details.html" class="link-btn">more info</a> </div>
+                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
                 </div>
                 <!-- POPULAR PLACES 2 -->
                 <div class="col-md-6 col-sm-6 col-xs-12 place">
                     <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/03.png" alt="" /> </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3><span>Family package</span> 14 Days / 13 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="tour-details.html" class="link-btn">more info</a> </div>
+                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
                 </div>
             </div>
             <div class="popu-places-home">
@@ -480,14 +480,14 @@
                     <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/02.png" alt="" /> </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3><span>Weekend Package </span> 3 Days / 2 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="tour-details.html" class="link-btn">more info</a> </div>
+                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
                 </div>
                 <!-- POPULAR PLACES 4 -->
                 <div class="col-md-6 col-sm-6 col-xs-12 place">
                     <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/01.png" alt="" /> </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3><span>Group Package</span> 10 Days / 9 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="tour-details.html" class="link-btn">more info</a> </div>
+                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
                 </div>
             </div>
         </div>
