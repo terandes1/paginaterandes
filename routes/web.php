@@ -20,6 +20,7 @@
 //comienzo rutas admin
 Route::prefix('admin')->group(function () {
     Route::view('','admin.index');
+    Route::resource('users','UserController');
 });
 //fin de rutas admin
 
