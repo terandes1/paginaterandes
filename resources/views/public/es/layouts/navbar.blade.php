@@ -25,7 +25,7 @@
                         </ul>
                         <h4>Tour Packages</h4>
                         <ul>
-                            <li><a href="all-package.html">All Package</a></li><li><a href="family-package.html">Family Package</a></li>
+                            <li><a href="">All Packagess</a></li><li><a href="">Family Package</a></li>
                             <li><a href="honeymoon-package.html">Honeymoon Package</a></li>
                             <li><a href="group-package.html">Group Package</a></li>
                             <li><a href="weekend-package.html">WeekEnd Package</a></li>
@@ -138,7 +138,7 @@
                             <li><a href="index.html">Home</a>
                             </li>
                             <li class="about-menu">
-                                <a href="family-package.html" class="mm-arr">Packages</a>
+                                <a href="{{('paquetes')}}" class="mm-arr">Packages</a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">
                                     <div class="about-mm m-menu">
