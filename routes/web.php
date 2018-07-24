@@ -13,6 +13,16 @@
 
 
 
+
+
+
+//------------------------------------------------------------------------------
+//comienzo rutas admin
+Route::prefix('admin')->group(function () {
+    Route::view('','admin.index');
+});
+//fin de rutas admin
+
 //------------------------------------------------------------------------------
 //vistas publicas
 Route::view('','public.es.index');
