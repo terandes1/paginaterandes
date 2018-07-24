@@ -64,3 +64,20 @@
   </div>
 </div>
 @endsection
+
+
+@section('script')
+  <script>
+    $(()=>{
+      $('i[name^="eliminar"]').click((e)=>{
+        let opcion = confirm("Esta seguro que desea eliminar este usuario");
+
+        if(opcion == true){
+          $('#'+$(e.target).attr('name')).submit();
+        }
+
+
+      });
+    });
+  </script>
+@endsection

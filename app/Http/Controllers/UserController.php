@@ -58,7 +58,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-      return view('admin.users.update'); 
+      return view('admin.users.update',['user'=>$user]);
     }
 
     /**
@@ -82,6 +82,23 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
 
+      if ($request->password != ''){
+        $user->fill(['password'=>bcrypt($request->password)]);
+      }
+      
+          $user->fill([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'language_id'=>1,
+            'privilege'=>$request->privilege,
+            'status'=>$request->status
+          ]);
+
+        $user->save();
+
+        return redirect('admin/users')->with('status','El Usuario "' . $user->name . '" Fue Actualizao correctamente');
+
+
     }
 
     /**
@@ -92,6 +109,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect('admin/users')->with('status','El usuario ha sido eliminado exitosamente');
     }
 }

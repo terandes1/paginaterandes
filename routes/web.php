@@ -21,6 +21,9 @@
 Route::prefix('admin')->group(function () {
     Route::view('','admin.index');
     Route::resource('users','UserController');
+    Route::resource('languages','LanguageController');
+    Route::resource('categories','CategorieController');
+    Route::resource('tours','TourController');
 });
 //fin de rutas admin
 

@@ -22,7 +22,7 @@
       <h3>Creando Nuevo Usuario</h3>
     </div>
   </div>
-  {!! Form::open(['url' => 'admin/users']) !!}
+  {!!Form::model($user, ['url' => ['admin/users', $user->id],'method'=>'PUT'])!!}
   <div class="card">
     <div class="card-body">
       <div class="row">
@@ -58,7 +58,7 @@
         <div class="col-md-6">
           <div class="form-group">
             {!!Form::label('privilege','Privilegios')!!}
-            {!!Form::select('privilege', ['A' => 'Administrador', 'N' => 'Normal'], 'S',['class'=>'form-control'])!!}
+            {!!Form::select('privilege', ['admin' => 'Administrador', 'normal' => 'Normal'], 'normal',['class'=>'form-control'])!!}
           </div>
         </div>
 
@@ -71,7 +71,7 @@
         </div>
 
         <div class="col-md-12">
-          <a class="btn btn-primary">Cancelar</a>
+          <a href="{{('/admin/users')}}" class="btn btn-primary">Cancelar</a>
           <button class="btn btn-primary">Guardar</button>
         </div>
 

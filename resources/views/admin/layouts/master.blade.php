@@ -12,11 +12,8 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
-  <style>
-      label.error{
-          color: red;
-      }
-  </style>
+   @yield('style')
+
 </head>
 <body>
 
@@ -36,34 +33,6 @@
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
-  <script>
-    $(()=>{
-      $('#tabla-contenido').DataTable();
-
-        $('#form_nuevo_proveedor').validate();
-
-
-// toastr.options = {
-//   "closeButton": false,
-//   "debug": false,
-//   "newestOnTop": false,
-//   "progressBar": true,
-//   "positionClass": "toast-bottom-right",
-//   "preventDuplicates": false,
-//   "onclick": null,
-//   "showDuration": "300",
-//   "hideDuration": "1000",
-//   "timeOut": "5000",
-//   "extendedTimeOut": "1000",
-//   "showEasing": "swing",
-//   "hideEasing": "linear",
-//   "showMethod": "fadeIn",
-//   "hideMethod": "fadeOut"
-// }
-// Command: toastr["success"]("My name is Inigo Montoya. You killed my father. Prepare to die!","Exito!")
-
-
-    });
-  </script>
+  @yield('script')
 </body>
 </html>
