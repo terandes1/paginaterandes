@@ -49,8 +49,8 @@
 
         <div class="col-md-6">
           <div class="form-group">
-            {!!Form::label('language','Idioma')!!}
-            {!!Form::select('language', ['spanish' => 'Spanish', 'english' => 'English'], 'S',['class'=>'form-control'])!!}
+            {!!Form::label('language_id','Idioma')!!}
+            {!!Form::select('language_id', ['spanish' => 'Spanish', 'english' => 'English'], 'S',['class'=>'form-control'])!!}
           </div>
         </div>
 

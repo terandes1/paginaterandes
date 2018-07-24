@@ -16,7 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $users = User::All();
+        return view('admin.users.index',['users'=>$users]);
     }
 
     /**
@@ -37,15 +38,16 @@ class UserController extends Controller
      */
     public function store(StoreUser $request)
     {
+
         User::create([
           'name'=>$request->name,
           'email'=>$request->email,
           'password'=>bcrypt($request->Password),
-          'language_id'=>'A',
+          'language_id'=>1,
           'privilege'=>$request->privilege,
           'status'=>$request->status
         ]);
-        return redirect('admin/users')->with('status','El usuario ' . $request->name . ' ha sido creado exitosamente');
+        return redirect('admin/users')->with('status','El usuario "' . $request->name . '" ha sido creado exitosamente');
     }
 
     /**
@@ -56,7 +58,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+      return view('admin.users.update'); 
     }
 
     /**
@@ -79,7 +81,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+
     }
 
     /**
