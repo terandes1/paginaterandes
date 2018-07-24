@@ -135,7 +135,7 @@
                     </div>
                     <div class="main-menu">
                         <ul>
-                            <li><a href="index.html">Home</a>
+                            <li><a href="{{('/')}}">Inicio</a>
                             </li>
                             <li class="about-menu">
                                 <a href="{{('paquetes')}}" class="mm-arr">Packages</a>
@@ -323,7 +323,7 @@
                             </li>
                             <li><a href="dashboard.html">Profile</a>
                             </li>
-                            <li><a href="contact.html">Contact us</a>
+                            <li><a href="{{('contacto')}}">Contacto</a>
                             </li>
                         </ul>
                     </div>

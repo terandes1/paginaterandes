@@ -8,12 +8,15 @@
                         <div>
                             <div class="row">
                                 <div class="col-sm-3 foot-spec foot-com">
-                                    <h4><span>Holiday</span> Tour & Travels</h4>
-                                    <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide.</p>
+                                    <h4><span>SOCIOS</span> </h4>
+                                    <p>- Patronato de Cultura Machu Picchu.</p>
+                                    <p>- Illapa Culturas Andinas.</p>
+                                    <p>- Tatoo, Adventure Gear.</p>
+                                    <p>- Promperu.</p>
                                 </div>
                                 <div class="col-sm-3 foot-spec foot-com">
-                                    <h4><span>Address</span> & Contact Info</h4>
-                                    <p>28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A. Landmark : Next To Airport</p>
+                                    <h4><span>Ubiquenos</span> </h4>
+                                    <p><strong>Dirección:</strong> Calle Turquezas E-11 Urb. Kenedy A - Cusco </p>
                                     <p> <span class="strong">Phone: </span> <span class="highlighted">+101-1231-1231</span> </p>
                                 </div>
                                 <div class="col-sm-3 col-md-3 foot-spec foot-com">
