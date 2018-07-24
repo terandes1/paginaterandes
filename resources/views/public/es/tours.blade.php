@@ -342,19 +342,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.5</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/1.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="/imagenesprueba/1.jpg" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Swiss, Paris & Italy</h3></a>
-                  <p>Home to numerous lakes, villages and high peaks of the Alps, Switzerland is a dreamy mountainous Central European country that lures tourists from all over the world.</p>
+                  <a href="{{('tour')}}"><h3>EN EL CORAZÓN DE LAS COMUNIDADES ANDINAS</h3></a>
+                  <p>Un curso diferente, fuera de los caminos trillados, reuniones de las comunidades Un curso diferente, fuera de los caminos trillados, </p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$650</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -378,19 +378,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.3</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/2.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="/imagenesprueba/6.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Incredible India</h3></a>
-                  <p>India may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
+                  <a href="{{('tour')}}"><h3>PÉROU-BOLIVIE EXPRESS</h3></a>
+                  <p>Ce combiné « express » Pérou & Bolivie vous permettra de découvrir en peu de temps les sites majeurs et les paysages les..</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$420</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -414,19 +414,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.0</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/3.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="imagenesprueba/7.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Awesome Dubai: Action Packed</h3></a>
-                  <p>Explore Dubai in all its glory with Yatra's 'Go Dubai.' From the air-conditioned interior of a 4X4, see the sands of the Arabian Desert.</p>
+                  <a href="{{('tour')}}"><h3>TESOROS DEL SUR PERÚ - EN GRUPO</h3></a>
+                  <p>Desde la costa hasta Machu Picchu, esta estancia le ofrece descubrimientos tan variados como completos. Desde la costa .</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$720</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -450,19 +450,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.8</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/4.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="imagenesprueba/8.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Amazing London and Edinburgh</h3></a>
-                  <p>London may not be the most ancient city in the world, but is surely one of those that take their history quite seriously; especially in terms of keeping traditions and heritage intact.</p>
+                  <a href="{{('tour')}}"><h3>PERU EN FAMILIA</h3></a>
+                  <p>Este viaje hará las delicias tanto de los jóvenes como de los mayores. Venga y descubra el Perú de una manera divertida...</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$860</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -486,19 +486,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.4</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/5.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="imagenesprueba/9.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Rio De Janeiro</h3></a>
-                  <p>Brazil may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
+                  <a href="{{('tour')}}"><h3>PERÚ CULTURAL, DEL NORTE AL SUR</h3></a>
+                  <p>De norte a sur, esta estancia le ofrece descubrimientos llenos de historia tan variada como completa. Perú es un país cargado de .</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$480</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -522,19 +522,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.2</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/6.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="imagenesprueba/10.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Roatan, Bay Islands</h3></a>
-                  <p>India may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
+                  <a href="{{('tour')}}"><h3>VIAJE DE LUNA DE MIEL EN PERÚ</h3></a>
+                  <p>Venga a celebrar su unión en Perú: país mágico y místico. En el programa: visitas completas a los sitios más emblemáticos,</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$1200</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -558,19 +558,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.9</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/7.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="imagenesprueba/6.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Venice Holiday Packages</h3></a>
-                  <p>Honeymoon calls for an utterly romantic and very distinguished place that will, at the same time, provide privacy and convenience, and Venice perfectly fits the bill.</p>
+                  <a href="{{('tour')}}"><h3>PERÚ Y BOLIVIA EXPRESS</h3></a>
+                  <p>Este tour "expreso" Perú & Bolivia le permitirá descubrir en poco tiempo los principales sitios y los paisajes más impresionantes de .</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$1350</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -594,19 +594,19 @@
                 <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                   <a href="javascript:void(0);">
                     <div class="hotel-list-score">4.5</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/1.jpg" alt=""> </div>
+                    <div class="hot-page2-hli-1"> <img src="imagenesprueba/10.png" alt=""> </div>
                   </a>
                 </div>
                 <div class="col-md-6">
                   <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Swiss, Paris & Italy</h3></a>
-                  <p>Home to numerous lakes, villages and high peaks of the Alps, Switzerland is a dreamy mountainous Central European country that lures tourists from all over the world.</p>
+                  <a href="{{('tour')}}"><h3>PERÚ CULTURAL, DEL NORTE AL SUR</h3></a>
+                  <p>De norte a sur, esta estancia le ofrece descubrimientos llenos de historia tan variada como completa. Perú es un país cargado de .</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                     <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$650</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+                      <a href="{{('tour')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
                     </span> </div>
                 </div>
                 <div>
@@ -625,473 +625,6 @@
                 </div>
               </div>
               <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.3</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/2.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Incredible India</h3></a>
-                  <p>India may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$420</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.0</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/3.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Awesome Dubai: Action Packed</h3></a>
-                  <p>Explore Dubai in all its glory with Yatra's 'Go Dubai.' From the air-conditioned interior of a 4X4, see the sands of the Arabian Desert.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$720</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.8</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/4.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Amazing London and Edinburgh</h3></a>
-                  <p>London may not be the most ancient city in the world, but is surely one of those that take their history quite seriously; especially in terms of keeping traditions and heritage intact.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$860</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.4</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/5.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Rio De Janeiro</h3></a>
-                  <p>Brazil may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$480</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.2</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/6.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Roatan, Bay Islands</h3></a>
-                  <p>India may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$1200</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.9</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/7.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Venice Holiday Packages</h3></a>
-                  <p>Honeymoon calls for an utterly romantic and very distinguished place that will, at the same time, provide privacy and convenience, and Venice perfectly fits the bill.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$1350</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.5</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/1.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Swiss, Paris & Italy</h3></a>
-                  <p>Home to numerous lakes, villages and high peaks of the Alps, Switzerland is a dreamy mountainous Central European country that lures tourists from all over the world.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$650</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.3</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/2.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Incredible India</h3></a>
-                  <p>India may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$420</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.0</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/3.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Awesome Dubai: Action Packed</h3></a>
-                  <p>Explore Dubai in all its glory with Yatra's 'Go Dubai.' From the air-conditioned interior of a 4X4, see the sands of the Arabian Desert.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$720</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.8</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/4.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Amazing London and Edinburgh</h3></a>
-                  <p>London may not be the most ancient city in the world, but is surely one of those that take their history quite seriously; especially in terms of keeping traditions and heritage intact.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$860</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.4</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/5.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Rio De Janeiro</h3></a>
-                  <p>Brazil may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$480</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.2</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/6.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Roatan, Bay Islands</h3></a>
-                  <p>India may not be the most ancient city in the world, but is surely one of those that take their history quite seriously.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$1200</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--END LISTINGS-->
-              <!--LISTINGS START-->
-              <div class="hot-page2-alp-r-list">
-                <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                  <a href="javascript:void(0);">
-                    <div class="hotel-list-score">4.9</div>
-                    <div class="hot-page2-hli-1"> <img src="/assets/public/images/package/7.jpg" alt=""> </div>
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="trav-list-bod">
-                  <a href="tour-details.html"><h3>Venice Holiday Packages</h3></a>
-                  <p>Honeymoon calls for an utterly romantic and very distinguished place that will, at the same time, provide privacy and convenience, and Venice perfectly fits the bill.</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                    <div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Prices Starting</span> <span class="hot-list-p3-2">$1350</span><span class="hot-list-p3-4">
-                      <a href="tour-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
-                    </span> </div>
-                </div>
-                <div>
-                  <div class="trav-ami">
-                    <h4>Detail and Includes</h4>
-                    <ul>
-                      <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Sightseeing</span></li>
-                      <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                      <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transfer</span></li>
-                      <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Luggage</span></li>
-                      <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duration 8N/9D</span></li>
-                      <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Location : Rio,Brazil</span></li>
-                      <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Plan</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
               <!--END LISTINGS-->
             </div>
           </div>
