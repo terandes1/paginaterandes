@@ -14,13 +14,13 @@
     <div class="container">
       <!-- TITLE & DESCRIPTION -->
       <div class="spe-title col-md-12">
-        <h2>Frequency Asked <span>Questions</span></h2>
+        <h2>CONTACTENOS <span style="color: #0e4817;">Questions</span></h2>
         <div class="title-line">
           <div class="tl-1"></div>
           <div class="tl-2"></div>
           <div class="tl-3"></div>
         </div>
-        <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience</p>
+        <p>Tierras de los andes  líder mundial en tours, más de 30,000 paquetes en todo el mundo. Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 form_1 wow fadeInLeft" data-wow-duration="1s">
         <!--====== THANK YOU MESSAGE ==========-->

@@ -114,34 +114,78 @@
               <td>Nov 18, 2017</td>
             </tr>
           </table>
-        </div>
+        </div></br>
         <!--====== DURATION ==========-->
         <div class="tour_head1 l-info-pack-days days">
-          <h3>Detailed Day Wise Itinerary</h3>
-          <ul>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 1</span> Arrival and Evening Dhow Cruise</h4>
-              <p>Arrive at the airport and transfer to hotel. Check-in time at the hotel will be at 2:00 PM. In the evening, enjoy a tasty dinner on the Dhow cruise. Later, head back to the hotel for a comfortable overnight stay.</p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 2</span> City Tour and Evening Free for Leisure</h4>
-              <p>After breakfast, proceed for tour of Dubai city. Visit Jumeirah Mosque, World Trade Centre, Palaces and Dubai Museum. Enjoy your overnight stay at the hotel.In the evening, enjoy a tasty dinner on the Dhow cruise. Later, head back to the hotel for a comfortable overnight stay.</p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 3</span> Desert Safari with Dinner</h4>
-              <p>Relish a yummy breakfast and later, proceed to explore the city on your own. Enjoy shopping at Mercato Shopping Mall, Dubai Mall and Wafi City. In the evening, enjoy the desert safari experience and belly dance performance. Relish a mouth-watering barbecue dinner and enjoy staying overnight in Dubai.</p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 4</span> Day at leisure</h4>
-              <p>Savour a satiating breakfast and relax for a while. Day Free for leisure. Overnight stay will be arranged in Dubai. In the evening, enjoy a tasty dinner on the Dhow cruise. Later, head back to the hotel for a comfortable overnight stay.</p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 5</span> Departure</h4>
-              <p>Fill your tummy with yummy breakfast and relax for a while. Later, check out from the hotel and proceed for your onward journey.In the evening, enjoy a tasty dinner on the Dhow cruise. Later, head back to the hotel for a comfortable overnight stay.</p>
-            </li>
-          </ul>
-        </div>
+          
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">ITINERARIO</a></li>
+                <li><a data-toggle="tab" href="#menu1">ORGANIZACIÓN</a></li>
+              </ul>
 
+              <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                  <h3>Itinerario  detallado del día</h3>
+              <ul>
+                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <h4><span>D1 - Llegada a Lima:</span></span> Desert Safari with Dinner</h4> <p>Llegada al aeropuerto de Lima, recepción y traslado al hotel. Noche libre. Alojamiento en hotel en Lima.</p>
+                </li>
+                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <h4><span>D2 - Lima - Arequipa (2400m):</span> </span> Desert Safari with Dinner</h4><p>Por la mañana, vuelo a Arequipa. A su llegada, recepción y traslado al hotel. Resto del día libre para aclimatarse tranquilamente a la altitud. Alojamiento en hotel en Arequipa.</p>
+                </li>
+                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <h4><span>D3 - Arequipa (2400m)</span> Desert Safari with Dinner</h4>
+                  <p>Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque</p>
+                </li>
+                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <h4><span>D4 - Arequipa (2400M)</span> - Chivay (3651M) - Yanque (3440M)</h4>
+                  <p>Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque.</p>
+                </li>
+                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <h4><span>D5 - Yanque (3440M) </span> Cabanaconde</h4>
+                  <p>Mañana con sus anfitriones que le hacen descubrir su forma de vida local. Por la tarde, salida hacia Cabanaconde para un corto paseo hasta el mirador de Achachiua, desde donde se tiene una magnífica vista del cañón y del río Colca. Retorno al final del día al pueblo e instalación en su hotel. Noche en el hotel en el Cañón del Colca.</p>
+                </li>
+              </ul>
+
+              
+
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                  <div class="row">
+                      <div class="col-sm-12">
+                            <h5>GENERAL</h5>
+                            <p>Viaje acompañado de un guía privado peruano de habla francesa en cada etapa. En otras palabras, tendrá una guía diferente en cada región visitada, dadas sus especificidades. El nivel de francés de las guías difiere de una región a otra. Durante las transferencias, se beneficia de la asistencia de habla francesa.
+
+                            </p>
+                            <br>
+                        </div>
+                        <div class="col-sm-12">
+                            <h5>ALOJAMIENTO</h5>
+                            <p>En Perú, los estándares del hotel son diferentes de los que usted puede conocer. Aquí hay algunos detalles útiles sobre cada tipo de alojamiento: - Campamento: gracias a la perfecta organización de nuestro (s) cocinero (s) y arriero (s), ¡puede relajarse realmente después de un buen día de caminata! Tenga la certeza de que tenemos una carpa de cocina, una carpa para las comidas, un baño de campaña. Para dos personas, ofrecemos una carpa de 3 plazas para mayor comodidad. También le ofrecemos un colchón cómodo y un recipiente con agua caliente al comienzo y al final del día para su inodoro; y, por supuesto, preparamos comidas calientes y completas. - Hoteles de 2 * y 3 * (estándares locales): habitaciones cómodas, sencillas y limpias, baño privado con ducha de agua caliente; algunos hoteles ofrecen habitaciones equipadas con caja de seguridad, sistema de calefacción, mini bar ... En la medida de nuestras posibilidades, elegimos hoteles cuya situación geográfica le permita aprovechar al máximo la ciudad y de sus atracciones.
+
+                          </p>
+                            <br>
+                        </div>
+                          <div class="col-sm-12">
+                            <h5>COMIDAS</h5>
+                            <p>Para permitirle disfrutar de más libertad durante su viaje, solo se incluyen algunas comidas en nuestros programas: generalmente se trata de comidas durante el trekking (almuerzo frío y calor en la noche) y durante ciertas excursiones, cuando la situación se presta a ello (en la carretera Puno-Cusco, en el Valle Sagrado, etc.). Para las comidas no incluidas, espere un promedio de $ 5 a $ 10 por persona. ¡Esto le permite elegir la hora, el lugar y el menú, dependiendo de su inspiración!
+
+                            </p>
+                            <br>
+                        </div>
+                        <div class="col-sm-12">
+                            <h5>TRANSPORTE</h5>
+                            <p>Sus viajes se realizarán en transporte privado durante la mayor parte de su viaje: tendrá a su servicio un vehículo privado conducido por un conductor de habla hispana que se adapta a su ritmo (foto, compras, etc.). Algunas excepciones: Los viajes Lima - Huaraz - Mancos y Huaraz - Lima se realizarán en bus cómodo y seguro.
+
+                              </p>
+                            <br>
+                        </div>
+                      </div>
+                </div>
+                 
+              </div>
+
+        </div>
 
         <!--====== TOUR LOCATION ==========-->
         <div class="tour_head1 tout-map map-container">
@@ -318,6 +362,7 @@
             <h4>India 14Days / 13Nights</h4>
             <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p> <a href="#" class="link-btn">View this Package</a> </div>
         </div>
+
       </div>
     </div>
   </div>
