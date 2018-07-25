@@ -78,6 +78,13 @@
           </div>
         </div>
 
+        <div class="col-sm-12">
+				<div class="form-group">
+					{!!Form::label('name','Descripción Completa')!!}
+					{!!Form::textarea('description_complete', null,['id'=>'summernote','class'=>'form-control','required'])!!}
+				</div>
+			</div>
+
 
 
         <div class="col-md-12">
@@ -93,13 +100,22 @@
 @endsection
 
 @section('script')
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoHpdye5cuneO5ciw7Zb3TErgmYQn3QVU&callback=initMap"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 {!!Html::script('assets/admin/plugins/fileinput/js/fileinput.min.js')!!}
 {!!Html::script('assets/admin/plugins/fileinput/themes/explorer-fa/theme.js')!!}
 <script type="text/javascript">
 
+$('#summernote').summernote({
+  height: 350,                 // set editor height
+      minHeight: null,             // set minimum height of editor
+      maxHeight: null,             // set maximum height of editor
+      focus: false
+});
+
   $(()=>{
+
+
+
 
     $("#avatar-1").fileinput({
         theme: "explorer-fa",
