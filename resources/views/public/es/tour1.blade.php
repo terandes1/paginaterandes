@@ -53,119 +53,115 @@
           <p>Un curso diferente, fuera de los caminos trillados, reuniones de las comunidades Un curso diferente, fuera de los caminos trillados, para conocer a las comunidades andinas. Comience por quedarse en el corazón del Cañón del Colca, dentro de la comunidad de Pumachiri. Luego continúa su viaje hacia el Lago Titicaca y su comunidad de Llachón antes de terminar su descubrimiento por la región de Cusco y especialmente la comunidad de Maras. Durante esta inmersión, descubre las actividades cotidianas y tradiciones ancestrales de los habitantes de estos tres pueblos. ¡Un descubrimiento en profundidad de la cultura peruana!</p>
           </div>
 
-        <!--====== DURATION ==========-->
-        <div class="tour_head1 l-info-pack-days days">
-          <h3>Detalla del itinerario</h3>
-          <ul>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 1</span> Llegada a Lima</h4>
-              <p>
-                Llegada al aeropuerto de Lima, recepción y traslado al hotel. Noche libre. Alojamiento en hotel en Lima
-              </p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 2</span> Lima - Arequipa (2400m)</h4>
-              <p>
-                Por la mañana, vuelo a Arequipa. A su llegada, recepción y traslado al hotel. Resto del día libre para aclimatarse tranquilamente a la altitud. Alojamiento en hotel en Arequipa.
-              </p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 3</span> Arequipa (2400m)</h4>
-              <p>
-                Por la mañana, descubra la ciudad blanca y su centro colonial, incluyendo el Museo Santuarios Andinos, el Convento de Santa Catalina y las torres de vigilancia de Yanahuara y Cayma, ofreciendo una vista panorámica de los volcanes circundantes. Tarde libre. Alojamiento en hotel en Arequipa.
-              </p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 4</span> Arequipa (2400M) - Chivay (3651M) - Yanque (3440M)</h4>
-              <p>
-                Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque.
-              </p>
-            </li>
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 5</span> Yanque (3440M) - Cabanaconde</h4>
-              <p>
-                Mañana con sus anfitriones que le hacen descubrir su forma de vida local. Por la tarde, salida hacia Cabanaconde para un corto paseo hasta el mirador de Achachiua, desde donde se tiene una magnífica vista del cañón y del río Colca. Retorno al final del día al pueblo e instalación en su hotel. Noche en el hotel en el Cañón del Colca.
-              </p>
-            </li>
-
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 6</span> Cabanaconde - Chivay - Puno (3812 M)</h4>
-              <p>
-                Salida temprano por la mañana para la Croix du Condor, un mirador que ofrece una magnífica vista del cañón del Colca y desde donde se puede admirar el vuelo del ave más grande del mundo: el cóndor. Retorno a Chivay, luego salida en bus turístico hacia Puno. Llegada por la noche. Alojamiento en hotel en Puno
-              </p>
-            </li>
 
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 7</span> Puno (3812 M) - Llachon (3850 M)</h4>
-              <p>
-                Salida hacia el pequeño pueblo de Llachon y descubriendo la península de Capachica y los alrededores de Llachón durante una caminata fácil a orillas del lago. Regresa a tu familia anfitriona con quien pasas el resto del día. Le hará descubrir la artesanía local y sus hijos podrán jugar con los niños del pueblo. Cena y alojamiento en Llachon
-              </p>
-            </li>
 
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 8</span> Llachon (3850 M) - Uros (Titinos) - Amanti (3850 m) - Puno (3825 m)</h4>
-              <p>
-                Excursión de un día al Lago Titicaca. Visite las islas flotantes de los Uros y la isla de Amantani donde se puede caminar a la Pachatata (4200 m) y disfrutar, si el tiempo lo permite, la magnífica puesta de sol sobre el lago. Regreso a Puno por la tarde. Alojamiento en hotel en Puno.
-              </p>
-            </li>
+          <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#sectionA">ITINERARIO</a></li>
+          <li><a data-toggle="tab" href="#sectionB">ORGANIZACION</a></li>
+
+      </ul>
 
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 9</span> Puno (3812M) - Cusco (3350m)</h4>
-              <p>
-                Salida en bus turístico a Cusco. En el camino visitaremos el pueblo de Pucará, el paso de La Raya (4360 m), que simboliza el final del altiplano y el comienzo de la región Cusco, almuerzo en Sicuani y visitar el santuario Inca de Raqchi, y la Iglesia de San Pedro en Andahuaylillas, conocida como la Capilla Sixtina de Sudamérica. Llegada a Cusco por la tarde. Noche en hotel en Cusco.
-              </p>
-            </li>
+      <div class="tab-content">
+          <div id="sectionA" class="tab-pane fade in active">
+          <br>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-plus"></span><span>&nbsp;&nbsp;&nbsp;Day : 1</span> <strong>Llegada a Lima</strong> </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Llegada al aeropuerto de Lima, recepción y traslado al hotel. Noche libre. Alojamiento en hotel en Lima</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-plus"></span><span>&nbsp;&nbsp;&nbsp;Day : 2</span><strong>Lima - Arequipa (2400m)</strong> </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Por la mañana, vuelo a Arequipa. A su llegada, recepción y traslado al hotel. Resto del día libre para aclimatarse tranquilamente a la altitud. Alojamiento en hotel en Arequipa.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 10</span>Cusco (3350 m), 4 Ruinas y visita de la ciudad</h4>
-              <p>
-                Por la mañana, visitaremos las cuatro ruinas ubicadas en las alturas del Cusco: Tambomachay, PucaPucara, Kenko y finalmente, Sacsayhuaman. Regreso al centro de la ciudad para visitar la catedral de Cusco y el monasterio Santo Domingo, antiguo templo del Sol también llamado Koricancha. Resto del día libre. Noche en hotel en Cusco.
-              </p>
-            </li>
+                @for($i = 0 ; $i < 5 ; $i++)
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$i}}"><span class="glyphicon glyphicon-plus"></span> <span>&nbsp;&nbsp;&nbsp;Day : 3</span><strong>Arequipa (2400m)</strong> </a>
+                        </h4>
+                    </div>
+                    <div id="collapse{{$i}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Por la mañana, descubra la ciudad blanca y su centro colonial, incluyendo el Museo Santuarios Andinos, el Convento de Santa Catalina y las torres de vigilancia de Yanahuara y Cayma, ofreciendo una vista panorámica de los volcanes circundantes. Tarde libre. Alojamiento en hotel en Arequipa.</p>
+                        </div>
+                    </div>
+                </div>
+                @endfor
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 11</span> Cusco (3350m) - Pisac (3400M) - Patabamba (3848M)</h4>
-              <p>
-                Salida hacia el Valle Sagrado y visita del complejo arqueológico de Pisaq. Parada en el mercado local de la villa de Pisaq, antes de ir a Patabamba donde conocer a los lugareños con los que va a pasar la noche. Cena y alojamiento en Patabamba.
-              </p>
-            </li>
+            </div>
+
+          </div>
+          <div id="sectionB" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-12">
+                      <br>
+                          <h5>GENERAL</h5>
+                          <p>Viaje acompañado de un guía privado peruano de habla francesa en cada etapa. En otras palabras, tendrá una guía diferente en cada región visitada, dadas sus especificidades. El nivel de francés de las guías difiere de una región a otra. Durante las transferencias, se beneficia de la asistencia de habla francesa.
+
+                          </p>
+                          <br>
+                      </div>
+                      <div class="col-sm-12">
+                          <h5>ALOJAMIENTO</h5>
+                          <p>En Perú, los estándares del hotel son diferentes de los que usted puede conocer. Aquí hay algunos detalles útiles sobre cada tipo de alojamiento: - Campamento: gracias a la perfecta organización de nuestro (s) cocinero (s) y arriero (s), ¡puede relajarse realmente después de un buen día de caminata! Tenga la certeza de que tenemos una carpa de cocina, una carpa para las comidas, un baño de campaña. Para dos personas, ofrecemos una carpa de 3 plazas para mayor comodidad. También le ofrecemos un colchón cómodo y un recipiente con agua caliente al comienzo y al final del día para su inodoro; y, por supuesto, preparamos comidas calientes y completas. - Hoteles de 2 * y 3 * (estándares locales): habitaciones cómodas, sencillas y limpias, baño privado con ducha de agua caliente; algunos hoteles ofrecen habitaciones equipadas con caja de seguridad, sistema de calefacción, mini bar ... En la medida de nuestras posibilidades, elegimos hoteles cuya situación geográfica le permita aprovechar al máximo la ciudad y de sus atracciones.
+
+                        </p>
+                          <br>
+                      </div>
+                        <div class="col-sm-12">
+                          <h5>COMIDAS</h5>
+                          <p>Para permitirle disfrutar de más libertad durante su viaje, solo se incluyen algunas comidas en nuestros programas: generalmente se trata de comidas durante el trekking (almuerzo frío y calor en la noche) y durante ciertas excursiones, cuando la situación se presta a ello (en la carretera Puno-Cusco, en el Valle Sagrado, etc.). Para las comidas no incluidas, espere un promedio de $ 5 a $ 10 por persona. ¡Esto le permite elegir la hora, el lugar y el menú, dependiendo de su inspiración!
+
+                          </p>
+                          <br>
+                      </div>
+                      <div class="col-sm-12">
+                          <h5>TRANSPORTE</h5>
+                          <p>Sus viajes se realizarán en transporte privado durante la mayor parte de su viaje: tendrá a su servicio un vehículo privado conducido por un conductor de habla hispana que se adapta a su ritmo (foto, compras, etc.). Algunas excepciones: Los viajes Lima - Huaraz - Mancos y Huaraz - Lima se realizarán en bus cómodo y seguro.
+
+                            </p>
+                          <br>
+                      </div>
+                    </div>
+          </div>
+
+      </div>
 
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 12</span> Patabamba (3848M) - Huchuy Qosqo (3950M) - Lamay - Aguas Calientes (2040 M)</h4>
-              <p>
-                Día de senderismo: se pasa por el pequeño pueblo de Sihuas, luego el paso de Pukamarca (3900m) donde tendrá una magnífica vista de la cordillera de Urubamba y el Valle Sagrado. Seguir el cañón Puncu Puma "la puerta del Puma" antes de tomar prestado un antiguo camino Inca restaurado en el proyecto Qapacñan, "el camino" que le llevará al sitio Inca aislada y misteriosa Huchuy Qosqo , el "pequeño Cusco". Después de visitar el sitio, y después del almuerzo con una familia local, descenso a Lamay y traslado a Ollantaytambo para tomar el tren a Aguas Calientes, un pequeño pueblo al pie de la famosa Machupicchu. Alojamiento en hotel en Aguas Calientes.
-              </p>
-            </li>
 
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 13</span> Aguas Calientes (2040M) - Machu Picchu (2450M) - Maras (3300 m)</h4>
-              <p>
-                Temprano por la mañana, tour guiado de los más famosos sitio Inca del país: Machupicchu y tiempo libre para continuar la visita por su cuenta antes de tomar el tren a Ollantaytambo, donde se le llevará hasta el pueblo de Maras. Conozca a sus invitados por la noche. Cena y alojamiento en Maras.
-              </p>
-            </li>
-
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 14</span> Moray (3500 m) - Chinchero (3780 m) - Cusco</h4>
-              <p>
-              Este día, visitar las minas de sal de Maras, el sitio de Moray y Chinchero, la "ciudad del arco iris", conocida por sus correas de la técnica textil, ponchos y capas tejidas y teñidas de acuerdo con el método tradicional de Inca. Conoce a Sonia que te dará una demostración de tejer. Después de compartir un delicioso almuerzo con una familia local, visitar las ruinas y luego regresar a Cusco. Noche en hotel en Cusco.
-              </p>
-            </li>
 
 
-            <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <h4><span>Day : 15</span> Llegada a Lima</h4>
-              <p>
-                Vuelo a Lima, luego conexión a su vuelo internacional.
-              </p>
-            </li>
 
-        </ul>
-        </div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,10 +298,7 @@
             <a href="#" class="link-btn">RESERVAR AHORA</a>
           </br></br>
           </div>
-
-
         </div>
-
 
         <div class="tour_right tour_incl tour-ri-com">
 
@@ -315,8 +308,6 @@
           </div>
 
         </div>
-
-
 
         <!--====== PUPULAR TOUR PACKAGES ==========-->
         <div class="tour_right tour_rela tour-ri-com">
@@ -337,6 +328,29 @@
 </section>
 
 
+
+
+@endsection
+
+
+@section('script')
+
+
+<script>
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.in").each(function(){
+        	$(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+        });
+
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });
+    });
+</script>
 
 
 @endsection

@@ -25,7 +25,7 @@
   {!! Form::open(['url' => 'admin/users']) !!}
   <div class="card">
     <div class="card-body">
-      <div class="row">
+      <div class="row justify-content-md-center">
 
 
         <div class="col-md-6">
@@ -69,10 +69,14 @@
             {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'A',['class'=>'form-control'])!!}
           </div>
         </div>
-
         <div class="col-md-12">
-          <a href="{{('/admin/users')}}" class="btn btn-danger">Cancelar</a>
-          <button class="btn btn-success">Guardar</button>
+          <hr>
+        </div>
+        <div class="col-md-2">
+          <a href="{{('/admin/users')}}" class="btn btn-danger form-control">Cancelar</a>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-success form-control">Guardar</button>
         </div>
 
       </div>

@@ -24,6 +24,10 @@ Route::prefix('admin')->group(function () {
     Route::resource('languages','LanguageController');
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
+
+    //trash
+    Route::get('trash','TrashController@index');
+    //trash
 });
 //fin de rutas admin
 

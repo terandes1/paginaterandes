@@ -22,7 +22,7 @@
 
     <div class="col-md-12">
     </br>
-        <table class="table table-striped">
+        <table class="table table-striped" id="table-users">
         <thead>
           <tr>
 
@@ -81,7 +81,12 @@
 
 @section('script')
   <script>
+
+
     $(()=>{
+
+      $('#table-users').DataTable();
+
       $('i[name^="eliminar"]').click((e)=>{
         let opcion = confirm("Esta seguro que desea eliminar este usuario");
 

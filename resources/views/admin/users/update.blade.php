@@ -25,7 +25,7 @@
   {!!Form::model($user, ['url' => ['admin/users', $user->id],'method'=>'PUT'])!!}
   <div class="card">
     <div class="card-body">
-      <div class="row">
+      <div class="row justify-content-md-center">
 
 
         <div class="col-md-6">
@@ -71,9 +71,16 @@
         </div>
 
         <div class="col-md-12">
-          <a href="{{('/admin/users')}}" class="btn btn-danger">Cancelar</a>
-          <button class="btn btn-success">Guardar</button>
+          <hr>
         </div>
+
+        <div class="col-md-2">
+          <a href="{{('/admin/users')}}" class="btn btn-danger form-control">Cancelar</a>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-success form-control">Guardar</button>
+        </div>
+
 
       </div>
     </div>

@@ -1,12 +1,14 @@
 @extends('public.es.layouts.master')
 
 @section('content')
+
 <!--HEADER SECTION-->
 <section>
     <div class="tourz-search">
         <div class="container">
             <div class="row">
                 <div class="tourz-search-1">
+                
                     <h1>Plan Your Travel Now!</h1>
                     <br><br><br>
                     <!-- <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p> -->
