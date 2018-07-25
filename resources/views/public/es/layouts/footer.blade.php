@@ -60,6 +60,7 @@
                 <p>Copyrights © 2018 Company Name. All Rights Reserved</p>
             </div>
         </div>
+        <a href="whatsapp://send?text=" data-action="share/whatsapp/share"><img border="0" src=" rutadelaimagendewhatsapp.png" width="64px" height="64px"></a>
     </section>
     <section>
         <div class="icon-float">
@@ -71,6 +72,8 @@
                 <li><a href="#" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
                 <li><a href="#" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
                 <li><a href="#" class="sh1"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li>
+                
+                
             </ul>
         </div>
     </section>
