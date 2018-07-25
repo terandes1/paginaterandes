@@ -4,10 +4,6 @@
 
 
 
-
-
-
-
 <!--====== FAQ ==========-->
 <section>
   <div class="form form-spac rows">

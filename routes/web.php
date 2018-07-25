@@ -36,6 +36,7 @@ Route::view('tour','public.es.tour');
 Route::view('tour1','public.es.tour1');
 Route::view('paquetes','public.es.tours');
 Route::view('testimonials','public.es.testimonials');
+Route::view('events','public.es.events');
 //fin de vistas publicas
 
 Auth::routes();
