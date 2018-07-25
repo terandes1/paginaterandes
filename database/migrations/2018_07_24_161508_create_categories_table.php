@@ -15,6 +15,14 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('language_id')->unsigned();
+            $table->foreign('language_id')->references('id')->on('languages')->onDelete('cascade');
+            $table->string('name',200);
+            $table->string('img',255);
+            $table->string('img_hd',255);
+            $table->string('description',500);
+            $table->string('status',1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
