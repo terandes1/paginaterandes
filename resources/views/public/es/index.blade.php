@@ -8,21 +8,26 @@
             <div class="row">
                 <div class="tourz-search-1">
                     <h1>Plan Your Travel Now!</h1>
-                    <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p>
+                    <br><br><br>
+                    <!-- <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p> -->
                     <form class="tourz-search-form">
-                        <div class="input-field">
+
+                      <input type="text" id="select-search" class="form-control">
+                        <!-- <div class="input-field">
                             <input type="text" id="select-city" class="autocomplete">
                             <label for="select-city">Enter city</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="select-search" class="autocomplete">
+                            <input type="text" id="select-search" class="autocomplete form-control">
                             <label for="select-search" class="search-hotel-type">Search over a million tour and travels, sight seeings, hotels and more</label>
                         </div>
                         <div class="input-field">
-                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn">
+                        </div> -->
                     </form>
                     <div class="tourz-hom-ser">
-                        <ul>
+                      <br><br><br><br>
+                        <!-- <ul>
                             <li>
                                 <a href="booking-tour-package.html" class="waves-effect waves-light btn-large tourz-pop-ser-btn wow fadeInUp" data-wow-duration="0.5s"><img src="/assets/public/images/icon/2.png" alt=""> Tour</a>
                             </li>
@@ -35,7 +40,7 @@
                             <li>
                                 <a href="booking-hotel.html" class="waves-effect waves-light btn-large tourz-pop-ser-btn wow fadeInUp" data-wow-duration="2s"><img src="/assets/public/images/icon/1.png" alt=""> Hotel</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
