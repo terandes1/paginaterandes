@@ -4,53 +4,42 @@
 <!--HEADER SECTION-->
 <section>
     <div class="tourz-search">
-        <div class="container">
-            <div class="row">
-                <div class="tourz-search-1">
-                    <h1>Plan Your Travel Now!</h1>
-                    <br><br><br>
-                    <!-- <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p> -->
-                    <form class="tourz-search-form">
-
-                      <input type="text" id="select-search" class="form-control">
-                        <!-- <div class="input-field">
-                            <input type="text" id="select-city" class="autocomplete">
-                            <label for="select-city">Enter city</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" id="select-search" class="autocomplete form-control">
-                            <label for="select-search" class="search-hotel-type">Search over a million tour and travels, sight seeings, hotels and more</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn">
-                        </div> -->
-                    </form>
-                    <div class="tourz-hom-ser">
-                      <br><br><br><br>
-                        <!-- <ul>
-                            <li>
-                                <a href="booking-tour-package.html" class="waves-effect waves-light btn-large tourz-pop-ser-btn wow fadeInUp" data-wow-duration="0.5s"><img src="/assets/public/images/icon/2.png" alt=""> Tour</a>
-                            </li>
-                            <li>
-                                <a href="booking-flight.html" class="waves-effect waves-light btn-large tourz-pop-ser-btn wow fadeInUp" data-wow-duration="1s"><img src="/assets/public/images/icon/31.png" alt=""> Flight</a>
-                            </li>
-                            <li>
-                                <a href="booking-car-rentals.html" class="waves-effect waves-light btn-large tourz-pop-ser-btn wow fadeInUp" data-wow-duration="1.5s"><img src="/assets/public/images/icon/30.png" alt=""> Car Rentals</a>
-                            </li>
-                            <li>
-                                <a href="booking-hotel.html" class="waves-effect waves-light btn-large tourz-pop-ser-btn wow fadeInUp" data-wow-duration="2s"><img src="/assets/public/images/icon/1.png" alt=""> Hotel</a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-            </div>
+       
+        <div class="contenedor_video" style="margin: 0px;position: relative;width: 100%;height: 0;z-index: 1;overflow: hidden;padding-bottom: 37%;">
+            <video poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
         </div>
+         <dir id="texto" style="width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;">
+             DISCOVER SOUTH AMERICA
+             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;">Pursue the Luxury of Personalized Travel</div>
+       </dir>
+       
     </div>
+   
 </section>
 <!--END HEADER SECTION-->
 <section>
     <div class="rows pad-bot-redu tb-space">
         <div class="container">
+            <div class="row" style="margin-top: -80px;">
+                
+                    <form class="tourz-search-form">
+                        <div class="input-field">
+                            <input type="text" id="select-city" class="autocomplete">
+                            <label for="select-city">Ciudad</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="select-search" class="autocomplete">
+                            <label for="select-search" class="search-hotel-type">Buscar tours y viajes, visitas turísticas, hoteles y más</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+                    </form>
+                    
+                
+            </div>
+        </div>
+        <div class="container">
+            
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
                 <h2>Top <span>Tour Packages</span></h2>
