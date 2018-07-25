@@ -37,3 +37,7 @@ Route::view('tour1','public.es.tour1');
 Route::view('paquetes','public.es.tours');
 Route::view('testimonials','public.es.testimonials');
 //fin de vistas publicas
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
