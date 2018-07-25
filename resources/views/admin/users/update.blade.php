@@ -19,7 +19,7 @@
   <div class="row">
     <div class="col-md-12">
       <br>
-      <h3>Creando Nuevo Usuario</h3>
+      <h3>Editando Usuario</h3>
     </div>
   </div>
   {!!Form::model($user, ['url' => ['admin/users', $user->id],'method'=>'PUT'])!!}
@@ -43,7 +43,7 @@
         <div class="col-md-6">
           <div class="form-group">
             {!!Form::label('password','Password')!!}
-            {!!Form::password('password',['class'=>'form-control','required'])!!}
+            {!!Form::password('password',['class'=>'form-control'])!!}
           </div>
         </div>
 
@@ -66,13 +66,13 @@
         <div class="col-md-6">
           <div class="form-group">
             {!!Form::label('status','Estado')!!}
-            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'S',['class'=>'form-control'])!!}
+            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'],null,['class'=>'form-control'])!!}
           </div>
         </div>
 
         <div class="col-md-12">
-          <a href="{{('/admin/users')}}" class="btn btn-primary">Cancelar</a>
-          <button class="btn btn-primary">Guardar</button>
+          <a href="{{('/admin/users')}}" class="btn btn-danger">Cancelar</a>
+          <button class="btn btn-success">Guardar</button>
         </div>
 
       </div>

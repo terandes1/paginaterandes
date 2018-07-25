@@ -85,7 +85,7 @@ class UserController extends Controller
       if ($request->password != ''){
         $user->fill(['password'=>bcrypt($request->password)]);
       }
-      
+
           $user->fill([
             'name'=>$request->name,
             'email'=>$request->email,
@@ -96,7 +96,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('admin/users')->with('status','El Usuario "' . $user->name . '" Fue Actualizao correctamente');
+        return redirect('admin/users')->with('status','El Usuario "' . $user->name . '" Fue Actualizado correctamente');
 
 
     }

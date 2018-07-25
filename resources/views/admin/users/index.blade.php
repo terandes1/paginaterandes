@@ -4,6 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <br>
       @if (session('status'))
           <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>{{ session('status') }}</strong>
@@ -28,6 +29,7 @@
             <th scope="col">Nombres</th>
             <th scope="col">Email</th>
             <th scope="col">Lenguaje</th>
+            <th>Estado</th>
             <th scope="col">Fecha de Creación</th>
             <th scope="col">Fecha de Actualización</th>
             <th scope="col">Acciones</th>
@@ -39,6 +41,13 @@
               <td>{{ $user->name }}</td>
               <td>{{ $user->email }}</td>
               <td>{{ $user->language}}</td>
+              <td>
+                  @if($user->status == 'A')
+                  <span class="badge badge-success">habilitado</span>
+                  @else
+                  <span class="badge badge-danger">deshabilitado</span>
+                  @endif
+                </td>
               <td>{{ $user->created_at }}</td>
               <td>{{ $user->updated_at }}</td>
               <td class="text-right">

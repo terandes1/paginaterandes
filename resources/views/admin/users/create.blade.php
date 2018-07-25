@@ -66,13 +66,13 @@
         <div class="col-md-6">
           <div class="form-group">
             {!!Form::label('status','Estado')!!}
-            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'S',['class'=>'form-control'])!!}
+            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'A',['class'=>'form-control'])!!}
           </div>
         </div>
 
         <div class="col-md-12">
-          <a href="{{('/admin/users')}}" class="btn btn-primary">Cancelar</a>
-          <button class="btn btn-primary">Guardar</button>
+          <a href="{{('/admin/users')}}" class="btn btn-danger">Cancelar</a>
+          <button class="btn btn-success">Guardar</button>
         </div>
 
       </div>

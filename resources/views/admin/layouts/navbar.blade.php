@@ -10,7 +10,7 @@
           <a class="nav-link" href="{{('/admin/users')}}">Usuarios <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lenguaje</a>
+          <a class="nav-link" href="{{('/admin/languages')}}">Lenguaje</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Categorias</a>

@@ -14,7 +14,7 @@ class LanguageController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.languages.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class LanguageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.languages.create');
     }
 
     /**
