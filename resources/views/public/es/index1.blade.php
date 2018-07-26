@@ -1,7 +1,6 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-
 <!--HEADER SECTION-->
 <section>
     <div class="tourz-search">
@@ -20,39 +19,53 @@
 <!--END HEADER SECTION-->
 <section>
     <div class="rows pad-bot-redu tb-space">
-        <div class="container">
-<<<<<<< HEAD
-            <div class="row">
-                <div class="tourz-search-1">
-                
-                    <h1>Plan Your Travel Now!</h1>
-                    <br><br><br>
-                    <!-- <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p> -->
-=======
-            <div class="row" style="margin-top: -80px;">
-                
->>>>>>> e55f92a9a00dbe48b6e8d276094b033536679b26
-                    <form class="tourz-search-form">
-                        <div class="input-field">
-                            <input type="text" id="select-city" class="autocomplete">
-                            <label for="select-city">Ciudad</label>
+        <!--<div class="container" >
+                    <div class="row" style=" margin-top: -80px;">
+                         <div class="col-sm-3">
+                         </div>
+                         <div class="col-sm-9">
+                            <form class="tourz-search-form">
+                                <div class="input-field">
+                                    <label for="select-city">Ciudad</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" id="select-search" class="autocomplete">
+                                    <label for="select-search" class="search-hotel-type">Buscar tours y viajes, visitas turísticas, hoteles y más</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+                            </form>
+                            
                         </div>
-                        <div class="input-field">
-                            <input type="text" id="select-search" class="autocomplete">
-                            <label for="select-search" class="search-hotel-type">Buscar tours y viajes, visitas turísticas, hoteles y más</label>
+                    </div>
+        </div>-->
+        <div class="search-top" style="background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-form">
+                        <form class="tourz-search-form">
+                            <div class="input-field">
+                                <input type="text" id="select-city" class="autocomplete">
+                                <label for="select-city">Enter city</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="select-search" class="autocomplete">
+                                <label for="select-search" class="search-hotel-type">Search over a million tour and travels, sight seeings, hotels and more</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+                        </form>
                         </div>
-                        <div class="input-field">
-                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
-                    </form>
-                    
-                
+                    </div>
+                </div>
             </div>
-        </div>
+        </div><br><br><br>
         <div class="container">
             
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Top <span>Tour Packages</span></h2>
+                <h2>Top <span style="color:#36691D">Tour Packages</span></h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
@@ -71,7 +84,7 @@
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
                         <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Rio de Janeiro<span class="v_pl_name">(Brazil)</span></a></h4>
+                            <h4><a href="{{'paquetes'}}">Aventura<span class="v_pl_name">(Perú)</span></a></h4>
                         </div>
                         <!-- TOUR ICONS -->
                         <div class="col-md-4 col-sm-4 pack_icon">
@@ -233,7 +246,7 @@
         <div class="container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Popular <span>Packages</span> </h2>
+                <h2>Popular <span style="color:#36691D">Packages</span> </h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
@@ -344,7 +357,7 @@
         <div class="container events events-1" id="inner-page-title">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Top <span>Events</span> in this month</h2>
+                <h2>Top <span style="color:#36691D">Events</span> in this month</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
@@ -454,7 +467,7 @@
         <div class="pla1 p-home container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title spe-title-1">
-                <h2>Top <span>Sight Seeing</span> in this month</h2>
+                <h2>Top <span style="color:#36691D;">Sight Seeing</span> in this month</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>

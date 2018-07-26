@@ -7418,7 +7418,7 @@
  .offer:before {
      content: '';
      position: absolute;
-     background: linear-gradient(to right, rgba(22, 40, 105, 0.91) 46%, rgba(0, 0, 0, 0.41) 100%);
+     background: linear-gradient(to right, rgb(103, 158, 2) -4%, rgba(-40, -49, -65, -91.59) 100%);
      top: 0px;
      bottom: 0px;
      left: 0px;
