@@ -109,7 +109,6 @@
   $(()=>{
 
 
-
     toastr.options = {
       "closeButton": false,
       "debug": false,
@@ -129,13 +128,9 @@
     }
 
 
-    $("#images").fileinput({
-      uploadUrl: "/file-upload-single/1",
-      maxFileCount: 5
-    });
 
 
-
+// validamos el form multimedia y lo almacenamos en la bd
   $('#form-multimedia').validate({
     submitHandler:()=>{
       var storeMultimedia = new FormData($('#form-multimedia')[0]);
@@ -147,11 +142,56 @@
         contentType:false,
         processData:false
       }).done((data)=>{
-        alert(data);
-        Command: toastr["success"]('El campo multimedia ha sido creado exitosamente','EXITO!')
+        Command: toastr["success"]('El campo multimedia ha sido creado exitosamente','EXITO!');
+        recuperar_imagenes(data);
+        cargar_imagenes(data);
       });
     }
   });
+
+
+
+// funcion para cargar y eliminar IMAGENES
+function cargar_imagenes(id){
+  $("#images").fileinput({
+    uploadUrl: "/admin/image/create/"+id,
+    theme: "explorer-fa",
+    allowedFileExtensions: ['jpg', 'png', 'gif'],
+    maxImageWidth: 800,
+    resizeImage: true,
+    browseOnZoneClick: true,
+    maxFileCount: 5,
+    overwriteInitial: false,
+    initialPreview: images,
+    initialPreviewAsData: true,
+    initialPreviewFileType: 'image',
+    initialPreviewConfig: captions
+    }).on('fileunlock', function() {
+          $('#images').fileinput('destroy');
+          recuperar_imagenes(id);
+      });
+}
+
+
+
+//funcion para recuperar imagenes una vez que hayan subido
+function recuperar_imagenes(id){
+      images = [];
+      captions = [];
+      $.ajax({
+        url:'/admin/image/view/'+id,
+        method:'GET'
+      }).done((data)=>{
+        $(data).each(function(key,value){
+          images.push('/'+value['path']);
+          captions.push({caption: value['name'], size: value['size'], url: "/admin/image/delete/"+value['id']});
+        });
+        cargar_imagenes(id);
+      }).fail((data)=>{
+        alert("ocurrio un error");
+      });
+}
+
 
 
 

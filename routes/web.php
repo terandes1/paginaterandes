@@ -26,6 +26,8 @@ Route::prefix('admin')->group(function () {
     Route::resource('tours','TourController');
     Route::resource('multimedia','MultimediaController');
     Route::post('image/create/{id}','MultimediaController@create_img');
+    Route::get('image/view/{id}','MultimediaController@view_img');
+    Route::post('image/delete/{id}','MultimediaController@delete_img');
     //trash
     Route::get('trash','TrashController@index');
     //trash
