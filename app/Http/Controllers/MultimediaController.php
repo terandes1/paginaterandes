@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Multimedia;
+use App\Image;
+use App\Video;
 use Illuminate\Http\Request;
 
 class MultimediaController extends Controller
@@ -14,7 +16,8 @@ class MultimediaController extends Controller
      */
     public function index()
     {
-        return view('admin.multimedia.index');
+        $multimedias = Multimedia::All();
+        return view('admin.multimedia.index',['multimedias'=>$multimedias]);
     }
 
     /**
@@ -35,7 +38,10 @@ class MultimediaController extends Controller
      */
     public function store(Request $request)
     {
-        return "llegaste a almacenar";
+
+
+      $multimedia =  Multimedia::create($request->all());
+      return response($multimedia->id);
     }
 
     /**
@@ -82,4 +88,10 @@ class MultimediaController extends Controller
     {
         //
     }
+
+    public function create_img(){
+      
+    }
+
+
 }
