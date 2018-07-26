@@ -87,7 +87,7 @@
       <div class="card">
         <div class="card-body text-center">
           <h4>MULTIMEDIA</h4> <br>
-          <a href="{{('/admin/languages')}}" class="btn btn-primary form-control">IR</a>
+          <a href="{{('/admin/multimedia')}}" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
     </div>

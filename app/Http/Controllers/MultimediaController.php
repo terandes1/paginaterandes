@@ -128,7 +128,9 @@ class MultimediaController extends Controller
 
 
     public function view_video($id){
-
+    
+      $videos = Video::where('multimedia_id',$id)->get();
+      return response($videos);
     }
 
 
