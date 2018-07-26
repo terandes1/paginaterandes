@@ -21,7 +21,13 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Itinerario</a>
         </li>
-        <li class="nav-item dropdown">
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{('/admin/multimedia')}}">Multimedia</a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Multimedia
           </a>
@@ -30,7 +36,7 @@
             <a class="dropdown-item" href="#">Videos</a>
 
           </div>
-        </li>
+        </li> -->
 
         <li class="nav-item">
           <a class="nav-link" href="#">Testimonios</a>

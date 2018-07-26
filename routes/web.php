@@ -24,7 +24,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('languages','LanguageController');
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
-
+    Route::resource('multimedia','MultimediaController');
     //trash
     Route::get('trash','TrashController@index');
     //trash

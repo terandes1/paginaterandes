@@ -86,20 +86,13 @@
     <div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
-          <h4>SLIDER</h4> <br>
+          <h4>MULTIMEDIA</h4> <br>
           <a href="{{('/admin/languages')}}" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
     </div>
 
-    <div class="col-md-3">
-      <div class="card">
-        <div class="card-body text-center">
-          <h4>VIDEOS</h4> <br>
-          <a href="{{('/admin/languages')}}" class="btn btn-primary form-control">IR</a>
-        </div>
-      </div>
-    </div>
+
 
 
     <div class="col-md-3">
