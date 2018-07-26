@@ -88,8 +88,29 @@
               AGREGAR VIDEOS
             </a>
       </p>
+
+
+
       <div class="collapse" id="collapsevideos">
         <div class="card card-body">
+          <div class="row">
+            <div class="col-md-12">
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_crear_video">
+                <span class="fa fa-plus"></span> Video
+              </button>
+
+              <hr>
+            </div>
+            <div class="col-md-12">
+              <div class="row" id="contenedor-video">
+                <!--aqui va los videos -->
+              </div>
+            </div>
+
+          </div>
+
+
 
 
         </div>
@@ -97,6 +118,55 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal_crear_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Creando Nuevo Video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" id="form-video-nuevo">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" name="multimedia_id" value="1" hidden>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="description">Descripción</label>
+              <input name="description" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="path">URL</label>
+              <input type="text" name="path" class="form-control" required>
+            </div>
+          </div>
+
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="form-video-nuevo">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection
 
 @section('script')
@@ -191,6 +261,53 @@ function recuperar_imagenes(id){
         alert("ocurrio un error");
       });
 }
+
+
+//funcion para recuperar los VIDEOS
+function recuperar_videos(){
+  var cadena = '';
+  cadena+='<div class="col-md-4">';
+  cadena+='<div class="card">';
+  cadena+='<iframe src="https://www.youtube.com/embed/1JcRFI4CY3E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+  cadena+='<div class="card-body">';
+  cadena+='<h5 class="card-title">Card title</h5>';
+  cadena+='<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>';
+  cadena+='<a href="#" class="btn btn-primary"><span class="fa fa-pencil"></span></a>';
+  cadena+='  <a href="#" class="btn btn-danger"><span class="fa fa-close"></span></a>';
+  cadena+='</div>';
+  cadena+='</div>';
+  cadena+='</div>';
+
+  $('#contenedor-video').html(cadena);
+}
+
+recuperar_videos();
+
+
+
+
+
+//funcion para la ventana modal de crear VIDEOS
+$('#form-video-nuevo').validate({
+  submitHandler:()=>{
+  var storeVideo = new FormData($('#form-video-nuevo')[0]);
+
+    $.ajax({
+      url:'/admin/video/create/1',
+      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+      method:'POST',
+      data:storeVideo,
+      contentType:false,
+      processData:false
+    }).done((data)=>{
+      $('#modal_crear_video').modal('hide');
+      Command: toastr["success"]('El video ha sido creado exitosamente','EXITO!');
+    });
+  }
+});
+
+
+//funcion para la ventana modal de editar VIDEO
 
 
 

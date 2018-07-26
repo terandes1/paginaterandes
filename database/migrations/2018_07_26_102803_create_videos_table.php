@@ -18,8 +18,8 @@ class CreateVideosTable extends Migration
             $table->unsignedInteger('multimedia_id');
             $table->foreign('multimedia_id')->references('id')->on('multimedia');
             $table->string('name',500);
+            $table->string('description',500);
             $table->string('path',500);
-            $table->string('size',100);
             $table->timestamps();
         });
     }

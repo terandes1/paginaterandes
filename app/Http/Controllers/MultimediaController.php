@@ -126,4 +126,22 @@ class MultimediaController extends Controller
     }
 
 
+
+    public function view_video($id){
+
+    }
+
+
+    public function create_video(Request $request, $id){
+
+      Video::create($request->all());
+    }
+    public function update_video(Request $request, $id){
+
+    }
+    public function delete_video($id){
+
+    }
+
+
 }
