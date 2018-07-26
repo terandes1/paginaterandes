@@ -14,6 +14,8 @@ class MultimediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         $multimedias = Multimedia::All();
@@ -89,8 +91,56 @@ class MultimediaController extends Controller
         //
     }
 
-    public function create_img(){
-      
+    public function create_img(Request $request, $id){
+
+
+
+      $file =  $request->file('images');
+      $extension = $file->getClientOriginalExtension();
+      $NameOriginal = $file->getClientOriginalName();
+      $fileName = $NameOriginal . '.' . $extension;
+      $size = $file->getClientSize();
+      $file->move(public_path('assets/content/'),$fileName);
+      $ruta = 'assets/content/'.$fileName;
+
+      Image::create([
+        'multimedia_id'=>$id,
+        'name'=>$fileName,
+        'path'=>$ruta,
+        'size'=>$size
+      ]);
+
+    }
+
+    public function view_img($id){
+      $images = Image::where('multimedia_id',$id)->get();
+      return response($images);
+    }
+
+    public function delete_img($id){
+
+      $video= Image::find($id);
+      \File::delete(public_path($video->path));
+
+      $video->delete();
+    }
+
+
+
+    public function view_video($id){
+
+    }
+
+
+    public function create_video(Request $request, $id){
+
+      Video::create($request->all());
+    }
+    public function update_video(Request $request, $id){
+
+    }
+    public function delete_video($id){
+
     }
 
 

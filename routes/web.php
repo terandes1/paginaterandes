@@ -26,6 +26,12 @@ Route::prefix('admin')->group(function () {
     Route::resource('tours','TourController');
     Route::resource('multimedia','MultimediaController');
     Route::post('image/create/{id}','MultimediaController@create_img');
+    Route::get('image/view/{id}','MultimediaController@view_img');
+    Route::post('image/delete/{id}','MultimediaController@delete_img');
+    Route::post('video/view/{id}','MultimediaController@view_video');
+    Route::post('video/create/{id}','MultimediaController@create_video');
+    Route::post('video/update/{id}','MultimediaController@update_video');
+    Route::post('video/delete/{id}','MultimediaController@delete_video');
     //trash
     Route::get('trash','TrashController@index');
     //trash
