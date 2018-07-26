@@ -135,7 +135,7 @@
                     </div>
                     <div class="main-menu">
                         <ul>
-                            <li><a href="{{('/')}}">Home</a>
+                            <li><a href="{{('/index1')}}">Home</a>
                             </li>
                             <li class="about-menu">
                                 <a href="{{('paquetes')}}" class="mm-arr">Packages</a>

@@ -26,7 +26,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
     margin-top: 35px;  
   }
    #texto{
-    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;
+    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 1; position: absolute;text-shadow: 2px 2px 4px #000;
  }
 
 }
@@ -38,7 +38,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
     margin-top: 0px;  
   }
    #texto{
-    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;
+    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 1; position: absolute;text-shadow: 2px 2px 4px #000;
  }
 }
 
@@ -79,8 +79,8 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
             <video poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
         </div>
          <dir id="texto" style="">
-             DISCOVER SOUTH AMERICA
-             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;">Pursue the Luxury of Personalized Travel</div>
+             AVENTURE
+             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;">Para los amantes del trekking en lugares aún auténticos y salvajes</div>
        </dir>
        
     </div>
@@ -528,6 +528,189 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="rows pla pad-bot-redu tb-space">
+        <div class="pla1 p-home container">
+            <!-- TITLE & DESCRIPTION -->
+
+            <div class="spe-title spe-title-1">
+                <h2>TOP <span style="color:#36691D;">TESTIMONIOS</span> DE ESTE MES</h2>
+                <div class="title-line">
+                    
+                </div>
+                <p> Comparte experiencias de viaje con nosotros </p>
+
+            </div>
+
+                <div class="row">
+                <div class="col-sm-12">
+                        
+                  <div id="myCarousel" class="row carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                      <div class="item active">
+                        
+                        <ul class="thumbnails">
+                          <li class="col-sm-3" >      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="#">Read More</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div><!-- /Slide1 --> 
+
+
+                      <div class="item">
+                        <ul class="thumbnails">
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div><!-- /Slide2 --> 
+                      <div class="item" style="text-align: center;">
+                        <ul class="thumbnails">
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail" style="text-align: center;">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div><!-- /Slide3 --> 
+                    </div><!-- /Wrapper for slides .carousel-inner -->
+                    <!-- Control box -->
+                    <div class="control-box">                            
+                      <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
+                      <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+                    </div><!-- /.control-box -->   
+
+                  </div><!-- /#myCarousel -->
+
+
+                </div><!-- /.col-sm-12 -->          
+                </div><!-- /.row --> 
+           
         </div>
     </div>
 </section>
