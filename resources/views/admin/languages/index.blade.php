@@ -4,6 +4,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <br>
+    </div>
+    <div class="col-md-12">
       @if (session('status'))
           <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>{{ session('status') }}</strong>

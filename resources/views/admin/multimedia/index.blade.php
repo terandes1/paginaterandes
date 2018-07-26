@@ -16,7 +16,7 @@
     </div>
     <div class="col-md-2">
     </br>
-        <a href="{{('/admin/users/create')}}" class="btn btn-primary">Nuevo Usuario</a>
+        <a href="{{('/admin/multimedia/create')}}" class="btn btn-primary">Nuevo Multimedia</a>
 
     </div>
 
@@ -36,37 +36,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($users as $user)
-            <tr>
-              <td>{{ $user->name }}</td>
-              <td>{{ $user->email }}</td>
-              <td>{{ $user->language}}</td>
-              <td>
-                  @if($user->status == 'A')
-                  <span class="badge badge-success">habilitado</span>
-                  @else
-                  <span class="badge badge-danger">deshabilitado</span>
-                  @endif
-                </td>
-              <td>{{ $user->created_at }}</td>
-              <td>{{ $user->updated_at }}</td>
-              <td class="text-right">
-                <div class="container">
-                  <div class="row">
-                  <div class="col-xs-6">
-                    <a href="{{url('/admin/users/'. $user->id )}}"><i class="fa fa-edit" style="color:blue;"></i></a>
-                  </div>
-                  <div class="col-xs-6">
-                    {!!Form::open(['url'=>'/admin/users/'.$user->id,'method'=>'DELETE','id'=>'eliminar'.$user->id])!!}
-                     &nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i name="eliminar{{$user->id}}" class="fa fa-times" style="color:red;"></i></a>
-                    {!!Form::close()!!}
-                  </div>
-                </div>
-                </div>
 
-              </td>
-            </tr>
-          @endforeach
         </tbody>
       </table>
     </div>

@@ -1,6 +1,7 @@
 @extends('public.es.layouts.master')
 
 @section('content')
+
 <!--HEADER SECTION-->
 <section>
     <div class="tourz-search">
@@ -20,8 +21,17 @@
 <section>
     <div class="rows pad-bot-redu tb-space">
         <div class="container">
+<<<<<<< HEAD
+            <div class="row">
+                <div class="tourz-search-1">
+                
+                    <h1>Plan Your Travel Now!</h1>
+                    <br><br><br>
+                    <!-- <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p> -->
+=======
             <div class="row" style="margin-top: -80px;">
                 
+>>>>>>> e55f92a9a00dbe48b6e8d276094b033536679b26
                     <form class="tourz-search-form">
                         <div class="input-field">
                             <input type="text" id="select-city" class="autocomplete">
