@@ -13,6 +13,10 @@ div.contenedor_video {
     overflow: hidden;
     padding-bottom: 37%;
 }
+.search-top{
+background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
+}
+
 
 @media screen and (min-width: 1602px) {
   div.contenedor_video {
@@ -21,6 +25,9 @@ div.contenedor_video {
     text-align: center;
     margin-top: 35px;  
   }
+   #texto{
+    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;
+ }
 
 }
 @media screen and (max-width: 1300px) , screen and (max-height: 1601px) {
@@ -30,6 +37,9 @@ div.contenedor_video {
     text-align: center;
     margin-top: 0px;  
   }
+   #texto{
+    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;
+ }
 }
 
 @media screen and (max-width: 767px) {
@@ -42,6 +52,24 @@ div.contenedor_video {
     overflow: hidden;
     padding-bottom: 37%;
   }
+
+}
+
+@media (max-width: 768px) {
+    #texto {
+         
+        font-size: 20px;
+        margin-top: -105px;
+    }
+    .search-top{
+        margin-top: 10px;
+    }
+  div.contenedor_video {
+    background: white;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px;  
+  }
 }
 </style>
 <section>
@@ -50,7 +78,7 @@ div.contenedor_video {
         <div class="contenedor_video">
             <video poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
         </div>
-         <dir id="texto" style="width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;">
+         <dir id="texto" style="">
              DISCOVER SOUTH AMERICA
              <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;">Pursue the Luxury of Personalized Travel</div>
        </dir>
@@ -81,7 +109,7 @@ div.contenedor_video {
                         </div>
                     </div>
         </div>-->
-        <div class="search-top" style="background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;">
+        <div class="search-top">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
