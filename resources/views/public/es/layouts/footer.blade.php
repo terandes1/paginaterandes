@@ -60,7 +60,6 @@
                 <p>Copyrights © 2018 Company Name. All Rights Reserved</p>
             </div>
         </div>
-        <a href="whatsapp://send?text=" data-action="share/whatsapp/share"><img border="0" src=" rutadelaimagendewhatsapp.png" width="64px" height="64px"></a>
     </section>
     <section>
         <div class="icon-float">

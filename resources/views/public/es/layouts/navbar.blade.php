@@ -3,8 +3,8 @@
     <div class="ed-mob-menu">
         <div class="ed-mob-menu-con">
             <div class="ed-mm-left">
-                <div class="wed-logo">
-                    <a href="index.html"><img src="/assets/public/images/logo.png" alt="" />
+                <div class="wed-logo" style="width: 130px;" >
+                    <a href="index.html"><img  src="/assets/public/images/logo.png" alt="" />
         </a>
                 </div>
             </div>
