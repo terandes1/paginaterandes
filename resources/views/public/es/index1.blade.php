@@ -2,10 +2,52 @@
 
 @section('content')
 <!--HEADER SECTION-->
+<style type="text/css">
+
+div.contenedor_video {
+  margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding-bottom: 37%;
+}
+
+@media screen and (min-width: 1602px) {
+  div.contenedor_video {
+   background: white;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 35px;  
+  }
+
+}
+@media screen and (max-width: 1300px) , screen and (max-height: 1601px) {
+  div.contenedor_video {
+   background: white;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px;  
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.contenedor_video {
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding-bottom: 37%;
+  }
+}
+</style>
 <section>
     <div class="tourz-search">
        
-        <div class="contenedor_video" style="margin: 0px;position: relative;width: 100%;height: 0;z-index: 1;overflow: hidden;padding-bottom: 37%;">
+        <div class="contenedor_video">
             <video poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
         </div>
          <dir id="texto" style="width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;">
