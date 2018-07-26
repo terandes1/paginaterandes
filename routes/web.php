@@ -25,6 +25,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
     Route::resource('multimedia','MultimediaController');
+    Route::post('image/create/{id}','MultimediaController@create_img');
     //trash
     Route::get('trash','TrashController@index');
     //trash

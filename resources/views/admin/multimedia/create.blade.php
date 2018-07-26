@@ -107,6 +107,28 @@
 
 <script>
   $(()=>{
+
+
+
+    toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-bottom-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+
+
     $("#images").fileinput({
       uploadUrl: "/file-upload-single/1",
       maxFileCount: 5
@@ -116,12 +138,17 @@
 
   $('#form-multimedia').validate({
     submitHandler:()=>{
+      var storeMultimedia = new FormData($('#form-multimedia')[0]);
       $.ajax({
         url:'/admin/multimedia',
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-        method:'POST'
+        method:'POST',
+        data:storeMultimedia,
+        contentType:false,
+        processData:false
       }).done((data)=>{
-        alert(data)
+        alert(data);
+        Command: toastr["success"]('El campo multimedia ha sido creado exitosamente','EXITO!')
       });
     }
   });
