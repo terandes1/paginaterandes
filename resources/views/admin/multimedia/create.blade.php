@@ -4,7 +4,11 @@
 {!!Html::style('assets/admin/plugins/fileinput/css/fileinput.min.css')!!}
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 {!!Html::style('assets/admin/plugins/fileinput/themes/explorer-fa/theme.css')!!}
-
+<style>
+#administrador-contenido{
+display: none;
+}
+</style>
 @endsection
 
 
@@ -37,13 +41,13 @@
         <div class="col-md-12">
           <div class="form-group">
             {!!Form::label('name','Nombre')!!}
-            {!!Form::text('name',null,['class'=>'form-control','required'])!!}
+            {!!Form::text('name',null,['class'=>'form-control','id'=>'name','required'])!!}
           </div>
         </div>
         <div class="col-md-12">
           <div class="form-group">
             {!!Form::label('description','Descripción')!!}
-            {!!Form::textarea('description',null,['class'=>'form-control','required'])!!}
+            {!!Form::textarea('description',null,['class'=>'form-control','id'=>'description','required','style'=>'height:100px;'])!!}
           </div>
         </div>
 
@@ -54,7 +58,7 @@
           <a href="{{('/admin/multimedia')}}" class="btn btn-danger form-control">Cancelar</a>
         </div>
         <div class="col-md-2">
-          <button class="btn btn-success form-control">Guardar</button>
+          <button class="btn btn-success form-control" id="guardar-multimedia">Guardar</button>
         </div>
 
       </div>
@@ -65,7 +69,7 @@
 
 
 
-<div class="container">
+<div class="container" id="administrador-contenido">
   <div class="row">
     <div class="col-md-12">
               <p>
@@ -123,7 +127,7 @@
 
 
 
-<!-- Modal -->
+<!-- Modal crear video-->
 <div class="modal fade" id="modal_crear_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -137,7 +141,7 @@
         <form action="" id="form-video-nuevo">
         <div class="row">
           <div class="col-md-12">
-            <input type="text" name="multimedia_id" value="1" hidden>
+            <input type="text" name="multimedia_id" id="multimedia_id">
             <div class="form-group">
               <label for="name">Nombre</label>
               <input type="text" name="name" class="form-control" required>
@@ -166,6 +170,56 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<!-- Modal editar video-->
+<div class="modal fade" id="modal_editar_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Creando Nuevo Video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" id="form-video-nuevo">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" name="multimedia_id" id="multimedia_id">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="description">Descripción</label>
+              <input name="description" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="path">URL</label>
+              <input type="text" name="path" class="form-control" required>
+            </div>
+          </div>
+
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="form-video-nuevo">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 @endsection
 
@@ -213,8 +267,14 @@
         processData:false
       }).done((data)=>{
         Command: toastr["success"]('El campo multimedia ha sido creado exitosamente','EXITO!');
+        $('#multimedia_id').val(data);
+        $('#administrador-contenido').css('display','block');
+        $('#name').attr('disabled','true');
+        $('#description').attr('disabled','true');
+        $('#guardar-multimedia').attr('disabled','true');
         recuperar_imagenes(data);
         cargar_imagenes(data);
+        nuevo_video(data);
       });
     }
   });
@@ -264,51 +324,67 @@ function recuperar_imagenes(id){
 
 
 //funcion para recuperar los VIDEOS
-function recuperar_videos(){
+function recuperar_videos(id){
   var cadena = '';
-  cadena+='<div class="col-md-4">';
-  cadena+='<div class="card">';
-  cadena+='<iframe src="https://www.youtube.com/embed/1JcRFI4CY3E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-  cadena+='<div class="card-body">';
-  cadena+='<h5 class="card-title">Card title</h5>';
-  cadena+='<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>';
-  cadena+='<a href="#" class="btn btn-primary"><span class="fa fa-pencil"></span></a>';
-  cadena+='  <a href="#" class="btn btn-danger"><span class="fa fa-close"></span></a>';
-  cadena+='</div>';
-  cadena+='</div>';
-  cadena+='</div>';
 
-  $('#contenedor-video').html(cadena);
+  $.ajax({
+    url:'/admin/video/view/' + id,
+    method:'GET'
+  }).done((data)=>{
+
+    $(data).each((key,value)=>{
+      cadena+='<div class="col-md-4">';
+      cadena+='<div class="card">';
+      cadena+='<iframe src="https://www.youtube.com/embed/1JcRFI4CY3E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      cadena+='<div class="card-body">';
+      cadena+='<h5 class="card-title">'+value.name+'</h5>';
+      cadena+='<p class="card-text">'+value.description+'</p>';
+      cadena+='<a href="#" name="abrir-modal-editar" class="btn btn-primary"><span class="fa fa-pencil"></span></a>';
+      cadena+='   <a href="#" class="btn btn-danger"><span class="fa fa-close"></span></a>';
+      cadena+='</div>';
+      cadena+='</div>';
+      cadena+='</div>';
+    });
+
+    $('#contenedor-video').html(cadena);
+    editar_video();
+  });
+
 }
-
-recuperar_videos();
-
-
-
 
 
 //funcion para la ventana modal de crear VIDEOS
-$('#form-video-nuevo').validate({
-  submitHandler:()=>{
-  var storeVideo = new FormData($('#form-video-nuevo')[0]);
+function nuevo_video(id){
+  $('#form-video-nuevo').validate({
+    submitHandler:()=>{
+    var storeVideo = new FormData($('#form-video-nuevo')[0]);
+      $.ajax({
+        url:'/admin/video/create/' + id,
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        method:'POST',
+        data:storeVideo,
+        contentType:false,
+        processData:false
+      }).done((data)=>{
+        $('#modal_crear_video').modal('hide');
+        //$('#form-video-nuevo')[0].reset();
+        recuperar_videos($('#multimedia_id').val());
+        Command: toastr["success"]('El video ha sido creado exitosamente','EXITO!');
+      });
+    }
+  });
+}
 
-    $.ajax({
-      url:'/admin/video/create/1',
-      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-      method:'POST',
-      data:storeVideo,
-      contentType:false,
-      processData:false
-    }).done((data)=>{
-      $('#modal_crear_video').modal('hide');
-      Command: toastr["success"]('El video ha sido creado exitosamente','EXITO!');
-    });
-  }
-});
+
+
 
 
 //funcion para la ventana modal de editar VIDEO
-
+function editar_video(){
+  $('a[name="abrir-modal-editar"]').click(()=>{
+    $('#modal_editar_video').modal('show');
+  });
+}
 
 
 
