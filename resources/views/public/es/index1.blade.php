@@ -76,7 +76,10 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
     <div class="tourz-search">
        
         <div class="contenedor_video">
-            <video style="width: 1348px;" poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/mp4"></video>
+            <video style="width: 1348px;" poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
+             <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/mp4"></video>
+            <!-- <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/webm"><source src="somevideo.mp4" type="video/webm">-->
+             <source src="https://www.terandes.com/video/bannerterandes1.ogg" type="video/ogg">
         </div>
          <dir id="texto" style="">
              AVENTURE
