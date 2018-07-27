@@ -76,11 +76,11 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
     <div class="tourz-search">
        
         <div class="contenedor_video">
-            <video poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
+            <video style="width: 1348px;" poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/mp4"></video>
         </div>
          <dir id="texto" style="">
              AVENTURE
-             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;">Para los amantes del trekking en lugares aún auténticos y salvajes</div>
+             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;font-size: 20px;">Para los amantes del trekking en lugares aún auténticos y salvajes</div>
        </dir>
        
     </div>
