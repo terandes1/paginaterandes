@@ -61,13 +61,13 @@
     <div class="card-body">
       <div class="row justify-content-md-center">
         <div class="col-md-6 text-center">
-          <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
+          <div id="kv-avatar-errors-2" class="center-block" style="display:none"></div>
               <div class="kv-avatar">
                   <div class="file-loading">
                       <input id="avatar-1" name="flag" type="file" required>
                   </div>
               </div>
-              <div class="kv-avatar-hint"><small>Select file < 1500 KB</small></div>
+              <div class="kv-avatar-hint"><small>Select file < 200 KB</small></div>
         </div>
         <div class="col-md-6">
           <div class="row">
@@ -117,7 +117,7 @@
     $("#avatar-1").fileinput({
         theme: "explorer-fa",
         overwriteInitial: true,
-        maxFileSize: 500,
+        maxFileSize: 200,
         showClose: false,
         showCaption: false,
         showBrowse: false,

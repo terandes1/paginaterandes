@@ -51,7 +51,7 @@ class LanguageController extends Controller
           'status'=>$request->status
       ]);
 
-    return redirect('admin/languages')->with('status','El lenguaje fue registrado exitosamente');
+    return redirect('admin/languages')->with('status','El lenguaje "' . $request->name.'" fue registrado exitosamente');
     }
 
     /**
@@ -85,7 +85,41 @@ class LanguageController extends Controller
      */
     public function update(Request $request, Language $language)
     {
-        //
+
+            if ($language->abbr != $request->abbr) {
+                $request->validate([
+                'abbr'=>'required|unique:languages,abbr',
+                ]);
+            }
+
+            if ($request->flag != null) {
+
+
+              \File::delete(public_path($language->flag));
+
+                $file =  $request->file('flag');
+                $extension = $file->getClientOriginalExtension();
+                $fileName = time() . '.' . $extension;
+                $file->move(public_path('assets/content/'),$fileName);
+                $ruta = 'assets/content/'.$fileName;
+
+                $language->fill([
+                    'flag'=>$ruta
+                ]);
+
+            }
+
+            $language->fill([
+                'name'=>$request->name,
+                'abbr'=>$request->abbr,
+                'status'=>$request->status
+            ]);
+
+            $language->save();
+            return redirect('admin/languages')->with('status','El idioma se actualizo correctamente');
+
+
+
     }
 
     /**
@@ -96,6 +130,6 @@ class LanguageController extends Controller
      */
     public function destroy(Language $language)
     {
-        //
+        return redirect('admin/languages')->with('error','Por cuestiones de seguridad no se permite eliminar un idioma');
     }
 }

@@ -50,7 +50,12 @@
         <div class="col-md-6">
           <div class="form-group">
             {!!Form::label('language_id','Idioma')!!}
-            {!!Form::select('language_id', ['spanish' => 'Spanish', 'english' => 'English'], 'S',['class'=>'form-control'])!!}
+            <select name="language_id" id="language_id" class="form-control">
+              @foreach($languages as $language)
+              <option value="{{$language->id}}">{{$language->name}}</option>
+              @endforeach
+            </select>
+
           </div>
         </div>
 

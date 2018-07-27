@@ -29,7 +29,8 @@
             <th scope="col">Nombres</th>
             <th scope="col">Email</th>
             <th scope="col">Lenguaje</th>
-            <th>Estado</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Privilegio</th>
             <th scope="col">Fecha de Creación</th>
             <th scope="col">Fecha de Actualización</th>
             <th scope="col">Acciones</th>
@@ -40,7 +41,14 @@
             <tr>
               <td>{{ $user->name }}</td>
               <td>{{ $user->email }}</td>
-              <td>{{ $user->language}}</td>
+
+                @foreach($languages as $language)
+                  @if($language->id == $user->language_id)
+                  <td>{!!Html::image($language->flag,'flag',['width'=>'50px'])!!}</td>
+                  @endif
+                @endforeach
+
+
               <td>
                   @if($user->status == 'A')
                   <span class="badge badge-success">habilitado</span>
@@ -48,6 +56,7 @@
                   <span class="badge badge-danger">deshabilitado</span>
                   @endif
                 </td>
+                <td>{{$user->privilege}}</td>
               <td>{{ $user->created_at }}</td>
               <td>{{ $user->updated_at }}</td>
               <td class="text-right">

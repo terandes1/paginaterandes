@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Language;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\StoreUser;
@@ -17,7 +18,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::All();
-        return view('admin.users.index',['users'=>$users]);
+        $languages = Language::All();
+        return view('admin.users.index',['users'=>$users,'languages'=>$languages]);
     }
 
     /**
@@ -27,7 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $languages = Language::All();
+        return view('admin.users.create',['languages'=>$languages]);
     }
 
     /**
@@ -58,7 +61,8 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-      return view('admin.users.update',['user'=>$user]);
+      $languages = Language::All();
+      return view('admin.users.update',['user'=>$user,'languages'=>$languages]);
     }
 
     /**
@@ -89,7 +93,7 @@ class UserController extends Controller
           $user->fill([
             'name'=>$request->name,
             'email'=>$request->email,
-            'language_id'=>1,
+            'language_id'=>$request->language_id,
             'privilege'=>$request->privilege,
             'status'=>$request->status
           ]);
