@@ -5,6 +5,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <br>
+    </div>
+    <div class="col-md-12">
       @if ($errors->any())
           <div class="alert alert-danger">
               <ul>
@@ -26,21 +29,25 @@
   <div class="card">
     <div class="card-body">
       <div class="row justify-content-md-center">
-
-        <div class="col-md-4">
-          {!!Form::label('nombre','Nombre')!!}
-          {!!Form::text('nombre',null,['class'=>'form-control','required'])!!}
+        <div class="col-md-12">
+             {!!Form::label('name','Subir Imagen')!!}
+            <input type="file" class="form-control" name="img" required>
         </div>
-        <div class="col-md-3">
+
+        <div class="col-md-6">
+          {!!Form::label('name','Nombre')!!}
+          {!!Form::text('name',null,['class'=>'form-control','required'])!!}
+        </div>
+        <div class="col-md-6">
           {!!Form::label('idioma','Idioma')!!}
-          <select name="language" id="language" class="form-control">
-            <option value="1">Spanish</option>
+          <select name="language_id" id="language" class="form-control">
+            @foreach($languages as $language)
+            <option value="{{$language->id}}">{{$language->name}}</option>
+            @endforeach
+
           </select>
         </div>
-        <div class="col-md-4">
-             {!!Form::label('name','Subir Imagen')!!}
-            <input type="file" class="form-control" name="img" >
-        </div>
+
         <div class="col-md-12">
           {!!Form::label('description','Descripcion')!!}
           {!!Form::textarea('description',null,['class'=>'form-control','required'])!!}
@@ -50,6 +57,8 @@
             {!!Form::label('status','Estado')!!}
             {!!Form::select('status', ['A' => 'habilitado', 'D' => 'deshabilitado'], 'A',['class'=>'form-control'])!!}
           </div>
+
+
         <div class="col-md-12">
           <hr>
         </div>
