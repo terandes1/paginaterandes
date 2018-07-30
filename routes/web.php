@@ -44,6 +44,7 @@ Route::prefix('admin')->group(function () {
 //vistas publicas
 Route::view('','public.es.index');
 Route::view('/index1','public.es.index1');
+Route::view('/index2','public.es.index2');
 Route::view('contacto','public.es.contact');
 Route::view('about','public.es.about');
 Route::view('tour','public.es.tour');

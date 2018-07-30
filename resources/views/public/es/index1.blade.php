@@ -76,8 +76,8 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
     <div class="tourz-search">
        
         <div class="contenedor_video">
-            <video style="width: 1348px;" poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
-             <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/mp4"></video>
+            <video style="width: 1348px; margin-top: -22px;" poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
+             <source src="https://www.terandes.com/video/bannerterandes4.mp4" type="video/mp4"></video>
             <!-- <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/webm"><source src="somevideo.mp4" type="video/webm">-->
              <source src="https://www.terandes.com/video/bannerterandes1.ogg" type="video/ogg">
         </div>
@@ -535,6 +535,75 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
     </div>
 </section>
 <section>
+    <div class="offer">
+
+        <div class="container" style="">
+ 
+            <div class="row">
+
+                <div class="popu-places-home" style="margin: 10px;margin-left: 51px;">
+                    <span class="ol-4" style="text-align: center;font-family: 'Oswald', sans-serif;">A medida</span> 
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>En grupo</h4>
+                        <ul>
+                            <li>
+                                <img src="/assets/content/icons/grupo1icono.png" alt="" />
+                                <a href="#!">
+                                    <h5>50% de descuento</h5>
+                                    <p>Un viaje que satisfaga a todos</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>En Familia</h4>
+                        <ul>
+                            <li>
+                                <img src="/assets/content/icons/familia1icono.png" alt="" /> 
+                                <a href="#!">
+                                    <h5>50% de descuento</h5>
+                                    <p>Aproveche un viaje adecuado tanto para adultos como para jóvenes.</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>Pareja</h4>
+                        <ul>
+                            <li>
+                                 <img src="/assets/content/icons/couple1icono.png" alt="" />
+                                <a href="#!">
+                                    <h5>50% de descuento</h5>
+                                    <p>Comparte momentos inolvidables con tu pareja.</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>Amigos</h4>
+                        <ul>
+                            <li>
+                                <img src="/assets/content/icons/amigos1icono.png" alt="" /> 
+                                <a href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                    <h5>50% de descuento</h5>
+                                    <p>Comparte momentos inolvidables entre amigos.</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                  
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
     <div class="rows pla pad-bot-redu tb-space">
         <div class="pla1 p-home container">
             <!-- TITLE & DESCRIPTION -->
@@ -544,7 +613,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                 <div class="title-line">
                     
                 </div>
-                <p> Comparte experiencias de viaje con nosotros </p>
+                <p> Comparte experiencias de viaje con nosotros. </p>
 
             </div>
 
@@ -568,6 +637,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -579,6 +661,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -590,6 +685,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -601,6 +709,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="#">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
                         </ul>
@@ -617,6 +738,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -628,6 +762,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -639,6 +786,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -650,6 +810,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
                         </ul>
@@ -664,6 +837,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -675,6 +861,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -686,6 +885,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
 
@@ -697,6 +909,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
                             </div>
                           </li>
                         </ul>
@@ -723,13 +948,14 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
         <div class="pla1 p-home container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title spe-title-1">
-                <h2>Top <span style="color:#36691D;">Sight Seeing</span> in this month</h2>
+                <h2>Usted <span style="color:#36691D;">define su</span> estilo de viaje</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
                 </div>
-                <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience</p>
+                <p>Desde tours culinarios peruanos para la familia,grupos,parejas y amigos, nos especializamos en la elaboración de viajes privados únicos diseñados especialmente para usted. ¿Desea planear su aventura sudamericana? 
+                    Contáctanos y comienza a rodar.</p>
             </div>
             <div class="popu-places-home">
                 <!-- POPULAR PLACES 1 -->
