@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Categorie;
 use Illuminate\Http\Request;
-
+use Image;
+use Illuminate\Support\Facades\DB;
 class CategorieController extends Controller
 {
     /**
@@ -14,7 +15,9 @@ class CategorieController extends Controller
      */
     public function index()
     {
-        return view('admin.categories.index');
+        $Categorie = Categorie::all();
+
+        return view('admin.categories.index',['categorias' => $Categorie]);
     }
 
     /**
@@ -24,6 +27,7 @@ class CategorieController extends Controller
      */
     public function create()
     {
+
         return view('admin.categories.create');
     }
 
@@ -35,7 +39,33 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          
+           $img = $request->file('img');
+           $url = $img->getClientOriginalExtension(); 
+
+           $categoria = new Categorie;
+
+           $categoria->language_id =$request->language;
+           $categoria->name = $request->nombre;
+           $categoria->img = $url;
+           $categoria->img_hd ='';
+           $categoria->description =$request->description;
+           $categoria->status = $request->status;
+           $categoria->save();
+
+           $id=DB::table('categories')->max('id');
+           $nombreImgen = $id.'.'.$img->getClientOriginalExtension(); 
+
+           $destinationPath = '../public/assets/content/categoria';
+           if (!file_exists($destinationPath)) {
+              mkdir($destinationPath, 666, true);
+             }
+           $thumb_img = Image::make($img->getRealPath())->resize(600,300);
+           $thumb_img->save($destinationPath.'/'.$nombreImgen,20);
+
+
+           return redirect()->route('categories.index')->with('info' , 'Se registro correctamente');
+  
     }
 
     /**
