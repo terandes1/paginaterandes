@@ -29,6 +29,7 @@ class MultimediaController extends Controller
      */
     public function create()
     {
+
         return view('admin.multimedia.create');
     }
 
@@ -77,7 +78,7 @@ class MultimediaController extends Controller
      */
     public function update(Request $request, Multimedia $multimedia)
     {
-        
+
         $multimedia->fill($request->all());
         $multimedia->save();
     }
@@ -90,7 +91,8 @@ class MultimediaController extends Controller
      */
     public function destroy(Multimedia $multimedia)
     {
-        //
+        return redirect('admin/multimedia')->with('error','no se permite eliminar multimedia por el momento');
+      
     }
 
     public function create_img(Request $request, $id){

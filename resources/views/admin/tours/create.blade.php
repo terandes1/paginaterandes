@@ -1,8 +1,6 @@
 @extends('admin.layouts.master')
 
 
-
-
 @section('style')
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
 
@@ -40,6 +38,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <br>
+    </div>
+    <div class="col-md-12">
       @if ($errors->any())
           <div class="alert alert-danger">
               <ul>
@@ -71,12 +72,34 @@
             <div class="kv-avatar-hint"><small>Select file < 1500 KB</small></div>
       </div>
 
-        <div class="col-md-12">
+        <div class="col-md-8">
           <div class="form-group">
             {!!Form::label('name','Nombre de Tour')!!}
             {!!Form::text('name',null,['class'=>'form-control','required'])!!}
           </div>
         </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            {!!Form::label('multimedia_id','Nombre de Tour')!!}
+            <select name="multimedia_id" id="" class="form-control">
+              @foreach($multimedia as $multi)
+              <option value="">{{$multi->name}}</option>
+              @endforeach
+            </select>
+
+          </div>
+        </div>
+
+
+
+        <div class="col-md-12">
+          <div class="form-group">
+            {!!Form::label('multimedia_id','Multimedia')!!}
+            {!!Form::text('multimedia_id',null,['class'=>'form-control','required'])!!}
+          </div>
+        </div>
+
 
         <div class="col-md-12">
   				<div class="form-group">
@@ -87,42 +110,24 @@
 
         <div class="col-md-12">
   				<div class="form-group">
-  					{!!Form::label('name','Descripción Completa')!!}
-  					{!!Form::textarea('description_complete', null,['id'=>'summernote','class'=>'form-control','required'])!!}
+  					{!!Form::label('description_complete','Descripción Completa')!!}
+  					{!!Form::textarea('description_complete', null,['class'=>'form-control summernote','required'])!!}
   				</div>
   			</div>
+
+        <div class="col-md-12">
+  				<div class="form-group">
+  					{!!Form::label('organization','Organización')!!}
+  					{!!Form::textarea('organization', null,['class'=>'form-control summernote','required'])!!}
+  				</div>
+  			</div>
+
 
         <div class="col-md-12">
           {!!Form::label('slug','URL AMIGABLE')!!}
           {!!Form::text('slug',null,['class'=>'form-control'])!!}
         </div>
 
-        <div class="col-md-4">
-          <div class="form-group">
-            {!!Form::label('name','Lenguaje')!!}
-            <select name="" id="" class="form-control" required>
-              <option value="">asdfas</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="form-group">
-            {!!Form::label('name','Categoria')!!}
-            <select name="" id="" class="form-control">
-              <option value="">asdas</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="form-group">
-            <div class="form-group">
-              {!!Form::label('status','Estado')!!}
-              {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'A',['class'=>'form-control'])!!}
-            </div>
-          </div>
-        </div>
 
         <div class="col-md-12">
           <hr>
@@ -147,7 +152,7 @@
 {!!Html::script('assets/admin/plugins/fileinput/themes/explorer-fa/theme.js')!!}
 <script type="text/javascript">
 
-$('#summernote').summernote({
+$('.summernote').summernote({
   height: 350,                 // set editor height
       minHeight: null,             // set minimum height of editor
       maxHeight: null,             // set maximum height of editor
@@ -155,9 +160,6 @@ $('#summernote').summernote({
 });
 
   $(()=>{
-
-
-
 
     $("#avatar-1").fileinput({
         theme: "explorer-fa",

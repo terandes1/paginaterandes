@@ -113,6 +113,9 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        if($user->id == 1){
+          return redirect('admin/users')->with('error','No se puede eliminar al super admin');
+        }
         $user->delete();
         return redirect('admin/users')->with('status','El usuario ha sido eliminado exitosamente');
     }

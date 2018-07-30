@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Tour;
+use App\Multimedia;
 use Illuminate\Http\Request;
+
 
 class TourController extends Controller
 {
@@ -24,7 +26,8 @@ class TourController extends Controller
      */
     public function create()
     {
-        return view('admin.tours.create');
+        $multimedia = Multimedia::All();
+        return view('admin.tours.create',['multimedia'=>$multimedia]);
     }
 
     /**
