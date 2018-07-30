@@ -186,25 +186,25 @@ display: none;
         </button>
       </div>
       <div class="modal-body">
-        <form action="" id="form-video-nuevo">
+        <form action="" id="form-video-editar">
         <div class="row">
           <div class="col-md-12">
-            <input type="text" name="multimedia_id" id="multimedia_id">
             <div class="form-group">
+              <input type="text" name="multimedia_id" id="multimedia_id_edit" hidden>
               <label for="name">Nombre</label>
-              <input type="text" name="name" class="form-control" required>
+              <input type="text" name="name" id="name_edit" class="form-control" required>
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label for="description">Descripción</label>
-              <input name="description" type="text" class="form-control" required>
+              <input name="description" id="description_edit" type="text" class="form-control" required>
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label for="path">URL</label>
-              <input type="text" name="path" class="form-control" required>
+              <input type="text" name="path" id="path_edit" class="form-control" required>
             </div>
           </div>
 
@@ -213,7 +213,7 @@ display: none;
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" form="form-video-nuevo">Save changes</button>
+        <button type="submit" class="btn btn-primary" form="form-video-editar">Save changes</button>
       </div>
     </div>
   </div>
@@ -232,6 +232,7 @@ display: none;
 <script>
   $(()=>{
 
+  var MULTIMEDIA_ID;
 
     toastr.options = {
       "closeButton": false,
@@ -339,14 +340,15 @@ function recuperar_videos(id){
       cadena+='<div class="card-body">';
       cadena+='<h5 class="card-title">'+value.name+'</h5>';
       cadena+='<p class="card-text">'+value.description+'</p>';
-      cadena+='<a href="#" name="abrir-modal-editar" class="btn btn-primary"><span class="fa fa-pencil"></span></a>';
-      cadena+='   <a href="#" class="btn btn-danger"><span class="fa fa-close"></span></a>';
+      cadena+='<a href="#" name="abrir-modal-editar" id="'+value.id+'" class="btn btn-primary">Editar</a>';
+      cadena+='   <a href="#" name="eliminar-video" id="eliminar_video'+value.id+'" class="btn btn-danger"><span class="fa fa-close"></span></a>';
       cadena+='</div>';
       cadena+='</div>';
       cadena+='</div>';
     });
     $('#contenedor-video').html(cadena);
     editar_video();
+    eliminar_video();
   });
 
 }
@@ -379,14 +381,66 @@ function nuevo_video(id){
 
 
 
-
-
 //funcion para la ventana modal de editar VIDEO
 function editar_video(){
-  $('a[name="abrir-modal-editar"]').click(()=>{
+  $('a[name="abrir-modal-editar"]').click((e)=>{
+    $('#multimedia_id_edit').val(e.target.id);
+    $.ajax({
+      url:'/admin/video/see/'+e.target.id,
+      method:'GET'
+    }).done((data)=>{
+      $('#name_edit').val(data.name);
+      $('#description_edit').val(data.description);
+      $('#path_edit').val(data.path);
+    }).fail((data)=>{
+
+    });
     $('#modal_editar_video').modal('show');
   });
 }
+
+
+function eliminar_video(){
+  $('a[name="eliminar-video"]').click((e)=>{
+
+      var confirmar = confirm('Esta seguro que desea eliminar este video?');
+      if(confirmar){
+          var idvideo = e.target.id;
+          idvideo = idvideo.substring(14,20);
+          $.ajax({
+            url:'/admin/video/delete/'+idvideo,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            method:'POST'
+          }).done((data)=>{
+            recuperar_videos($('#multimedia_id').val());
+            Command: toastr["success"]('El video ha sido eliminado exitosamente','EXITO!');
+          });
+      }
+
+  });
+}
+
+
+
+$('#form-video-editar').validate({
+  submitHandler:()=>{
+    var updateVideo = new FormData($('#form-video-editar')[0]);
+    updateVideo.append('_method','PUT');
+    $.ajax({
+      url:'/admin/video/update/'+$('#multimedia_id_edit').val(),
+      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+      method:'POST',
+      data:updateVideo,
+      contentType:false,
+      processData:false
+    }).done((data)=>{
+        recuperar_videos($('#multimedia_id').val());
+        Command: toastr["success"]('El video ha sido modificado exitosamente','EXITO!');
+        $('#modal_editar_video').modal('hide');
+    });
+
+  }
+});
 
 
 

@@ -77,6 +77,7 @@ class MultimediaController extends Controller
      */
     public function update(Request $request, Multimedia $multimedia)
     {
+        
         $multimedia->fill($request->all());
         $multimedia->save();
     }
@@ -139,11 +140,26 @@ class MultimediaController extends Controller
 
       Video::create($request->all());
     }
-    public function update_video(Request $request, $id){
 
+
+    public function see_video($id){
+      $video = Video::find($id);
+      return response($video);
+    }
+
+    public function update_video(Request $request, $id){
+        $video = Video::find($id);
+        $video->fill([
+          'name'=>$request->name,
+          'description'=>$request->description,
+          'path'=>$request->path
+        ]);
+
+        $video->save();
     }
     public function delete_video($id){
-
+      $video = Video::find($id);
+      $video->delete();
     }
 
 
