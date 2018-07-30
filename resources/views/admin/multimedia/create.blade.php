@@ -141,7 +141,7 @@ display: none;
         <form action="" id="form-video-nuevo">
         <div class="row">
           <div class="col-md-12">
-            <input type="text" name="multimedia_id" id="multimedia_id">
+            <input type="text" name="multimedia_id" id="multimedia_id" hidden>
             <div class="form-group">
               <label for="name">Nombre</label>
               <input type="text" name="name" class="form-control" required>
@@ -155,7 +155,7 @@ display: none;
           </div>
           <div class="col-md-12">
             <div class="form-group">
-              <label for="path">URL</label>
+              <label for="path">Pegue el iframe de youtube</label>
               <input type="text" name="path" class="form-control" required>
             </div>
           </div>
@@ -180,7 +180,7 @@ display: none;
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Creando Nuevo Video</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Editando Video</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -333,9 +333,9 @@ function recuperar_videos(id){
   }).done((data)=>{
 
     $(data).each((key,value)=>{
-      cadena+='<div class="col-md-4">';
+      cadena+='<div class="col-md-12">';
       cadena+='<div class="card">';
-      cadena+='<iframe src="https://www.youtube.com/embed/1JcRFI4CY3E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      cadena+= value.path;
       cadena+='<div class="card-body">';
       cadena+='<h5 class="card-title">'+value.name+'</h5>';
       cadena+='<p class="card-text">'+value.description+'</p>';
@@ -345,7 +345,6 @@ function recuperar_videos(id){
       cadena+='</div>';
       cadena+='</div>';
     });
-
     $('#contenedor-video').html(cadena);
     editar_video();
   });
@@ -367,6 +366,9 @@ function nuevo_video(id){
         processData:false
       }).done((data)=>{
         $('#modal_crear_video').modal('hide');
+        $('input[name="name"]').val('');
+        $('input[name="description"]').val('');
+        $('input[name="path"]').val('');
         //$('#form-video-nuevo')[0].reset();
         recuperar_videos($('#multimedia_id').val());
         Command: toastr["success"]('El video ha sido creado exitosamente','EXITO!');

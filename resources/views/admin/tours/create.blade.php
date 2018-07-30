@@ -60,7 +60,7 @@
   {!! Form::open(['url' => 'admin/users']) !!}
   <div class="card">
     <div class="card-body">
-      <div class="row">
+      <div class="row justify-content-md-center">
         <div class="col-sm-12 text-center">
         <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
             <div class="kv-avatar">
@@ -71,25 +71,67 @@
             <div class="kv-avatar-hint"><small>Select file < 1500 KB</small></div>
       </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="form-group">
-            {!!Form::label('name','Nombres')!!}
+            {!!Form::label('name','Nombre de Tour')!!}
             {!!Form::text('name',null,['class'=>'form-control','required'])!!}
           </div>
         </div>
 
-        <div class="col-sm-12">
-				<div class="form-group">
-					{!!Form::label('name','Descripción Completa')!!}
-					{!!Form::textarea('description_complete', null,['id'=>'summernote','class'=>'form-control','required'])!!}
-				</div>
-			</div>
-
-
+        <div class="col-md-12">
+  				<div class="form-group">
+  					{!!Form::label('description_short','Descripción Corta')!!}
+  					{!!Form::textarea('description_short', null,['class'=>'form-control','rows'=>'2','required'])!!}
+  				</div>
+  			</div>
 
         <div class="col-md-12">
-          <a href="{{('/admin/users')}}" class="btn btn-primary">Cancelar</a>
-          <button class="btn btn-primary">Guardar</button>
+  				<div class="form-group">
+  					{!!Form::label('name','Descripción Completa')!!}
+  					{!!Form::textarea('description_complete', null,['id'=>'summernote','class'=>'form-control','required'])!!}
+  				</div>
+  			</div>
+
+        <div class="col-md-12">
+          {!!Form::label('slug','URL AMIGABLE')!!}
+          {!!Form::text('slug',null,['class'=>'form-control'])!!}
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            {!!Form::label('name','Lenguaje')!!}
+            <select name="" id="" class="form-control" required>
+              <option value="">asdfas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            {!!Form::label('name','Categoria')!!}
+            <select name="" id="" class="form-control">
+              <option value="">asdas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="form-group">
+              {!!Form::label('status','Estado')!!}
+              {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'A',['class'=>'form-control'])!!}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <hr>
+        </div>
+        <div class="col-md-2">
+          <a href="{{('/admin/languages')}}" class="btn btn-danger form-control">Cancelar</a>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-success form-control">Guardar</button>
         </div>
 
       </div>

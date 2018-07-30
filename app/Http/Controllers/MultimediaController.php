@@ -54,7 +54,7 @@ class MultimediaController extends Controller
      */
     public function show(Multimedia $multimedia)
     {
-        //
+        return view('admin.multimedia.update',['multimedia'=>$multimedia]);
     }
 
     /**
@@ -77,7 +77,8 @@ class MultimediaController extends Controller
      */
     public function update(Request $request, Multimedia $multimedia)
     {
-        //
+        $multimedia->fill($request->all());
+        $multimedia->save();
     }
 
     /**
@@ -128,7 +129,7 @@ class MultimediaController extends Controller
 
 
     public function view_video($id){
-    
+
       $videos = Video::where('multimedia_id',$id)->get();
       return response($videos);
     }
