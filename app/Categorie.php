@@ -11,13 +11,14 @@ class Categorie extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    
+
     protected $fillable = [
       'language_id',
       'name',
       'img',
       'img_hd',
       'description',
-      'status'
+      'status',
+      'slug'
     ];
 }

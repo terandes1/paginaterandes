@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\language;
 use App\Categorie;
 use Illuminate\Http\Request;
 use Image;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\StoreCategorie;
+use Illuminate\Support\Str as Str;
+
 class CategorieController extends Controller
 {
     /**
@@ -27,8 +31,8 @@ class CategorieController extends Controller
      */
     public function create()
     {
-
-        return view('admin.categories.create');
+        $languages = language::All();
+        return view('admin.categories.create',['languages'=>$languages]);
     }
 
     /**
@@ -37,24 +41,23 @@ class CategorieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCategorie $request)
     {
-          
+            $slug = Str::slug($request['name']);
            $img = $request->file('img');
-           $url = $img->getClientOriginalExtension(); 
-
+           $url = $img->getClientOriginalExtension();
            $categoria = new Categorie;
-
-           $categoria->language_id =$request->language;
-           $categoria->name = $request->nombre;
+           $categoria->language_id =$request->language_id;
+           $categoria->name = $request->name;
            $categoria->img = $url;
            $categoria->img_hd ='';
            $categoria->description =$request->description;
            $categoria->status = $request->status;
+           $categoria->slug = $slug;
            $categoria->save();
 
            $id=DB::table('categories')->max('id');
-           $nombreImgen = $id.'.'.$img->getClientOriginalExtension(); 
+           $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
 
            $destinationPath = '../public/assets/content/categoria';
            if (!file_exists($destinationPath)) {
@@ -65,7 +68,7 @@ class CategorieController extends Controller
 
 
            return redirect()->route('categories.index')->with('info' , 'Se registro correctamente');
-  
+
     }
 
     /**

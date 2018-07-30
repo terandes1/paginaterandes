@@ -18,7 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('language_id');
+            $table->unsignedInteger('language_id');
+            $table->foreign('language_id')->references('id')->on('languages');
             $table->string('privilege',20);
             $table->string('status',1);
             $table->softDeletes();

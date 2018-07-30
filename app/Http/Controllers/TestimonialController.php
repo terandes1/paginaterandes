@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Tour;
-use App\Multimedia;
+use App\Testimonial;
 use Illuminate\Http\Request;
 
-
-class TourController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class TourController extends Controller
      */
     public function index()
     {
-        return view('admin.tours.index');
+        //
     }
 
     /**
@@ -26,8 +24,7 @@ class TourController extends Controller
      */
     public function create()
     {
-        $multimedia = Multimedia::All();
-        return view('admin.tours.create',['multimedia'=>$multimedia]);
+        //
     }
 
     /**
@@ -44,10 +41,10 @@ class TourController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Tour  $tour
+     * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function show(Tour $tour)
+    public function show(Testimonial $testimonial)
     {
         //
     }
@@ -55,10 +52,10 @@ class TourController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Tour  $tour
+     * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tour $tour)
+    public function edit(Testimonial $testimonial)
     {
         //
     }
@@ -67,10 +64,10 @@ class TourController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Tour  $tour
+     * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tour $tour)
+    public function update(Request $request, Testimonial $testimonial)
     {
         //
     }
@@ -78,10 +75,10 @@ class TourController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Tour  $tour
+     * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tour $tour)
+    public function destroy(Testimonial $testimonial)
     {
         //
     }

@@ -44,6 +44,8 @@ display: none;
             {!!Form::text('name',null,['class'=>'form-control','id'=>'name','required'])!!}
           </div>
         </div>
+
+
         <div class="col-md-12">
           <div class="form-group">
             {!!Form::label('description','Descripción')!!}

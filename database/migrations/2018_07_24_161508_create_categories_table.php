@@ -22,6 +22,7 @@ class CreateCategoriesTable extends Migration
             $table->string('img_hd',255);
             $table->string('description',500);
             $table->string('status',1);
+            $table->string('slug',100)->unique();
             $table->softDeletes();
             $table->timestamps();
         });
