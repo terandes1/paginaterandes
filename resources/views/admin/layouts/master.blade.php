@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-  <link rel="stylesheet" href="/assets/admin/css/bootstrap-glyphicons.css">
-  <link href="/assets/admin/maps/glyphicons-fontawesome.css" rel="stylesheet" type="text/css" />
+
   <style>
     label.error{
       color: red;
