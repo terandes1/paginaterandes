@@ -25,7 +25,7 @@ class StoreCategorie extends FormRequest
     {
         return [
             'language_id'=>'required',
-            'name'=>'required',
+            'name'=>'required|unique:categories,name',
             'img'=>'required',
             'description'=>'required',
             'status'=>'required',

@@ -69,7 +69,7 @@
                   <a href="{{url('/admin/languages/'. $language->id )}}"><i class="fa fa-edit" style="color:blue;"></i></a>
                 </div>
                 <div class="col-xs-6">
-                  {!!Form::open(['url'=>'/admin/languages/'.$language->id,'method'=>'DELETE','id'=>'eliminar'.$language->id])!!}
+                  {!! Form::open(['route' => ['categories.destroy',"$category->id"] , 'method' => 'DELETE', 'class' => 'form-horizontal']) !!}
                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i name="eliminar{{$language->id}}" class="fa fa-times" style="color:red;"></i></a>
                   {!!Form::close()!!}
                 </div>

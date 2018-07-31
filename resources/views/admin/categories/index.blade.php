@@ -44,8 +44,16 @@
                     <td>{{ $item->status }}</td>
                     <td>{{ $item->created_at }}</td>
                     <td>
-                    <button type="button" class="btn btn-success btn-sm">Editar</button>
-                    <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+
+                      <a  class="btn btn-success btn-sm" href="{{route('categories.show',$item->id)}} "> 
+                         Editar
+                      </a> 
+                      {!! Form::open(['method' => 'DELETE','route' => ['categories.destroy', $item->id]]) !!}
+            			{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
+          			  {!! Form::close() !!}
+          			  <span class="fas fa-home"></span>
+						<span class="fas fa-plus-circle"></span>
+						<span class="fas fa-hand-point-left"></span>
                     </td>
               </tr>
             @endforeach

@@ -43,7 +43,8 @@ class CategorieController extends Controller
      */
     public function store(StoreCategorie $request)
     {
-            $slug = Str::slug($request['name']);
+           $slug = Str::slug($request['name']);
+
            $img = $request->file('img');
            $url = $img->getClientOriginalExtension();
            $categoria = new Categorie;
@@ -53,7 +54,7 @@ class CategorieController extends Controller
            $categoria->img_hd ='';
            $categoria->description =$request->description;
            $categoria->status = $request->status;
-           $categoria->slug = $slug;
+           $categoria->slug =str_replace(' ', '-', $slug);
            $categoria->save();
 
            $id=DB::table('categories')->max('id');
@@ -77,9 +78,11 @@ class CategorieController extends Controller
      * @param  \App\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function show(Categorie $categorie)
+    public function show($id)
     {
-        //
+        $category = Categorie::find($id);
+        $languages = language::All();
+        return view('admin.categories.update',['category'=>$category,'languages'=>$languages]);
     }
 
     /**
@@ -100,9 +103,65 @@ class CategorieController extends Controller
      * @param  \App\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categorie $categorie)
+    public function update(Request $request, $id)
     {
-        //
+        $img = $request->file('img');
+        $slug = Str::slug($request['name']);
+
+        if(empty($img))
+        {
+          $category = Categorie::find($id);
+          $category->update([
+              'name'        => $request->name,
+              'description' => $request->description,
+              'status'      => $request->status,
+              'language_id' => $request->language_id,
+              'slug'        => str_replace(' ', '-', $slug)
+          ]);
+
+          return redirect()->route('categories.index');
+
+        }else{
+
+          $img = $request->file('img');
+          $url = $img->getClientOriginalExtension();
+
+          $category = Categorie::find($id);
+          $category->update([
+              'name'        => $request->name,
+              'description' => $request->description,
+              'status'      => $request->status,
+              'language_id' => $request->language_id,
+              'img' 		=> $url,
+              'slug'        => str_replace(' ', '-', $slug)
+          ]);
+
+          $itemCategoria = Categorie::where('id', '=',$id)->get()[0];
+          $destinationPath = '../public/assets/content/categoria/'.$id.'.'.$itemCategoria->img;
+
+          if(file_exists(public_path($destinationPath)))
+            {
+			 
+			  unlink(public_path($destinationPath));
+
+			}else{
+
+			}
+
+          $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
+		  $destinationPathN = '../public/assets/content/categoria';
+
+           if (!file_exists($destinationPathN)) 
+           {
+              mkdir($destinationPathN, 666, true);
+           }
+
+           $thumb_img = Image::make($img->getRealPath())->resize(600,300);
+           $thumb_img->save($destinationPathN.'/'.$nombreImgen,20);
+
+           return redirect()->route('categories.index');
+
+        }
     }
 
     /**
@@ -111,8 +170,25 @@ class CategorieController extends Controller
      * @param  \App\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categorie $categorie)
+    public function destroy($id)
     {
-        //
+        $itemCategoria = Categorie::where('id', '=',$id)->get()[0];
+        Categorie::destroy($id);
+
+        $destinationPath = '../public/assets/content/categoria/'.$id.'.'.$itemCategoria->img;
+
+        if(file_exists(public_path($destinationPath)))
+        	{
+
+		  	unlink(public_path($destinationPath));
+
+			}else{
+
+			}
+
+        return redirect()->route('categories.index')
+                        ->with('success','Member deleted successfully');
+        
+
     }
 }

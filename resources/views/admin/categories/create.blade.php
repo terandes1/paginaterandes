@@ -7,17 +7,6 @@
     <div class="col-md-12">
       <br>
     </div>
-    <div class="col-md-12">
-      @if ($errors->any())
-          <div class="alert alert-danger">
-              <ul>
-                  @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                  @endforeach
-              </ul>
-          </div>
-      @endif
-    </div>
   </div>
   <div class="row">
     <div class="col-md-12">
@@ -37,6 +26,7 @@
         <div class="col-md-6">
           {!!Form::label('name','Nombre')!!}
           {!!Form::text('name',null,['class'=>'form-control','required'])!!}
+          <p style="color:red;">{{ $errors->first('name') }}</p>
         </div>
         <div class="col-md-6">
           {!!Form::label('idioma','Idioma')!!}
