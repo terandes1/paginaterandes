@@ -38,13 +38,13 @@
         <thead>
           <tr>
 
-            <th scope="col">Nombres</th>
-            <th scope="col">Abreviación</th>
-            <th scope="col">Flag</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Fecha de Creación</th>
-            <th scope="col">Fecha de Actualización</th>
-            <th scope="col">Acciones</th>
+            <th>Nombres</th>
+            <th>Abreviación</th>
+            <th>Flag</th>
+            <th>Estado</th>
+            <th>Fecha de Creación</th>
+            <th>Fecha de Actualización</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>

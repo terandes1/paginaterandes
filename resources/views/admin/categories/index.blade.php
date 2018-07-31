@@ -41,7 +41,13 @@
                     <td>{{ $item->description }}</td>
                     <td><img style="width: 100px;" src="/assets/content/categoria/{{$item->id}}.{{$item->img}}"> </td>
                     <td>{{ $item->language_id }}</td>
-                    <td>{{ $item->status }}</td>
+                    <td>
+                        @if($item->status == 'A')
+                        <span class="badge badge-success">habilitado</span>
+                        @else
+                        <span class="badge badge-danger">deshabilitado</span>
+                        @endif
+                      </td>
                     <td>{{ $item->created_at }}</td>
                     <td>
 

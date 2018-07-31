@@ -34,14 +34,14 @@
         <thead>
           <tr>
 
-            <th scope="col">Nombres</th>
-            <th scope="col">Email</th>
-            <th scope="col">Lenguaje</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Privilegio</th>
-            <th scope="col">Fecha de Creación</th>
-            <th scope="col">Fecha de Actualización</th>
-            <th scope="col">Acciones</th>
+            <th>Nombres</th>
+            <th>Email</th>
+            <th>Lenguaje</th>
+            <th>Estado</th>
+            <th>Privilegio</th>
+            <th>Fecha de Creación</th>
+            <th>Fecha de Actualización</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>

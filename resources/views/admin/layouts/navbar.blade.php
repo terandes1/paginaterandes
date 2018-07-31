@@ -19,7 +19,7 @@
           <a class="nav-link" href="{{('/admin/tours')}}">Tour</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Itinerario</a>
+          <a class="nav-link" href="{{('/admin/itineraries')}}">Itinerario</a>
         </li>
 
 

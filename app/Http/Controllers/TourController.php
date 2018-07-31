@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Tour;
 use App\Multimedia;
+use App\Language;
+use App\Categorie;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\StoreTour;
 
 class TourController extends Controller
 {
@@ -16,7 +18,8 @@ class TourController extends Controller
      */
     public function index()
     {
-        return view('admin.tours.index');
+        $tours = Tour::All();
+        return view('admin.tours.index',['tours'=>$tours]);
     }
 
     /**
@@ -26,8 +29,9 @@ class TourController extends Controller
      */
     public function create()
     {
+        $languages = Language::All();
         $multimedia = Multimedia::All();
-        return view('admin.tours.create',['multimedia'=>$multimedia]);
+        return view('admin.tours.create',['multimedia'=>$multimedia,'languages'=>$languages]);
     }
 
     /**
@@ -36,9 +40,25 @@ class TourController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTour $request)
     {
-        //
+
+      $file =  $request->file('img');
+      $extension = $file->getClientOriginalExtension();
+      $fileName = time() . '.' . $extension;
+      $size = $file->getClientSize();
+      $file->move(public_path('assets/content/'),$fileName);
+      $ruta = 'assets/content/'.$fileName;
+
+
+        Tour::create([
+          'name'=>$request->name,
+          'img'=>$ruta,
+          'description_short'=>$request->description_short,
+          'description_complete'=>$request->description_complete,
+          'multimedia_id'=>$request->multimedia_id,
+          'status'=>$request->status
+        ]);
     }
 
     /**

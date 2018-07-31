@@ -13,7 +13,7 @@ class StoreTour extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class StoreTour extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>'required',
+            'img'=>'required',
+            'description_short',
+            'description_complete',
+            'multimedia_id'
         ];
     }
 }
