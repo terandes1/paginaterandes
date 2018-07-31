@@ -125,15 +125,15 @@
     </div> -->
 
     <!-- LOGO AND MENU SECTION -->
-    <div class="top-logo" data-spy="affix" data-offset-top="250">
+    <div class="top-logo" style="background: #0e4817;height: 80px;" data-spy="affix" data-offset-top="250">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="wed-logo">
-                        <a href="index.html"><img src="/assets/public/images/logo.png" alt="" />
+                    <div class="wed-logo" style="margin-top: 10px;">
+                        <a href="index.html"><img style="width: 206px;" src="/assets/public/images/logo.png" alt="" />
                         </a>
                     </div>
-                    <div class="main-menu">
+                    <div class="main-menu" style="margin-top: 10px;">
                         <ul>
                             <li><a href="{{('/index1')}}">Home</a>
                             </li>

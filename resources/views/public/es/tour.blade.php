@@ -45,7 +45,7 @@
         <!--====== TOUR DESCRIPTION ==========-->
         <div class="tour_head1">
           <h3>Description</h3>
-          <p>Un curso diferente, fuera de los caminos trillados, reuniones de las comunidades Un curso diferente, fuera de los caminos trillados, para conocer a las comunidades andinas. Comience por quedarse en el corazón del Cañón del Colca, dentro de la comunidad de Pumachiri. Luego continúa su viaje hacia el Lago Titicaca y su comunidad de Llachón antes de terminar su descubrimiento por la región de Cusco y especialmente la comunidad de Maras. Durante esta inmersión, descubre las actividades cotidianas y tradiciones ancestrales de los habitantes de estos tres pueblos. ¡Un descubrimiento en profundidad de la cultura peruana!</p>
+          <p style="text-align: justify;">Un curso diferente, fuera de los caminos trillados, reuniones de las comunidades Un curso diferente, fuera de los caminos trillados, para conocer a las comunidades andinas. Comience por quedarse en el corazón del Cañón del Colca, dentro de la comunidad de Pumachiri. Luego continúa su viaje hacia el Lago Titicaca y su comunidad de Llachón antes de terminar su descubrimiento por la región de Cusco y especialmente la comunidad de Maras. Durante esta inmersión, descubre las actividades cotidianas y tradiciones ancestrales de los habitantes de estos tres pueblos. ¡Un descubrimiento en profundidad de la cultura peruana!</p>
           </div>
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
@@ -116,83 +116,137 @@
           </table>
         </div></br>
         <!--====== DURATION ==========-->
-        <div class="tour_head1 l-info-pack-days days">
-          
-              <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">ITINERARIO</a></li>
-                <li><a data-toggle="tab" href="#menu1">ORGANIZACIÓN</a></li>
-              </ul>
-
-              <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                  <h3>Itinerario  detallado del día</h3>
-              <ul>
-                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-                  <h4><span>D1 - Llegada a Lima:</span></span> Desert Safari with Dinner</h4> <p>Llegada al aeropuerto de Lima, recepción y traslado al hotel. Noche libre. Alojamiento en hotel en Lima.</p>
-                </li>
-                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-                  <h4><span>D2 - Lima - Arequipa (2400m):</span> </span> Desert Safari with Dinner</h4><p>Por la mañana, vuelo a Arequipa. A su llegada, recepción y traslado al hotel. Resto del día libre para aclimatarse tranquilamente a la altitud. Alojamiento en hotel en Arequipa.</p>
-                </li>
-                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-                  <h4><span>D3 - Arequipa (2400m)</span> Desert Safari with Dinner</h4>
-                  <p>Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque</p>
-                </li>
-                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-                  <h4><span>D4 - Arequipa (2400M)</span> - Chivay (3651M) - Yanque (3440M)</h4>
-                  <p>Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque.</p>
-                </li>
-                <li class="l-info-pack-plac"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-                  <h4><span>D5 - Yanque (3440M) </span> Cabanaconde</h4>
-                  <p>Mañana con sus anfitriones que le hacen descubrir su forma de vida local. Por la tarde, salida hacia Cabanaconde para un corto paseo hasta el mirador de Achachiua, desde donde se tiene una magnífica vista del cañón y del río Colca. Retorno al final del día al pueblo e instalación en su hotel. Noche en el hotel en el Cañón del Colca.</p>
-                </li>
-              </ul>
-
-              
-
-                </div>
-                <div id="menu1" class="tab-pane fade">
-                  <div class="row">
-                      <div class="col-sm-12">
-                            <h5>GENERAL</h5>
-                            <p>Viaje acompañado de un guía privado peruano de habla francesa en cada etapa. En otras palabras, tendrá una guía diferente en cada región visitada, dadas sus especificidades. El nivel de francés de las guías difiere de una región a otra. Durante las transferencias, se beneficia de la asistencia de habla francesa.
-
-                            </p>
-                            <br>
-                        </div>
-                        <div class="col-sm-12">
-                            <h5>ALOJAMIENTO</h5>
-                            <p>En Perú, los estándares del hotel son diferentes de los que usted puede conocer. Aquí hay algunos detalles útiles sobre cada tipo de alojamiento: - Campamento: gracias a la perfecta organización de nuestro (s) cocinero (s) y arriero (s), ¡puede relajarse realmente después de un buen día de caminata! Tenga la certeza de que tenemos una carpa de cocina, una carpa para las comidas, un baño de campaña. Para dos personas, ofrecemos una carpa de 3 plazas para mayor comodidad. También le ofrecemos un colchón cómodo y un recipiente con agua caliente al comienzo y al final del día para su inodoro; y, por supuesto, preparamos comidas calientes y completas. - Hoteles de 2 * y 3 * (estándares locales): habitaciones cómodas, sencillas y limpias, baño privado con ducha de agua caliente; algunos hoteles ofrecen habitaciones equipadas con caja de seguridad, sistema de calefacción, mini bar ... En la medida de nuestras posibilidades, elegimos hoteles cuya situación geográfica le permita aprovechar al máximo la ciudad y de sus atracciones.
-
-                          </p>
-                            <br>
-                        </div>
-                          <div class="col-sm-12">
-                            <h5>COMIDAS</h5>
-                            <p>Para permitirle disfrutar de más libertad durante su viaje, solo se incluyen algunas comidas en nuestros programas: generalmente se trata de comidas durante el trekking (almuerzo frío y calor en la noche) y durante ciertas excursiones, cuando la situación se presta a ello (en la carretera Puno-Cusco, en el Valle Sagrado, etc.). Para las comidas no incluidas, espere un promedio de $ 5 a $ 10 por persona. ¡Esto le permite elegir la hora, el lugar y el menú, dependiendo de su inspiración!
-
-                            </p>
-                            <br>
-                        </div>
-                        <div class="col-sm-12">
-                            <h5>TRANSPORTE</h5>
-                            <p>Sus viajes se realizarán en transporte privado durante la mayor parte de su viaje: tendrá a su servicio un vehículo privado conducido por un conductor de habla hispana que se adapta a su ritmo (foto, compras, etc.). Algunas excepciones: Los viajes Lima - Huaraz - Mancos y Huaraz - Lima se realizarán en bus cómodo y seguro.
-
-                              </p>
-                            <br>
-                        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9" style="margin-left: -20px;">
+                  <div class="panel with-nav-tabs panel-default">
+                      <div class="panel-heading">
+                              <ul class="nav nav-tabs">
+                                  <li class="active"><a href="#tab1default" data-toggle="tab">ITINERARIO</a></li>
+                                  <li><a href="#tab2default" data-toggle="tab">ORGANIZACIÓN</a></li>
+                              </ul>
                       </div>
-                </div>
-                 
-              </div>
+                      <div class="panel-body">
+                          <div class="tab-content">
+                              <div class="tab-pane fade in active" id="tab1default">
+                                <div class="panel-group" id="accordion">
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                          <h4><span>D1 - Llegada a Lima:</span></span> Desert Safari with Dinner
+                                           </h4>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse in">
+                                      <div class="panel-body">
+                                          <p>Llegada al aeropuerto de Lima, recepción y traslado al hotel. Noche libre. Alojamiento en hotel en Lima.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                            <h4><span>D2 - Lima - Arequipa (2400m):</span> </span> Desert Safari with Dinner</h4>
+                                          </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                      <div class="panel-body">
+                                          <p>Por la mañana, vuelo a Arequipa. A su llegada, recepción y traslado al hotel. Resto del día libre para aclimatarse tranquilamente a la altitud. Alojamiento en hotel en Arequipa.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><h4><span>D3 - Arequipa (2400m)</span> Desert Safari with Dinner</h4></a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse">
+                                      <div class="panel-body">
+                                        <p>Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque</p>
 
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                            <h4><span>D4 - Arequipa (2400M)</span> - Chivay (3651M) - Yanque (3440M)</h4>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse">
+                                      <div class="panel-body">
+                                          <p>Salida hacia el Cañón del Colca, uno de los más profundos del mundo. Llegada a Chivay, la "capital del cañón", visita del pueblo, su iglesia y su mercado tradicional, y posibilidad de bañarse en los baños termales. Continuación hacia el pueblo de Yanque. Conozca a sus invitados por la noche. Cena y alojamiento en Yanque.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                            <h4><span>D5 - Yanque (3440M) </span> Cabanaconde</h4>
+                                        </a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapse5" class="panel-collapse collapse">
+                                      <div class="panel-body">
+                                          <p>Mañana con sus anfitriones que le hacen descubrir su forma de vida local. Por la tarde, salida hacia Cabanaconde para un corto paseo hasta el mirador de Achachiua, desde donde se tiene una magnífica vista del cañón y del río Colca. Retorno al final del día al pueblo e instalación en su hotel. Noche en el hotel en el Cañón del Colca.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+
+                              </div>
+                              <div class="tab-pane fade" id="tab2default">
+                                  <div class="row">
+                                      <div class="col-sm-12">
+                                            <h5>GENERAL</h5>
+                                            <p>Viaje acompañado de un guía privado peruano de habla francesa en cada etapa. En otras palabras, tendrá una guía diferente en cada región visitada, dadas sus especificidades. El nivel de francés de las guías difiere de una región a otra. Durante las transferencias, se beneficia de la asistencia de habla francesa.
+                
+                                            </p>
+                                            <br>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5>ALOJAMIENTO</h5>
+                                            <p>En Perú, los estándares del hotel son diferentes de los que usted puede conocer. Aquí hay algunos detalles útiles sobre cada tipo de alojamiento: - Campamento: gracias a la perfecta organización de nuestro (s) cocinero (s) y arriero (s), ¡puede relajarse realmente después de un buen día de caminata! Tenga la certeza de que tenemos una carpa de cocina, una carpa para las comidas, un baño de campaña. Para dos personas, ofrecemos una carpa de 3 plazas para mayor comodidad. También le ofrecemos un colchón cómodo y un recipiente con agua caliente al comienzo y al final del día para su inodoro; y, por supuesto, preparamos comidas calientes y completas. - Hoteles de 2 * y 3 * (estándares locales): habitaciones cómodas, sencillas y limpias, baño privado con ducha de agua caliente; algunos hoteles ofrecen habitaciones equipadas con caja de seguridad, sistema de calefacción, mini bar ... En la medida de nuestras posibilidades, elegimos hoteles cuya situación geográfica le permita aprovechar al máximo la ciudad y de sus atracciones.
+                
+                                          </p>
+                                            <br>
+                                        </div>
+                                          <div class="col-sm-12">
+                                            <h5>COMIDAS</h5>
+                                            <p>Para permitirle disfrutar de más libertad durante su viaje, solo se incluyen algunas comidas en nuestros programas: generalmente se trata de comidas durante el trekking (almuerzo frío y calor en la noche) y durante ciertas excursiones, cuando la situación se presta a ello (en la carretera Puno-Cusco, en el Valle Sagrado, etc.). Para las comidas no incluidas, espere un promedio de $ 5 a $ 10 por persona. ¡Esto le permite elegir la hora, el lugar y el menú, dependiendo de su inspiración!
+                
+                                            </p>
+                                            <br>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <h5>TRANSPORTE</h5>
+                                            <p>Sus viajes se realizarán en transporte privado durante la mayor parte de su viaje: tendrá a su servicio un vehículo privado conducido por un conductor de habla hispana que se adapta a su ritmo (foto, compras, etc.). Algunas excepciones: Los viajes Lima - Huaraz - Mancos y Huaraz - Lima se realizarán en bus cómodo y seguro.
+                
+                                              </p>
+                                            <br>
+                                        </div>
+                                      </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div> 
         </div>
+      </div>
 
         <!--====== TOUR LOCATION ==========-->
         <div class="tour_head1 tout-map map-container">
           <h3>Location</h3>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6290415.157581651!2d-93.99661009218904!3d39.661150926343694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois%2C+USA!5e0!3m2!1sen!2sin!4v1467884030780" allowfullscreen></iframe>
         </div>
-
 
 
         <div>

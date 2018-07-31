@@ -56,7 +56,7 @@
      -ms-transition: all 0.5s ease;
      -o-transition: all 0.5s ease;
      background: #f4364f;
-     background: linear-gradient(to bottom,#0e4817,#080707);
+     background: linear-gradient(to bottom,#167F39,#167F39);
 }
  .link-btn:hover {
      background-color: #e23464;
@@ -4296,7 +4296,7 @@
      height: 45px;
      line-height: 45px;
      background: #f4364f;
-     background: linear-gradient(to bottom,#0e4817,#000000);
+     background: linear-gradient(to bottom,#167f39,#167f39);
      outline: none;
      font-size: 16px;
      display: block !important;

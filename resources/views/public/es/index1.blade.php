@@ -431,13 +431,13 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
 
                 <div class="popu-places-home" style="margin: 5px;">
                     <span class="ol-4" style="font-size: 3em; margin-top:  -25px;
-   text-align: center;
-color: white;
-font-family: Georgia, serif;
-font-size: 40px;
-letter-spacing: 0;
-text-align: left;
-text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1px #333;">
+                    text-align: center;
+                    color: white;
+                    font-family: Georgia, serif;
+                    font-size: 40px;
+                    letter-spacing: 0;
+                    text-align: left;
+                    text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1px #333;">
                     Tours de lujo en Perú
                    </span> 
                     
@@ -453,12 +453,12 @@ text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1
         <div class="container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Popular <span style="color:#36691D">Packages</span> </h2>
+               <!-- <h2>Popular <span style="color:#36691D">Packages</span> </h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
-                </div>
+                </div>--></br>
                 <p>World's leading Hotel Booking website,Over 30,000 Hotel rooms worldwide. Book Hotel rooms and enjoy your holidays with distinctive experience</p>
             </div>
             <!-- CITY -->
@@ -609,7 +609,7 @@ text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1
                         <h4>En grupo</h4>
                         <ul>
                             <li>
-                                <img src="/assets/content/icons/grupo1icono.png" alt="" />
+                                <img src="/assets/public/icons/grupo1icono.png" alt="" />
                                 <a href="#!">
                                     <h5>50% de descuento</h5>
                                     <p>Un viaje que satisfaga a todos</p>
@@ -622,7 +622,7 @@ text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1
                         <h4>En Familia</h4>
                         <ul>
                             <li>
-                                <img src="/assets/content/icons/familia1icono.png" alt="" /> 
+                                <img src="/assets/public/icons/familia1icono.png" alt="" /> 
                                 <a href="#!">
                                     <h5>50% de descuento</h5>
                                     <p>Aproveche un viaje adecuado tanto para adultos como para jóvenes.</p>
@@ -635,7 +635,7 @@ text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1
                         <h4>Pareja</h4>
                         <ul>
                             <li>
-                                 <img src="/assets/content/icons/couple1icono.png" alt="" />
+                                 <img src="/assets/public/icons/couple1icono.png" alt="" />
                                 <a href="#!">
                                     <h5>50% de descuento</h5>
                                     <p>Comparte momentos inolvidables con tu pareja.</p>
@@ -648,7 +648,7 @@ text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1
                         <h4>Amigos</h4>
                         <ul>
                             <li>
-                                <img src="/assets/content/icons/amigos1icono.png" alt="" /> 
+                                <img src="/assets/public/icons/amigos1icono.png" alt="" /> 
                                 <a href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
                                     <h5>50% de descuento</h5>
                                     <p>Comparte momentos inolvidables entre amigos.</p>
