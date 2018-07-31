@@ -56,7 +56,7 @@
      -ms-transition: all 0.5s ease;
      -o-transition: all 0.5s ease;
      background: #f4364f;
-     background: linear-gradient(to bottom,#0e4817,#080707);
+     background: linear-gradient(to bottom,#167F39,#167F39);
 }
  .link-btn:hover {
      background-color: #e23464;
@@ -4296,7 +4296,7 @@
      height: 45px;
      line-height: 45px;
      background: #f4364f;
-     background: linear-gradient(to bottom,#0e4817,#000000);
+     background: linear-gradient(to bottom,#167f39,#167f39);
      outline: none;
      font-size: 16px;
      display: block !important;
@@ -7418,7 +7418,7 @@
  .offer:before {
      content: '';
      position: absolute;
-     background: linear-gradient(to right, rgb(103, 158, 2) -4%, rgba(-40, -49, -65, -91.59) 100%);
+     background: linear-gradient(to right, rgb(31, 123, 12) -4%, rgba(-40, -49, -65, -91.59) 100%);
      top: 0px;
      bottom: 0px;
      left: 0px;

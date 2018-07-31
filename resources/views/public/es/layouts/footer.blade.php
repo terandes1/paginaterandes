@@ -1,4 +1,33 @@
-
+   <section>
+    <div class="rows">
+            <div class="container" style="margin-top: 20px;">
+                <div class="col-sm-3"> 
+                    <div  class="thumbnail">
+                      <img src="https://www.cantturperu.org/public/images/socios/terandes.png" class="img-rounded" alt="Cinque Terre" width="200" height="100"> 
+                  </div>
+               
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumbnail" style="">
+                      <img src="https://www.cantturperu.org/public/images/socios/illapa.png" class="img-rounded" alt="Cinque Terre" width="200" height="100"> 
+                  </div>
+               </div>
+               <div class="col-sm-3">
+                  <div class="thumbnail"style="">
+                    <br/>
+                      <img src="https://www.cantturperu.org/public/images/logo.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="10"> 
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumbnail" style="">
+                      <br/>
+                      <br/>
+                      <img src="https://www.turismorural.com.pe/public/images/logo.png" class="img-rounded" alt="Cinque Terre" width="250" height="100"> 
+                  </div>
+                 </div>
+            </div>
+     </div> 
+   </section>
     <!--====== FOOTER 2 ==========-->
     <section>
         <div class="rows">

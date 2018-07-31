@@ -156,11 +156,33 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                     <!-- TOUR TITLE & ICONS -->
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Aventura<span class="v_pl_name">(Perú)</span></a></h4>
+                        <div class="col-md-12 col-sm-12" style="text-align: center;">
+                            <h4>
+                                <a href="{{'paquetes'}}">The Amazon & Machu Picchu<span class="v_pl_name">(Perú)</span>
+                                </a>
+                                <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                        <h5>10 DAYS / 09 NIGHTS </h5>
+                                </a>
+
+                            </h4>
+                                  
+                            
+                        </div>
+                        
+                        <div class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                                Experience a compelling blend of wild, unspoiled nature and fascinating historic reminders of vanished civilizations during this sample luxury tour of Peru.
+                            </p>
                         </div>
                         <!-- TOUR ICONS -->
                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
                             <ul>
                                 <li>
                                     <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
@@ -187,11 +209,30 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                     <!-- TOUR TITLE & ICONS -->
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Paris<span class="v_pl_name">(England)</span></a></h4>
+                        <div class="col-md-12 col-sm-12 " style="text-align: center;">
+                            <h4>
+                                <a href="{{'paquetes'}}">Paris<span class="v_pl_name">(England)</span>
+                               </a>
+                              <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                        <h5>10 DAYS / 09 NIGHTS </h5>
+                                </a>
+                           </h4>
+                        
                         </div>
                         <!-- TOUR ICONS -->
+                        <div  class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                                Experience a compelling blend of wild, unspoiled nature and fascinating historic reminders of vanished civilizations during this sample luxury tour of Peru.
+                            </p>
+                        </div>
+                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
                             <ul>
                                 <li>
                                     <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
@@ -213,10 +254,27 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                 <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">
                     <div class="v_place_img"><img src="/imagenesprueba/peques/03.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">South India<span class="v_pl_name">(India)</span></a></h4>
+                        <div class="col-md-12 col-sm-12 " style="text-align: center;">
+                            <h4><a href="{{'paquetes'}}">South India<span class="v_pl_name">(India)</span></a>
+                                <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                        <h5>10 DAYS / 09 NIGHTS </h5>
+                                </a>
+                            </h4>
+                        </div>
+                    
+                        <div class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                                Experience a compelling blend of wild, unspoiled nature and fascinating historic reminders of vanished civilizations during this sample luxury tour of Peru.
+                            </p>
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
                             <ul>
                                 <li>
                                     <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
@@ -238,10 +296,26 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                 <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="1.1s">
                     <div class="v_place_img"><img src="/imagenesprueba/peques/04.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">The Great Wall<span class="v_pl_name">(China)</span></a></h4>
+                        <div class="col-md-12 col-sm-12 " style="text-align: center;">
+                            <h4><a href="{{'paquetes'}}">The Great Wall<span class="v_pl_name">(China)</span></a>
+                                <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                        <h5>10 DAYS / 09 NIGHTS </h5>
+                                </a>
+                            </h4>
+                        </div>
+                        <div  class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                                Experience a compelling blend of wild, unspoiled nature and fascinating historic reminders of vanished civilizations during this sample luxury tour of Peru.
+                            </p>
+                        </div>
+                         <div class="col-md-4 col-sm-4 pack_icon">
+
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
                             <ul>
                                 <li>
                                     <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
@@ -263,10 +337,28 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                 <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="1.3s">
                     <div class="v_place_img"><img src="/imagenesprueba/peques/05.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Nail Island<span class="v_pl_name">(Andaman)</span></a></h4>
+                        <div class="col-md-12 col-sm-12 " style="text-align: center;">
+                            <h4><a href="{{'paquetes'}}">Nail Island<span class="v_pl_name">(Andaman)</span></a>
+                                        <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                        <h5>10 DAYS / 09 NIGHTS </h5>
+                                </a>
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                                Experience a compelling blend of wild, unspoiled nature and fascinating historic reminders of vanished civilizations during this sample luxury tour of Peru.
+                            </p>
+                        </div>
+
+                         <div class="col-md-4 col-sm-4 pack_icon">
+
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
                             <ul>
                                 <li>
                                     <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
@@ -288,10 +380,26 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                 <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="1.5s">
                     <div class="v_place_img"><img src="/imagenesprueba/peques/06.png" alt="Tour Booking" title="Tour Booking" /> </div>
                     <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Mauritius<span class="v_pl_name">(Indiana)</span></a></h4>
+                        <div class="col-md-12 col-sm-12 " style="text-align: center;">
+                            <h4><a href="{{'paquetes'}}">Mauritius<span class="v_pl_name">(Indiana)</span></a>
+                                <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                                        <h5>10 DAYS / 09 NIGHTS </h5>
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                                Experience a compelling blend of wild, unspoiled nature and fascinating historic reminders of vanished civilizations during this sample luxury tour of Peru.
+                            </p>
+                        </div>
+                         <div class="col-md-4 col-sm-4 pack_icon">
+
                         </div>
                         <div class="col-md-4 col-sm-4 pack_icon">
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 pack_icon">
+
                             <ul>
                                 <li>
                                     <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
@@ -315,16 +423,42 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
 </section>
 <!--====== HOME HOTELS ==========-->
 <section>
+    <div class="offer">
+
+        <div class="container" style="">
+ 
+            <div class="row">
+
+                <div class="popu-places-home" style="margin: 5px;">
+                    <span class="ol-4" style="font-size: 3em; margin-top:  -25px;
+                    text-align: center;
+                    color: white;
+                    font-family: Georgia, serif;
+                    font-size: 40px;
+                    letter-spacing: 0;
+                    text-align: left;
+                    text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1px #333;">
+                    Tours de lujo en Perú
+                   </span> 
+                    
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
     <div class="rows tb-space pad-top-o pad-bot-redu">
         <div class="container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Popular <span style="color:#36691D">Packages</span> </h2>
+               <!-- <h2>Popular <span style="color:#36691D">Packages</span> </h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
-                </div>
+                </div>--></br>
                 <p>World's leading Hotel Booking website,Over 30,000 Hotel rooms worldwide. Book Hotel rooms and enjoy your holidays with distinctive experience</p>
             </div>
             <!-- CITY -->
@@ -457,78 +591,6 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                         <td class="e_h1">Australia</td>
                         <td><a href="booking.html" class="link-btn">Book Now</a> </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><img src="/imagenesprueba/peques/02.png" alt="" /><a href="hotels-list.html" class="events-title">Salesforce Summer, Dubai</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Dubai</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><img src="/imagenesprueba/peques/03.png" alt="" /><a href="hotels-list.html" class="events-title">God Towers, TOKYO, JAPAN</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">JAPAN</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><img src="/imagenesprueba/peques/04.png" alt="" /><a href="hotels-list.html" class="events-title">TOUR DE ROMANDIE, Switzerland</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Switzerland</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><img src="/imagenesprueba/peques/05.png" alt="" /><a href="hotels-list.html" class="events-title">TOUR DE POLOGNE, Poland</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Poland</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><img src="/imagenesprueba/peques/06.png" alt="" /><a href="hotels-list.html" class="events-title">Future of Marketing,Sydney, Australia</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Australia</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td><img src="/imagenesprueba/peques/07.png" alt="" /><a href="hotels-list.html" class="events-title">Eiffel Tower, Paris</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">France</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td><img src="/imagenesprueba/peques/08.png" alt="" /><a href="hotels-list.html" class="events-title">PARIS - ROUBAIX, England</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">England</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td><img src="/imagenesprueba/peques/09.png" alt="" /><a href="hotels-list.html" class="events-title">Dubai Beach Resort, Dubai</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Dubai</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td><img src="/imagenesprueba/peques/11.png" alt="" /><a href="hotels-list.html" class="events-title">TOUR DE POLOGNE, Poland</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Poland</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -547,7 +609,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                         <h4>En grupo</h4>
                         <ul>
                             <li>
-                                <img src="/assets/content/icons/grupo1icono.png" alt="" />
+                                <img src="/assets/public/icons/grupo1icono.png" alt="" />
                                 <a href="#!">
                                     <h5>50% de descuento</h5>
                                     <p>Un viaje que satisfaga a todos</p>
@@ -560,7 +622,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                         <h4>En Familia</h4>
                         <ul>
                             <li>
-                                <img src="/assets/content/icons/familia1icono.png" alt="" /> 
+                                <img src="/assets/public/icons/familia1icono.png" alt="" /> 
                                 <a href="#!">
                                     <h5>50% de descuento</h5>
                                     <p>Aproveche un viaje adecuado tanto para adultos como para jóvenes.</p>
@@ -573,7 +635,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                         <h4>Pareja</h4>
                         <ul>
                             <li>
-                                 <img src="/assets/content/icons/couple1icono.png" alt="" />
+                                 <img src="/assets/public/icons/couple1icono.png" alt="" />
                                 <a href="#!">
                                     <h5>50% de descuento</h5>
                                     <p>Comparte momentos inolvidables con tu pareja.</p>
@@ -586,7 +648,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                         <h4>Amigos</h4>
                         <ul>
                             <li>
-                                <img src="/assets/content/icons/amigos1icono.png" alt="" /> 
+                                <img src="/assets/public/icons/amigos1icono.png" alt="" /> 
                                 <a href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
                                     <h5>50% de descuento</h5>
                                     <p>Comparte momentos inolvidables entre amigos.</p>

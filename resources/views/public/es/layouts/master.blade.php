@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>The Travel - Tour Travel</title>
+    <title>Terandes | Agence de voyages au Pérou</title>
     <!--== META TAGS ==-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
