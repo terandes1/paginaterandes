@@ -92,17 +92,15 @@ class MultimediaController extends Controller
     public function destroy(Multimedia $multimedia)
     {
         return redirect('admin/multimedia')->with('error','no se permite eliminar multimedia por el momento');
-      
+
     }
 
     public function create_img(Request $request, $id){
 
-
-
       $file =  $request->file('images');
       $extension = $file->getClientOriginalExtension();
       $NameOriginal = $file->getClientOriginalName();
-      $fileName = $NameOriginal . '.' . $extension;
+      $fileName = $NameOriginal . time() . '.' . $extension;
       $size = $file->getClientSize();
       $file->move(public_path('assets/content/'),$fileName);
       $ruta = 'assets/content/'.$fileName;

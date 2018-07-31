@@ -256,6 +256,12 @@ display: none;
 
 
 
+    $.ajaxSetup({
+      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+    });
+
+
+
 
 // validamos el form multimedia y lo almacenamos en la bd
   $('#form-multimedia').validate({
@@ -263,7 +269,6 @@ display: none;
       var storeMultimedia = new FormData($('#form-multimedia')[0]);
       $.ajax({
         url:'/admin/multimedia',
-        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method:'POST',
         data:storeMultimedia,
         contentType:false,
@@ -363,7 +368,6 @@ function nuevo_video(id){
     var storeVideo = new FormData($('#form-video-nuevo')[0]);
       $.ajax({
         url:'/admin/video/create/' + id,
-        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         method:'POST',
         data:storeVideo,
         contentType:false,
@@ -411,7 +415,6 @@ function eliminar_video(){
           idvideo = idvideo.substring(14,20);
           $.ajax({
             url:'/admin/video/delete/'+idvideo,
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             method:'POST'
           }).done((data)=>{
             recuperar_videos($('#multimedia_id').val());
@@ -430,7 +433,6 @@ $('#form-video-editar').validate({
     updateVideo.append('_method','PUT');
     $.ajax({
       url:'/admin/video/update/'+$('#multimedia_id_edit').val(),
-      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
       method:'POST',
       data:updateVideo,
       contentType:false,

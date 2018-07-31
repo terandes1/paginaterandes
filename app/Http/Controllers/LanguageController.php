@@ -130,6 +130,6 @@ class LanguageController extends Controller
      */
     public function destroy(Language $language)
     {
-        return redirect('admin/languages')->with('error','Por cuestiones de seguridad no se permite eliminar un idioma');
+          return redirect('admin/languages')->with('error','Por cuestiones de seguridad no se permite eliminar un idioma');
     }
 }
