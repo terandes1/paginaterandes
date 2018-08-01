@@ -8,6 +8,7 @@ use App\Language;
 use App\Categorie;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTour;
+use App\Http\Requests\UpdateTour;
 use Illuminate\Support\Str as Str;
 
 class TourController extends Controller
@@ -102,9 +103,49 @@ class TourController extends Controller
      * @param  \App\Tour  $tour
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tour $tour)
+    public function update(UpdateTour $request, Tour $tour)
     {
-        //
+
+
+        if($request->name != $tour->name){
+          $request->validate([
+            'name' => 'required|unique:tours,name'
+          ]);
+        }
+
+
+        $slug = Str::slug($request['name']);
+
+        if ($request->img != null) {
+
+
+          \File::delete(public_path($tour->img));
+
+            $file =  $request->file('img');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move(public_path('assets/content/'),$fileName);
+            $ruta = 'assets/content/'.$fileName;
+
+            $tour->fill([
+                'img'=>$ruta
+            ]);
+
+        }
+
+        $tour->fill([
+          'name'=>$request->name,
+          'description_short'=>$request->description_short,
+          'description_complete'=>$request->description_complete,
+          'multimedia_id'=>$request->multimedia_id,
+          'status'=>$request->status,
+          'slug'=>$slug
+        ]);
+
+
+        $tour->save();
+
+
     }
 
     /**

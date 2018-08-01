@@ -65,7 +65,7 @@ i[name="eliminar-categoria"]{
       <h3>Creando Nuevo Tour</h3>
     </div>
   </div>
-  {!!Form::model($tour, ['url' => ['admin/tours', $tour->id],'method'=>'PUT'])!!}
+  {!!Form::model($tour, ['url' => ['admin/tours', $tour->id],'method'=>'PUT','id'=>'form-tours'])!!}
   <div class="card">
     <div class="card-body">
       <div class="row justify-content-md-center">
@@ -73,7 +73,7 @@ i[name="eliminar-categoria"]{
         <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
             <div class="kv-avatar">
                 <div class="file-loading">
-                    <input id="avatar-1" name="img" type="file" required>
+                    <input id="avatar-1" name="img" type="file">
                 </div>
             </div>
             <div class="kv-avatar-hint"><small>Select file < 1500 KB</small></div>
@@ -231,6 +231,8 @@ i[name="eliminar-categoria"]{
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script type="text/javascript">
 
+var tour=<?php echo json_encode($tour);?>;
+
 
 toastr.options = {
   "closeButton": false,
@@ -287,6 +289,7 @@ $('.summernote').summernote({
 
 
 
+
 $('#language_id').change(()=>{
   cargar_categorias($('#language_id').val());
 });
@@ -310,6 +313,9 @@ function cargar_categorias(id){
 }
 
 
+
+
+
   $('#agregando-categoria').click(()=>{
     var i = 0;
     var cuenta=0;
@@ -328,6 +334,9 @@ function cargar_categorias(id){
 
   cargar_lista();
   });
+
+
+
 
 
 //cargar los array en li
@@ -356,42 +365,48 @@ function eliminar_categoria(){
   });
 }
 
+
 $('#form-tours').validate({
   submitHandler:()=>{
 
-    var storetours = new FormData($('#form-tours')[0]);
+    var updatetours = new FormData($('#form-tours')[0]);
+
+    updatetours.append('_method','PUT');
+
     $.ajax({
-      url:'/admin/tours',
+      url:'/admin/tours/'+tour.id,
       method:'POST',
-      data:storetours,
+      data:updatetours,
       contentType:false,
       processData:false
     }).done((data)=>{
 
-      var idTour = data;
-      var NuevoArrayCategoria = [];
-      for(let i = 0 ; i < arrayCategoria.length ; i++){
-        if(arrayCategoria[i] != undefined){
-            NuevoArrayCategoria.push(arrayCategoria[i]);
-        }
-      }
+      alert(data);
 
-      for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
-            $.ajax({
-            url:'/admin/categories_has_tours',
-            method:'POST',
-            async:false,
-            data:{id:idTour,slug:NuevoArrayCategoria[i]}
-            }).done((data)=>{
-
-            }).fail((data)=>{
-            alert("ha ocurrido un error");
-            });
-
-      }
-
-
-      window.location.href = "/admin/tours";
+      // var idTour = data;
+      // var NuevoArrayCategoria = [];
+      // for(let i = 0 ; i < arrayCategoria.length ; i++){
+      //   if(arrayCategoria[i] != undefined){
+      //       NuevoArrayCategoria.push(arrayCategoria[i]);
+      //   }
+      // }
+      //
+      // for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
+      //       $.ajax({
+      //       url:'/admin/categories_has_tours',
+      //       method:'POST',
+      //       async:false,
+      //       data:{id:idTour,slug:NuevoArrayCategoria[i]}
+      //       }).done((data)=>{
+      //
+      //       }).fail((data)=>{
+      //       alert("ha ocurrido un error");
+      //       });
+      //
+      // }
+      //
+      //
+      // window.location.href = "/admin/tours";
 
     }).fail((data)=>{
         if(data.status == 422){
@@ -404,6 +419,9 @@ $('#form-tours').validate({
         }
     });
   }
+
+
+
 });
 
 
