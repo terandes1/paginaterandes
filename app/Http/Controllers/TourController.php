@@ -43,6 +43,7 @@ class TourController extends Controller
      */
     public function store(StoreTour $request)
     {
+
       $slug = Str::slug($request['name']);
 
 
@@ -54,7 +55,7 @@ class TourController extends Controller
       $ruta = 'assets/content/'.$fileName;
 
 
-        Tour::create([
+        $tour = Tour::create([
           'name'=>$request->name,
           'img'=>$ruta,
           'description_short'=>$request->description_short,
@@ -63,6 +64,8 @@ class TourController extends Controller
           'status'=>$request->status,
           'slug'=>$slug
         ]);
+
+      return response($tour->id);
 
 
     }
@@ -75,7 +78,10 @@ class TourController extends Controller
      */
     public function show(Tour $tour)
     {
-        //
+
+      $languages = Language::All();
+      $multimedia = Multimedia::All();
+      return view('admin.tours.update',['tour'=>$tour,'multimedia'=>$multimedia,'languages'=>$languages]);
     }
 
     /**

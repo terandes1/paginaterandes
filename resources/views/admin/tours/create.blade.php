@@ -297,8 +297,11 @@ function cargar_categorias(id){
       method:'GET'
     }).done((data)=>{
       var cadena = '';
+
+      var contador=0;
       $(data).each(()=>{
-        cadena+='<option value="'+data.slug+'">'+data.slug+'</option>'
+        cadena+='<option value="'+data[contador].slug+'">'+data[contador].slug+'</option>';
+        contador++;
       });
       $('#categorie_slug').html(cadena);
     }).fail((data)=>{
@@ -365,26 +368,31 @@ $('#form-tours').validate({
       processData:false
     }).done((data)=>{
 
+      var idTour = data;
       var NuevoArrayCategoria = [];
-      for(i = 0 ; i < arrayCategoria.length ; i++){
+      for(let i = 0 ; i < arrayCategoria.length ; i++){
         if(arrayCategoria[i] != undefined){
             NuevoArrayCategoria.push(arrayCategoria[i]);
         }
       }
 
-      $.ajax({
-        url:'/admin/categories_has_tours',
-        method:'POST',
-        data:NuevoArrayCategoria,
-        contentType:false,
-        processData:false
-      }).done((data)=>{
-        alert(data);
-      }).fail((data)=>{
-        alert("ha ocurrido un error");
-      });
+      for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
+            $.ajax({
+            url:'/admin/categories_has_tours',
+            method:'POST',
+            async:false,
+            data:{id:idTour,slug:NuevoArrayCategoria[i]}
+            }).done((data)=>{
 
-      //window.location.href = "/admin/tours";
+            }).fail((data)=>{
+            alert("ha ocurrido un error");
+            });
+
+      }
+
+
+      window.location.href = "/admin/tours";
+
     }).fail((data)=>{
         if(data.status == 422){
           $errors = data.responseJSON;
