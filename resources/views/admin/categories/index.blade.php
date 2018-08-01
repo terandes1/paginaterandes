@@ -26,7 +26,7 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">Nombres</th>
-            <th scope="col">description</th>
+            <th scope="col">Description</th>
             <th>Imgen</th>
             <th scope="col">Lenguaje</th>
             <th>Estado</th>
@@ -40,7 +40,7 @@
                     <th scope="row">{{ $item->name }}</th>
                     <td>{{ $item->description }}</td>
                     <td><img style="width: 100px;" src="/assets/content/categoria/{{$item->id}}.{{$item->img}}"> </td>
-                    <td>{{ $item->language_id }}</td>
+                    <td>{{ $item->idioma }}</td>
                     <td>
                         @if($item->status == 'A')
                         <span class="badge badge-success">Habilitado</span>

@@ -57,6 +57,9 @@
                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i name="eliminar{{$tour->id}}" class="fa fa-times" style="color:red;"></i></a>
                   {!!Form::close()!!}
                 </div>
+                <div class="col-xs-6">
+                    <a href="{{route('itinerario',$tour->id)}}">Itineario</a>
+                </div>
               </div>
               </div>
             </td>
