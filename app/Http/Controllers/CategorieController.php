@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Image;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreCategorie;
+use App\Http\Requests\UpdateCategory;
 use Illuminate\Support\Str as Str;
 
 class CategorieController extends Controller
@@ -103,10 +104,10 @@ class CategorieController extends Controller
      * @param  \App\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCategory $request, $id)
     {
         $img = $request->file('img');
-        $slug = Str::slug($request['name']);
+        $slug = Str::slug($request['slug']);
 
         if(empty($img))
         {

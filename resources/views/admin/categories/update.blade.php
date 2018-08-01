@@ -30,6 +30,7 @@
 		        <div class="col-md-6">
 		          {!!Form::label('name','Nombre')!!}
 		          {!!Form::text('name',$category->name,['class'=>'form-control','required'])!!}
+		          <p style="color:red;">{{ $errors->first('name') }}</p>
 		        </div>
 
 		        <div class="col-md-6">
@@ -47,6 +48,7 @@
 		        <div class="col-md-12">
 		          {!!Form::label('description','Descripción')!!}
 		          {!!Form::textarea('description',$category->description,['class'=>'form-control','required'])!!}
+		          		          <p style="color:red;">{{ $errors->first('description') }}</p>
 		        </div>
 
 		        <div class="col-md-6">
@@ -56,6 +58,7 @@
 		        <div class="col-md-6">
 		            {!!Form::label('slug','Slug')!!}
 		            {!!Form::text('slug',$category->slug,['class'=>'form-control','required'])!!}
+		            <p style="color:red;">{{ $errors->first('slug') }}</p>
 
 		        </div>
 
@@ -64,7 +67,7 @@
 		          <hr>
 		        </div>
 		        <div class="col-md-2">
-		          <a href="{{('/admin/users')}}" class="btn btn-danger form-control">Cancelar</a>
+		          <a href="{{('/admin/categories')}}" class="btn btn-danger form-control">Cancelar</a>
 		        </div>
 		        <div class="col-md-2">
 		          <button class="btn btn-success form-control">Guardar</button>
