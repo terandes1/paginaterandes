@@ -67,7 +67,7 @@
 		          <hr>
 		        </div>
 		        <div class="col-md-2">
-		          <a href="{{('/admin/users')}}" class="btn btn-danger form-control">Cancelar</a>
+		          <a href="{{('/admin/categories')}}" class="btn btn-danger form-control">Cancelar</a>
 		        </div>
 		        <div class="col-md-2">
 		          <button class="btn btn-success form-control">Guardar</button>

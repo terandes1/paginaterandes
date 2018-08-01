@@ -43,20 +43,28 @@
                     <td>{{ $item->language_id }}</td>
                     <td>
                         @if($item->status == 'A')
-                        <span class="badge badge-success">habilitado</span>
+                        <span class="badge badge-success">Habilitado</span>
                         @else
-                        <span class="badge badge-danger">deshabilitado</span>
+                        <span class="badge badge-danger">Deshabilitado</span>
                         @endif
                       </td>
                     <td>{{ $item->created_at }}</td>
                     <td>
-
-                      <a  class="btn btn-success btn-sm" href="{{route('categories.show',$item->id)}} "> 
-                         Editar
-                      </a> 
-                      {!! Form::open(['method' => 'DELETE','route' => ['categories.destroy', $item->id]]) !!}
-            			{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-          			  {!! Form::close() !!}
+                    	<div class="row" >
+	                    	 <div class="col-md-1">
+	                    	 	<a  class="btn btn-success btn-sm" href="{{route('categories.show',$item->id)}} "> 
+	                         			<span class="fa fa-edit"> </span>
+	                     		</a>
+	                  		</div>
+	                  		<div class="col-md-1">
+	                    	 	
+	                  		</div>
+	 						<div class="col-md-1">
+	 						 	{!! Form::open(['method' => 'DELETE','route' => ['categories.destroy', $item->id]]) !!}
+									{{ Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-sm'] )  }}
+	          			  		{!! Form::close() !!}
+	          				</div>
+                      	</div>
                     </td>
               </tr>
             @endforeach
