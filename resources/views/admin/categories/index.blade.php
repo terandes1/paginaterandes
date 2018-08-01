@@ -20,10 +20,10 @@
 
     </div>
 
-    <div class="col-md-12">
+    <div class="col-md-12 table-responsive">
     </br>
-        <table class="table table-striped">
-        <thead>
+        <table class="table">
+        <thead class="thead-light">
           <tr>
             <th scope="col">Nombres</th>
             <th scope="col">description</th>

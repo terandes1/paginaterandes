@@ -21,7 +21,6 @@ class CategorieController extends Controller
     public function index()
     {
         $Categorie = Categorie::all();
-
         return view('admin.categories.index',['categorias' => $Categorie]);
     }
 

@@ -21,4 +21,9 @@ class Categorie extends Model
       'status',
       'slug'
     ];
+
+    public function lenguages()
+    {
+        return $this->hasMany('App\Lenguage');
+    }
 }
