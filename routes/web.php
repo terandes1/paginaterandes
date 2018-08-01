@@ -35,6 +35,10 @@ Route::prefix('admin')->group(function () {
     Route::get('video/see/{id}','MultimediaController@see_video');
     Route::put('video/update/{id}','MultimediaController@update_video');
     Route::post('video/delete/{id}','MultimediaController@delete_video');
+
+
+    Route::resource('categories_has_tours','CategorieTourController');
+
     //trash
     Route::get('trash','TrashController@index');
     //trash

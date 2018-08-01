@@ -267,14 +267,54 @@ $('.summernote').summernote({
     });
 
 
+function cargar_categorias(){
+
+}
+
+
+
+
+
+
+
   $('#agregando-categoria').click(()=>{
+
+
+
+    var i = 0;
+    var cuenta=0;
     let categoria = $('#categorie_id').val();
-    arrayCategoria.push(categoria);
-    var cadena = '<li id="li'+contador+'">'+categoria+' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i name="eliminar-categoria" id="categoria'+contador+'" class="fa fa-times" style="color:red;"></i></li>';
-    contador++;
-    $('#contenido-categoria').append(cadena);
-    eliminar_categoria();
+    do{
+        if(arrayCategoria[i] == categoria){+
+          cuenta++;
+        }
+      i++;
+    }
+    while(i < arrayCategoria.length);
+
+    if(cuenta == 0){
+      arrayCategoria.push(categoria);
+    }
+
+  cargar_lista();
   });
+
+
+//cargar los array en li
+  function cargar_lista(){
+    console.log(arrayCategoria);
+    var cadena='';
+    for(let i = 0; i < arrayCategoria.length ; i++){
+      if(arrayCategoria[i] != undefined){
+        cadena += '<li id="li'+i+'">'+arrayCategoria[i]+' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i name="eliminar-categoria" id="categoria'+i+'" class="fa fa-times" style="color:red;"></i></li>';
+      }
+    }
+
+
+
+    $('#contenido-categoria').html(cadena);
+    eliminar_categoria();
+  }
 
 
 
@@ -284,16 +324,6 @@ function eliminar_categoria(){
       idli = idli.substring(9,12);
       delete arrayCategoria[idli];
       $('#li'+idli).remove();
-
-
-
-    //  alert(e.target.id);
-
-    // var confirmar = confirm("esta seguro que desea eliminar la categoria");
-    // if(confirmar){
-    //   alert("la categoria ha sido eliminada");
-    // }
-
 
   });
 }
@@ -308,8 +338,27 @@ $('#form-tours').validate({
       data:storetours,
       contentType:false,
       processData:false
-    }).done(()=>{
-      window.location.href = "/admin/tours";
+    }).done((data)=>{
+      var NuevoArrayCategoria = [];
+      for(i = 0 ; i < arrayCategoria.length ; i++){
+        if(arrayCategoria[i] != undefined){
+            NuevoArrayCategoria.push(arrayCategoria[i]);
+        }
+      }
+
+      $.ajax({
+        url:'/admin/categories_has_tours',
+        method:'POST',
+        data:NuevoArrayCategoria,
+        contentType:false,
+        processData:false
+      }).done((data)=>{
+        alert(data);
+      }).fail((data)=>{
+        alert("ha ocurrido un error");
+      });
+
+      //window.location.href = "/admin/tours";
     }).fail(()=>{
       alert("ocurrio un error")
     });
