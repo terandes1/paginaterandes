@@ -57,9 +57,6 @@
                       {!! Form::open(['method' => 'DELETE','route' => ['categories.destroy', $item->id]]) !!}
             			{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
           			  {!! Form::close() !!}
-          			  <span class="fas fa-home"></span>
-						<span class="fas fa-plus-circle"></span>
-						<span class="fas fa-hand-point-left"></span>
                     </td>
               </tr>
             @endforeach
@@ -76,17 +73,5 @@
 
 
 @section('script')
-  <script>
-    $(()=>{
-      $('i[name^="eliminar"]').click((e)=>{
-        let opcion = confirm("Esta seguro que desea eliminar este usuario");
-
-        if(opcion == true){
-          $('#'+$(e.target).attr('name')).submit();
-        }
-
-
-      });
-    });
-  </script>
+  
 @endsection
