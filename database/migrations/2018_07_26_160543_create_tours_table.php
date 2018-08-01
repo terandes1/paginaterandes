@@ -23,6 +23,7 @@ class CreateToursTable extends Migration
             $table->string('meta_description',500)->nullable();
             $table->string('meta_keywords',500)->nullable();
             $table->string('status',1);
+            $table->string('slug',100)->unique();
             $table->unsignedInteger('multimedia_id');
             $table->foreign('multimedia_id')->references('id')->on('multimedia');
             $table->timestamps();

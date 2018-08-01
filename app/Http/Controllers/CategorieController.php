@@ -21,6 +21,7 @@ class CategorieController extends Controller
     public function index()
     {
         $Categorie = Categorie::all();
+
         return view('admin.categories.index',['categorias' => $Categorie]);
     }
 
@@ -141,7 +142,7 @@ class CategorieController extends Controller
 
           if(file_exists(public_path($destinationPath)))
             {
-			 
+
 			  unlink(public_path($destinationPath));
 
 			}else{
@@ -151,7 +152,7 @@ class CategorieController extends Controller
           $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
 		  $destinationPathN = '../public/assets/content/categoria';
 
-           if (!file_exists($destinationPathN)) 
+           if (!file_exists($destinationPathN))
            {
               mkdir($destinationPathN, 666, true);
            }
@@ -188,7 +189,7 @@ class CategorieController extends Controller
 
         return redirect()->route('categories.index')
                         ->with('success','Member deleted successfully');
-        
+
 
     }
 }

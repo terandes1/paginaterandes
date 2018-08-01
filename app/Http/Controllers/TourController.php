@@ -8,6 +8,7 @@ use App\Language;
 use App\Categorie;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTour;
+use Illuminate\Support\Str as Str;
 
 class TourController extends Controller
 {
@@ -42,6 +43,8 @@ class TourController extends Controller
      */
     public function store(StoreTour $request)
     {
+      $slug = Str::slug($request['name']);
+
 
       $file =  $request->file('img');
       $extension = $file->getClientOriginalExtension();
@@ -57,8 +60,11 @@ class TourController extends Controller
           'description_short'=>$request->description_short,
           'description_complete'=>$request->description_complete,
           'multimedia_id'=>$request->multimedia_id,
-          'status'=>$request->status
+          'status'=>$request->status,
+          'slug'=>$slug
         ]);
+
+
     }
 
     /**
@@ -104,5 +110,10 @@ class TourController extends Controller
     public function destroy(Tour $tour)
     {
         //
+    }
+
+    public function get_categoria($id){
+        $categories = Categorie::where('language_id',$id)->get();
+        return response($categories);
     }
 }

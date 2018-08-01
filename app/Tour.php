@@ -15,6 +15,7 @@ class Tour extends Model
       'meta_description',
       'meta_keywords',
       'multimedia_id',
-      'status'
+      'status',
+      'slug'
     ];
 }

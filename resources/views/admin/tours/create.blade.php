@@ -193,9 +193,8 @@ i[name="eliminar-categoria"]{
           <div class="col-md-4">
             <div class="form-group">
               <label for="">Categoria</label>
-              <select name="categorie_id" id="categorie_id" class="form-control">
-                <option value="ninguna">ninguna</option>
-                <option value="asfd">asfd</option>
+              <select name="categorie_slug" id="categorie_slug" class="form-control">
+
               </select>
             </div>
           </div>
@@ -232,6 +231,26 @@ i[name="eliminar-categoria"]{
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script type="text/javascript">
 
+
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-bottom-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
+
 $('.summernote').summernote({
   height: 350,                 // set editor height
       minHeight: null,             // set minimum height of editor
@@ -267,23 +286,31 @@ $('.summernote').summernote({
     });
 
 
-function cargar_categorias(){
 
+$('#language_id').change(()=>{
+  cargar_categorias($('#language_id').val());
+});
+
+function cargar_categorias(id){
+    $.ajax({
+      url:'/admin/get/categoria/'+id,
+      method:'GET'
+    }).done((data)=>{
+      var cadena = '';
+      $(data).each(()=>{
+        cadena+='<option value="'+data.slug+'">'+data.slug+'</option>'
+      });
+      $('#categorie_slug').html(cadena);
+    }).fail((data)=>{
+      alert("ha ocurrido un error");
+    });
 }
 
 
-
-
-
-
-
   $('#agregando-categoria').click(()=>{
-
-
-
     var i = 0;
     var cuenta=0;
-    let categoria = $('#categorie_id').val();
+    let categoria = $('#categorie_slug').val();
     do{
         if(arrayCategoria[i] == categoria){+
           cuenta++;
@@ -309,8 +336,6 @@ function cargar_categorias(){
         cadena += '<li id="li'+i+'">'+arrayCategoria[i]+' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i name="eliminar-categoria" id="categoria'+i+'" class="fa fa-times" style="color:red;"></i></li>';
       }
     }
-
-
 
     $('#contenido-categoria').html(cadena);
     eliminar_categoria();
@@ -339,6 +364,7 @@ $('#form-tours').validate({
       contentType:false,
       processData:false
     }).done((data)=>{
+
       var NuevoArrayCategoria = [];
       for(i = 0 ; i < arrayCategoria.length ; i++){
         if(arrayCategoria[i] != undefined){
@@ -359,8 +385,15 @@ $('#form-tours').validate({
       });
 
       //window.location.href = "/admin/tours";
-    }).fail(()=>{
-      alert("ocurrio un error")
+    }).fail((data)=>{
+        if(data.status == 422){
+          $errors = data.responseJSON;
+          $.each($errors,(key,value)=>{
+            if(value['name'] != undefined){
+              Command: toastr["error"]('El campo nombre ya esta en uso','ERROR!');
+            }
+          })
+        }
     });
   }
 });

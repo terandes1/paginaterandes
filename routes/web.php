@@ -24,6 +24,8 @@ Route::prefix('admin')->group(function () {
     Route::resource('languages','LanguageController');
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
+    Route::get('get/categoria/{id}','TourController@get_categoria');
+
     Route::resource('multimedia','MultimediaController');
 
     Route::post('image/create/{id}','MultimediaController@create_img');

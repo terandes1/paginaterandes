@@ -24,7 +24,7 @@ class StoreTour extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required',
+            'name'=>'required|unique:tours,name',
             'img'=>'required',
             'description_short',
             'description_complete',
