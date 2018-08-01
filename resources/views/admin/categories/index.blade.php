@@ -26,7 +26,7 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">Nombres</th>
-            <th scope="col">description</th>
+            <th scope="col">Description</th>
             <th>Imgen</th>
             <th scope="col">Lenguaje</th>
             <th>Estado</th>

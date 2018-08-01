@@ -35,6 +35,8 @@ Route::prefix('admin')->group(function () {
     Route::get('video/see/{id}','MultimediaController@see_video');
     Route::put('video/update/{id}','MultimediaController@update_video');
     Route::post('video/delete/{id}','MultimediaController@delete_video');
+    
+    Route::get('intinearie/{id}','ItinerarieController@update')->name('itinerario');
 
 
     Route::resource('categories_has_tours','CategorieTourController');
