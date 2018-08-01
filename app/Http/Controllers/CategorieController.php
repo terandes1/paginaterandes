@@ -20,7 +20,11 @@ class CategorieController extends Controller
      */
     public function index()
     {
-        $Categorie = Categorie::all();
+        $Categorie = DB::table('categories')
+                    ->join('languages', 'languages.id', '=', 'categories.language_id')
+                    ->select('categories.*', 'languages.name as idioma')
+                    ->get();
+                    
         return view('admin.categories.index',['categorias' => $Categorie]);
     }
 
