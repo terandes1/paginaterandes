@@ -33,7 +33,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 {!!Form::label('','Selecciona el Tour que quieres convertir en Serie')!!}
-                <select name="" id="" class="form-control">
+                <select name="tour_id" id="" class="form-control" required>
                     @foreach($tours as $tour)
                     <option value="{{$tour->id}}">{{$tour->name}}</option>
                     @endforeach
@@ -43,28 +43,28 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                {!!Form::label('','Cantidad de Personas')!!}
-                <input type="number" class="form-control">
+                {!!Form::label('cant_person','Cantidad de Personas')!!}
+                <input type="number" name="cant_person" class="form-control" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                {!!Form::label('','Precio por Persona en $')!!}
-                <input type="number" class="form-control" step="any"> 
+                {!!Form::label('price','Precio por Persona en $')!!}
+                <input type="number" name="price" class="form-control" step="any" required> 
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
-                {!!Form::label('','Fecha Inicio')!!}
-                <input type="date" class="form-control">
+                {!!Form::label('date_start','Fecha Inicio')!!}
+                <input type="date" name="date_start" class="form-control" required>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
             {!!Form::label('','Fecha Final')!!}
-                <input type="date" class="form-control">
+                <input type="date" name="date_end" class="form-control" required>
             </div>
         </div>
     

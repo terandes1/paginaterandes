@@ -38,7 +38,8 @@ class SerieController extends Controller
      */
     public function store(StoreSerie $request)
     {
-        //
+        Serie::create($request->all());
+        return redirect('admin/series')->with('status','La serie ha sido creada con exito');
     }
 
     /**
