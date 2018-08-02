@@ -88,6 +88,6 @@ class CategorieTourController extends Controller
      */
     public function destroy(CategorieTour $categorieTour)
     {
-        //
+        return "llegaste a eliminar";
     }
 }

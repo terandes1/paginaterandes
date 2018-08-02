@@ -25,6 +25,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
     Route::get('get/categoria/{id}','TourController@get_categoria');
+    Route::post('delete/categoria/{id}','TourController@delete_categoria');
 
     Route::resource('multimedia','MultimediaController');
 

@@ -62,7 +62,7 @@ i[name="eliminar-categoria"]{
   <div class="row">
     <div class="col-md-12">
       <br>
-      <h3>Creando Nuevo Tour</h3>
+      <h3>Editando Tour</h3>
     </div>
   </div>
   {!!Form::model($tour, ['url' => ['admin/tours', $tour->id],'method'=>'PUT','id'=>'form-tours'])!!}
@@ -139,15 +139,15 @@ i[name="eliminar-categoria"]{
 
         <div class="col-md-12">
           <div class="form-group">
-            {!!Form::label('meta_keyword','Meta Keyword')!!}
-            {!!Form::text('meta_keyword',null,['class'=>'form-control'])!!}
+            {!!Form::label('meta_keywords','Meta Keyword')!!}
+            {!!Form::text('meta_keywords',null,['class'=>'form-control'])!!}
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             {!!Form::label('status','Estado')!!}
-            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'A',['class'=>'form-control'])!!}
+            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], null,['class'=>'form-control'])!!}
           </div>
         </div>
 
@@ -232,6 +232,30 @@ i[name="eliminar-categoria"]{
 <script type="text/javascript">
 
 var tour=<?php echo json_encode($tour);?>;
+var categories=<?php echo json_encode($categories);?>;
+
+
+ var arrayCategoria = [];
+
+function eliminar_categoria(){
+    $('i[name="eliminar-categoria"]').click((e)=>{
+      let idli = e.target.id
+      idli = idli.substring(9,12);
+      delete arrayCategoria[idli];
+      $('#li'+idli).remove();
+
+  });
+}
+
+
+  var cadena='';
+  for(let i = 0; i < categories.length ; i++){  
+      cadena += '<li id="li'+i+'">'+categories[i].slug+' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i name="eliminar-categoria" id="categoria'+i+'" class="fa fa-times" style="color:red;"></i></li>';   
+      arrayCategoria.push(categories[i].slug);
+  }
+
+  $('#contenido-categoria').html(cadena);
+  eliminar_categoria();
 
 
 toastr.options = {
@@ -263,7 +287,7 @@ $('.summernote').summernote({
   $(()=>{
 
 
-    var arrayCategoria = [];
+   
     var contador=0;
 
     $.ajaxSetup({
@@ -283,7 +307,7 @@ $('.summernote').summernote({
         removeTitle: 'Cancel or reset changes',
         elErrorContainer: '#kv-avatar-errors-2',
         msgErrorClass: 'alert alert-block alert-danger',
-        defaultPreviewContent: '<span class="fa fa-search"></span>',
+        defaultPreviewContent: '<img src="/'+tour.img+'">',
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -294,6 +318,8 @@ $('#language_id').change(()=>{
   cargar_categorias($('#language_id').val());
 });
 
+
+// funcion para cargar categorias
 function cargar_categorias(id){
     $.ajax({
       url:'/admin/get/categoria/'+id,
@@ -315,7 +341,7 @@ function cargar_categorias(id){
 
 
 
-
+//agregando categorias al array
   $('#agregando-categoria').click(()=>{
     var i = 0;
     var cuenta=0;
@@ -341,7 +367,6 @@ function cargar_categorias(id){
 
 //cargar los array en li
   function cargar_lista(){
-    console.log(arrayCategoria);
     var cadena='';
     for(let i = 0; i < arrayCategoria.length ; i++){
       if(arrayCategoria[i] != undefined){
@@ -355,15 +380,7 @@ function cargar_categorias(id){
 
 
 
-function eliminar_categoria(){
-    $('i[name="eliminar-categoria"]').click((e)=>{
-      let idli = e.target.id
-      idli = idli.substring(9,12);
-      delete arrayCategoria[idli];
-      $('#li'+idli).remove();
 
-  });
-}
 
 
 $('#form-tours').validate({
@@ -381,32 +398,37 @@ $('#form-tours').validate({
       processData:false
     }).done((data)=>{
 
-      alert(data);
+    
+      $.ajax({
+        url:'/admin/delete/categoria/'+tour.id,
+        method:'POST',
+        async:false
+      });
 
-      // var idTour = data;
-      // var NuevoArrayCategoria = [];
-      // for(let i = 0 ; i < arrayCategoria.length ; i++){
-      //   if(arrayCategoria[i] != undefined){
-      //       NuevoArrayCategoria.push(arrayCategoria[i]);
-      //   }
-      // }
-      //
-      // for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
-      //       $.ajax({
-      //       url:'/admin/categories_has_tours',
-      //       method:'POST',
-      //       async:false,
-      //       data:{id:idTour,slug:NuevoArrayCategoria[i]}
-      //       }).done((data)=>{
-      //
-      //       }).fail((data)=>{
-      //       alert("ha ocurrido un error");
-      //       });
-      //
-      // }
-      //
-      //
-      // window.location.href = "/admin/tours";
+     
+      var NuevoArrayCategoria = [];
+      for(let i = 0 ; i < arrayCategoria.length ; i++){
+        if(arrayCategoria[i] != undefined){
+            NuevoArrayCategoria.push(arrayCategoria[i]);
+        }
+      }
+      
+      for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
+            $.ajax({
+            url:'/admin/categories_has_tours',
+            method:'POST',
+            async:false,
+            data:{id:tour.id,slug:NuevoArrayCategoria[i]}
+            }).done((data)=>{
+      
+            }).fail((data)=>{
+            alert("ha ocurrido un error");
+            });
+      
+      }
+      
+      
+      window.location.href = "/admin/tours";
 
     }).fail((data)=>{
         if(data.status == 422){

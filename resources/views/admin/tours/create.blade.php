@@ -134,13 +134,12 @@ i[name="eliminar-categoria"]{
             {!!Form::label('meta_description','Meta Descriptión')!!}
             {!!Form::text('meta_description',null,['class'=>'form-control'])!!}
           </div>
-
         </div>
 
         <div class="col-md-12">
           <div class="form-group">
-            {!!Form::label('meta_keyword','Meta Keyword')!!}
-            {!!Form::text('meta_keyword',null,['class'=>'form-control'])!!}
+            {!!Form::label('meta_keywords','Meta Keyword')!!}
+            {!!Form::text('meta_keywords',null,['class'=>'form-control'])!!}
           </div>
         </div>
 
@@ -405,9 +404,6 @@ $('#form-tours').validate({
     });
   }
 });
-
-
-
 
 
   });

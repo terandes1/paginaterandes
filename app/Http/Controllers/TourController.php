@@ -6,10 +6,12 @@ use App\Tour;
 use App\Multimedia;
 use App\Language;
 use App\Categorie;
+use App\CategorieTour;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTour;
 use App\Http\Requests\UpdateTour;
 use Illuminate\Support\Str as Str;
+use Illuminate\Support\Facades\DB;
 
 class TourController extends Controller
 {
@@ -61,9 +63,12 @@ class TourController extends Controller
           'img'=>$ruta,
           'description_short'=>$request->description_short,
           'description_complete'=>$request->description_complete,
+          'organization'=>$request->organization,
           'multimedia_id'=>$request->multimedia_id,
           'status'=>$request->status,
-          'slug'=>$slug
+          'slug'=>$slug,
+          'meta_description'=>$request->meta_description,
+          'meta_keywords'=>$request->meta_keywords
         ]);
 
       return response($tour->id);
@@ -82,7 +87,9 @@ class TourController extends Controller
 
       $languages = Language::All();
       $multimedia = Multimedia::All();
-      return view('admin.tours.update',['tour'=>$tour,'multimedia'=>$multimedia,'languages'=>$languages]);
+      $categories = DB::select('select categories.slug from categories_has_tours cht left join categories on categories.id = cht.categorie_id where cht.tour_id = :id',['id'=>$tour->id]);
+
+      return view('admin.tours.update',['tour'=>$tour,'multimedia'=>$multimedia,'languages'=>$languages,'categories'=>$categories]);
     }
 
     /**
@@ -137,9 +144,12 @@ class TourController extends Controller
           'name'=>$request->name,
           'description_short'=>$request->description_short,
           'description_complete'=>$request->description_complete,
+          'organization'=>$request->organization,
           'multimedia_id'=>$request->multimedia_id,
           'status'=>$request->status,
-          'slug'=>$slug
+          'slug'=>$slug,
+          'meta_description'=>$request->meta_description,
+          'meta_keywords'=>$request->meta_keywords
         ]);
 
 
@@ -162,5 +172,17 @@ class TourController extends Controller
     public function get_categoria($id){
         $categories = Categorie::where('language_id',$id)->get();
         return response($categories);
+    }
+
+
+    public function delete_categoria($id){
+        
+        $categories = CategorieTour::where('tour_id',$id)->get();
+
+        foreach($categories as $categorie){
+            $c = CategorieTour::find($categorie->id);
+            $c->delete();
+        }
+
     }
 }
