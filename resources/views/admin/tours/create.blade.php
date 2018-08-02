@@ -2,7 +2,7 @@
 
 
 @section('style')
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
 
 
 {!!Html::style('assets/admin/plugins/fileinput/css/fileinput.min.css')!!}
@@ -118,14 +118,14 @@ i[name="eliminar-categoria"]{
         <div class="col-md-12">
   				<div class="form-group">
   					{!!Form::label('description_complete','Descripción Completa')!!}
-  					{!!Form::textarea('description_complete', null,['class'=>'form-control summernote','required'])!!}
+  					{!!Form::textarea('description_complete', null,['class'=>'form-control','id'=>'description_complete','required'])!!}
   				</div>
   			</div>
 
         <div class="col-md-12">
   				<div class="form-group">
   					{!!Form::label('organization','Organización')!!}
-  					{!!Form::textarea('organization', null,['class'=>'form-control summernote','required'])!!}
+  					{!!Form::textarea('organization', null,['class'=>'form-control','id'=>'organization','required'])!!}
   				</div>
   			</div>
 
@@ -134,13 +134,12 @@ i[name="eliminar-categoria"]{
             {!!Form::label('meta_description','Meta Descriptión')!!}
             {!!Form::text('meta_description',null,['class'=>'form-control'])!!}
           </div>
-
         </div>
 
         <div class="col-md-12">
           <div class="form-group">
-            {!!Form::label('meta_keyword','Meta Keyword')!!}
-            {!!Form::text('meta_keyword',null,['class'=>'form-control'])!!}
+            {!!Form::label('meta_keywords','Meta Keyword')!!}
+            {!!Form::text('meta_keywords',null,['class'=>'form-control'])!!}
           </div>
         </div>
 
@@ -225,41 +224,55 @@ i[name="eliminar-categoria"]{
 @endsection
 
 @section('script')
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
 {!!Html::script('assets/admin/plugins/fileinput/js/fileinput.min.js')!!}
 {!!Html::script('assets/admin/plugins/fileinput/themes/explorer-fa/theme.js')!!}
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script type="text/javascript">
 
 
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-bottom-right",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
+$(document).ready(function() {
+  $('#description_complete').summernote({
+            height: 200,  
+          
+  });
 
+  $('#organization').summernote({
+            height: 200,           
+            tooltip:false
+  });
 
-$('.summernote').summernote({
-  height: 350,                 // set editor height
-      minHeight: null,             // set minimum height of editor
-      maxHeight: null,             // set maximum height of editor
-      focus: false
+  
 });
 
-  $(()=>{
 
+  $(()=>{
+    
+
+    toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-bottom-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+
+  
+
+  
+     
+
+      
 
     var arrayCategoria = [];
     var contador=0;
@@ -297,8 +310,11 @@ function cargar_categorias(id){
       method:'GET'
     }).done((data)=>{
       var cadena = '';
+
+      var contador=0;
       $(data).each(()=>{
-        cadena+='<option value="'+data.slug+'">'+data.slug+'</option>'
+        cadena+='<option value="'+data[contador].slug+'">'+data[contador].slug+'</option>';
+        contador++;
       });
       $('#categorie_slug').html(cadena);
     }).fail((data)=>{
@@ -365,26 +381,31 @@ $('#form-tours').validate({
       processData:false
     }).done((data)=>{
 
+      var idTour = data;
       var NuevoArrayCategoria = [];
-      for(i = 0 ; i < arrayCategoria.length ; i++){
+      for(let i = 0 ; i < arrayCategoria.length ; i++){
         if(arrayCategoria[i] != undefined){
             NuevoArrayCategoria.push(arrayCategoria[i]);
         }
       }
 
-      $.ajax({
-        url:'/admin/categories_has_tours',
-        method:'POST',
-        data:NuevoArrayCategoria,
-        contentType:false,
-        processData:false
-      }).done((data)=>{
-        alert(data);
-      }).fail((data)=>{
-        alert("ha ocurrido un error");
-      });
+      for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
+            $.ajax({
+            url:'/admin/categories_has_tours',
+            method:'POST',
+            async:false,
+            data:{id:idTour,slug:NuevoArrayCategoria[i]}
+            }).done((data)=>{
 
-      //window.location.href = "/admin/tours";
+            }).fail((data)=>{
+            alert("ha ocurrido un error");
+            });
+
+      }
+
+
+      window.location.href = "/admin/tours";
+
     }).fail((data)=>{
         if(data.status == 422){
           $errors = data.responseJSON;
@@ -397,9 +418,6 @@ $('#form-tours').validate({
     });
   }
 });
-
-
-
 
 
   });

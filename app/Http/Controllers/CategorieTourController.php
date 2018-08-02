@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Categorie;
 use App\CategorieTour;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,14 @@ class CategorieTourController extends Controller
      */
     public function store(Request $request)
     {
-              return response($request);
+      $categoria = Categorie::where('slug',$request->slug)->get();
+
+      $idcategoria = $categoria[0]->id;
+
+      CategorieTour::create([
+        'categorie_id'=>$idcategoria,
+        'tour_id'=>$request->id
+      ]);
     }
 
     /**
@@ -80,6 +88,6 @@ class CategorieTourController extends Controller
      */
     public function destroy(CategorieTour $categorieTour)
     {
-        //
+        return "llegaste a eliminar";
     }
 }

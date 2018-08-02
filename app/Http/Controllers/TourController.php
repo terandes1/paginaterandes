@@ -6,9 +6,12 @@ use App\Tour;
 use App\Multimedia;
 use App\Language;
 use App\Categorie;
+use App\CategorieTour;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTour;
+use App\Http\Requests\UpdateTour;
 use Illuminate\Support\Str as Str;
+use Illuminate\Support\Facades\DB;
 
 class TourController extends Controller
 {
@@ -43,6 +46,7 @@ class TourController extends Controller
      */
     public function store(StoreTour $request)
     {
+
       $slug = Str::slug($request['name']);
 
 
@@ -54,15 +58,20 @@ class TourController extends Controller
       $ruta = 'assets/content/'.$fileName;
 
 
-        Tour::create([
+        $tour = Tour::create([
           'name'=>$request->name,
           'img'=>$ruta,
           'description_short'=>$request->description_short,
           'description_complete'=>$request->description_complete,
+          'organization'=>$request->organization,
           'multimedia_id'=>$request->multimedia_id,
           'status'=>$request->status,
-          'slug'=>$slug
+          'slug'=>$slug,
+          'meta_description'=>$request->meta_description,
+          'meta_keywords'=>$request->meta_keywords
         ]);
+
+      return response($tour->id);
 
 
     }
@@ -75,7 +84,12 @@ class TourController extends Controller
      */
     public function show(Tour $tour)
     {
-        //
+
+      $languages = Language::All();
+      $multimedia = Multimedia::All();
+      $categories = DB::select('select categories.slug from categories_has_tours cht left join categories on categories.id = cht.categorie_id where cht.tour_id = :id',['id'=>$tour->id]);
+
+      return view('admin.tours.update',['tour'=>$tour,'multimedia'=>$multimedia,'languages'=>$languages,'categories'=>$categories]);
     }
 
     /**
@@ -96,9 +110,52 @@ class TourController extends Controller
      * @param  \App\Tour  $tour
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tour $tour)
+    public function update(UpdateTour $request, Tour $tour)
     {
-        //
+
+
+        if($request->name != $tour->name){
+          $request->validate([
+            'name' => 'required|unique:tours,name'
+          ]);
+        }
+
+
+        $slug = Str::slug($request['name']);
+
+        if ($request->img != null) {
+
+
+          \File::delete(public_path($tour->img));
+
+            $file =  $request->file('img');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move(public_path('assets/content/'),$fileName);
+            $ruta = 'assets/content/'.$fileName;
+
+            $tour->fill([
+                'img'=>$ruta
+            ]);
+
+        }
+
+        $tour->fill([
+          'name'=>$request->name,
+          'description_short'=>$request->description_short,
+          'description_complete'=>$request->description_complete,
+          'organization'=>$request->organization,
+          'multimedia_id'=>$request->multimedia_id,
+          'status'=>$request->status,
+          'slug'=>$slug,
+          'meta_description'=>$request->meta_description,
+          'meta_keywords'=>$request->meta_keywords
+        ]);
+
+
+        $tour->save();
+
+
     }
 
     /**
@@ -115,5 +172,17 @@ class TourController extends Controller
     public function get_categoria($id){
         $categories = Categorie::where('language_id',$id)->get();
         return response($categories);
+    }
+
+
+    public function delete_categoria($id){
+        
+        $categories = CategorieTour::where('tour_id',$id)->get();
+
+        foreach($categories as $categorie){
+            $c = CategorieTour::find($categorie->id);
+            $c->delete();
+        }
+
     }
 }
