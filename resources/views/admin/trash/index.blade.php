@@ -25,21 +25,34 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <br><br>
                     <table class="table table-striped" id="table-users">
                     <thead>
                       <tr>
 
-                        <th scope="col">Nombres</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Lenguaje</th>
+                        <th>Nombres</th>
+                        <th>Email</th>
+                        <th>Lenguaje</th>
                         <th>Estado</th>
-                        <th scope="col">Fecha de Creación</th>
-                        <th scope="col">Fecha de Actualización</th>
-                        <th scope="col">Acciones</th>
+                        <th>Fecha de Creación</th>
+                        <th>Fecha de Eliminación</th>
+                        <th>Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
-
+                        @foreach($users as $user)
+                        <tr>
+                          <td>{{$user->name}}</td>
+                          <td>{{$user->email}}</td>
+                          <td></td>
+                          <td>{{$user->status}}</td>
+                          <td>{{$user->created_at}}</td>
+                          <td>{{$user->deleted_at}}</td>
+                          <td class="text-right">
+                            <button class="btn btn-warning">Restaurar</button>
+                          </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                   </table>
             </div>
@@ -72,4 +85,13 @@
     </div>
   </div>
 </div>
+@endsection
+
+
+@section('script')
+<script>
+  $(()=>{
+    $('#table-users').DataTable();
+  });
+</script>
 @endsection
