@@ -2,7 +2,7 @@
 
 
 @section('style')
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
 
 
 {!!Html::style('assets/admin/plugins/fileinput/css/fileinput.min.css')!!}
@@ -118,14 +118,14 @@ i[name="eliminar-categoria"]{
         <div class="col-md-12">
   				<div class="form-group">
   					{!!Form::label('description_complete','Descripción Completa')!!}
-  					{!!Form::textarea('description_complete', null,['class'=>'form-control summernote','required'])!!}
+  					{!!Form::textarea('description_complete', null,['class'=>'form-control','id'=>'description_complete','required'])!!}
   				</div>
   			</div>
 
         <div class="col-md-12">
   				<div class="form-group">
   					{!!Form::label('organization','Organización')!!}
-  					{!!Form::textarea('organization', null,['class'=>'form-control summernote','required'])!!}
+  					{!!Form::textarea('organization', null,['class'=>'form-control','id'=>'organization','required'])!!}
   				</div>
   			</div>
 
@@ -224,41 +224,55 @@ i[name="eliminar-categoria"]{
 @endsection
 
 @section('script')
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
 {!!Html::script('assets/admin/plugins/fileinput/js/fileinput.min.js')!!}
 {!!Html::script('assets/admin/plugins/fileinput/themes/explorer-fa/theme.js')!!}
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script type="text/javascript">
 
 
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-bottom-right",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
+$(document).ready(function() {
+  $('#description_complete').summernote({
+            height: 200,  
+          
+  });
 
+  $('#organization').summernote({
+            height: 200,           
+            tooltip:false
+  });
 
-$('.summernote').summernote({
-  height: 350,                 // set editor height
-      minHeight: null,             // set minimum height of editor
-      maxHeight: null,             // set maximum height of editor
-      focus: false
+  
 });
 
-  $(()=>{
 
+  $(()=>{
+    
+
+    toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-bottom-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+
+  
+
+  
+     
+
+      
 
     var arrayCategoria = [];
     var contador=0;

@@ -2,7 +2,7 @@
 
 
 @section('style')
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
 
 
 {!!Html::style('assets/admin/plugins/fileinput/css/fileinput.min.css')!!}
@@ -225,7 +225,7 @@ i[name="eliminar-categoria"]{
 @endsection
 
 @section('script')
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
 {!!Html::script('assets/admin/plugins/fileinput/js/fileinput.min.js')!!}
 {!!Html::script('assets/admin/plugins/fileinput/themes/explorer-fa/theme.js')!!}
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
