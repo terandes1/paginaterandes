@@ -43,6 +43,8 @@ Route::prefix('admin')->group(function () {
     Route::post('intinearie/','ItinerarieController@insert')->name('itinerarioInsert');
     Route::get('intinearie/listar/{id}','ItinerarieController@listar')->name('itinerarioListar');
     Route::get('intinearie/eliminar/{id}','ItinerarieController@eliminar')->name('ItinerarioEliminar');
+    Route::post('intinearie/actualizar/','ItinerarieController@actualizar')->name('itinerarioActualizar');
+
 
 
 
