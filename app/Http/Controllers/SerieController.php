@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Serie;
+use App\Tour;
+use App\Http\Requests\StoreSerie;
 use Illuminate\Http\Request;
 
 class SerieController extends Controller
@@ -14,7 +16,7 @@ class SerieController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.series.index');
     }
 
     /**
@@ -24,7 +26,8 @@ class SerieController extends Controller
      */
     public function create()
     {
-        //
+        $tours = Tour::All();
+        return view('admin.series.create',['tours'=>$tours]);
     }
 
     /**
@@ -33,9 +36,10 @@ class SerieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreSerie $request)
     {
-        //
+        Serie::create($request->all());
+        return redirect('admin/series')->with('status','La serie ha sido creada con exito');
     }
 
     /**

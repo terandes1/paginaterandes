@@ -30,7 +30,7 @@
 
     <div class="col-md-12">
     </br>
-        <table class="table table-striped" id="table-users">
+        <table class="table table-responsive" id="table-users">
         <thead>
           <tr>
 
@@ -80,7 +80,6 @@
                   </div>
                 </div>
                 </div>
-
               </td>
             </tr>
           @endforeach

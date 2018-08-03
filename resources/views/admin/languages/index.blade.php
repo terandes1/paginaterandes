@@ -34,7 +34,7 @@
 
     <div class="col-md-12">
     </br>
-        <table class="table table-striped">
+        <table class="table" id="table-language">
         <thead>
           <tr>
 
@@ -45,7 +45,7 @@
             <th>Fecha de Creación</th>
             <th>Fecha de Actualización</th>
             <th>Acciones</th>
-          </tr>
+           </tr>
         </thead>
         <tbody>
           @foreach($languages as $language)
@@ -94,6 +94,9 @@
 @section('script')
   <script>
     $(()=>{
+
+      $('#table-language').DataTable();
+
       $('i[name^="eliminar"]').click((e)=>{
         let opcion = confirm("Esta seguro que desea eliminar este usuario");
 

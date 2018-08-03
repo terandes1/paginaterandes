@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSeriesTable extends Migration
+class CreateSeriesController extends Migration
 {
     /**
      * Run the migrations.
@@ -18,9 +18,9 @@ class CreateSeriesTable extends Migration
             $table->unsignedInteger('tour_id');
             $table->foreign('tour_id')->references('id')->on('tours');
             $table->integer('cant_person');
-            $table->float('price',8,2);
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->float('price', 8, 2);
+            $table->date('date_start');
+            $table->date('date_end');
             $table->timestamps();
         });
     }
