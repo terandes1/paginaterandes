@@ -44,27 +44,28 @@
         <div class="col-md-6">
             <div class="form-group">
                 {!!Form::label('cant_person','Cantidad de Personas')!!}
-                <input type="number" name="cant_person" class="form-control" required>
+                {!!Form::number('cant_person', null,['class'=>'form-control','step'=>'any','required'])!!}
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 {!!Form::label('price','Precio por Persona en $')!!}
-                <input type="number" name="price" class="form-control" step="any" required> 
+                {!!Form::number('price', null,['class'=>'form-control','step'=>'any','required'])!!}
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
                 {!!Form::label('date_start','Fecha Inicio')!!}
-                <input type="date" name="date_start" class="form-control" required>
+                {!!Form::date('date_start', null,['class'=>'form-control','required'])!!}
+                
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
             {!!Form::label('','Fecha Final')!!}
-                <input type="date" name="date_end" class="form-control" required>
+            {!!Form::date('date_end', null,['class'=>'form-control','required'])!!}
             </div>
         </div>
     
