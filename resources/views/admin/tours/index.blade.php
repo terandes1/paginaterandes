@@ -21,7 +21,7 @@
 
     <div class="col-md-12">
     </br>
-        <table class="table table-striped">
+        <table class="table table-striped" id="table_tours">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -74,17 +74,9 @@
 
 
 @section('script')
-  <script>
-    // $(()=>{
-    //   $('i[name^="eliminar"]').click((e)=>{
-    //     let opcion = confirm("Esta seguro que desea eliminar este usuario");
-    //
-    //     if(opcion == true){
-    //       $('#'+$(e.target).attr('name')).submit();
-    //     }
-    //
-    //
-    //   });
-    // });
+   <script>
+    $(()=>{
+      $('#table_tours').DataTable();
+    });
   </script>
 @endsection

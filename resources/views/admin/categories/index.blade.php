@@ -22,7 +22,7 @@
 
     <div class="col-md-12 table-responsive">
     </br>
-        <table class="table">
+        <table class="table" id="table_catogories">
         <thead class="thead-light">
           <tr>
             <th scope="col">Nombres</th>
@@ -81,5 +81,9 @@
 
 
 @section('script')
-  
+   <script>
+    $(()=>{
+      $('#table_catogories').DataTable();
+    });
+  </script>
 @endsection

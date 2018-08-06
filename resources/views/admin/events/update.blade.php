@@ -57,7 +57,7 @@
           <a href="{{('/admin/events')}}" class="btn btn-danger form-control">Cancelar</a>
         </div>
         <div class="col-md-2">
-          <button class="btn btn-success form-control">Guardar</button>
+          <button class="btn btn-success form-control">Actualizar</button>
         </div>
 
       </div>

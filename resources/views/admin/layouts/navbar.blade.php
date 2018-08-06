@@ -21,7 +21,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/series')}}">Serie</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reserva</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/multimedia')}}">Multimedia</a>
@@ -42,9 +44,6 @@
           <a class="nav-link" href="#">Testimonios</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Reserva</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/events')}}">Eventos</a>
         </li>
