@@ -48,6 +48,11 @@ Route::prefix('admin')->group(function () {
     Route::get('intinearie/eliminar/{id}','ItinerarieController@eliminar')->name('ItinerarioEliminar');
     Route::post('intinearie/actualizar/','ItinerarieController@actualizar')->name('itinerarioActualizar');
 
+    Route::get('intinearie/ubicacion/{id}','ItinerarieController@ubicacion')->name('itinerarioUbicacion');
+    Route::post('intinearie/actualizarUbicacion/','ItinerarieController@ubicacionUpdate')->name('itineUbicacionUpdate');
+
+
+
 
 
 

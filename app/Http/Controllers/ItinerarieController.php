@@ -5,12 +5,17 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Itinerarie;
 use App\Tour;
+use App\Http\Requests\UpdateItinerarie;
+use App\Icon;
 class ItinerarieController extends Controller
 {
     public function update($id)
     {
-    	$tourItem=Tour::find($id);
-    	return view('admin.itineraries.update',['tourItem'=>$tourItem]);
+    	$icons=Icon::all();
+
+        $tourItem=Tour::find($id);
+
+    	return view('admin.itineraries.update',['tourItem'=>$tourItem,'icons'=>$icons]);
     
     }
     public function insert(Request $request)
@@ -26,9 +31,9 @@ class ItinerarieController extends Controller
 		    'province' => $request['province'],
 		    'district' => $request['district'],
 		    'altitud' => $request['altitud'],
-		    'latitud' => $request['latitud'],
-		    'longitud' => $request['longitud'],
-		    'icono' => $request['description']
+		    'latitud' => ' ',
+		    'longitud' => ' ',
+		    'icono' => $request['icon']
 			]
 		);
 
@@ -37,8 +42,10 @@ class ItinerarieController extends Controller
 
     public function listar($id)
     {
-    	 $itinerarie=DB::table('itineraries')->where('tour_id', '=', $id)->get();
-    	 return response()->json(['data'=>$itinerarie]);
+         $itinerarie=DB::table('itineraries')->where('tour_id', '=', $id)->get();
+
+         $maxItem = Itinerarie::whereRaw('id = (select max(`id`) from itineraries where tour_id='.$id.' )')->get();
+         return response()->json(['data'=>$itinerarie,'maxItem'=>$maxItem]);
     }
 
      public function eliminar($idItinerario)
@@ -104,7 +111,7 @@ class ItinerarieController extends Controller
     }
      public function actualizar(Request $request)
     {
-
+        //return $request['altitud'];
     	DB::table('itineraries')
             ->where('id', $request['id'])
             ->update([
@@ -117,13 +124,34 @@ class ItinerarieController extends Controller
 		    		'province' => $request['province'],
 		    		'district' => $request['district'],
 		    		'altitud' => $request['altitud'],
-		    		'latitud' => $request['latitud'],
-		    		'longitud' => $request['longitud'],
-		    		'icono' => $request['description']
                 ]);
-
     	return redirect()->route('itinerario',$request['idTourP'])->with('info' , 'Se registro correctamente');
 
+    }
+
+    public function ubicacion($id)
+    {
+     
+     $itenerarioItem=Itinerarie::find($id);
+     $icons=Icon::all();
+     return response()->json(['data'=>$itenerarioItem,'icons'=>$icons]);
+
+    }
+    public function ubicacionUpdate(Request $request)
+    {
+       
+        $itinerarie=DB::table('itineraries')->where('id', '=', $request['idItinerario'])->get()[0]; 
+        
+        $idTourP=$itinerarie->tour_id;
+        DB::table('itineraries')
+            ->where('id', $request['idItinerario'])
+            ->update([
+                
+                    'latitud' => $request['latitud1'],
+                    'longitud' => $request['longitud1'],
+                    'icono' => $request['Selecticons']
+                ]);
+        return redirect()->route('itinerario', $idTourP)->with('info' , 'Se registro correctamente');
     }
 
 }

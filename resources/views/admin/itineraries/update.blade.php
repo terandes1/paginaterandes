@@ -39,7 +39,7 @@
 							        
 
 							      </div>
-							      
+							     
 						    </div>
 
 					  </div>
@@ -50,32 +50,42 @@
 			  <div class="modal-dialog modal-lg" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle">UBICACIÓN</h5>
+			        <h5 class="modal-title" id="exampleModalLongTitle">UBICACIÓN 
+			        	
+			        </h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
 			      </div>
+			      {!! Form::open(['route' => ['itineUbicacionUpdate'] , 'method' => 'POST', 'class' => 'form-horizontal']) !!}
 			      <div class="modal-body">
-			      	
+			      	<div class="alert alert-success">
+			       		<div id="item"> 							
+			        		 ITINERARIO:<span id="tituloItinerario"> </span>
+			        		 <input type='hidden' id="idItinerario" name="idItinerario">
+			        	</div>
+			         </div>
 			       <div id="googleMap" style="width:100%;height:400px;"></div>
 			       <div class='row' style='margin-left:3px;'>
-						<div class='col-4'>
-			                	<label for='Departamento'>Altitud</label>
-			                	<input type='text' class='form-control' name='altitud1' id='altitud1'  placeholder='Altitud'>
-						</div>
-						<div class='col-4'>
+						<div class='col-3'>
 			                	<label for='distric'>Latitud</label>
 			                	<input type='text' class='form-control' name='latitud1' id='latitud1'  placeholder='Latitud'>
 						</div>
-						<div class='col-4'>
+						<div class='col-3'>
 			                	<label for='distric'>Longitud</label>
 			                	<input type='text' class='form-control' name='longitud1' id='longitud1'  placeholder='Longitud'>
+						</div>
+						<div class='col-3' id="iconoUbicacion">
+			                <label>Iconos</label> 
+
 						</div>
 		         	<div>
 			      </div>
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-primary">Guardar</button>
+
+			        <button style="margin-top: 15px;" class="btn btn-primary">Guardar Ubicación</button>
 			      </div>
+			      {!! Form::close() !!}
 			    </div>
 			  </div>
 			</div>
@@ -89,12 +99,16 @@
 @section('script')
 
  <script>
- 	var marker;          //variable del marcador
-	var coords = {};    //coordenadas obtenidas con la geolocalización
-	function initMap() {
 
-		var map = new google.maps.Map(document.getElementById('googleMap'), {
-		 center: {lat: -13.5364544, lng: -72.0259185},
+	function initMap(latitud1,longitud1) {
+		
+		 if(latitud1.length==1)
+		 {
+		 	latitud1=-13.52577301931808;
+		 	longitud1=-71.94352103906249;
+		 }
+		 var map = new google.maps.Map(document.getElementById('googleMap'), {
+		 center: {lat: parseFloat(latitud1), lng: parseFloat(longitud1)},
 		 scrollwheel: false,
 		 zoom: 8,
 		 zoomControl: true,
@@ -104,7 +118,7 @@
 		 });
 		 // Creamos dos marcadores.
 		 var marker1 = new google.maps.Marker({
-		 position: {lat: -13.5364544, lng: -72.0259185},
+		 position: {lat:parseFloat(latitud1), lng:  parseFloat(longitud1)},
 		 draggable: true
 		 });
 		 marker1.setMap(map);
@@ -115,14 +129,60 @@
 
   		 });
 	}
-	 jQuery("#ubicacionModal button.close").click(function () {
-    jQuery("#ubicacionModal").modal("hide");
-  });
+	
+function agregarUbicaion(idItinerario) {
+		
+  		$.ajax({
+
+			   url:'{{ route('itinerarioUbicacion','') }}'+'/'+idItinerario,
+			   type: 'GET',
+			   data:'_token = <?php echo csrf_token() ?>',
+			   dataType: 'JSON',
+			   beforeSend: function() {
+			   },
+			   error: function() {
+			   },
+		 	  	success: function(respuesta) {
+		 	  		var idIcono=respuesta.data.icono;
+
+		 	  		$( "#tituloItinerario" ).remove();
+		 	  		$( "#Selecticons" ).remove();
+		 	  		$('#item').append('<span id="tituloItinerario"></span>'); 
+		 	  		var id=respuesta.data.id;
+		 	  		$("#idItinerario").val(id);
+		 	  		$("#latitud1").val(respuesta.data.latitud);
+		 	  		$("#longitud1").val(respuesta.data.longitud);
+					var html=respuesta.data.name;
+					$("#tituloItinerario").append(html);
+
+					var latitud1=$("#latitud1").val();
+					var longitud1=$("#longitud1").val();
+
+					var SelectIcono ='<select class="form-control" name="Selecticons" id="Selecticons">';
+
+					 $.each(respuesta.icons,function(index,element)
+                    	{
+                    		SelectIcono =SelectIcono+ "<option value='"+element.id+"'>"+element.name+"</option>";
+                    	});
+
+					 	SelectIcono =SelectIcono + "</select>";
+					 	$("#iconoUbicacion").append(SelectIcono);
+					 	$('#Selecticons > option[value="'+idIcono+'"]').attr('selected', 'selected');
+
+					initMap(latitud1,longitud1);
+
+		   		}
+			});
+
+  $('#ubicacionModal').modal('show');
+}
+
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback">
 	
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback=initMap">
-	
-</script>
+
 
   <script>
   	//$.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
@@ -144,17 +204,17 @@
           			"Dia "+numero+" </a>";
          $("#v-pills-tab").append(tab);
 
-         var tabPanel= "<div class='tab-pane "+active+" ' id='v-pills-home"+numero+"' role='tabpanel' 								aria-labelledby='v-pills-home-tab'>"+
-         						'{!! Form::open(['route' => ['itinerarioInsert'] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}'+
+         var tabPanel= "  <div class='tab-pane "+active+" ' id='v-pills-home"+numero+"' role='tabpanel' 								aria-labelledby='v-pills-home-tab'>"+
+         						'{!! Form::open(['route' => ['itinerarioInsert'] , 'method' => 'POST','id'=>'FormCrearItinerarie', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}'+
          							"<input type='hidden' id='idTourP' name='idTourP' value='{{$tourItem->id}}'>"+
 		         			   		"<p style='width: 900px;'>"+
 		         			           "<div class='row'>"+
 		         			                "<input type='hidden' id='day' name='day' value='"+numero+"'>"+
 		         			                "<div class='col'>"+
-		         			                	"<label for='inputPassword'>Nombre</label>"+
-		         			                	"<input type='text' class='form-control' name='name' id='name'  placeholder='Nombre'>"+
-		         			                	"<label for='inputPassword'>Description</label>"+
-		         			                	"<textarea  class='form-control' rows='5' name='description' id='description'>"+
+		         			                	"<label for='inputPassword'>Nombre <span style='color:red;'>*<span></label>"+
+		         			                	"<input type='text' class='form-control' name='name' id='name'  placeholder='Nombre' required>"+
+		         			                	"<label for='inputPassword'>Description <span style='color:red;'>*<span></label>"+
+		         			                	"<textarea  class='form-control' rows='5' name='description' id='description' required>"+
 		         			                	"</textarea>"+
 		         			                "<div>"+
 
@@ -182,23 +242,15 @@
 													"</div>"+
 													"<div class='col-4'>"+
 				         			                	"<label for='distric'>Latitud</label>"+
-				         			                	"<input type='text' class='form-control' name='latitud' id='latitud'  placeholder='Latitud'>"+
+				         			                	"<input type='text' class='form-control' name='latitud' id='latitud'  placeholder='Latitud' readonly>"+
 													"</div>"+
 													"<div class='col-4'>"+
 				         			                	"<label for='distric'>Longitud</label>"+
-				         			                	"<input type='text' class='form-control' name='longitud' id='longitud'  placeholder='Longitud'>"+
+				         			                	"<input type='text' class='form-control' name='longitud' id='longitud'  placeholder='Longitud' readonly>"+
 													"</div>"+
 		         			                "<div>"+
 
-		         			                "<div class='row'  style='margin-left:5px;'>"+
-
-													"<div class='col-2'>"+
-				         			                	"<label>Icono</label>"+
-				         			                	"<input type='file' name='pic' accept='image/*'>"+
-													"</div>"+
-													
-		         			                "<div><br><br><br>"+
-		         			                 "<div class='row'>"+
+		         			                 "<div class='row' style='margin-left:5px;'>"+
 
 													"<div class='col-5'>"+
 				         			                	"<label style='color:white'>Eliminar</label>"+
@@ -208,12 +260,7 @@
 				         			                	"<label style='color:white'>Guardar</label>"+
 				         			                	"<button class='btn btn-success form-control'>Guardar</button>"+
 													"</div>"+
-													"<div class='col-2'>"+
-				         			                	"<label>Ubicación</label>"+
-				         			                		"<button type='button' id='btnCerrar' class='btn btn-primary' data-toggle='modal' data-target='#ubicacionModal'> Ubicación"+
-															"</button>"
-													"</div>"+
-
+													
 		         			                "<div>"+
 		         			                
 
@@ -242,10 +289,20 @@
 		   },
 		   success: function(respuesta) {
 					
+					console.log(respuesta.icons);
+						var dia;
+						 
+						 $.each(respuesta.maxItem,function(index,elementa)
+                    		{
+                    			dia=elementa.day;
+                    		});
+						
+				        		 //console.log(htmlSelect);
+
 					    $.each(respuesta.data,function(index,element)
                     	{
-                   			console.log(element);
-                    	    if(numero==1)
+                   			
+                    	    if(numero==dia)
 					      	{
 								active="active show";
 					      	}else {
@@ -264,10 +321,10 @@
 		         			           "<div class='row'>"+
 		         			           	"<input type='hidden' id='day' name='day' value='"+numero+"'>"+
 		         			                "<div class='col'>"+
-		         			                	"<label for='inputPassword'>Nombre</label>"+
-		         			                	"<input type='text' class='form-control' name='name' id='name' value="+element.name+">"+
-		         			                	"<label for='inputPassword'>Description</label>"+
-		         			                	"<textarea  class='form-control' rows='5' name='description' id='description'>"+
+		         			                	"<label for='inputPassword'>Nombre  <span style='color:red;'>*<span></label>"+
+		         			                	"<input type='text' class='form-control' name='name' id='name' required value="+element.name+">"+
+		         			                	"<label for='inputPassword'>Description <span style='color:red;'>*<span></label>"+
+		         			                	"<textarea  class='form-control' rows='5' name='description'  required id='description'>"+
 		         			                	    
 		         			                	" "+element.description+" </textarea>"+
 		         			                "<div>"+
@@ -296,22 +353,13 @@
 													"</div>"+
 													"<div class='col-4'>"+
 				         			                	"<label for='distric'>Latitud</label>"+
-				         			                	"<input type='text' class='form-control' name='latitud' id='latitud'  value="+element.latitud+">"+
+				         			                	"<input type='text' class='form-control' name='latitud' id='latitud' readonly value="+element.latitud+">"+
 													"</div>"+
 													"<div class='col-4'>"+
 				         			                	"<label for='distric'>Longitud</label>"+
-				         			                	"<input type='text' class='form-control' name='longitud' id='longitud'  value="+element.longitud+">"+
+				         			                	"<input type='text' class='form-control' name='longitud' id='longitud' readonly value="+element.longitud+">"+
 													"</div>"+
 		         			                "<div>"+
-
-		         			                "<div class='row'  style='margin-left:5px;'>"+
-
-													"<div class='col-2'>"+
-				         			                	"<label>Icono</label>"+
-				         			                	"<input type='file' name='pic' accept='image/*'>"+
-													"</div>"+
-													
-		         			                "<div><br><br><br>"+
 		         			                 "<div class='row'>"+
 
 													"<div class='col-5'>"+
@@ -322,6 +370,11 @@
 													"<div class='col-5'>"+
 				         			                	"<label style='color:white'>Actualizar</label>"+
 				         			                	"<button class='btn btn-success form-control'>Actualizar</button>"+
+													"</div>"+
+													"<div class='col-2'>"+
+				         			                	"<label>Ubicación</label>"+
+				         			                		"<button type='button' onclick='agregarUbicaion("+element.id+")' class='btn btn-primary'> Ubicación"+
+															"</button> "+
 													"</div>"+
 													
 		         			                "<div>"+
@@ -334,6 +387,8 @@
          			    "</div>";
 				         $("#v-pills-tabContent").append(tabPanel);
 				        numero++;
+
+
                     	});
 		   		
 
