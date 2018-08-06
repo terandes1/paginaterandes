@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+use Image;
 class EventController extends Controller
 {
     /**
@@ -14,7 +15,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $Events = Event::all();
+
+        return view('admin.events.index',['Events' => $Events]);
     }
 
     /**
@@ -24,7 +27,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.events.create');
     }
 
     /**
@@ -35,7 +38,24 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $img = $request->file('img');
+           $url = $img->getClientOriginalExtension();
+           $event = new Event;
+           $event->name = $request->name;
+           $event->fecha_inicio = $request->fecha_inicio;
+           $event->fecha_fin = $request->fecha_fin;
+           $event->img = $url;
+           $event->description =$request->description;
+           $event->save();
+           $id=DB::table('events')->max('id');
+           $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
+           $destinationPath = '../public/assets/content/events';
+           if (!file_exists($destinationPath)) {
+              mkdir($destinationPath, 666, true);
+             }
+           $thumb_img = Image::make($img->getRealPath())->resize(600,300);
+           $thumb_img->save($destinationPath.'/'.$nombreImgen,20);
+           return redirect()->route('events.index')->with('info' , 'Se registro correctamente');
     }
 
     /**
@@ -44,9 +64,10 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($id)
     {
-        //
+         $event = Event::find($id);
+          return view('admin.events.update',['event'=>$event]);
     }
 
     /**
@@ -67,9 +88,48 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $id)
     {
-        //
+        $img = $request->file('img');
+        if(empty($img))
+        {
+          $event = Event::find($id);
+          $event->update([
+              'name'         => $request->name,
+              'fecha_inicio' => $request->fecha_inicio,
+              'fecha_fin'    => $request->fecha_fin,
+              'description'  => $request->description,
+          ]);
+
+          return redirect()->route('events.index');
+        }else{
+          $img = $request->file('img');
+          $url = $img->getClientOriginalExtension();
+          $event = Event::find($id);
+          $event->update([
+              'name'         => $request->name,
+              'description'  => $request->description,
+              'fecha_inicio' => $request->fecha_inicio,
+              'fecha_fin'    => $request->fecha_fin,
+              'img'         => $url,
+          ]);
+          $itemEvent = Event::where('id', '=',$id)->get()[0];
+          $destinationPath = '../public/assets/content/events/'.$id.'.'.$itemEvent->img;
+          if(file_exists(public_path($destinationPath)))
+            {
+              unlink(public_path($destinationPath));
+            }else{
+            }
+          $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
+          $destinationPathN = '../public/assets/content/events';
+           if (!file_exists($destinationPathN))
+           {
+              mkdir($destinationPathN, 666, true);
+           }
+           $thumb_img = Image::make($img->getRealPath())->resize(600,300);
+           $thumb_img->save($destinationPathN.'/'.$nombreImgen,20);
+           return redirect()->route('events.index');
+        }
     }
 
     /**
@@ -78,8 +138,18 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy($id)
     {
-        //
+        $itemEvent = Event::where('id', '=',$id)->get()[0];
+        Event::destroy($id);
+        $destinationPath = '../public/assets/content/events/'.$id.'.'.$itemEvent->img;
+        if(file_exists(public_path($destinationPath)))
+            {
+            unlink(public_path($destinationPath));
+            }else{
+            }
+        return redirect()->route('events.index')
+                        ->with('success','Member deleted successfully');
+
     }
 }

@@ -50,6 +50,9 @@ Route::prefix('admin')->group(function () {
 
     Route::get('intinearie/ubicacion/{id}','ItinerarieController@ubicacion')->name('itinerarioUbicacion');
     Route::post('intinearie/actualizarUbicacion/','ItinerarieController@ubicacionUpdate')->name('itineUbicacionUpdate');
+    Route::resource('events','EventController');
+
+
 
 
 

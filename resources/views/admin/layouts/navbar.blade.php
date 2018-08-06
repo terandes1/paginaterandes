@@ -46,7 +46,7 @@
           <a class="nav-link" href="#">Reserva</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Eventos</a>
+          <a class="nav-link" href="{{('/admin/events')}}">Eventos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/trash')}}">Papelera</a>
