@@ -4,6 +4,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <br>
+    </div>
+    <div class="col-md-12">
       @if (session('status'))
           <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>{{ session('status') }}</strong>
@@ -24,16 +27,38 @@
         <table class="table table-striped">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Estado</th>
+            <th>Tour</th>
+            <th>Cantidad Personas</th>
+            <th>Precio Por Persona</th>
             <th>Fecha de Creación</th>
             <th>Fecha de Actualización</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-
+          @foreach($series as $serie)
+          <tr>
+            <td>{{$serie->tour}}</td>
+            <td>{{$serie->cant_person}}</td>
+            <td>$ {{$serie->price}}</td>
+            <td>{{$serie->created_at}}</td>
+            <td>{{$serie->updated_at}}</td>
+            <td class="text-right">
+                <div class="container">
+                  <div class="row">
+                  <div class="col-xs-6">
+                    <a href="{{url('/admin/series/'. $serie->id )}}"><i class="fa fa-edit" style="color:blue;"></i></a>
+                  </div>
+                  <div class="col-xs-6">
+                    {!!Form::open(['url'=>'/admin/series/'.$serie->id,'method'=>'DELETE','id'=>'eliminar'.$serie->id])!!}
+                     &nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i name="eliminar{{$serie->id}}" class="fa fa-times" style="color:red;"></i></a>
+                    {!!Form::close()!!}
+                  </div>
+                </div>
+                </div>
+              </td>
+          </tr>
+          @endforeach
         </tbody>
       </table>
     </div>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\DB;
 use App\Serie;
 use App\Tour;
 use App\Http\Requests\StoreSerie;
@@ -16,7 +18,10 @@ class SerieController extends Controller
      */
     public function index()
     {
-        return view('admin.series.index');
+        $series = Serie::All();
+
+        $series = DB::select('SELECT series.*,tours.name as tour FROM series INNER JOIN tours ON tours.id = series.tour_id');
+        return view('admin.series.index',['series'=>$series]);
     }
 
     /**
@@ -26,7 +31,7 @@ class SerieController extends Controller
      */
     public function create()
     {
-        $tours = Tour::All();
+        $tours = DB::select('select * from tours WHERE NOT EXISTS (SELECT NULL FROM series WHERE series.tour_id = tours.id)');
         return view('admin.series.create',['tours'=>$tours]);
     }
 
@@ -48,9 +53,11 @@ class SerieController extends Controller
      * @param  \App\Serie  $serie
      * @return \Illuminate\Http\Response
      */
-    public function show(Serie $serie)
+    public function show($id)
     {
-        //
+        $serie = Serie::find($id);
+        $tour = Tour::find($serie->tour_id);
+        return view('admin.series.update',['serie'=>$serie,'tour'=>$tour]);
     }
 
     /**
@@ -71,9 +78,12 @@ class SerieController extends Controller
      * @param  \App\Serie  $serie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Serie $serie)
-    {
-        //
+    public function update(Request $request, $id)
+    {   
+        $serie = Serie::find($id);
+        $serie->fill($request->all());
+        $serie->save();
+        return redirect('admin/series')->with('status','La serie ha sido actualizada con exito');
     }
 
     /**
