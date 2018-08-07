@@ -2,98 +2,49 @@
 
 namespace App\Http\Controllers;
 
-
-use Illuminate\Support\Facades\DB;
-use App\Serie;
 use App\Tour;
-use App\Http\Requests\StoreSerie;
+use App\Serie;
+
+
 use Illuminate\Http\Request;
 
 class SerieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $series = Serie::All();
 
-        $series = DB::select('SELECT series.*,tours.name as tour FROM series INNER JOIN tours ON tours.id = series.tour_id');
-        return view('admin.series.index',['series'=>$series]);
-    }
+  public function index($id){
+    $tour = Tour::find($id);
+    $series = Serie::where('tour_id',$id)->get();
+    return view('admin.series.index',['series'=>$series,'tour'=>$tour]);
+  }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $tours = DB::select('select * from tours WHERE NOT EXISTS (SELECT NULL FROM series WHERE series.tour_id = tours.id)');
-        return view('admin.series.create',['tours'=>$tours]);
-    }
+  public function create($id){
+    $tour = Tour::find($id);
+    return view('admin.series.create',['tour'=>$tour]);
+  }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreSerie $request)
-    {
-        Serie::create($request->all());
-        return redirect('admin/series')->with('status','La serie ha sido creada con exito');
-    }
+  public function store(Request $request, $id){
+    Serie::create($request->all());
+    return redirect('admin/serie/tour/'.$id)->with('status','La serie ha sido creada Exitosamente');
+  }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Serie  $serie
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $serie = Serie::find($id);
-        $tour = Tour::find($serie->tour_id);
-        return view('admin.series.update',['serie'=>$serie,'tour'=>$tour]);
-    }
+  public function show($id){
+    $serie = Serie::find($id);
+    $tour = Tour::find($serie->tour_id);
+  return view('admin.series.update',['serie'=>$serie,'tour'=>$tour]);
+  }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Serie  $serie
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Serie $serie)
-    {
-        //
-    }
+  public function update(Request $request,$id){
+      $serie = Serie::find($id);
+      $serie->fill($request->all());
+      $serie->save();
+      return redirect('admin/serie/tour/'.$serie->tour_id)->with('status','La serie ha sido actualizada Exitosamente');
+  }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Serie  $serie
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {   
-        $serie = Serie::find($id);
-        $serie->fill($request->all());
-        $serie->save();
-        return redirect('admin/series')->with('status','La serie ha sido actualizada con exito');
-    }
+  public function delete($id){
+      $serie = Serie::find($id);
+      $serie->delete();
+      return redirect('admin/serie/tour/'.$serie->tour_id)->with('status','La serie ha sido eliminada Exitosamente');
+  }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Serie  $serie
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Serie $serie)
-    {
-        //
-    }
+
 }

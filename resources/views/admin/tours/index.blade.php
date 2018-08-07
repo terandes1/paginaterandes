@@ -58,7 +58,7 @@
                 <a class="dropdown-item" href="{{url('/admin/tours/'. $tour->id )}}">Editar</a>
                 <a class="dropdown-item" href="{{route('itinerario',$tour->id)}}">Itinerario</a>
                 <a class="dropdown-item" href="{{url('/admin/price/tour/'.$tour->id)}}">Precio</a>
-                <a class="dropdown-item" href="{{url('/admin/series')}}">Serie</a>
+                <a class="dropdown-item" href="{{url('/admin/serie/tour/'.$tour->id)}}">Serie</a>
                 {!!Form::open(['url'=>'/admin/tours/'.$tour->id,'method'=>'DELETE','id'=>'eliminar'.$tour->id])!!}
                    <a class="dropdown-item" name="eliminar{{$tour->id}}" href="#">Eliminar</a>
                 {!!Form::close()!!}

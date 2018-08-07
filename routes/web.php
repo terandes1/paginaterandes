@@ -27,7 +27,6 @@ Route::prefix('admin')->group(function () {
     Route::get('get/categoria/{id}','TourController@get_categoria');
     Route::post('delete/categoria/{id}','TourController@delete_categoria');
 
-    Route::resource('series','SerieController');
     Route::resource('reservations','ReservationController');
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -59,6 +58,14 @@ Route::prefix('admin')->group(function () {
     Route::get('price/{id}','PriceController@show');
     Route::put('price/{id}','PriceController@update');
     Route::delete('price/{id}','PriceController@delete');
+
+    //ruta para las series del tour
+    Route::get('serie/tour/{id}','SerieController@index');
+    Route::get('serie/tour/{id}/create','SerieController@create');
+    Route::post('serie/tour/{id}/create','SerieController@store');
+    Route::get('serie/{id}','SerieController@show');
+    Route::put('serie/{id}','SerieController@update');
+    Route::delete('serie/{id}','SerieController@delete');
 
     Route::resource('events','EventController');
 
