@@ -25,55 +25,41 @@
       <h3>Creando Nueva Serie</h3>
     </div>
   </div>
-  {!! Form::open(['url' => 'admin/series']) !!}
+  {!! Form::open(['url' => 'admin/serie/tour/'.$tour->id.'/create']) !!}
   <div class="card">
     <div class="card-body">
       <div class="row justify-content-md-center">
 
-        <div class="col-md-12">
-            <div class="form-group">
-                {!!Form::label('','Selecciona el Tour que quieres convertir en Serie')!!}
-                <select name="tour_id" id="" class="form-control" required>
-                    @foreach($tours as $tour)
-                    <option value="{{$tour->id}}">{{$tour->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-        </div>
+        <input type="text" name="tour_id" value="{{$tour->id}}" hidden>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="form-group">
                 {!!Form::label('cant_person','Cantidad de Personas')!!}
                 {!!Form::number('cant_person', null,['class'=>'form-control','step'=>'any','required'])!!}
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                {!!Form::label('price','Precio por Persona en $')!!}
-                {!!Form::number('price', null,['class'=>'form-control','step'=>'any','required'])!!}
-            </div>
-        </div>
 
-        <div class="col-md-6">
+
+        <div class="col-md-4">
             <div class="form-group">
                 {!!Form::label('date_start','Fecha Inicio')!!}
                 {!!Form::date('date_start', null,['class'=>'form-control','required'])!!}
-                
+
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="form-group">
-            {!!Form::label('','Fecha Final')!!}
+            {!!Form::label('date_end','Fecha Final')!!}
             {!!Form::date('date_end', null,['class'=>'form-control','required'])!!}
             </div>
         </div>
-    
+
         <div class="col-md-12">
           <hr>
         </div>
         <div class="col-md-2">
-          <a href="{{('/admin/series')}}" class="btn btn-danger form-control">Cancelar</a>
+          <a href="{{('/admin/serie/tour/'.$tour->id)}}" class="btn btn-danger form-control">Cancelar</a>
         </div>
         <div class="col-md-2">
           <button class="btn btn-success form-control">Guardar</button>
