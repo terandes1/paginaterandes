@@ -19,9 +19,6 @@
           <a class="nav-link" href="{{('/admin/tours')}}">Tour</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{('/admin/series')}}">Serie</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#">Reserva</a>
         </li>
 

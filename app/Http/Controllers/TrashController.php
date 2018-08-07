@@ -15,5 +15,10 @@ class TrashController extends Controller
         return view('admin.trash.index',['users'=>$users]);
     }
 
+    public function restore_user($id){
+        $user = User::onlyTrashed()->find($id)->restore();
+        return redirect('admin/trash')->with('status','El Usuario Ha sido correctamenta restaurado');
+    }
+
 
 }

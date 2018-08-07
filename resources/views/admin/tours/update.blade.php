@@ -249,8 +249,8 @@ function eliminar_categoria(){
 
 
   var cadena='';
-  for(let i = 0; i < categories.length ; i++){  
-      cadena += '<li id="li'+i+'">'+categories[i].slug+' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i name="eliminar-categoria" id="categoria'+i+'" class="fa fa-times" style="color:red;"></i></li>';   
+  for(let i = 0; i < categories.length ; i++){
+      cadena += '<li id="li'+i+'">'+categories[i].slug+' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i name="eliminar-categoria" id="categoria'+i+'" class="fa fa-times" style="color:red;"></i></li>';
       arrayCategoria.push(categories[i].slug);
   }
 
@@ -287,7 +287,7 @@ $('.summernote').summernote({
   $(()=>{
 
 
-   
+
     var contador=0;
 
     $.ajaxSetup({
@@ -307,7 +307,7 @@ $('.summernote').summernote({
         removeTitle: 'Cancel or reset changes',
         elErrorContainer: '#kv-avatar-errors-2',
         msgErrorClass: 'alert alert-block alert-danger',
-        defaultPreviewContent: '<img src="/'+tour.img+'">',
+        defaultPreviewContent: '<img src="/'+tour.img+'" width="100%">',
         allowedFileExtensions: ["jpg", "png", "gif"]
     });
 
@@ -398,21 +398,21 @@ $('#form-tours').validate({
       processData:false
     }).done((data)=>{
 
-    
+
       $.ajax({
         url:'/admin/delete/categoria/'+tour.id,
         method:'POST',
         async:false
       });
 
-     
+
       var NuevoArrayCategoria = [];
       for(let i = 0 ; i < arrayCategoria.length ; i++){
         if(arrayCategoria[i] != undefined){
             NuevoArrayCategoria.push(arrayCategoria[i]);
         }
       }
-      
+
       for(let i = 0 ; i < NuevoArrayCategoria.length ; i++){
             $.ajax({
             url:'/admin/categories_has_tours',
@@ -420,14 +420,14 @@ $('#form-tours').validate({
             async:false,
             data:{id:tour.id,slug:NuevoArrayCategoria[i]}
             }).done((data)=>{
-      
+
             }).fail((data)=>{
             alert("ha ocurrido un error");
             });
-      
+
       }
-      
-      
+
+
       window.location.href = "/admin/tours";
 
     }).fail((data)=>{

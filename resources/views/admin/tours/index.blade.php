@@ -46,22 +46,26 @@
               </td>
             <td>{{$tour->created_at}}</td>
             <td>{{$tour->updated_at}}</td>
-            <td class="text-right">
-              <div class="container">
-                <div class="row">
-                <div class="col-xs-6">
-                  <a href="{{url('/admin/tours/'. $tour->id )}}"><i class="fa fa-edit" style="color:blue;"></i></a>
-                </div>
-                <div class="col-xs-6">
-                  {!!Form::open(['url'=>'/admin/tours/'.$tour->id,'method'=>'DELETE','id'=>'eliminar'.$tour->id])!!}
-                   &nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i name="eliminar{{$tour->id}}" class="fa fa-times" style="color:red;"></i></a>
-                  {!!Form::close()!!}
-                </div>
-                <div class="col-xs-6">
-                    <a href="{{route('itinerario',$tour->id)}}">Itineario</a>
-                </div>
+            <td>
+
+
+              <div class="dropdown show">
+              <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Acciones
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="{{url('/admin/tours/'. $tour->id )}}">Editar</a>
+                <a class="dropdown-item" href="{{route('itinerario',$tour->id)}}">Itinerario</a>
+                <a class="dropdown-item" href="{{url('/admin/price/tour/'.$tour->id)}}">Precio</a>
+                <a class="dropdown-item" href="{{url('/admin/series')}}">Serie</a>
+                {!!Form::open(['url'=>'/admin/tours/'.$tour->id,'method'=>'DELETE','id'=>'eliminar'.$tour->id])!!}
+                   <a class="dropdown-item" name="eliminar{{$tour->id}}" href="#">Eliminar</a>
+                {!!Form::close()!!}
               </div>
-              </div>
+
+            </div>
+
             </td>
           </tr>
           @endforeach
@@ -70,6 +74,11 @@
     </div>
   </div>
 </div>
+
+
+
+
+
 @endsection
 
 

@@ -26,44 +26,48 @@ Route::prefix('admin')->group(function () {
     Route::resource('tours','TourController');
     Route::get('get/categoria/{id}','TourController@get_categoria');
     Route::post('delete/categoria/{id}','TourController@delete_categoria');
-    
+
     Route::resource('series','SerieController');
     Route::resource('reservations','ReservationController');
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //ruta para los multimedias del tour
     Route::resource('multimedia','MultimediaController');
-
     Route::post('image/create/{id}','MultimediaController@create_img');
     Route::get('image/view/{id}','MultimediaController@view_img');
     Route::post('image/delete/{id}','MultimediaController@delete_img');
-
     Route::get('video/view/{id}','MultimediaController@view_video');
     Route::post('video/create/{id}','MultimediaController@create_video');
     Route::get('video/see/{id}','MultimediaController@see_video');
     Route::put('video/update/{id}','MultimediaController@update_video');
     Route::post('video/delete/{id}','MultimediaController@delete_video');
-    
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //ruta para los itinerarios del tours
     Route::get('intinearie/{id}','ItinerarieController@update')->name('itinerario');
     Route::post('intinearie/','ItinerarieController@insert')->name('itinerarioInsert');
     Route::get('intinearie/listar/{id}','ItinerarieController@listar')->name('itinerarioListar');
     Route::get('intinearie/eliminar/{id}','ItinerarieController@eliminar')->name('ItinerarioEliminar');
     Route::post('intinearie/actualizar/','ItinerarieController@actualizar')->name('itinerarioActualizar');
-
     Route::get('intinearie/ubicacion/{id}','ItinerarieController@ubicacion')->name('itinerarioUbicacion');
     Route::post('intinearie/actualizarUbicacion/','ItinerarieController@ubicacionUpdate')->name('itineUbicacionUpdate');
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //ruta para los precios del tour
+    Route::get('price/tour/{id}','PriceController@index');
+    Route::get('price/tour/{id}/create','PriceController@create');
+    Route::post('price/tour/{id}/create','PriceController@store');
+    Route::get('price/{id}','PriceController@show');
+    Route::put('price/{id}','PriceController@update');
+    Route::delete('price/{id}','PriceController@delete');
+
     Route::resource('events','EventController');
 
-
-
-
-
-
-
-
     Route::resource('categories_has_tours','CategorieTourController');
-
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //trash
     Route::get('trash','TrashController@index');
-    //trash
+    Route::post('trash/restore_user/{id}','TrashController@restore_user');
+
 });
 //fin de rutas admin
 

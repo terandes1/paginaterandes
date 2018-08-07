@@ -9,6 +9,26 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-md-12">
+    @if (session('status'))
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session('status') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      @endif
+      @if (session('error'))
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{ session('error') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      @endif
+    </div>
+  </div>
+  <div class="row">
     <div class="card">
       <div class="card-body">
         <div class="col-md-12">
@@ -17,11 +37,9 @@
               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">USUARIOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">LENGUAJE</a>
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">TOURS</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">CATEGORIAS</a>
-            </li>
+           
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -49,7 +67,11 @@
                           <td>{{$user->created_at}}</td>
                           <td>{{$user->deleted_at}}</td>
                           <td class="text-right">
-                            <button class="btn btn-warning">Restaurar</button>
+                            
+                            {!!Form::open(['url'=>'/admin/trash/restore_user/'.$user->id])!!}
+                            <button class="btn btn-warning" name="eliminar{{$user->id}}">Restaurar</button>
+                            {!!Form::close()!!}
+
                           </td>
                         </tr>
                         @endforeach
@@ -75,10 +97,7 @@
               </tbody>
             </table>
             </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
-                  
-            </div>
+        
           </div>
         </div>
       </div>
