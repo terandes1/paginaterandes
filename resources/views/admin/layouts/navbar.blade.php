@@ -57,7 +57,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Perfil</a>
-                        <a class="dropdown-item" href="#">Cerra Sesion</a>
+                        <a class="dropdown-item" href="{{route('logout')}}">Cerra Sesion</a>
                     </div>
                 </li>
         </ul>

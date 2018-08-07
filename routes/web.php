@@ -18,9 +18,11 @@
 
 //------------------------------------------------------------------------------
 //comienzo rutas admin
+Route::get('logout',['as' =>'logout','uses' => 'Auth\LoginController@logout']);
 Route::prefix('admin')->group(function () {
     Route::view('','admin.index');
     Route::resource('users','UserController');
+    
     Route::resource('languages','LanguageController');
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
