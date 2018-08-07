@@ -46,7 +46,7 @@ class UserController extends Controller
           'name'=>$request->name,
           'email'=>$request->email,
           'password'=>bcrypt($request->Password),
-          'language_id'=>1,
+          'language_id'=>$request->language_id,
           'privilege'=>$request->privilege,
           'status'=>$request->status
         ]);
