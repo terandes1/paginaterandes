@@ -51,11 +51,11 @@
                     <td>{{ $item->created_at }}</td>
                     <td>
                     	<div class="row" >
-	                    	 <div class="col-md-1">
+	                    	 
 	                    	 	<a  class="btn btn-success btn-sm" href="{{route('categories.show',$item->id)}} "> 
 	                         			<span class="fa fa-edit"> </span>
 	                     		</a>
-	                  		</div>
+	                  	
 	                  		<div class="col-md-1">
 	                    	 	
 	                  		</div>

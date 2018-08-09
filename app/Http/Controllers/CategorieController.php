@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreCategorie;
 use App\Http\Requests\UpdateCategory;
 use Illuminate\Support\Str as Str;
-
+use Illuminate\Support\Facades\Auth;
+use App\Helpers\languageUsers;
 class CategorieController extends Controller
 {
     /**
@@ -18,13 +19,36 @@ class CategorieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    function __construct()
+    {
+         $this->middleware(['auth' ,'roles:normal,admin']);
+    }
+
     public function index()
     {
 
-        $Categorie = DB::table('categories')
-                    ->join('languages', 'languages.id', '=', 'categories.language_id')
-                    ->select('categories.*', 'languages.name as idioma')
-                    ->get();
+        $user = Auth::user();
+        $idLanguage=$user->language_id;
+        $privilege=$user->privilege;
+        if($privilege=='normal')
+        {
+          $Categorie = DB::table('categories')
+                      ->join('languages', 'languages.id', '=', 'categories.language_id')
+                      ->select('categories.*', 'languages.name as idioma')
+                      ->whereNull('categories.deleted_at')
+                      ->where('languages.id',$idLanguage)
+                      ->orderBy('categories.id')
+                      ->get();
+        }else{
+         
+         $Categorie = DB::table('categories')
+                      ->join('languages', 'languages.id', '=', 'categories.language_id')
+                      ->select('categories.*', 'languages.name as idioma')
+                      ->whereNull('categories.deleted_at')
+                      ->orderBy('categories.id')
+                      ->get();
+        }
 
         return view('admin.categories.index',['categorias' => $Categorie]);
     }
@@ -36,7 +60,16 @@ class CategorieController extends Controller
      */
     public function create()
     {
+        
         $languages = language::All();
+        
+        if(languageUsers::privilege()=='normal')
+        {
+          $languages = DB::table('languages')
+                    ->where('id', languageUsers::idLanguage())
+                    ->get();
+        }
+       
         return view('admin.categories.create',['languages'=>$languages]);
     }
 
@@ -85,8 +118,16 @@ class CategorieController extends Controller
      */
     public function show($id)
     {
-        $category = Categorie::find($id);
         $languages = language::All();
+        $category = Categorie::find($id);
+        
+        if(languageUsers::privilege()=='normal')
+        {
+          $languages = DB::table('languages')
+                    ->where('id', languageUsers::idLanguage())
+                    ->get();
+        }
+
         return view('admin.categories.update',['category'=>$category,'languages'=>$languages]);
     }
 

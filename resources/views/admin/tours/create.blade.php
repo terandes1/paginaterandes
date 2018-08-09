@@ -299,6 +299,8 @@ $(document).ready(function() {
     });
 
 
+cargar_categorias($('#language_id').val());
+
 
 $('#language_id').change(()=>{
   cargar_categorias($('#language_id').val());
@@ -310,7 +312,7 @@ function cargar_categorias(id){
       method:'GET'
     }).done((data)=>{
       var cadena = '';
-
+      console.log(data);
       var contador=0;
       $(data).each(()=>{
         cadena+='<option value="'+data[contador].slug+'">'+data[contador].slug+'</option>';

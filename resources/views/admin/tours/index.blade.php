@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
       @if (session('status'))
@@ -22,7 +22,7 @@
     <div class="col-md-12">
     </br>
         <table class="table table-striped" id="table_tours">
-        <thead>
+        <thead class="thead-light">
           <tr>
             <th>Nombre</th>
             <th>Descripción</th>
@@ -54,7 +54,7 @@
                 Acciones
               </a>
 
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="{{url('/admin/tours/'. $tour->id )}}">Editar</a>
                 <a class="dropdown-item" href="{{route('itinerario',$tour->id)}}">Itinerario</a>
                 <a class="dropdown-item" href="{{url('/admin/price/tour/'.$tour->id)}}">Precio</a>

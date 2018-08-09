@@ -12,6 +12,9 @@ use App\Http\Requests\StoreTour;
 use App\Http\Requests\UpdateTour;
 use Illuminate\Support\Str as Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Helpers\languageUsers;
+
 
 class TourController extends Controller
 {
@@ -20,10 +23,29 @@ class TourController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     function __construct()
+    {
+         
+         $this->middleware(['auth' ,'roles:normal,admin']);
+    }
     public function index()
     {
+
         $tours = Tour::All();
+
+        if(languageUsers::privilege()=='normal')
+        {
+          	$tours = DB::table('languages')
+			        ->select('tours.*')
+			        ->join('categories', 'languages.id', '=', 'categories.language_id')
+			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
+			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+			        ->where('languages.id',languageUsers::idLanguage())
+			        ->get();
+     	 }
+
         return view('admin.tours.index',['tours'=>$tours]);
+
     }
 
     /**
@@ -33,7 +55,16 @@ class TourController extends Controller
      */
     public function create()
     {
-        $languages = Language::All();
+       
+        $languages = Language::All(); 
+
+        if(languageUsers::privilege()=='normal')
+        {
+          $languages = DB::table('languages')
+                    ->where('id', languageUsers::idLanguage())
+                    ->get();
+        }
+
         $multimedia = Multimedia::All();
         return view('admin.tours.create',['multimedia'=>$multimedia,'languages'=>$languages]);
     }
@@ -85,7 +116,15 @@ class TourController extends Controller
     public function show(Tour $tour)
     {
 
-      $languages = Language::All();
+      $languages = Language::All(); 
+
+        if(languageUsers::privilege()=='normal')
+        {
+          $languages = DB::table('languages')
+                    ->where('id', languageUsers::idLanguage())
+                    ->get();
+        }
+
       $multimedia = Multimedia::All();
       $categories = DB::select('select categories.slug from categories_has_tours cht left join categories on categories.id = cht.categorie_id where cht.tour_id = :id',['id'=>$tour->id]);
 
@@ -170,6 +209,7 @@ class TourController extends Controller
     }
 
     public function get_categoria($id){
+
         $categories = Categorie::where('language_id',$id)->get();
         return response($categories);
     }

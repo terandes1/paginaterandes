@@ -6,12 +6,17 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{('/admin/users')}}">Usuarios <span class="sr-only">(current)</span></a>
-        </li>
+
+      @if(auth()->user()->hasRoles(['admin']))
+	        <li class="nav-item active">
+	          <a class="nav-link" href="{{('/admin/users')}}">Usuarios <span class="sr-only">(current)</span></a>
+	        </li>
+	    @endif
+	    @if(auth()->user()->hasRoles(['admin']))
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/languages')}}">Lenguaje</a>
         </li>
+      @endif
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/categories')}}">Categorias</a>
         </li>
@@ -44,16 +49,20 @@
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/events')}}">Eventos</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{('/admin/trash')}}">Papelera</a>
-        </li>
-
+        @if(auth()->check())
+	        @if(auth()->user()->hasRoles(['admin']))
+		        <li class="nav-item">
+		          <a class="nav-link" href="{{('/admin/trash')}}">Papelera</a>
+		        </li>
+	        @endif
+	    @endif
       </ul>
-
+       @if(auth()->check())
         <ul class="navbar-nav my-lg-1">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <strong>Bienvenido : </strong> &nbsp; David Alvarez
+                            <strong>Bienvenido : </strong> &nbsp;{{ auth()->user()->name }}  
+                           
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Perfil</a>
@@ -61,6 +70,7 @@
                     </div>
                 </li>
         </ul>
+        @endif
       <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

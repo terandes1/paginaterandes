@@ -313,7 +313,7 @@ $('.summernote').summernote({
 
 
 
-
+cargar_categorias($('#language_id').val());
 $('#language_id').change(()=>{
   cargar_categorias($('#language_id').val());
 });
