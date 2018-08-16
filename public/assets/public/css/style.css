@@ -201,6 +201,7 @@
      position: relative;
      overflow: hidden;
      margin-bottom: 50px;
+     z-index: -48;
 }
  .spe-title h2 {
      margin-bottom: 0px;
@@ -1730,7 +1731,7 @@
  .inner_banner::before {
      content: '';
      position: absolute;
-     background: linear-gradient(to top, rgb(29, 36, 42) 15%, rgba(0, 0, 0, 0) 100%);
+     background: linear-gradient(to top, rgb(14, 72, 23) 15%, rgba(0, 0, 0, 0) 100%);
      top: 0px;
      bottom: 0px;
      left: 0px;
@@ -1753,7 +1754,7 @@
      background-size: cover;
 }
  .inner_banner_5 {
-     background: url('../images/banner/5.jpg') no-repeat center center;
+     background: url('../nosotros/tierra-equipo.jpg') no-repeat center center;
      background-size: cover;
 }
  .inner_banner div {
@@ -6315,7 +6316,8 @@
      overflow: hidden;
      width: 100%;
      box-shadow: 0px 7px 12px -4px rgba(0, 0, 0, 0.45);
-     background: url('../images/mm-col-bg.png') no-repeat right bottom, #fff;
+    /* background: url('../images/mm-col-bg.png') no-repeat right bottom, #fff;*/
+     background:#fefefe;
      z-index: 999;
      margin-top: -7px;
      padding: 20px 10px;

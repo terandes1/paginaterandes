@@ -6,6 +6,7 @@
     <div class="col-md-12">
       <br><br>
     </div>
+    @if(auth()->user()->hasRoles(['admin']))
     <div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
@@ -14,7 +15,8 @@
         </div>
       </div>
     </div>
-
+    @endif
+    @if(auth()->user()->hasRoles(['admin']))
     <div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
@@ -23,7 +25,7 @@
         </div>
       </div>
     </div>
-
+    @endif
     <div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
@@ -45,14 +47,14 @@
     <div class="col-md-12">
       <br>
     </div>
-    <div class="col-md-3">
+    <!--<div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
           <h4>ITINERARIO</h4> <br>
           <a href="{{('/admin/itineraries')}}" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <div class="col-md-3">
       <div class="card">
@@ -63,25 +65,22 @@
       </div>
     </div>
 
-    <div class="col-md-3">
+    <!--<div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
           <h4>RESERVA</h4> <br>
           <a href="{{('/admin/languages')}}" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
           <h4>EVENTOS</h4> <br>
-          <a href="{{('/admin/languages')}}" class="btn btn-primary form-control">IR</a>
+          <a href="{{('/admin/events')}}" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
-    </div>
-    <div class="col-md-12">
-      <br>
     </div>
     <div class="col-md-3">
       <div class="card">
@@ -91,7 +90,7 @@
         </div>
       </div>
     </div>
-
+ @if(auth()->user()->hasRoles(['admin']))
     <div class="col-md-3">
       <div class="card">
         <div class="card-body text-center">
@@ -100,7 +99,7 @@
         </div>
       </div>
     </div>
-
+@endif
 
   </div>
 </div>

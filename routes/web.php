@@ -28,6 +28,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('tours','TourController');
     Route::get('get/categoria/{id}','TourController@get_categoria');
     Route::post('delete/categoria/{id}','TourController@delete_categoria');
+    Route::get('publicar/tour/{id}','TourController@publicarPrincipal')->name('publicarTourPrincipal');
 
     Route::resource('reservations','ReservationController');
 
@@ -82,18 +83,26 @@ Route::prefix('admin')->group(function () {
 
 //------------------------------------------------------------------------------
 //vistas publicas
-Route::view('/','public.es.index1');
-Route::view('/index1','public.es.index1');
-Route::view('/index2','public.es.index2');
-Route::view('contacto','public.es.contact');
-Route::view('about','public.es.about');
-Route::view('tour','public.es.tour');
-Route::view('tour1','public.es.tour1');
-Route::view('paquetes','public.es.tours');
-Route::view('testimonials','public.es.testimonials');
-Route::view('events','public.es.events');
-//fin de vistas publicas
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', [ 'uses' => 'PublicController@index' ]);
+Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
+Route::get('{lang?}/contact/', [ 'uses' => 'PublicController@contact' ])->name('contact');
+Route::get('{lang?}/tours/', [ 'uses' => 'PublicController@tours' ])->name('paquetes');
+
+Route::post('toursOpcion/', [ 'uses' => 'PublicController@toursOpcion' ])->name('toursOpcion');
+Route::post('toursOpcionPrecio/', [ 'uses' => 'PublicController@toursOpcionPrecio' ])->name('toursOpcionPrecio');
+
+
+Route::get('/tour/{lang?}/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+//Route::get('/tour/{tour?}/{lang?}', [ 'uses' => 'PublicController@tour' ])->name('tour');
+Route::get('{lang?}/testimonials/', [ 'uses' => 'PublicController@testimonials' ])->name('testimonials');
+Route::get('{lang?}/events/', [ 'uses' => 'PublicController@events' ])->name('events');
+Route::get('{lang?}/our-team/', [ 'uses' => 'PublicController@our_team' ])->name('our-team');
+
+//fin de vistas publicas
+
+
+Route::get('/home', 'HomeController@index');
+
+

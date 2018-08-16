@@ -16,6 +16,7 @@ class Tour extends Model
       'meta_keywords',
       'multimedia_id',
       'status',
-      'slug'
+      'slug',
+      'price'
     ];
 }

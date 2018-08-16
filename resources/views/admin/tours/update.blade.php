@@ -85,6 +85,12 @@ i[name="eliminar-categoria"]{
             {!!Form::text('name',null,['class'=>'form-control','required'])!!}
           </div>
         </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            {!!Form::label('price','precio del Tour')!!}
+            {!!Form::number('price',null,['class'=>'form-control','required'])!!}
+          </div>
+        </div>
 
         <div class="col-md-6">
           <div class="form-group">

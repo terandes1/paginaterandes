@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- FAV ICON -->
-    <link rel="shortcut icon" href="/assets/public/images/fav.ico">
+    <link rel="shortcut icon" href="/assets/public/images/icons.png">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
     <!-- FONT-AWESOME ICON CSS -->
@@ -149,10 +149,11 @@ input::-moz-focus-inner { border: 0; }
 
     <!--========= Scripts ===========-->
     {!!Html::script('assets/public/js/jquery-latest.min.js')!!}
-    {!!Html::script('assets/public/js/bootstrap.js')!!}
+     {!!Html::script('assets/public/js/jquery-ui.js')!!}
     {!!Html::script('assets/public/js/wow.min.js')!!}
     {!!Html::script('assets/public/js/materialize.min.js')!!}
     {!!Html::script('assets/public/js/custom.js')!!}
+     @yield('script')
 </body>
  <script>
     // sandbox disable popups
@@ -193,9 +194,7 @@ input::-moz-focus-inner { border: 0; }
   
   <!--scripts loaded here-->
   
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  
+   {!!Html::script('assets/public/js/bootstrap.js')!!}
   
   
   <script>

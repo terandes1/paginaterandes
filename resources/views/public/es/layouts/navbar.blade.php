@@ -7,6 +7,8 @@
                     <a href="index.html"><img  src="/assets/public/images/logo.png" alt="" />
         </a>
                 </div>
+
+
             </div>
             <div class="ed-mm-right">
                 <div class="ed-mm-menu">
@@ -135,52 +137,13 @@
                     </div>
                     <div class="main-menu" style="margin-top: 10px;">
                         <ul>
-                            <li><a href="{{('/index1')}}">Home</a>
+                            <li><a href="{{('/es')}}">INICIO</a>
                             </li>
                             <li class="about-menu">
-                                <a href="{{('paquetes')}}" class="mm-arr">Packages</a>
-                                <!-- MEGA MENU 1 -->
-                                <div class="mm-pos">
-                                    <div class="about-mm m-menu">
-                                        <div class="m-menu-inn">
-                                            <div class="mm1-com mm1-s1">
-                                                <div class="ed-course-in">
-                                                    <a class="course-overlay menu-about" href="all-package.html">
-                                                        <img src="/assets/public/images/sight/5.jpg" alt="">
-                                                        <span>Popular Package</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="mm1-com mm1-s2">
-                                                <p>Want to change the world? At Berkeley we’re doing just that. When you join the Golden Bear community, you’re part of an institution that shifts the global conversation every single day.</p>
-                                                <a href="all-package.html" class="mm-r-m-btn">Read more</a>
-                                            </div>
-                                            <div class="mm1-com mm1-s3">
-                                                <ul>
-                                                    <li><a href="booking-all.html">All Booking</a></li>
-                                                    <li><a href="booking-tour-package.html">Tour Package Booking</a></li>
-                                                    <li><a href="booking-hotel.html">Hotel Booking</a></li>
-                                                    <li><a href="booking-car-rentals.html">Car Rentals Booking</a></li>
-                                                    <li><a href="booking-flight.html">Flight Booking</a></li>
-                                                    <li><a href="booking-slider.html">Slider Booking</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="mm1-com mm1-s4">
-                                                <ul>
-                                                    <li><a href="all-package.html">All Package</a></li><li><a href="family-package.html">Family Package</a></li>
-                                                    <li><a href="honeymoon-package.html">Honeymoon Package</a></li>
-                                                    <li><a href="group-package.html">Group Package</a></li>
-                                                    <li><a href="weekend-package.html">WeekEnd Package</a></li>
-                                                    <li><a href="regular-package.html">Regular Package</a></li>
-                                                    <li><a href="custom-package.html">Custom Package</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="{{route('paquetes','es')}}" class="mm-arr">TOURS</a>
                             </li>
                             <li class="admi-menu">
-                                <a href="#" class="mm-arr">Tour Popular</a>
+                                <a href="#" class="mm-arr">NUESTRO VIAJE</a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">
                                     <div class="admi-mm m-menu">
@@ -189,55 +152,83 @@
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places.html">
                                                         <img src="/assets/public/images/sight/1.jpg" alt="">
-                                                        <span>Seight Seeing - 1</span>
+                                                        <span>Descubrimiento</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-                                                <a href="places.html" class="mm-r-m-btn">Read more</a>
+                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
+                                                <a href="places.html" class="mm-r-m-btn">Lee más</a>
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places-1.html">
                                                         <img src="/assets/public/images/sight/2.jpg" alt="">
-                                                        <span>Seight Seeing - 2</span>
+                                                        <span>Aventura</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-                                                <a href="places-1.html" class="mm-r-m-btn">Read more</a>
+                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
+                                                <a href="places-1.html" class="mm-r-m-btn">Lee más</a>
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places-2.html">
                                                         <img src="/assets/public/images/sight/3.jpg" alt="">
-                                                        <span>Seight Seeing - 3</span>
+                                                        <span>Alta Montaña</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-                                                <a href="places-2.html" class="mm-r-m-btn">Read more</a>
+                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
+                                                <a href="places-2.html" class="mm-r-m-btn">Lee más</a>
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s4">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places-3.html">
                                                         <img src="/assets/public/images/sight/4.jpg" alt="">
-                                                        <span>Seight Seeing - 4</span>
+                                                        <span>Excursiones</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros. Vestibulum congue nec eros quis lacinia. Mauris non tincidunt lectus. Nulla mollis, orci vitae accumsan rhoncus.</p>
-                                                <a href="places-3.html" class="mm-r-m-btn">Read more</a>
+                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
+                                                <a href="places-3.html" class="mm-r-m-btn">Lee más</a>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <!--<li><a class='dropdown-button ed-sub-menu' href='#' data-activates='dropdown1'>Courses</a></li>-->
+                            <!--<li><a class='dropdown-button ed-sub-menu' href='#'TOURS data-activates='dropdown1'>Courses</a></li>-->
 
-                            <li><a href="{{('events')}}">Events</a>
+                            <li><a href="{{route('testimonials','es')}}">TESTIMONIOS</a>
+                            </li>
+                            <li><a href="{{route('events','es')}}">EVENTOS</a>
+                            </li>
+                            <li><a href="{{route('our-team','es')}}">NOSOTROS</a>
                             </li>
 
-                            <li><a href="{{('contacto')}}">contact</a>
+                            <li><a href="{{route('contact','es')}}">CONTACTO</a>
                             </li>
+
+                             <li class="cour-menu">
+                                    <a href="#!" class="mm-arr">LANGUAJE</a>
+                                    <div class="mm-pos" style="width: 100%;float:right;position: relative;">
+                                        <div class="cour-mm m-menu" style="">
+
+                                                <div class="mm2-com ">
+                                                    <a class="route-language" href=""><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/fr.png" alt="Idioma"></a>
+                                                </div>
+                                                <div class="mm2-com">
+                                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/en.png" alt="Idioma"></a>
+                                                </div>
+                                                <div class="mm2-com">
+                                                 <a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/es.png" alt="Idioma"></a>
+                                                </div>
+                                                <div class="mm2-com">
+                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/fr.png" alt="Idioma"></a>
+                                                </div>
+
+                                         </div>
+                                    </div>
+                             </li>
+                               
                         </ul>
+
                     </div>
                 </div>
             </div>

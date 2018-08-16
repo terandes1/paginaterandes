@@ -31,17 +31,25 @@ class TourController extends Controller
     public function index()
     {
 
-        $tours = Tour::All();
+        $tours = DB::table('languages')
+			        ->select('tours.*','languages.name as nameLenguage')
+			        ->join('categories', 'languages.id', '=', 'categories.language_id')
+			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
+			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+              ->orderBy('tours.id', 'desc')
+              ->get();
 
         if(languageUsers::privilege()=='normal')
         {
           	$tours = DB::table('languages')
-			        ->select('tours.*')
+			        ->select('tours.*','languages.name as nameLenguage')
 			        ->join('categories', 'languages.id', '=', 'categories.language_id')
 			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
 			        ->where('languages.id',languageUsers::idLanguage())
-			        ->get();
+             		->where('tours.status','A')
+			       ->orderBy('tours.id', 'desc')
+              ->get();
      	 }
 
         return view('admin.tours.index',['tours'=>$tours]);
@@ -99,7 +107,8 @@ class TourController extends Controller
           'status'=>$request->status,
           'slug'=>$slug,
           'meta_description'=>$request->meta_description,
-          'meta_keywords'=>$request->meta_keywords
+          'meta_keywords'=>$request->meta_keywords,
+          'price'=>$request->price 
         ]);
 
       return response($tour->id);
@@ -188,7 +197,8 @@ class TourController extends Controller
           'status'=>$request->status,
           'slug'=>$slug,
           'meta_description'=>$request->meta_description,
-          'meta_keywords'=>$request->meta_keywords
+          'meta_keywords'=>$request->meta_keywords,
+          'price'=>$request->price 
         ]);
 
 
@@ -205,7 +215,11 @@ class TourController extends Controller
      */
     public function destroy(Tour $tour)
     {
-        //
+        $tour = Tour::find($tour->id);
+        $tour->status = 'D';
+        $tour->save();
+        return redirect()->route('tours.index')
+                        ->with('success','Member deleted successfully');
     }
 
     public function get_categoria($id){
@@ -225,4 +239,17 @@ class TourController extends Controller
         }
 
     }
+
+    public function publicarPrincipal($id){
+
+ 
+          $tour = Tour::find($id);
+          $tour->principal =1;
+          $tour->save();
+
+          return response()->json(['resul'=>'correcto']);
+  
+
+    }
+
 }

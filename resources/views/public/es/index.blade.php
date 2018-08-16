@@ -1,17 +1,140 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-
 <!--HEADER SECTION-->
+<style type="text/css">
+
+div.contenedor_video {
+  margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding-bottom: 37%;
+}
+.search-top{
+background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
+}
+
+
+@media screen and (min-width: 1602px) {
+  div.contenedor_video {
+   background: white;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 35px;  
+  }
+   #texto{
+    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 1; position: absolute;text-shadow: 2px 2px 4px #000;
+ }
+
+}
+@media screen and (max-width: 1300px) , screen and (max-height: 1601px) {
+  div.contenedor_video {
+   background: white;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px;  
+  }
+   #texto{
+    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 1; position: absolute;text-shadow: 2px 2px 4px #000;
+ }
+}
+
+@media screen and (max-width: 767px) {
+  div.contenedor_video {
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding-bottom: 37%;
+  }
+
+}
+
+@media (max-width: 768px) {
+    #texto {
+         
+        font-size: 20px;
+        margin-top: -105px;
+    }
+    .search-top{
+        margin-top: 10px;
+    }
+  div.contenedor_video {
+    background: white;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px;  
+  }
+}
+
+
+
+</style>
+<?php 
+ function DostourDeLujos($toursLujos)
+{
+    $htmltemp='';
+    $i=0;
+     foreach($toursLujos as $item)
+      {
+         $i=$i+1;
+         if($i<3)
+             {
+                $htmltemp.='<div class="col-md-6">'.
+                        '<a href="tour/es/'.$item->slug.'">'.
+                            '<div class="tour-mig-like-com">'.
+                                '<div class="tour-mig-lc-img">'.
+                                      '<img src="'.$item->img.'" alt="" style="height:377px;">'.
+                                '</div>'.
+                                '<div class="tour-mig-lc-con">'.
+                                    '<h6 style="text-align:center;">'.$item->name.' </h6> <br><br>'.
+                                    '<p><span>12 Packages</span> A partir de $2400</p>'.
+                                '</div>'.
+                            '</div>'.
+                       '</a>'.
+                    '</div>';
+             }else {
+
+                 $htmltemp.='<div class="col-md-3">'.
+                                '<a href="tour/es/'.$item->slug.'">'.
+                                    '<div class="tour-mig-like-com">'.
+                                        '<div class="tour-mig-lc-img">'.
+                                              '<img src="'.$item->img.'" alt="" style="height:200px;">'.
+                                        '</div>'.
+                                        '<div class="tour-mig-lc-con">'.
+                                             '<h6 style="text-align:center;">'.$item->name.' </h6><br><br>'.
+                                            '<p><span></span> Apartir de $2400</p>'.
+                                        '</div>'.
+                                    '</div>'.
+                               '</a>'.
+                            '</div>';
+             }
+        
+      }
+            
+    return $htmltemp;
+}
+ 
+
+?>
 <section>
     <div class="tourz-search">
        
-        <div class="contenedor_video" style="margin: 0px;position: relative;width: 100%;height: 0;z-index: 1;overflow: hidden;padding-bottom: 37%;">
-            <video poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
+        <div class="contenedor_video">
+            <video style="width: 1348px; margin-top: -22px;" poster="https://www.kuodatravel.com/wp-content/uploads/2018/04/poster-video-home.jpg" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
+             <source src="https://www.terandes.com/video/bannerterandes4.mp4" type="video/mp4"></video>
+            <!-- <source src="https://www.terandes.com/video/bannerterandes1.mp4" type="video/webm"><source src="somevideo.mp4" type="video/webm">-->
+             <source src="https://www.terandes.com/video/bannerterandes1.ogg" type="video/ogg">
         </div>
-         <dir id="texto" style="width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 10000; position: absolute;text-shadow: 2px 2px 4px #000;">
-             DISCOVER SOUTH AMERICA
-             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;">Pursue the Luxury of Personalized Travel</div>
+         <dir id="texto" style="">
+             AVENTURE 
+            
+             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Oswald', sans-serif;50px;font-size: 20px;">Para los amantes del trekking en lugares aún auténticos y salvajes</div>
        </dir>
        
     </div>
@@ -20,283 +143,157 @@
 <!--END HEADER SECTION-->
 <section>
     <div class="rows pad-bot-redu tb-space">
-        <div class="container">
-<<<<<<< HEAD
-            <div class="row">
-                <div class="tourz-search-1">
-                
-                    <h1>Plan Your Travel Now!</h1>
-                    <br><br><br>
-                    <!-- <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p> -->
-=======
-            <div class="row" style="margin-top: -80px;">
-                
->>>>>>> e55f92a9a00dbe48b6e8d276094b033536679b26
-                    <form class="tourz-search-form">
-                        <div class="input-field">
-                            <input type="text" id="select-city" class="autocomplete">
-                            <label for="select-city">Ciudad</label>
+        <!--<div class="container" >
+                    <div class="row" style=" margin-top: -80px;">
+                         <div class="col-sm-3">
+                         </div>
+                         <div class="col-sm-9">
+                            <form class="tourz-search-form">
+                                <div class="input-field">
+                                    <label for="select-city">Ciudad</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" id="select-search" class="autocomplete">
+                                    <label for="select-search" class="search-hotel-type">Buscar tours y viajes, visitas turísticas, hoteles y más</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+                            </form>
+                            
                         </div>
-                        <div class="input-field">
-                            <input type="text" id="select-search" class="autocomplete">
-                            <label for="select-search" class="search-hotel-type">Buscar tours y viajes, visitas turísticas, hoteles y más</label>
+                    </div>
+        </div>-->
+        <div class="search-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="search-form">
+                        <form class="tourz-search-form">
+                            <div class="input-field">
+                                <label for="select-city">Enter city</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="select-search" class="autocomplete">
+                                <label for="select-search" class="search-hotel-type">Buscar tour por ciudad</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" value="Buscar" class="waves-effect waves-light tourz-sear-btn"> </div>
+                        </form>
                         </div>
-                        <div class="input-field">
-                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
-                    </form>
-                    
-                
+                    </div>
+                </div>
             </div>
-        </div>
+        </div><br><br><br>
         <div class="container">
             
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Top <span>Tour Packages</span></h2>
+                <h2>Paquetes De Viaje <span style="color:#36691D">Principales </span></h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
                 </div>
-                <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide.</p>
+                <p>El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
             </div>
             <div>
-                <!-- TOUR PLACE 1 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow slideInUp" data-wow-duration="0.5s">
+
+                @foreach($toursPrincipal as $item)
+                <div id="tort" class="col-md-4 col-sm-6 col-xs-12 b_packages wow slideInUp" data-wow-duration="0.5s">
                     <!-- OFFER BRAND -->
                     <div class="band"> <img src="/assets/public/images/band.png" alt="" /> </div>
                     <!-- IMAGE -->
-                    <div class="v_place_img"> <img src="/imagenesprueba/peques/01.png" alt="Tour Booking" title="Tour Booking" /> </div>
+                    <div class="v_place_img"> <img src="/{{$item->img}}" alt="Tour Booking" title="Tour Booking" /> 
+                        <div class="hom-hot-av-tic" style="background:#99c104;;border: 2px solid #9ebb2f;    text-transform: uppercase; font-family: Eras ITC, Eras Light ITC, sans-serif;">
+                            {!! $item->categoriesName!!}
+                        </div>
+                    </div>
                     <!-- TOUR TITLE & ICONS -->
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Rio de Janeiro<span class="v_pl_name">(Brazil)</span></a></h4>
+                        <div class="col-md-12 col-sm-12" style="text-align: center;">
+                            <h4>
+                                <a style="font-size: 12px; href="{{'paquetes'}}">{{ $item->name }}
+                                </a>
+                                <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!">
+                                        <div class="col-md-3 col-sm-4 pack_icon">
+                             
+                                               
+                                        </div>
+                                        <div class="col-md-6 col-sm-6  pack_icon">
+                             
+                                                 <h5 style="color: #f4364f;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
+                                             
+                                        </div>
+
+
+                                </a>
+
+                            </h4>   
+                        </div>
+                        
+                        <div class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
+                            <p>
+                              {!! str_limit($item->description_short, 150) !!}
+
+                            </p>
+                            
                         </div>
                         <!-- TOUR ICONS -->
-                        <div class="col-md-4 col-sm-4 pack_icon">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/info.png" alt="Details" title="View more details" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/price.png" alt="Price" title="Price" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/map.png" alt="Location" title="Location" /> </a>
-                                </li>
-                            </ul>
+                        
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="col-md-12" style="margin: 15px;">
+                                <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">APRENDE MÁS SOBRE ESTE VIAJE
+                                </a>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- TOUR PLACE 2 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.7s">
-                    <!-- OFFER BRAND -->
-                    <!-- <div class="band"> <img src="/imagenesprueba/peques/02.png" alt="" /> </div> -->
-                    <!-- IMAGE -->
-                    <div class="v_place_img"> <img src="/imagenesprueba/peques/02.png" alt="Tour Booking" title="Tour Booking" /> </div>
-                    <!-- TOUR TITLE & ICONS -->
-                    <div class="b_pack rows">
-                        <!-- TOUR TITLE -->
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Paris<span class="v_pl_name">(England)</span></a></h4>
-                        </div>
-                        <!-- TOUR ICONS -->
-                        <div class="col-md-4 col-sm-4 pack_icon">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/info.png" alt="Details" title="View more details" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/price.png" alt="Price" title="Price" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/map.png" alt="Location" title="Location" /> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- TOUR PLACE 3 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">
-                    <div class="v_place_img"><img src="/imagenesprueba/peques/03.png" alt="Tour Booking" title="Tour Booking" /> </div>
-                    <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">South India<span class="v_pl_name">(India)</span></a></h4>
-                        </div>
-                        <div class="col-md-4 col-sm-4 pack_icon">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/info.png" alt="Details" title="View more details" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/price.png" alt="Price" title="Price" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/map.png" alt="Location" title="Location" /> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- TOUR PLACE 4 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="1.1s">
-                    <div class="v_place_img"><img src="/imagenesprueba/peques/04.png" alt="Tour Booking" title="Tour Booking" /> </div>
-                    <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">The Great Wall<span class="v_pl_name">(China)</span></a></h4>
-                        </div>
-                        <div class="col-md-4 col-sm-4 pack_icon">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/info.png" alt="Details" title="View more details" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/price.png" alt="Price" title="Price" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/map.png" alt="Location" title="Location" /> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- TOUR PLACE 5 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="1.3s">
-                    <div class="v_place_img"><img src="/imagenesprueba/peques/05.png" alt="Tour Booking" title="Tour Booking" /> </div>
-                    <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Nail Island<span class="v_pl_name">(Andaman)</span></a></h4>
-                        </div>
-                        <div class="col-md-4 col-sm-4 pack_icon">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/info.png" alt="Details" title="View more details" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/price.png" alt="Price" title="Price" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/map.png" alt="Location" title="Location" /> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- TOUR PLACE 6 -->
-                <div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="1.5s">
-                    <div class="v_place_img"><img src="/imagenesprueba/peques/06.png" alt="Tour Booking" title="Tour Booking" /> </div>
-                    <div class="b_pack rows">
-                        <div class="col-md-8 col-sm-8">
-                            <h4><a href="{{'paquetes'}}">Mauritius<span class="v_pl_name">(Indiana)</span></a></h4>
-                        </div>
-                        <div class="col-md-4 col-sm-4 pack_icon">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/clock.png" alt="Date" title="Tour Timing" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/info.png" alt="Details" title="View more details" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/price.png" alt="Price" title="Price" /> </a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="/assets/public/images/map.png" alt="Location" title="Location" /> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                   
             </div>
         </div>
     </div>
 </section>
 <!--====== HOME HOTELS ==========-->
 <section>
+    <div class="offer">
+
+        <div class="container" style="">
+ 
+            <div class="row">
+
+                <div class="popu-places-home" style="margin: 5px;">
+                    <span class="ol-4" style="font-size: 3em; margin-top:  -25px;
+                    text-align: center;
+                    color: white;
+                    font-family: Georgia, serif;
+                    font-size: 40px;
+                    letter-spacing: 0;
+                    text-align: left;
+                    text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1px #333;">
+                    Tours de lujo en Perú
+                   </span> 
+                    
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
     <div class="rows tb-space pad-top-o pad-bot-redu">
         <div class="container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Popular <span>Packages</span> </h2>
-                <div class="title-line">
-                    <div class="tl-1"></div>
-                    <div class="tl-2"></div>
-                    <div class="tl-3"></div>
-                </div>
-                <p>World's leading Hotel Booking website,Over 30,000 Hotel rooms worldwide. Book Hotel rooms and enjoy your holidays with distinctive experience</p>
+               </br>
+                <p>El sitio web de reservas de tour líder en el latinomarica, más de 30,000 personas  disfrute de sus vacaciones con una experiencia única</p>
             </div>
             <!-- CITY -->
-            <div class="col-md-6">
-                <a href="{{'paquetes'}}">
-                    <div class="tour-mig-like-com">
-                        <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/03.png" alt=""> </div>
-                        <div class="tour-mig-lc-con">
-                            <h5>Europe</h5>
-                            <p><span>12 Packages</span> Starting from $2400</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="{{'paquetes'}}">
-                    <div class="tour-mig-like-com">
-                        <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/01.png" alt=""> </div>
-                        <div class="tour-mig-lc-con tour-mig-lc-con2">
-                            <h5>Dubai</h5>
-                            <p>Starting from $2400</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="{{'paquetes'}}">
-                    <div class="tour-mig-like-com">
-                        <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/02.png" alt=""> </div>
-                        <div class="tour-mig-lc-con tour-mig-lc-con2">
-                            <h5>India</h5>
-                            <p>Starting from $2400</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="{{'paquetes'}}">
-                    <div class="tour-mig-like-com">
-                        <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/03.png" alt=""> </div>
-                        <div class="tour-mig-lc-con tour-mig-lc-con2">
-                            <h5>Usa</h5>
-                            <p>Starting from $2400</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="{{'paquetes'}}">
-                    <div class="tour-mig-like-com">
-                        <div class="tour-mig-lc-img"> <img src="/imagenesprueba/peques/04.png" alt=""> </div>
-                        <div class="tour-mig-lc-con tour-mig-lc-con2">
-                            <h5>London</h5>
-                            <p>Starting from $2400</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <?=DostourDeLujos($toursLujos);?>
+
         </div>
     </div>
 </section>
@@ -344,7 +341,7 @@
         <div class="container events events-1" id="inner-page-title">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title">
-                <h2>Top <span>Events</span> in this month</h2>
+                <h2>Top <span style="color:#36691D">Events</span> in this month</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
@@ -371,80 +368,416 @@
                         <td class="e_h1">Australia</td>
                         <td><a href="booking.html" class="link-btn">Book Now</a> </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><img src="/imagenesprueba/peques/02.png" alt="" /><a href="hotels-list.html" class="events-title">Salesforce Summer, Dubai</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Dubai</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><img src="/imagenesprueba/peques/03.png" alt="" /><a href="hotels-list.html" class="events-title">God Towers, TOKYO, JAPAN</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">JAPAN</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><img src="/imagenesprueba/peques/04.png" alt="" /><a href="hotels-list.html" class="events-title">TOUR DE ROMANDIE, Switzerland</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Switzerland</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><img src="/imagenesprueba/peques/05.png" alt="" /><a href="hotels-list.html" class="events-title">TOUR DE POLOGNE, Poland</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Poland</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><img src="/imagenesprueba/peques/06.png" alt="" /><a href="hotels-list.html" class="events-title">Future of Marketing,Sydney, Australia</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Australia</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td><img src="/imagenesprueba/peques/07.png" alt="" /><a href="hotels-list.html" class="events-title">Eiffel Tower, Paris</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">France</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td><img src="/imagenesprueba/peques/08.png" alt="" /><a href="hotels-list.html" class="events-title">PARIS - ROUBAIX, England</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">England</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td><img src="/imagenesprueba/peques/09.png" alt="" /><a href="hotels-list.html" class="events-title">Dubai Beach Resort, Dubai</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Dubai</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td><img src="/imagenesprueba/peques/11.png" alt="" /><a href="hotels-list.html" class="events-title">TOUR DE POLOGNE, Poland</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Poland</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="offer">
+
+        <div class="container" style="">
+ 
+            <div class="row">
+
+                <div class="popu-places-home" style="margin: 10px;margin-left: 51px;">
+                    <span class="ol-4" style="text-align: center;font-family: 'Oswald', sans-serif;">A medida</span> 
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>En grupo</h4>
+                        <ul>
+                            <li>
+                                <img src="/assets/public/icons/grupo1icono.png" alt="" />
+                                <a href="#!">
+                                    <h5>50% de descuento</h5>
+                                    <p>Un viaje que satisfaga a todos</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>En Familia</h4>
+                        <ul>
+                            <li>
+                                <img src="/assets/public/icons/familia1icono.png" alt="" /> 
+                                <a href="#!">
+                                    <h5>50% de descuento</h5>
+                                    <p>Aproveche un viaje adecuado tanto para adultos como para jóvenes.</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>Pareja</h4>
+                        <ul>
+                            <li>
+                                 <img src="/assets/public/icons/couple1icono.png" alt="" />
+                                <a href="#!">
+                                    <h5>50% de descuento</h5>
+                                    <p>Comparte momentos inolvidables con tu pareja.</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="db-3" style="margin: 14px;">
+                        <h4>Amigos</h4>
+                        <ul>
+                            <li>
+                                <img src="{{URL::asset('assets/public/icons/amigos1icono.png')}}" alt="" /> 
+                                <a href="#!"> <img src="{{URL::asset('assets/public/images/icon/dbr1.jpg')}}" alt="" />
+                                    <h5>50% de descuento</h5>
+                                    <p>Comparte momentos inolvidables entre amigos.</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                  
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="rows pla pad-bot-redu tb-space">
+        <div class="pla1 p-home container">
+            <!-- TITLE & DESCRIPTION -->
+
+            <div class="spe-title spe-title-1">
+                <h2>TOP <span style="color:#36691D;">TESTIMONIOS</span> DE ESTE MES</h2>
+                <div class="title-line">
+                    
+                </div>
+                <p> Comparte experiencias de viaje con nosotros. </p>
+
+            </div>
+
+                <div class="row">
+                <div class="col-sm-12">
+                        
+                  <div id="myCarousel" class="row carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                      <div class="item active">
+                        
+                        <ul class="thumbnails">
+                          <li class="col-sm-3" >      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="#">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div><!-- /Slide1 --> 
+
+
+                      <div class="item">
+                        <ul class="thumbnails">
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div><!-- /Slide2 --> 
+                      <div class="item" style="text-align: center;">
+                        <ul class="thumbnails">
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail" style="text-align: center;">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box">
+                              <h3>Praesent commodo</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div><!-- /Slide3 --> 
+                    </div><!-- /Wrapper for slides .carousel-inner -->
+                    <!-- Control box -->
+                    <div class="control-box">                            
+                      <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
+                      <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+                    </div><!-- /.control-box -->   
+
+                  </div><!-- /#myCarousel -->
+
+
+                </div><!-- /.col-sm-12 -->          
+                </div><!-- /.row --> 
+           
         </div>
     </div>
 </section>
@@ -454,13 +787,14 @@
         <div class="pla1 p-home container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title spe-title-1">
-                <h2>Top <span>Sight Seeing</span> in this month</h2>
+                <h2>Usted <span style="color:#36691D;">define su</span> estilo de viaje</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
                 </div>
-                <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience</p>
+                <p>Desde tours culinarios peruanos para la familia,grupos,parejas y amigos, nos especializamos en la elaboración de viajes privados únicos diseñados especialmente para usted. ¿Desea planear su aventura sudamericana? 
+                    Contáctanos y comienza a rodar.</p>
             </div>
             <div class="popu-places-home">
                 <!-- POPULAR PLACES 1 -->
