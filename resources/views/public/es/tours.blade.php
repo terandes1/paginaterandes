@@ -83,7 +83,7 @@
                     <div class="hot-page2-alp-r-list">
 
                       <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                        <a href="javascript:void(0);">
+                        <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
                           <div class="hotel-list-score">4.5</div>
                           <div class="hot-page2-hli-1">  <img src="/{{$item->img}}" alt=""> </div>
                         </a>
@@ -92,7 +92,7 @@
 
                       <div class="col-md-6">
                         <div class="trav-list-bod">
-                        <a href="{{route('tour','es')}}"><h3>{{ $item->name }}</h3></a>
+                        <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"><h3>{{ $item->name }}</h3></a>
                         <p>{!! str_limit($item->description_short, 150) !!}</p>
                         </div>
                         <div class="col-md-12" style="margin: 15px;">
@@ -169,7 +169,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='javascript:void(0);'>"+
+                                                         "<a href='../tour/es/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -177,7 +177,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href=''><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../tour/es/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(1,150)+"</p>"+
                                                    " </div>"+
                                                     "<div class='col-md-12' style='margin: 15px;'> "+
@@ -247,7 +247,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='javascript:void(0);'>"+
+                                                         "<a href='../tour/es/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -255,7 +255,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href=''><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../tour/es/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(1,150)+"</p>"+
                                                    " </div>"+
                                                     "<div class='col-md-12' style='margin: 15px;'> "+
