@@ -34,12 +34,11 @@
               <tr>
                 <td>{{ $item->id }}</td>
                 <td>
-                	<img src="/assets/content/events/{{$item->id}}.{{$item->img}}" alt="" />
-                	<h4 style="text-align: left;">{!! $item->name !!}</h4>
-                	<a href="#" class="events-title"></a> 
+                	<img  style="width: 200px;" src="/assets/content/events/{{$item->id}}.{{$item->img}}"  alt="" />
+                	<h4>{!! $item->name !!}</h4>
                 </td>
                 <td class="e_h1" style="text-align: justify;">{!! $item->description !!}</td>
-                <td class="e_h3">{!! $item->fecha_fin !!}</td>
+                <td class="e_h1">{!! $item->fecha_fin !!}</td>
                 <td class="e_h1">{!! $item->place !!}</td>
               </tr>
 
