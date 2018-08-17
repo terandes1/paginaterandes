@@ -48,9 +48,12 @@ class PublicController extends Controller
 			    ->where('languages.abbr','=',$abbr)
 			    ->get();
 
+
 		if($search=='')
 		{
 				$todoTours=publicTours::todoTours($abbr);//todo los tours
+
+
 
 		}else {
 				if($search=="cuzco")
@@ -59,6 +62,7 @@ class PublicController extends Controller
 				}
 				
 				$todoTours=publicTours::searchTours($abbr,$search);//buscar tours
+				
 
 		}
 	    
@@ -181,6 +185,7 @@ class PublicController extends Controller
    {
    	 
    	 $tour = Tour::where('slug', '=', $slug)->get()[0];
+
 
    	 $tourCategoria = DB::table('tours')
 			        ->select('categories.id')

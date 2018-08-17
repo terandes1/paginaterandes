@@ -77,51 +77,64 @@
         <div class="hot-page2-alp-con-right-1">
           <!--LISTINGS-->
           <div class="row" id="tours">
+            @if (count($todoTours) == 0)<br>
+               <div class="spe-title col-md-12">
+					<h2>Lo sentimos</h2>
+					<h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
+					<div class="title-line">
+						<div class="tl-1"></div>
+						<div class="tl-2"></div>
+						<div class="tl-3"></div>
+					</div>
+					<p>
+						Volver a buscar por otra ciudad o seleccionar categorias y precios
+					</p>
+				</div>
+            @else
+                  @foreach($todoTours as $item)
+                          <div class="hot-page2-alp-r-list">
 
+                            <div class="col-md-3 hot-page2-alp-r-list-re-sp">
+                              <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+                                <div class="hotel-list-score">4.5</div>
+                                <div class="hot-page2-hli-1">  <img src="/{{$item->img}}" alt=""> </div>
+                              </a>
+                              <div class="hom-hot-av-tic"> {{$item->categoriesName}}</div>
+                            </div>
 
-            @foreach($todoTours as $item)
-                    <div class="hot-page2-alp-r-list">
-
-                      <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                        <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
-                          <div class="hotel-list-score">4.5</div>
-                          <div class="hot-page2-hli-1">  <img src="/{{$item->img}}" alt=""> </div>
-                        </a>
-                        <div class="hom-hot-av-tic"> {{$item->categoriesName}}</div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <div class="trav-list-bod">
-                        <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"><h3>{{ $item->name }}</h3></a>
-                        <p>{!! str_limit($item->description_short, 150) !!}</p>
-                        </div>
-                        <div class="col-md-12" style="margin: 15px;">
-                                <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
-                                </a>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                          <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <span class="hot-list-p3-1">Precios dede</span> <span class="hot-list-p3-2">$ {{$item->price}}</span><span class="hot-list-p3-4">
-                            <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
-                          </span> </div>
-                      </div>
-                      <div>
-                        <div class="trav-ami">
-                          <h4>Detalle e Incluye</h4>
-                          <ul>
-                            <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Turismo</span></li>
-                            <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                            <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transferir</span></li>
-                            <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Equipaje</span></li>
-                            <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duración 8N / 9D</span></li>
-                            <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Ubicación: Rio, Brasil</span></li>
-                            <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Planw</span></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-            @endforeach
+                            <div class="col-md-6">
+                              <div class="trav-list-bod">
+                              <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"><h3>{{ $item->name }}</h3></a>
+                              <p style="text-align: justify;">{!! str_limit($item->description_short, 150) !!}</p>
+                              </div>
+                              <div class="col-md-12" style="margin: 15px;">
+                                      <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
+                                      </a>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
+                                <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <span class="hot-list-p3-1">Precios dede</span> <span class="hot-list-p3-2">$ {{$item->price}}</span><span class="hot-list-p3-4">
+                                  <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
+                                </span> </div>
+                            </div>
+                            <div>
+                              <div class="trav-ami">
+                                <h4>Detalle e Incluye</h4>
+                                <ul>
+                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Turismo</span></li>
+                                  <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
+                                  <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transferir</span></li>
+                                  <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Equipaje</span></li>
+                                  <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duración 8N / 9D</span></li>
+                                  <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Ubicación: Rio, Brasil</span></li>
+                                  <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Planw</span></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                  @endforeach
+              @endif
             <!--END LISTINGS-->
             <!--END LISTINGS-->
           </div>

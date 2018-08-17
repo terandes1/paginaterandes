@@ -93,7 +93,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                                 '</div>'.
                                 '<div class="tour-mig-lc-con">'.
                                     '<h6 style="text-align:center;">'.$item->name.' </h6> <br><br>'.
-                                    '<p><span>12 Packages</span> A partir de $2400</p>'.
+                                    '<p><span>12 Packages</span> A partir de $ '.$item->price.'</p>'.
                                 '</div>'.
                             '</div>'.
                        '</a>'.
@@ -108,7 +108,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                                         '</div>'.
                                         '<div class="tour-mig-lc-con">'.
                                              '<h6 style="text-align:center;">'.$item->name.' </h6><br><br>'.
-                                            '<p><span></span> Apartir de $2400</p>'.
+                                            '<p><span></span>A partir de $ '.$item->price.'</p>'.
                                         '</div>'.
                                     '</div>'.
                                '</a>'.

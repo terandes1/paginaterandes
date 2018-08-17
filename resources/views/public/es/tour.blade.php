@@ -84,12 +84,12 @@
          	 <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span>
         </div>
         <!--====== TOUR DESCRIPTION ==========-->
-        <div class="tour_head1">
+        <div class="tour_head1" style="text-align: justify;">
           <h3>Descripción</h3>
-          <p style="text-align: justify;">
-          	{!! $tour->description_complete !!}
+          <p>
+          	{!! strip_tags($tour->description_complete) !!}
           </p>
-          </div>
+         </div>
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
           <h3>Galería de fotos</h3>
@@ -135,7 +135,7 @@
 	                                    <div class="panel-heading">
 	                                      <h4 class="panel-title">
 	                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{!! $itemp->day !!}"">
-	                                          <h4><span>D{!!  $itemp->day !!} - {!! $itemp->name !!}:</span></span> Desert Safari with Dinner
+	                                          <h4><span>D{!!  $itemp->day !!} - {!! $itemp->name !!}:</span></span> 
 	                                           </h4>
 	                                        </a>
 	                                      </h4>
@@ -154,7 +154,20 @@
                                 </div> 
 
                               </div>
-                              
+                              <div class="tab-pane fade" id="tab2default">
+                                  <div class="row">
+                                      
+                                      <div class="col-sm-12">
+                                             <div class="tour_head1 tout-map map-container">
+                                             
+                                             	{!! $tour->organization !!}
+                                            </div>
+
+                                      </div>
+                                       
+                                  </div>
+                              </div>
+
                               <div class="tab-pane fade" id="tab3default">
                                   <div class="row">
                                       
