@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Helpers\publicTours;
 use Illuminate\Support\Facades\DB;
 use App\Categorie;
+use App\Event;
 class PublicController extends Controller
 {
     function __construct()
@@ -218,8 +219,9 @@ class PublicController extends Controller
 
     public function  events($abbr='es')
     {
+    	$eventos=Event::all();
 
-    	return view('public.'.$abbr.'.events');
+    	return view('public.'.$abbr.'.events',['eventos'=>$eventos]);
 
     }
 
