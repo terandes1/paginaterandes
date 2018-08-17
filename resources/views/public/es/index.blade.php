@@ -204,11 +204,13 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                     <!-- OFFER BRAND -->
                     <div class="band"> <img src="/assets/public/images/band.png" alt="" /> </div>
                     <!-- IMAGE -->
+                    <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
                     <div class="v_place_img"> <img src="/{{$item->img}}" alt="Tour Booking" title="Tour Booking" /> 
                         <div class="hom-hot-av-tic" style="background:#99c104;;border: 2px solid #9ebb2f;    text-transform: uppercase; font-family: Eras ITC, Eras Light ITC, sans-serif;">
                             {!! $item->categoriesName!!}
                         </div>
-                    </div>
+                    </div></a>
+
                     <!-- TOUR TITLE & ICONS -->
                     <div class="b_pack rows">
                         <!-- TOUR TITLE -->
