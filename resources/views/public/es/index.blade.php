@@ -170,14 +170,15 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                         <div class="search-form">
                         <form class="tourz-search-form">
                             <div class="input-field">
-                                <label for="select-city">Enter city</label>
+                                <label for="select-city" style="color: #679e02">Enter city</label>
+                                <input  style="background: #679e02;border: 2px solid #679e02;" type="text" id="select-city" class="autocomplete">
                             </div>
                             <div class="input-field">
-                                <input type="text" id="select-search" class="autocomplete">
+                                <input type="text" id="select-search" name="select-search" class="autocomplete">
                                 <label for="select-search" class="search-hotel-type">Buscar tour por ciudad</label>
                             </div>
-                            <div class="input-field">
-                                <input type="submit" value="Buscar" class="waves-effect waves-light tourz-sear-btn"> </div>
+                            <div class="input-field" style="text-align: center;">
+                                <input type="button" id="buscar" value="Buscar" class="waves-effect waves-light tourz-sear-btn"> </div>
                         </form>
                         </div>
                     </div>
@@ -833,5 +834,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
 </section>
 <!--====== REQUEST A QUOTE ==========-->
 
+
+@endsection
+@section('script')
+     
+    <script>
+       
+
+        $("#buscar").click(function(){
+
+              $texto=$("#select-search").val();
+              window.location.href = "/es/tours/"+$texto;
+        });
+     
+    </script>
 
 @endsection

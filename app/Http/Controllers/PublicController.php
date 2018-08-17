@@ -39,14 +39,28 @@ class PublicController extends Controller
 
     }
 
-   public function tours($abbr='es')
+   public function tours($abbr='es',$search='')
    {
 
    		$categorias = DB::table('languages')
 			    ->join('categories', 'languages.id', '=', 'categories.language_id')
 			    ->where('languages.abbr','=',$abbr)
 			    ->get();
-	    $todoTours=publicTours::todoTours($abbr);
+
+		if($search=='')
+		{
+				$todoTours=publicTours::todoTours($abbr);//todo los tours
+
+		}else {
+				if($search=="cuzco")
+				{
+					$search="cusco";
+				}
+				
+				$todoTours=publicTours::searchTours($abbr,$search);//buscar tours
+
+		}
+	    
    		return view('public.'.$abbr.'.tours',['categorias' =>$categorias ,'abbr' => $abbr,'todoTours' =>$todoTours]);
 
    }
