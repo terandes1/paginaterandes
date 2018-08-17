@@ -35,6 +35,11 @@
           {!!Form::label('Fecha Final','Fecha Final')!!}
           {!!Form::date('fecha_fin',$event->fecha_fin,['class'=>'form-control','required'])!!}
         </div>
+        <div class="col-md-12">
+          {!!Form::label('place','Lugar')!!}
+          {!!Form::text('place',$event->place,['class'=>'form-control','required'])!!}
+      
+        </div>
         <div class="col-md-8">
              {!!Form::label('name','Subir Imagen')!!}
             <input type="file" class="form-control" name="img" >

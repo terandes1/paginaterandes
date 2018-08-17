@@ -36,6 +36,11 @@
       
         </div>
         <div class="col-md-12">
+          {!!Form::label('place','Lugar')!!}
+          {!!Form::text('place',null,['class'=>'form-control','required'])!!}
+      
+        </div>
+        <div class="col-md-12">
              {!!Form::label('name','Subir Imagen')!!}
             <input type="file" class="form-control" name="img" required>
         </div>

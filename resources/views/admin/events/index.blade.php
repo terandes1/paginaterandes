@@ -27,6 +27,7 @@
             <th scope="col">Nombres</th>
             <th scope="col">Fecha Inicio</th>
             <th>Fecha Fin</th>
+            <th>Lugar</th>
             <th scope="col">description</th>
             <th>img</th>
             <th scope="col">Acciones</th>
@@ -39,6 +40,7 @@
                     <td>{!! $item->name!!}</td>
                     <td>{!! $item->fecha_inicio!!}</td>
                     <td>{!! $item->fecha_fin!!}</td>
+                    <td>{!! $item->place!!}</td>
                     <td>{!! $item->description!!}</td>
                     <td><img style="width: 100px;" src="/assets/content/events/{{$item->id}}.{{$item->img}}"> </td></td>
                     <td>

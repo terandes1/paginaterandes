@@ -13,6 +13,7 @@ class Event extends Model
       'fecha_inicio',
       'fecha_fin',
       'description',
+      'place',
       'img',
     ];
 }

@@ -8,7 +8,7 @@
     <div class="container inn-page-con-bg events events-1 tb-space" id="inner-page-title">
       <!-- TITLE & DESCRIPTION -->
       <div class="spe-title col-md-12">
-        <h2>Travel <span> Eventos</span></h2>
+        <h2>Tierra de los Andes <span> Eventos</span></h2>
         <div class="title-line">
           <div class="tl-1"></div>
           <div class="tl-2"></div>
@@ -40,7 +40,7 @@
                 </td>
                 <td class="e_h1" style="text-align: justify;">{!! $item->description !!}</td>
                 <td class="e_h3">{!! $item->fecha_fin !!}</td>
-                <td class="e_h1">Perú</td>
+                <td class="e_h1">{!! $item->place !!}</td>
               </tr>
 
             @endforeach

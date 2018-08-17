@@ -62,7 +62,7 @@ class PublicController extends Controller
 				}
 				
 				$todoTours=publicTours::searchTours($abbr,$search);//buscar tours
-				
+
 
 		}
 	    

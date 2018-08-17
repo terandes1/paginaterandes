@@ -45,6 +45,7 @@ class EventController extends Controller
            $event->fecha_inicio = $request->fecha_inicio;
            $event->fecha_fin = $request->fecha_fin;
            $event->img = $url;
+           $event->place = $request->place;
            $event->description =$request->description;
            $event->save();
            $id=DB::table('events')->max('id');
@@ -99,6 +100,7 @@ class EventController extends Controller
               'fecha_inicio' => $request->fecha_inicio,
               'fecha_fin'    => $request->fecha_fin,
               'description'  => $request->description,
+              'place'        => $request->place,
           ]);
 
           return redirect()->route('events.index');
@@ -110,6 +112,7 @@ class EventController extends Controller
               'name'         => $request->name,
               'description'  => $request->description,
               'fecha_inicio' => $request->fecha_inicio,
+              'place'        => $request->place,
               'fecha_fin'    => $request->fecha_fin,
               'img'         => $url,
           ]);
