@@ -26,6 +26,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('languages','LanguageController');
     Route::resource('categories','CategorieController');
     Route::resource('tours','TourController');
+    Route::resource('icons','IconController');
     Route::get('get/categoria/{id}','TourController@get_categoria');
     Route::post('delete/categoria/{id}','TourController@delete_categoria');
     Route::get('publicar/tour/{id}','TourController@publicarPrincipal')->name('publicarTourPrincipal');

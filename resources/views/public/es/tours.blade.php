@@ -87,7 +87,7 @@
 						<div class="tl-3"></div>
 					</div>
 					<p>
-						Volver a buscar por otra ciudad o seleccionar categorias y precios
+						<a href="/es" type="button" class="btn btn-link">Volver a buscar</a>
 					</p>
 				</div>
             @else
