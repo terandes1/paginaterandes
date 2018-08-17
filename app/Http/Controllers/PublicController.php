@@ -108,18 +108,53 @@ class PublicController extends Controller
 				}
 
 				$precios=$_POST['precios'];
-				$max=max($precios);
-				$min=min($precios);
-				
-				$categories = DB::table('categories')
+				$id;
+				$minPrecio;
+				$maxPrecio;
+
+				$count=0;
+				$tempTours=array();
+				foreach ($precios as $key => $value) 
+					{
+						$count=1+$count;
+
+						if($count==1)
+						{
+							$minPrecio=$value;
+						}
+						if($count==2)
+						{
+							$maxPrecio=$value;
+							
+								$categories = DB::table('categories')
 								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
-                  				  ->whereBetween('tours.price',[$min,$max])
+                  				  ->whereBetween('tours.price',[$minPrecio,$maxPrecio])
                   				  ->where('languages.abbr',$abbr)->get();
+                  				  foreach ($categories as  $item) {
 
-				return response(['data' => $categories,'can' => min($precios)]);
+                  				  		 $tempTours[] = array(
+                  				  		 	"categoriaName" => $item->categoriaName,
+                  				  		 	"name" => $item->name,
+                  				  		 	"description_short" => $item->description_short,
+                  				  		 	"description_short" => $item->description_short,
+                  				  		 	"price" => $item->price,
+                  				  		 	"slug" => $item->slug,
+                  				  		 	"img" => $item->img
+                  				  		 );
+                  				  }
+                  				 
+
+                  			$count=0;
+
+						}
+
+					}
+				
+			
+				return response(['data' => $tempTours]);
 				
 				
 			}

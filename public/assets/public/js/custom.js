@@ -113,31 +113,11 @@ $(document).ready(function() {
 
     $('#select-search,#select-search-1,#select-search-2.autocomplete').autocomplete({
         data: {
-            "Amazonas": 'assets/public/images/icon/7.png',
-            "Áncash": 'assets/public/images/icon/8.png',
-            "Apurímac": 'assets/public/images/icon/9.png',
-            "Arequipa": 'assets/public/images/icon/10.png',
-            "Ayacucho": 'assets/public/images/icon/11.png',
-            "Cajamarca": 'assets/public/images/icon/12.png',
-            "Callao": 'assets/public/images/icon/13.png',
+ 
+            "Arequipa": 'assets/public/images/icon/14.png',
             "Cuzco": 'assets/public/images/icon/14.png',
-            "Huancavelica": 'assets/public/images/icon/15.png',
-            "Huánuco": 'assets/public/images/icon/16.png',
-            "Ica": 'assets/public/images/icon/17.png',
-            "Junín": 'assets/public/images/icon/18.png',
-            "La Libertad": 'assets/public/images/icon/19.png',
-            "Lambayeque": 'assets/public/images/icon/20.png',
             "Lima": 'assets/public/images/icon/21.png',
-            "Loreto": 'assets/public/images/icon/22.png',
-            "Madre de Dios": 'assets/public/images/icon/23.png',
-            "Moquegua": 'assets/public/images/icon/24.png',
-            "Pasco": 'assets/public/images/icon/25.png',
-            "Piura": 'assets/public/images/icon/26.png',
-            "Puno": 'assets/public/images/icon/27.png',
-            "San Martín": 'assets/public/images/icon/29.png',
-            "Tacna": 'assets/public/images/icon/13.png',
-            "Tumbes": 'assets/public/images/icon/14.png',
-            "Ucayali": 'assets/public/images/icon/15.png',
+        
         },
         limit: 8, // The max amount of results that can be shown at once. Default: Infinity.
         onAutocomplete: function(val) {

@@ -187,7 +187,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
         <div class="container">
             
             <!-- TITLE & DESCRIPTION -->
-            <div class="spe-title">
+            <div class="spe-title" style="z-index: -1000;">
                 <h2>Paquetes De Viaje <span style="color:#36691D">Principales </span></h2>
                 <div class="title-line">
                     <div class="tl-1"></div>

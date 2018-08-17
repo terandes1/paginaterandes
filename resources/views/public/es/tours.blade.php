@@ -81,12 +81,15 @@
 
             @foreach($todoTours as $item)
                     <div class="hot-page2-alp-r-list">
+
                       <div class="col-md-3 hot-page2-alp-r-list-re-sp">
                         <a href="javascript:void(0);">
                           <div class="hotel-list-score">4.5</div>
-                          <div class="hot-page2-hli-1"> <img src="/{{$item->img}}" alt=""> </div>
+                          <div class="hot-page2-hli-1">  <img src="/{{$item->img}}" alt=""> </div>
                         </a>
+                        <div class="hom-hot-av-tic"> {{$item->categoriesName}}</div>
                       </div>
+
                       <div class="col-md-6">
                         <div class="trav-list-bod">
                         <a href="{{route('tour','es')}}"><h3>{{ $item->name }}</h3></a>
@@ -161,6 +164,7 @@
                  error: function() {
                  },
                   success: function(respuesta) {
+
                         $.each(respuesta.data,function(index,element)
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
@@ -169,6 +173,7 @@
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
+                                                         "<div class='hom-hot-av-tic'>"+element.categoriaName+"</div>"+
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
@@ -246,6 +251,7 @@
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
+                                                         "<div class='hom-hot-av-tic'>"+element.categoriaName+"</div>"+
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
