@@ -171,11 +171,13 @@
                               <div class="tab-pane fade" id="tab3default">
                                   <div class="row">
                                       
-                                      <div class="col-sm-12">
+                                      <div class="col-sm-12" style="margin-top: -50px;">
+
                                              <div class="tour_head1 tout-map map-container">
-                                              <h3>Location</h3>
-                                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6290415.157581651!2d-93.99661009218904!3d39.661150926343694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois%2C+USA!5e0!3m2!1sen!2sin!4v1467884030780" allowfullscreen></iframe>
+                                              <h3>Ubicación</h3>
+                                              
                                             </div>
+                                            <div id="map_ubicacion" style="height: 450px;"></div>
 
                                       </div>
                                        
@@ -233,10 +235,10 @@
 											 </b>
 												{!! str_limit($item->description_short, 150) !!}
 												</br> <b>Maxinum </b> : 4 Persons</span> 
-                        <div class="col-md-12" style="margin: 15px;">
-                                <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
-                                </a>
-                        </div>
+                                            <div class="col-md-12" style="margin: 15px;">
+                                                    <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
+                                                    </a>
+                                            </div>
 										</div>
 										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Precio por noche</span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn spec-btn-text">Reservar ahora</a> </div>
 									</div>
@@ -294,8 +296,71 @@
 
       </div>
     </div>
+    
   </div>
+
 </section>
+
+@endsection
+
+@section('script')
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback&sensor=true&callback=initialize">
+</script>
+
+ <script>
+
+     var directionsDisplay;
+     var map;
+
+    function initialize() {
+      directionsDisplay = new google.maps.DirectionsRenderer();
+      var chicago = new google.maps.LatLng(-13.52577301931808, -71.94352103906249);
+      var mapOptions = 
+      { 
+        zoom:7, mapTypeId: google.maps.MapTypeId.ROADMAP, center: chicago
+
+      }
+      map = new google.maps.Map(document.getElementById("map_ubicacion"), mapOptions);
+      directionsDisplay.setMap(map);
+        var icon = {
+            url: "https://images.vexels.com/media/users/3/138096/isolated/preview/bd3e7c2a0fe7cf8b2213aa3430390f66-aventura-de-senderismo-by-vexels.png", // url
+                    scaledSize: new google.maps.Size(50, 50), // scaled size
+                    origin: new google.maps.Point(0,0), // origin
+                    anchor: new google.maps.Point(0, 0) // anchor
+        };
+
+        var infowindow = new google.maps.InfoWindow({
+          content: "<img style='width:260px;' src='http://morisantours.com.pe/travel/images/catedral_cusco.jpg'>"+
+                "<table> <tr><th><h4><strong> La Plaza principal del Cuzco </strong></th></tr><tr><td style='width:150px; text-align:justify;'></h3></h6>Un curso diferente, fuera de los caminos trillados, reuniones de las comunidades Un curso diferente, fuera de los caminos trillados.</h6></td></tr></table>"
+        });
+
+      var marker1 = new google.maps.Marker({
+         position: {lat:parseFloat(-13.52577301931808), lng:  parseFloat(-71.94352103906249)},
+         draggable: true,
+              icon: icon,
+                title: 'Info'
+         });
+         marker1.setMap(map);
+         
+         
+        var marker2 = new google.maps.Marker({
+         position: {lat:parseFloat(-13.6330805), lng:  parseFloat(-72.8973477)},
+         draggable: true,
+                icon:icon,
+                title: 'Info'
+         });
+        marker2.setMap(map);
+
+        marker1.addListener('click', function() {
+          infowindow.open(map, marker1);
+        });
+    }
+
+    $(document).ready(function(e) { initialize() });
+
+</script>
 
 
 @endsection
