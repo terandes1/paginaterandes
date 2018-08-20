@@ -21,7 +21,8 @@ class ItinerarieController extends Controller
     public function insert(Request $request)
     {
 		
-		DB::table('itineraries')->insert(
+		
+        DB::table('itineraries')->insert(
 		    [
 		    'tour_id' => $request['idTourP'],
 		    'name' => $request['name'], 
@@ -111,6 +112,7 @@ class ItinerarieController extends Controller
     }
      public function actualizar(Request $request)
     {
+       // return $request->all();
         //return $request['altitud'];
     	DB::table('itineraries')
             ->where('id', $request['id'])

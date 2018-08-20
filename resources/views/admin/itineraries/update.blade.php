@@ -289,7 +289,7 @@ function agregarUbicaion(idItinerario) {
 		   },
 		   success: function(respuesta) {
 					
-					console.log(respuesta.icons);
+					console.log(respuesta);
 						var dia;
 						 
 						 $.each(respuesta.maxItem,function(index,elementa)
@@ -322,7 +322,7 @@ function agregarUbicaion(idItinerario) {
 		         			           	"<input type='hidden' id='day' name='day' value='"+numero+"'>"+
 		         			                "<div class='col'>"+
 		         			                	"<label for='inputPassword'>Nombre  <span style='color:red;'>*<span></label>"+
-		         			                	"<input type='text' class='form-control' name='name' id='name' required value="+element.name+">"+
+		         			                	"<input type='text' class='form-control' name='name' id='name' required value='"+element.name+"'>"+
 		         			                	"<label for='inputPassword'>Description <span style='color:red;'>*<span></label>"+
 		         			                	"<textarea  class='form-control' rows='5' name='description'  required id='description'>"+
 		         			                	    
