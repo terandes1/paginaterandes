@@ -46,15 +46,19 @@
 <section>
   <div class="rows inner_banner inner_banner_4">
     <div class="container">
-      <h2><span>Brazil & Argentina -</span> Family Package</h2>
+      <h2><span>{!! $tour->name !!}</span> Family Package</h2>
+       <div class="tour_head">
+           
+           <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span>
+        </div>
       <ul>
-        <li><a href="#inner-page-title">Home</a>
+        <li><a href="#inner-page-title">Inicio</a>
         </li>
         <li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
-        <li><a href="#inner-page-title" class="bread-acti">Brazil & Argentina</a>
+        <li><a href="{{route('paquetes','es')}}" class="bread-acti">Tours</a>
         </li>
       </ul>
-      <p>Book travel packages and enjoy your holidays with distinctive experience</p>
+      <p>Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
     </div>
   </div>
 </section>
@@ -77,13 +81,8 @@
 <section>
   <div class="rows inn-page-bg com-colo">
     <div class="container inn-page-con-bg tb-space">
-      <div class="col-md-9">
-        <!--====== TOUR TITLE ==========-->
-        <div class="tour_head">
-         	 <h4>{!! $tour->name !!}</h4><br>
-         	 <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span>
-        </div>
-        <!--====== TOUR DESCRIPTION ==========-->
+      <div class="col-md-9" style="margin-top: -140px;">
+ 
         <div class="tour_head1" style="text-align: justify;">
           <h3>Descripción</h3>
           <p>
@@ -252,15 +251,16 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 tour_r">
+      <div class="col-md-3 tour_r" style="margin-top: -90px;">
         <!--====== SPECIAL OFFERS ==========-->
         <div class="tour_right tour_offer">
+
           <div class="band1"><img src="/assets/public/images/offer.png" alt="" /> </div>
-          <p>Special Offer</p>
+          <p>Oferta especial</p>
           <h4>$500<span class="n-td">
               <span class="n-td-1">$800</span>
               </span>
-            </h4> <a href="booking.html" class="link-btn">Book Now</a> </div>
+            </h4> <a href="{{route('contact','es')}}" class="link-btn">RESERVAR AHORA</a> </div>
         <!--====== TRIP INFORMATION ==========-->
         
         <!--====== PACKAGE SHARE ==========-->
