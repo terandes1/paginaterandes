@@ -78,13 +78,22 @@
   </div>
 </section>
 <!--====== TOUR DETAILS ==========-->
+  
 <section>
   <div class="rows inn-page-bg com-colo">
     <div class="container inn-page-con-bg tb-space">
       <div class="col-md-9" style="margin-top: -140px;">
- 
+ 		
         <div class="tour_head1" style="text-align: justify;">
-          <h3>Descripción</h3>
+          <h3></h3>
+          <div class="db-2-com db-2-main">
+          <h4>Descripción</h4>
+          <div class="db-2-main-com">
+          
+            
+            
+          </div>
+        </div>
           <p>
           	{!! strip_tags($tour->description_complete) !!}
           </p>

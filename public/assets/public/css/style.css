@@ -1931,7 +1931,7 @@
      background: linear-gradient(to bottom, #8BC34A, #70ab2c);
 }
  .banner_book {
-     background: #253d52;
+     background: #97BF04;;
      z-index: 9999;
      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.37);
 }
@@ -1947,7 +1947,7 @@
      display: inline;
      line-height: 55px;
      font-size: 18px;
-     border-right: 1px solid #314c64;
+     border-right: 1px solid #97bf04;
      color: #fff;
      float: left;
      width: 24%;
@@ -1960,7 +1960,7 @@
  .banner_book_1 ul li a {
      background: #1aa5d8;
      background: #f4364f;
-     background: linear-gradient(to bottom,#f4364f,#dc2039);
+     background: linear-gradient(to bottom,#ff5722,#ff5722);
      display: block;
      text-align: center;
      color: #fff;
