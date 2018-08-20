@@ -7,6 +7,7 @@ use App\Helpers\publicTours;
 use Illuminate\Support\Facades\DB;
 use App\Categorie;
 use App\Event;
+use App\Itinerarie;
 class PublicController extends Controller
 {
     function __construct()
@@ -211,8 +212,41 @@ class PublicController extends Controller
     $toursPrincipal=publicTours::tours($abbr,'1');//Retorne de  tours  en español y principal(1 y 0)
     $toursRelacionados=publicTours::toursRelacionados($abbr,$tourCategoria->id);//Retorne de  tours  relacionados
 
-   	 return view('public.'.$abbr.'.tour',['tour' => $tour,'multimediaTour' => $multimediaTour,'toursPrincipal' => $toursPrincipal,'itinerarioTour' => $itinerarioTour,'toursRelacionados' => $toursRelacionados ]);
+   	 return view('public.'.$abbr.'.tour',['tour' => $tour,'multimediaTour' => $multimediaTour,'toursPrincipal' => $toursPrincipal,'itinerarioTour' => $itinerarioTour,'toursRelacionados' => $toursRelacionados,'abbr'=>$abbr]);
 
+   }
+   public function tourItinerario(Request $request)
+   {
+	   	if($request->ajax())
+	   	{
+	   		$idTour =	$_POST['idTour'];
+	   		$abbr	=	$_POST['abbr'];
+	   		$tempItinerarioPuntos=[];
+	   		$tempItinerarioGrafica=[];
+	   		$data=DB::table('tours')
+   					->select('itineraries.name','itineraries.day','itineraries.latitud','itineraries.longitud','icons.id as idIcons','icons.url','itineraries.description','tours.img')
+   			  		->join('itineraries','tours.id','=','itineraries.tour_id')
+   			  		->join('icons','itineraries.icono','=','icons.id')
+   			  		->where('tours.id',$idTour)
+   			  		->get();
+   			$dataGrfica=DB::table('tours')
+   					->select('itineraries.latitud as lat','itineraries.longitud as lng')
+   			  		->join('itineraries','tours.id','=','itineraries.tour_id')
+   			  		->join('icons','itineraries.icono','=','icons.id')
+   			  		->where('tours.id',$idTour)
+   			  		->get();
+
+   			foreach ($data as $item) {
+
+   				  $tempItinerarioPuntos[]=[$item->name,(float)$item->latitud,(float)$item->longitud,$item->idIcons,$item->url,$item->description,$item->img];
+
+   				  $tempItinerarioGrafica[]=[(float)$item->latitud,(float)$item->longitud];
+   			}
+   			
+
+	   	}
+
+	   	return response(['data'=>$tempItinerarioPuntos,'grafica'=> $dataGrfica]);
    }
 
     public function  testimonials($abbr='es')

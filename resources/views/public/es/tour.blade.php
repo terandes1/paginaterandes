@@ -311,53 +311,100 @@
 
  <script>
 
-     var directionsDisplay;
-     var map;
 
-    function initialize() {
-      directionsDisplay = new google.maps.DirectionsRenderer();
-      var chicago = new google.maps.LatLng(-13.52577301931808, -71.94352103906249);
-      var mapOptions = 
-      { 
-        zoom:7, mapTypeId: google.maps.MapTypeId.ROADMAP, center: chicago
+    //ListItinerarioMap();
+    function initialize()
+        {
+            var marcadores;
+            var idTour='{{$tour->id}}';
+            var abbr='{{$abbr}}';
+            $.ajax({
+                     url:'{{ route('listItinerarioMap') }}',
+                     type: 'POST',
+                     data:{
+                            "_token": "{{ csrf_token() }}",
+                             "idTour":idTour, "abbr":abbr
+                        },
+                     dataType: 'JSON',
+                     beforeSend: function() {
+                     },
+                     error: function() {
+                     },
+                      success: function(respuesta) {
+                        var marcadores=respuesta.data;
+ 
+                        var flightPlanCoordinates   = [];
+                         $.each(respuesta.grafica,function(index,element)
+                            { 
+                            
+                                flightPlanCoordinates .push({"lat":Number(element.lat),"lng":Number(element.lng)});
 
-      }
-      map = new google.maps.Map(document.getElementById("map_ubicacion"), mapOptions);
-      directionsDisplay.setMap(map);
-        var icon = {
-            url: "https://images.vexels.com/media/users/3/138096/isolated/preview/bd3e7c2a0fe7cf8b2213aa3430390f66-aventura-de-senderismo-by-vexels.png", // url
-                    scaledSize: new google.maps.Size(50, 50), // scaled size
-                    origin: new google.maps.Point(0,0), // origin
-                    anchor: new google.maps.Point(0, 0) // anchor
-        };
+                                 
+                             });
+                        
+                      var lineSymbol = {
+                              path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+                            };
 
-        var infowindow = new google.maps.InfoWindow({
-          content: "<img style='width:260px;' src='http://morisantours.com.pe/travel/images/catedral_cusco.jpg'>"+
-                "<table> <tr><th><h4><strong> La Plaza principal del Cuzco </strong></th></tr><tr><td style='width:150px; text-align:justify;'></h3></h6>Un curso diferente, fuera de los caminos trillados, reuniones de las comunidades Un curso diferente, fuera de los caminos trillados.</h6></td></tr></table>"
-        });
+                        var map = new google.maps.Map(document.getElementById('map_ubicacion'),
+                         {
+                            zoom: 7,
+                            center: new google.maps.LatLng(-13.539158, -71.9720368),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
 
-      var marker1 = new google.maps.Marker({
-         position: {lat:parseFloat(-13.52577301931808), lng:  parseFloat(-71.94352103906249)},
-         draggable: true,
-              icon: icon,
-                title: 'Info'
-         });
-         marker1.setMap(map);
-         
-         
-        var marker2 = new google.maps.Marker({
-         position: {lat:parseFloat(-13.6330805), lng:  parseFloat(-72.8973477)},
-         draggable: true,
-                icon:icon,
-                title: 'Info'
-         });
-        marker2.setMap(map);
+                          });
+                        var flightPath = new google.maps.Polyline({
+                          path: flightPlanCoordinates,
+                          strokeColor: '#15959F',
+                          strokeOpacity: 0.8,
+                          strokeWeight: 3,
+                          fillColor: '#15959F',
+                          fillOpacity: 0.35,
+                          draggable: true,
+                          geodesic: true,
+                          icons: [{
+                            icon: lineSymbol,
+                            repeat: '330px',
+                            offset: '0',
+                          }],
+                          map: map
+                        });
+                        
+                        flightPath.setMap(map);
 
-        marker1.addListener('click', function() {
-          infowindow.open(map, marker1);
-        });
-    }
+                          var infowindow = new google.maps.InfoWindow();
 
+                          var marker, i;
+                          for (i = 0; i < marcadores.length; i++) 
+                          {  
+                            marker = new google.maps.Marker({
+                              position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+                              map: map,
+                              icon: {
+                                         url: "../../assets/content/iconos/"+marcadores[i][3]+"."+marcadores[i][4]+"",
+                                         scaledSize: new google.maps.Size(30, 30), 
+                                         origin: new google.maps.Point(0,0), 
+                                         anchor: new google.maps.Point(0, 0) 
+                                    }
+                            });
+
+                            google.maps.event.addListener(marker, 'mouseover', (function(marker, i)
+                             {
+                              return function() {
+                                infowindow.setContent("<img style='width:250px;' src='../../"+marcadores[i][6]+"'>"+
+                                    "<table> <tr><th><h4><strong> "+marcadores[i][0]+" </strong></th></tr><tr><td style='width:150px; text-align:justify;'></h3></h6>"+marcadores[i][5]+"</h6></td></tr></table>");
+                                infowindow.open(map, marker);
+                              }
+                            })(marker, i));
+
+                          }
+
+                      }
+
+                  });
+            
+          
+        }
     $(document).ready(function(e) { initialize() });
 
 </script>
