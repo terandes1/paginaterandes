@@ -191,7 +191,7 @@
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
                                                    " <a href='../tour/es/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
-                                                    "<p>"+element.description_short.substring(1,150)+"</p>"+
+                                                    "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                     "<div class='col-md-12' style='margin: 15px;'> "+
                                                         "<a class='link-btn'href='../tour/es/"+element.slug+"'>VER MÁS DETALLE"+
@@ -269,7 +269,7 @@
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
                                                    " <a href='../tour/es/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
-                                                    "<p>"+element.description_short.substring(1,150)+"</p>"+
+                                                    "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                     "<div class='col-md-12' style='margin: 15px;'> "+
                                                         "<a class='link-btn'href='../tour/es/"+element.slug+"'>VER MÁS DETALLE"+

@@ -98,7 +98,7 @@
       $('#table-language').DataTable();
 
       $('i[name^="eliminar"]').click((e)=>{
-        let opcion = confirm("Esta seguro que desea eliminar este usuario");
+        let opcion = confirm("Esta seguro que desea eliminar este lenguaje");
 
         if(opcion == true){
           $('#'+$(e.target).attr('name')).submit();
