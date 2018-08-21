@@ -86,21 +86,23 @@
  		
         <div class="tour_head1" style="text-align: justify;">
           <h3></h3>
-          <div class="db-2-com db-2-main">
-          <h4>Descripción</h4>
-          <div class="db-2-main-com">
-          
-            
-            
-          </div>
-        </div>
+	        <div class="db-2-com db-2-main">
+	          <h4>Descripción</h4>
+	          <div class="db-2-main-com">
+	          </div>
+	        </div>
           <p>
           	{!! strip_tags($tour->description_complete) !!}
           </p>
          </div>
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
-          <h3>Galería de fotos</h3>
+
+          <div class="db-2-com db-2-main">
+	          <h4>Galería de fotos</h4>
+	          <div class="db-2-main-com">
+	          </div>
+	        </div>
           <div id="myCarousel1" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators carousel-indicators-1">
