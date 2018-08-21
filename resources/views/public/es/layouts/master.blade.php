@@ -89,7 +89,7 @@ ul.thumbnails {
     width: 100%;
     }
     .carousel-control{
-        background: #666 !important;
+     
         border: 0px;
         border-radius: 0px;
         display: inline-block;

@@ -9,10 +9,11 @@
               $i=0;
               foreach($carrusel as $item)
               {
-				$i=$i+1;
+				
 				$htmlTemp.='<li data-target="#myCarousel1" data-slide-to="'.$i.'">'.
 	              				'<img src="../../'.$item->path.'" alt="Chania">'.
 	            			 '</li>';
+	            $i=$i+1;
               }
               return $htmlTemp;
 	} 
@@ -23,21 +24,22 @@
               $i=0;
               foreach($multimediaTour as $item)
               {
-				$i=$i+1;
-				if($i==1)
+				
+				if($i==0)
 				{
 					$htmlTemp1.='<div class="item active">'.
 		              	'<img src="../../'.$item->path.'" alt="Chania" width="460" height="345" style="width:850px;height:450px">'.
 		            '</div>';
 
 				}else {
-
-				}
-				$htmlTemp1.='<div class="item">'.
+					$htmlTemp1.='<div class="item">'.
 		              			'<img src="../../'.$item->path.'" alt="Chania" width="460" height="345" style="width:850px;height:450px">'.
 		            		'</div>';
+				}
+				
+		        $i=$i+1;
               }
-
+              
               return $htmlTemp1;
 	}
 
@@ -46,11 +48,14 @@
 <section>
   <div class="rows inner_banner inner_banner_4">
     <div class="container">
-      <h2><span>{!! $tour->name !!}</span> Family Package</h2>
+      <h2><span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.1em;">{!! $tour->name !!}</span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1em;"> Paquete familiar</h2>
        <div class="tour_head">
            
-           <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span>
+           <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+
+           <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span>
         </div>
+        
       <ul>
         <li><a href="#inner-page-title">Inicio</a>
         </li>
@@ -58,7 +63,7 @@
         <li><a href="{{route('paquetes','es')}}" class="bread-acti">Tours</a>
         </li>
       </ul>
-      <p>Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
+      <p style="text-shadow: 2px 2px 4px #000;color: #fff;">Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
     </div>
   </div>
 </section>
@@ -119,7 +124,9 @@
             	<span><i class="fa fa-angle-left hotel-gal-arr" aria-hidden="true"></i></span> 
             </a>
 			<a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next"> 
-					<span><i style="margin-left: -100px;margin-top: 52px;"class="fa fa-angle-right hotel-gal-arr hotel-gal-arr1" aria-hidden="true"></i></span> 
+					<span>
+						<i style="margin-left: -48px;margin-top: 52px;"class="fa fa-angle-right hotel-gal-arr" aria-hidden="true"></i>
+			</span> 
 			</a>
           </div>
         </div>
@@ -290,7 +297,7 @@
           <h3>SERVICIO DE ASISTENCIA</h3>
           <div class="tour_help_1">
             <h4 class="tour_help_1_call">Llámanos ahora</h4>
-            <h4><i class="fa fa-phone" aria-hidden="true"></i> 10-800-123-000</h4> </div>
+            <h4><i class="fa fa-phone" aria-hidden="true"></i>  00-51-84-247277</h4> </div>
         </div>
         <!--====== PUPULAR TOUR PACKAGES ==========-->
         <div class="tour_right tour_rela tour-ri-com">

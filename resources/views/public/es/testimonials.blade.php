@@ -1,8 +1,50 @@
 @extends('public.es.layouts.master')
 
 @section('content')
+<style type="text/css">
 
+
+.radio{
+        margin-right:20px;
+    }
+    .card{
+        margin:10px !important;
+        background: transparent;
+    }
+.input-hidden {
+position: absolute;
+left: -9999px;
+}
+
+input[type=radio]:checked + label>img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px #090;
+}
+
+input[type=radio]:checked + label {
+  color: #090;
+}
+
+input[type=radio] + label>img {
+  margin-right: 10px;
+  border: 1px dashed #444;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: 500ms all;
+  cursor:pointer;
+}
+
+input[type=radio]:checked + label>img {
+  transform: 
+    rotateZ(-10deg) 
+    rotateX(10deg);
+}
+
+ 
+</style>
 <!--====== ALL TESTIMONIALS ==========-->
+
 <section>
   <div class="to-ho-hotel">
 
@@ -17,7 +59,9 @@
           <div class="tl-3"></div>
         </div>
         <p>Comparte experiencias de viaje con nosotros</p>
+        
       </div>
+
       <div class="p_testimonial">
 
 	        <div class="col-md-4">
@@ -138,5 +182,4 @@
     </div>
   </div>
 </section>
-
 @endsection

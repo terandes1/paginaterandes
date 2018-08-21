@@ -1,11 +1,14 @@
 <!-- MOBILE MENU -->
+<style type="text/css">
+
+</style>
 <section>
     <div class="ed-mob-menu">
         <div class="ed-mob-menu-con">
             <div class="ed-mm-left">
                 <div class="wed-logo" style="width: 130px;" >
                     <a href="index.html"><img  src="/assets/public/images/logo.png" alt="" />
-        </a>
+                     </a>
                 </div>
 
 
@@ -131,8 +134,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="wed-logo" style="margin-top: 10px;">
-                        <a href="{{('/es')}}"><img style="width: 206px;" src="/assets/public/images/logo.png" alt="" />
+                    <div class="wed-logo" style="margin-top: 5px;">
+                        <a href="{{('/es')}}"><img style="width:100%;" src="/assets/public/images/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="main-menu" style="margin-top: 10px;">

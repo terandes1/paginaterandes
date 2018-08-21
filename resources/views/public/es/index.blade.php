@@ -75,6 +75,48 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
 
 
 </style>
+<style type="text/css">
+
+
+.radio{
+        margin-right:20px;
+    }
+    .card{
+        margin:10px !important;
+        background: transparent;
+    }
+.input-hidden {
+position: absolute;
+left: -9999px;
+}
+
+input[type=radio]:checked + label>img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px #090;
+}
+
+input[type=radio]:checked + label {
+  color: #090;
+}
+
+input[type=radio] + label>img {
+  margin-right: 10px;
+  border: 1px dashed #444;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: 500ms all;
+  cursor:pointer;
+}
+
+input[type=radio]:checked + label>img {
+  transform: 
+    rotateZ(-10deg) 
+    rotateX(10deg);
+}
+
+ 
+</style>
 <?php 
  function DostourDeLujos($toursLujos)
 {
@@ -225,7 +267,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                                         </div>
                                         <div class="col-md-6 col-sm-6  pack_icon">
                              
-                                                 <h5 style="color: #f4364f;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
+                                                 <h5 style="color: #f4364f;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
                                              
                                         </div>
 
@@ -453,7 +495,19 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
             <div class="spe-title spe-title-1">
                 <h2>TOP <span style="color:#36691D;">TESTIMONIOS</span> DE ESTE MES</h2>
                 <div class="title-line">
-                    
+                     <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat"  style="color: white;font-size: 30px;">4.5</span>
+                                 </h2> 
+                             </div>
                 </div>
                 <p> Comparte experiencias de viaje con nosotros. </p>
 
@@ -476,9 +530,57 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                             </div>
                             <div class="caption-box" style="text-align: center;">
 
-                              <h3>Praesent commodo</h3>
+                              <h3>Gutiérrez Aller Andrés</h3>
+                              <h4>Perú en mi caso y sé que el de muchos es ...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Gutiérrez Aller Andrés</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
+                               <div class="tour_head">
+                                 <h2>
+                                    <span class="tour_star">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
+                                        </i>
+                                     </span>
+                                     <span class="tour_rat">4.5</span>
+                                 </h2> 
+                             </div>
+                            </div>
+                          </li>
+
+                          <li class="col-sm-3">      
+                            <div class="thumbnail">
+                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
+                            </div>
+                            <div class="caption-box" style="text-align: center;">
+                              <h3>Gutiérrez Aller Andrés</h3>
+                              <h4>Muy buena organización y puntualidad...</h4>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -502,55 +604,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                             <div class="caption-box" style="text-align: center;">
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
-
-                          <li class="col-sm-3">      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
-
-                          <li class="col-sm-3">      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="#">Read More</a>
+                              <a class="link-btn" href="#">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -579,7 +633,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                             <div class="caption-box" style="text-align: center;">
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -603,7 +657,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                             <div class="caption-box" style="text-align: center;">
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -627,7 +681,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                             <div class="caption-box" style="text-align: center;">
                               <h3>Praesent commodo</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -649,9 +703,9 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
+                              <h3>Gutiérrez Aller Andrés</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Read More</a>
+                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -676,7 +730,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
+                              <h3>Gutiérrez Aller Andrés</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
                                <div class="tour_head">
@@ -700,7 +754,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
+                              <h3>Gutiérrez Aller Andrés</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
                                <div class="tour_head">
@@ -724,7 +778,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
+                              <h3>Gutiérrez Aller Andrés</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
                                <div class="tour_head">
@@ -748,7 +802,7 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
                             </div>
                             <div class="caption-box">
-                              <h3>Praesent commodo</h3>
+                              <h3>Gutiérrez Aller Andrés</h3>
                               <h4>Muy buena organización y puntualidad...</h4>
                               <a class="link-btn" href="{{('testimonials')}}">Read More</a>
                                <div class="tour_head">
@@ -764,25 +818,42 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
                                      <span class="tour_rat">4.5</span>
                                  </h2> 
                              </div>
+
                             </div>
                           </li>
+
                         </ul>
+
                       </div><!-- /Slide3 --> 
+
                     </div><!-- /Wrapper for slides .carousel-inner -->
                     <!-- Control box -->
                     <div class="control-box">                            
                       <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
                       <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
                     </div><!-- /.control-box -->   
-
+                     <div >
+                        <div class="input-field col s5">
+                            
+                        </div>
+                         <div class="input-field col s2">
+                            <i class="waves-effect waves-light full-btn waves-input-wrapper" style="">
+                                  <input type="submit" value="INGRESE SU TESTIMONIO"  data-toggle="modal" data-target="#idTestimonio" class="waves-button-input">
+                            </i> 
+                        </div>
+                     </div>
+                        
                   </div><!-- /#myCarousel -->
-
 
                 </div><!-- /.col-sm-12 -->          
                 </div><!-- /.row --> 
+
            
         </div>
+
+
     </div>
+    @include('public.es.testimonials.formTestimonials')
 </section>
 <!--====== POPULAR TOUR PLACES ==========-->
 <section>
