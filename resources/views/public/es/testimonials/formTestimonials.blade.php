@@ -9,6 +9,7 @@
                 </div>
             </div>
             <div class="modal-body" style="width: 100%;">
+            	 {!! Form::open(['route' => ['testimonials.store'] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}
                   <div class="v2-search-form" style="width: 100%;height: 100%; margin-top: -10px;">
                         <div class="row" style="margin-top: -50px;">
                                 <div class="input-field col s6">
@@ -97,18 +98,20 @@
                       <div class="row">
                             <div class="file-field input-field" style="margin-left: 15px;">
                                 <div class="db-up-btn"> <span>Subir Imagen</span>
-                                    <input type="file"> </div>
+                                    <input type="file" id="Imagen" name="Imagen"> </div>
                                 <div class="file-path-wrapper">
                                     <input class="file-path validate" type="text"> </div>
                             </div>
                       </div>
                         <div class="row">
                                 <div class="input-field col s12">
-                                    <i class="waves-effect waves-light tourz-sear-btn v2-ser-btn waves-input-wrapper" style=""><input type="submit" value="Enviar ahora" class="waves-button-input"></i>
+							        <input type="text" name="abbr" value="{{$abbr}}" hidden="">
+                                    <i class="waves-effect waves-light tourz-sear-btn v2-ser-btn waves-input-wrapper" style=""><input type="submit" id="EnviarTestimonio" name="EnviarTestimonio" value="Enviar ahora" class="waves-button-input"></i>
                                 </div>
                         </div>
 
                   </div>
+                  {!! Form::close() !!}
             </div>
             
           </div>

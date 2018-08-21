@@ -919,7 +919,9 @@ input[type=radio]:checked + label>img {
               $texto=$("#select-search").val();
               window.location.href = "/es/tours/"+$texto;
         });
+
      
     </script>
+  
 
 @endsection

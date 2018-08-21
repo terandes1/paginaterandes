@@ -79,6 +79,9 @@ Route::prefix('admin')->group(function () {
     Route::get('trash','TrashController@index');
     Route::post('trash/restore_user/{id}','TrashController@restore_user');
 
+    //testimonio
+    Route::resource('testimonials','TestimonialController');
+
 });
 //fin de rutas admin
 
@@ -99,6 +102,7 @@ Route::get('/tour/{lang?}/{slug?}', ['as' => 'tour','uses' => 'PublicController@
 Route::post('listItinerarioMap/', [ 'uses' => 'PublicController@tourItinerario' ])->name('listItinerarioMap');
 //Route::get('/tour/{tour?}/{lang?}', [ 'uses' => 'PublicController@tour' ])->name('tour');
 Route::get('{lang?}/testimonials/', [ 'uses' => 'PublicController@testimonials' ])->name('testimonials');
+
 Route::get('{lang?}/events/', [ 'uses' => 'PublicController@events' ])->name('events');
 Route::get('{lang?}/our-team/', [ 'uses' => 'PublicController@our_team' ])->name('our-team');
 

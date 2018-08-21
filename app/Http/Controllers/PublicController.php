@@ -31,7 +31,7 @@ class PublicController extends Controller
     	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
-    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos]);
+    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'abbr'=>$abbr]);
     }
 
     public function contact($abbr='es')
