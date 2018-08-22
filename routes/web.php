@@ -89,6 +89,28 @@ Route::prefix('admin')->group(function () {
 //vistas publicas
 Auth::routes();
 
+//encuestas
+Route::get('/store/encuesta','EncuestaController@store');
+Route::get('/encuesta/enviada','EncuestaController@enviado');
+Route::post('/encuesta/upload','EncuestaController@upload');
+Route::get('encuesta',function(){
+    return view('public/encuesta./es');
+});
+Route::get('enquete',function(){
+    return view('public.encuesta.fr');
+});
+
+Route::get('survey',function(){
+    return view('public.encuesta.en');
+});
+Route::get('sondaggio',function(){
+    return view('public.encuesta.it');
+});
+//fin encuesta
+
+Route::get('umfrage',function(){
+    return view('public.encuesta.de');
+});
 Route::get('/', [ 'uses' => 'PublicController@index' ]);
 Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
 Route::get('{lang?}/contact/', [ 'uses' => 'PublicController@contact' ])->name('contact');

@@ -52,6 +52,7 @@ class TestimonialController extends Controller
            $itemp->nationality=$request->nacionalidad;
            $itemp->testimonial=$request->testimonial;
            $itemp->language=$request->abbr;
+           $itemp->tipo='Testimonio';
 
            if ($request->hasFile('Imagen')) 
             {
@@ -59,7 +60,7 @@ class TestimonialController extends Controller
                 $url = $img->getClientOriginalExtension();
                 $itemp->photo= $url;
                 $itemp->save();
-                
+
                 $id=DB::table('testimonials')->max('id');
                 $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
                 $destinationPath = '../public/assets/content/testimonio';
