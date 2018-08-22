@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Testimonial;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreTestimonial;
 use Image;
 use DB;
 class TestimonialController extends Controller
@@ -34,8 +35,10 @@ class TestimonialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTestimonial $request)
     {
+            //return $request->all();
+           
            $date = new \DateTime();
            $date->format('Y-m-d');
 
@@ -43,7 +46,7 @@ class TestimonialController extends Controller
            $url = $img->getClientOriginalExtension();
            $itemp=new Testimonial; 
 
-           $itemp->impresion_global=$request->impresion_global;
+           $itemp->impresion_global=$request->global;
            $itemp->name=$request->name;
            $itemp->email=$request->email;
            $itemp->date =$date;

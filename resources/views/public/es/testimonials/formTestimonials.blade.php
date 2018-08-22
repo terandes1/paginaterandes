@@ -2,26 +2,30 @@
         <div class="modal-dialog">
         
           <div class="modal-content">
+          	  <button type="button" class="close" data-dismiss="modal">&times;</button>
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <div class="db-2-com db-2-main">
-                  <h4 class="modal-title">INGRESE SU TESTIMONIO</h4>
+            
+                 <div class="db-2-com db-2-main">
+                  	<h4 class="modal-title">INGRESE SU TESTIMONIO</h4>
                 </div>
             </div>
             <div class="modal-body" style="width: 100%;">
             	 {!! Form::open(['route' => ['testimonials.store'] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}
                   <div class="v2-search-form" style="width: 100%;height: 100%; margin-top: -10px;">
-                        <div class="row" style="margin-top: -50px;">
+                        <div class="row" style="margin-top: -50px;"></br>
                                 <div class="input-field col s6">
                                   <div class="input-field col s12">
-                                    <input type="text" id="name" name="name" class="autocomplete validate">
+                                    <input type="text" id="name" name="name" value="{{ old('name') }}" class="autocomplete validate">
                                     <label for="select-city-1" class="">Nombre</label>
+                                   
+                                     <p class="errorValidacion">{{ $errors->first('name') }}</p>
                                  </div>
                                 </div>
                                 <div class="input-field col s6">
                                     <div class="input-field col s12">
-                                     <input type="text" id="email" name="email" class="autocomplete validate">
-                                    <label for="select-city-1" class="">Email</label>
+                                     <input type="text" id="email" name="email" value="{{ old('email') }}" class="autocomplete validate">
+                                     <label for="select-city-1" class="">Email</label>
+                                      <p class="errorValidacion">{{ $errors->first('email') }}</p>
                                     </div>
                                 </div>
                       </div>
@@ -29,19 +33,22 @@
                       	    <div>
                                 <div class="input-field col s6">
                                   <div class="input-field col s12">
-                                    <input type="text" id="nacionalidad" name="nacionalidad" class="autocomplete validate">
+                                    <input type="text" id="nacionalidad" name="nacionalidad" value="{{ old('nacionalidad') }}" class="autocomplete validate">
                                     <label for="select-city-1" class="">Nacionalidad</label>
+                                    <p class="errorValidacion">{{ $errors->first('nacionalidad') }}</p>
                                  </div>
                                 </div>
                                 <div class="input-field col s6">
                                     <div class="input-field col s12">
-                                     <input type="text" id="ciudadReferecia" name="ciudadReferecia" class="autocomplete validate">
-                                    <label for="select-city-1" class="">Ciudad de referencia</label>
+                                     <input type="text" id="ciudadReferecia" name="ciudadReferecia" value="{{ old('ciudadReferecia') }}" class="autocomplete validate">
+                                     <p class="errorValidacion">{{ $errors->first('ciudadReferecia') }}</p>
+                                     <label for="select-city-1" class="">Ciudad</label>
                                     </div>
                                 </div>
                       </div><br>
                       <div class="row">
                                 <h5 class="text-center"><strong>IMPRESIÓN GLOBAL</strong></h5>
+                                <p style="text-align: center;" class="errorValidacion">{{ $errors->first('global') }}</p>
                       </div>
                       <div class="row" style="margin-left: -61px;margin-top:-32px; ">
                             <div class="input-field col s3">
@@ -83,14 +90,17 @@
                                     </label>
                                 
                             </div>
-
+                            	
 
                       </div>
                        <div class="row">
 
                             <div class="input-field col s12">
                                   <div class="input-field col s12">
-                                    <textarea name="testimonial" id="testimonial" class="form-control" rows="4" placeholder="Ingrese su testimonio" style="border: 2px solid #e6e6e6;" required=""></textarea>
+                                    <textarea name="testimonial" id="testimonial" class="form-control" rows="4" placeholder="Ingrese su testimonio" style="border: 2px solid #e6e6e6;" required="">
+                                    	{{ old('testimonial') }}
+                                    </textarea>
+                                 	<p class="errorValidacion">{{ $errors->first('testimonial') }}</p>
                                  </div>
                             </div>
                                 
@@ -104,7 +114,9 @@
                             </div>
                       </div>
                         <div class="row">
-                                <div class="input-field col s12">
+                        	    <div class="input-field col s4">
+                        		</div>
+                                <div class="input-field col s4">
 							        <input type="text" name="abbr" value="{{$abbr}}" hidden="">
                                     <i class="waves-effect waves-light tourz-sear-btn v2-ser-btn waves-input-wrapper" style=""><input type="submit" id="EnviarTestimonio" name="EnviarTestimonio" value="Enviar ahora" class="waves-button-input"></i>
                                 </div>

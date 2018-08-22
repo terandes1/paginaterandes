@@ -128,7 +128,11 @@ footer.info p { color: #ccc; margin: 10px 0; }
 a, a:focus, a:active, a:hover, object, embed { outline: none; }
 :-moz-any-link:focus { outline: none; }
 input::-moz-focus-inner { border: 0; }
-
+.errorValidacion
+{
+  color:red;
+  font-size: 11px;
+}
 </style>
 </head>
 

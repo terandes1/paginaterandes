@@ -164,6 +164,7 @@ input[type=radio]:checked + label>img {
  
 
 ?>
+
 <section>
     <div class="tourz-search">
        
@@ -861,7 +862,7 @@ input[type=radio]:checked + label>img {
         <div class="pla1 p-home container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title spe-title-1">
-                <h2>Usted <span style="color:#36691D;">define su</span> estilo de viaje</h2>
+                <h2>Usted <span class="errorValidacion" style="color:#36691D;">define su</span> estilo de viaje</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
@@ -910,9 +911,16 @@ input[type=radio]:checked + label>img {
 
 @endsection
 @section('script')
-     
+  
+   @if($errors->any())
     <script>
-       
+        $(document).ready(function(){
+             $("#idTestimonio").modal('show');
+        });
+    </script>
+    @endif
+
+    <script>
 
         $("#buscar").click(function(){
 
