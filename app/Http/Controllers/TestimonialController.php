@@ -42,8 +42,7 @@ class TestimonialController extends Controller
            $date = new \DateTime();
            $date->format('Y-m-d');
 
-           $img = $request->file('Imagen');
-           $url = $img->getClientOriginalExtension();
+           
            $itemp=new Testimonial; 
 
            $itemp->impresion_global=$request->global;
@@ -51,20 +50,30 @@ class TestimonialController extends Controller
            $itemp->email=$request->email;
            $itemp->date =$date;
            $itemp->nationality=$request->nacionalidad;
-           $itemp->photo= $url;
            $itemp->testimonial=$request->testimonial;
            $itemp->language=$request->abbr;
 
-           $itemp->save();
+           if ($request->hasFile('Imagen')) 
+            {
+                $img = $request->file('Imagen');
+                $url = $img->getClientOriginalExtension();
+                $itemp->photo= $url;
+                $itemp->save();
+                
+                $id=DB::table('testimonials')->max('id');
+                $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
+                $destinationPath = '../public/assets/content/testimonio';
+                if (!file_exists($destinationPath)) {
+                  mkdir($destinationPath, 666, true);
+                 }
+               $thumb_img = Image::make($img->getRealPath())->resize(600,300);
+               $thumb_img->save($destinationPath.'/'.$nombreImgen,20);
+            }else
+            {
+                $itemp->save();
+            }
 
-           $id=DB::table('testimonials')->max('id');
-           $nombreImgen = $id.'.'.$img->getClientOriginalExtension();
-           $destinationPath = '../public/assets/content/testimonio';
-           if (!file_exists($destinationPath)) {
-              mkdir($destinationPath, 666, true);
-             }
-           $thumb_img = Image::make($img->getRealPath())->resize(600,300);
-           $thumb_img->save($destinationPath.'/'.$nombreImgen,20);
+           
 
            return redirect()->route('idiomas',$request->abbr)->with('info' , 'Se registro correctamente');
 
