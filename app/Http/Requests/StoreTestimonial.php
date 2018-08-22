@@ -31,6 +31,7 @@ class StoreTestimonial extends FormRequest
              'ciudadReferecia' => 'required',
              'testimonial' => 'required',
              'global' => 'required',
+             'g-recaptcha-response' => 'required|recaptcha',
         ];
     }
 
@@ -43,6 +44,7 @@ class StoreTestimonial extends FormRequest
               'ciudadReferecia.required' => 'Ingresar ciudad de referencia',
               'testimonial.required' => 'Ingrese su testimonio',
               'global.required' => 'Califique su impresión global',
+              'g-recaptcha-response.required' =>  'Verificar Captcha',
            ];
         }
 

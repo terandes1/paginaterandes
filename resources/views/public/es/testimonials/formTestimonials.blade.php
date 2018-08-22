@@ -30,7 +30,7 @@
                                 </div>
                       </div>
                       <div class="row">
-                      	    <div>
+                      	 
                                 <div class="input-field col s6">
                                   <div class="input-field col s12">
                                     <input type="text" id="nacionalidad" name="nacionalidad" value="{{ old('nacionalidad') }}" class="autocomplete validate">
@@ -45,7 +45,7 @@
                                      <label for="select-city-1" class="">Ciudad</label>
                                     </div>
                                 </div>
-                      </div><br>
+                      </div>
                       <div class="row">
                                 <h5 class="text-center"><strong>IMPRESIÓN GLOBAL</strong></h5>
                                 <p style="text-align: center;" class="errorValidacion">{{ $errors->first('global') }}</p>
@@ -113,6 +113,23 @@
                                     <input class="file-path validate" type="text"> </div>
                             </div>
                       </div>
+                       <div class="row">
+                      	 
+                                <div class="input-field col s3">
+                                  <div class="input-field col s12">
+                                   
+                                 </div>
+                                </div>
+                                <div class="input-field col s6">
+                                  <div class="input-field col s12">
+                                    {!! Recaptcha::render() !!}
+                                      <p class="errorValidacion">{{ $errors->first('g-recaptcha-response') }}</p>
+                                 </div>
+                                </div>
+                               
+                      </div>
+                     
+                    
                         <div class="row">
                         	    <div class="input-field col s4">
                         		</div>
