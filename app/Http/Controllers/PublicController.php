@@ -252,7 +252,8 @@ class PublicController extends Controller
     public function  testimonials($abbr='es')
     {
 
-    	return view('public.'.$abbr.'.testimonials');
+    	 
+       return view('public.'.$abbr.'.testimonials');
 
     }
 
