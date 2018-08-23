@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Helpers\publicTours;
 use Illuminate\Support\Facades\DB;
 use App\Categorie;
+use App\testimonial;
 use App\Event;
 use App\Itinerarie;
 class PublicController extends Controller
@@ -251,9 +252,8 @@ class PublicController extends Controller
 
     public function  testimonials($abbr='es')
     {
-
-    	return view('public.'.$abbr.'.testimonials');
-
+       $testimonials = testimonial::all();
+    	return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
     }
 
     public function  events($abbr='es')
