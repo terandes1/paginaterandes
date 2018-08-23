@@ -252,9 +252,11 @@ class PublicController extends Controller
 
     public function  testimonials($abbr='es')
     {
+
        $testimonials = testimonial::all();
     	return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
-    }
+ 	 
+     }
 
     public function  events($abbr='es')
     {

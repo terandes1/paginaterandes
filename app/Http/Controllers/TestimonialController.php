@@ -33,11 +33,16 @@ class TestimonialController extends Controller
             $language=languageUsers::languageTestimonioEncuesta();
             
             $testimonials = Testimonial::where('language',$language->abbr)
+            							->where('tipo','Testimonio')
            								->orderBy('created_at', 'desc')->paginate(6);
+
+           	$encuesta = Testimonial::where('language',$language->abbr)
+            							->where('tipo','Encuesta')
+           								->orderBy('created_at', 'desc')->paginate(1);
 
        }
 
-        return view('admin.testimony.index',['testimonials'=>$testimonials]);
+        return view('admin.testimony.index',['testimonials'=>$testimonials,'encuesta' => $encuesta]);
 
     }
 
