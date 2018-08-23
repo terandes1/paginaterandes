@@ -63,13 +63,12 @@ input[type=radio]:checked + label>img {
       </div>
 
       <div class="p_testimonial">
-      	<?php
- 		foreach($testimonials as $item)
- 		{$item->tipo;
- 		
- 		  If ($item == "Testimonio")
-		{
-		?>
+      	 @if (count($testimonials) == 0)<br>
+               <div class="spe-title col-md-12">
+					<h2>Lo sentimos</h2>
+					<h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
+		@else				
+ 		@foreach($testimonials as $item)
 	        <div class="col-md-4">
 	            <div class="to-ho-hotel-con p-tesi">
 	              <div class="to-ho-hotel-con-1">
@@ -79,7 +78,7 @@ input[type=radio]:checked + label>img {
 	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>{{$item->name}}</h4></a> </div>
 	                <div class="to-ho-hotel-con-3">
 	                  <ul>
-	                    <li style="text-align:justify;">{{$item->date}} <br> testimonio <br>{{$item->testimonial}}
+	                    <li style="text-align:justify;">{{$item->date}} <br>{{$item->testimonial}}
 	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
 	                    </li>
 	                    <li></li>
@@ -88,12 +87,8 @@ input[type=radio]:checked + label>img {
 	              </div>
 	            </div>
 	        </div>
-	      
-	      <?php 
-		}
-		
-	        
-	        } ?>
+	         @endforeach
+	          @endif
       </div>
     </div>
   </div>
