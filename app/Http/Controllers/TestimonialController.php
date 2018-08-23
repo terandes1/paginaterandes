@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreTestimonial;
 use Image;
 use DB;
+use App\Helpers\languageUsers;
 class TestimonialController extends Controller
 {
     /**
@@ -14,9 +15,30 @@ class TestimonialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     function __construct()
+    {
+         
+         $this->middleware(['auth' ,'roles:normal,admin']);
+    }
+
     public function index()
     {
-        //
+        
+        $testimonials = Testimonial::all();
+              
+
+        if(languageUsers::privilege()=='normal')
+        {
+            
+            $language=languageUsers::languageTestimonioEncuesta();
+            
+            $testimonials = Testimonial::where('language',$language->abbr)
+           								->orderBy('created_at', 'desc')->paginate(6);
+
+       }
+
+        return view('admin.testimony.index',['testimonials'=>$testimonials]);
+
     }
 
     /**
@@ -49,12 +71,14 @@ class TestimonialController extends Controller
            $itemp->name=$request->name;
            $itemp->email=$request->email;
            $itemp->date =$date;
+           $itemp->status='approve';
            $itemp->nationality=$request->nacionalidad;
            $itemp->testimonial=$request->testimonial;
            $itemp->language=$request->abbr;
            $itemp->tipo='Testimonio';
 
-           if ($request->hasFile('Imagen')) 
+
+           if ($request->hasFile('Imagen') && $request->file('Imagen')->getClientSize() < 2097152) 
             {
                 $img = $request->file('Imagen');
                 $url = $img->getClientOriginalExtension();

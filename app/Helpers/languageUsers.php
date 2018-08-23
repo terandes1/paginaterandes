@@ -22,4 +22,16 @@ class languageUsers
 
 	}
 
+	public static function languageTestimonioEncuesta()
+	{
+		
+        $user = Auth::user();
+        $idLanguage=$user->language_id;
+
+        $abbr=Language::find($idLanguage);
+
+        return ($abbr);
+
+	}
+
 }

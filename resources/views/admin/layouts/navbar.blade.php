@@ -46,7 +46,7 @@
         </li> -->
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Testimonios</a>
+          <a class="nav-link" href="{{'/admin/testimonials'}}">Testimonios</a>
         </li>
 
         <li class="nav-item">
