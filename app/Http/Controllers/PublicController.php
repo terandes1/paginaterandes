@@ -32,7 +32,7 @@ class PublicController extends Controller
     	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
-      $testimonials=PublicController::testimonials($abbr,'approve');
+      $testimonials=PublicController::testimonialsindex($abbr,'approve');
     	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr]);
     }
 
@@ -251,14 +251,20 @@ class PublicController extends Controller
 	   	return response(['data'=>$tempItinerarioPuntos,'grafica'=> $dataGrfica]);
    }
 
-    public static function  testimonials($abbr='es',$estadoHabilitado='approve')
+    public static function  testimonialsindex($abbr='es',$estadoHabilitado)
     {
 
        $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
       return $testimonials;
  	 
      }
- 
+ public function  testimonials($abbr='es',$estadoHabilitado='approve')
+    {
+
+       $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
+      return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
+   
+     }
 
     public function  events($abbr='es')
     {

@@ -532,8 +532,10 @@ input[type=radio]:checked + label>img {
                               <a href="#"><img src="/assets/content/testimonio/{{$item->id}}.{{$item->photo}}" alt=""></a>
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>{{$item->name}}</h3>
-                              <h4>{{$item->testimonial}}</h4>
+                              <h3>{{$item->name}} - {{$item->nationality}}</h3>
+                              <h5>{{$item->testimonial}}</h5>
+                              <h5>{{$item->email}} <h5>
+                              <h5>{{$item->date}} <h5>
                               <a class="link-btn" href="#">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
