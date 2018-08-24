@@ -17,6 +17,18 @@
 
 <div class="container-fluid"></br>
 
+	
+<p>
+<div class="card">
+	<div class="card-body">
+		
+		<button type="button" class="btn btn-success">Testimonios</button>
+	<button type="button" class="btn btn-info">Encuestas</button>
+	</div>
+	
+</div>
+
+</p>
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
 	  <li class="nav-item" id="tapTestimonio">
 	    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#testimonio" role="tab" aria-controls="home" aria-selected="true">			Testimonios
