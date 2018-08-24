@@ -63,17 +63,22 @@ input[type=radio]:checked + label>img {
       </div>
 
       <div class="p_testimonial">
-
+      	 @if (count($testimonials) == 0)<br>
+               <div class="spe-title col-md-12">
+					<h2>Lo sentimos</h2>
+					<h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
+		@else				
+ 		@foreach($testimonials as $item)
 	        <div class="col-md-4">
 	            <div class="to-ho-hotel-con p-tesi">
 	              <div class="to-ho-hotel-con-1">
 	                <div class="hot-page2-hli-3"> <img src="images/hci1.png" alt=""> </div>
-	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/testimonio.jpg" alt=""> </div>
+	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/{{$item->id}}.{{$item->photo}}" alt=""> </div>
 	              <div class="to-ho-hotel-con-23">
-	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
+	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>{{$item->name}}</h4></a> </div>
 	                <div class="to-ho-hotel-con-3">
 	                  <ul>
-	                    <li style="text-align:justify;">Alcatel Group - Lannion. Permanezca del 30 de abril al 11 de mayo. Lima. Arequipa, Chivay, Puno (Titicaca).
+	                    <li style="text-align:justify;">{{$item->date}} <br>{{$item->testimonial}}
 	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
 	                    </li>
 	                    <li></li>
@@ -82,102 +87,8 @@ input[type=radio]:checked + label>img {
 	              </div>
 	            </div>
 	        </div>
-
-	        <div class="col-md-4">
-	            <div class="to-ho-hotel-con p-tesi">
-	              <div class="to-ho-hotel-con-1">
-	                <div class="hot-page2-hli-3"> <img src="images/hci1.png" alt=""> </div>
-	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/testimonio.jpg" alt=""> </div>
-	              <div class="to-ho-hotel-con-23">
-	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
-	                <div class="to-ho-hotel-con-3">
-	                  <ul>
-	                    <li style="text-align:justify;">Alcatel Group - Lannion. Permanezca del 30 de abril al 11 de mayo. Lima. Arequipa, Chivay, Puno (Titicaca).
-	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-	                    </li>
-	                    <li></li>
-	                  </ul>
-	                </div>
-	              </div>
-	            </div>
-	        </div>
-
-	        <div class="col-md-4">
-	            <div class="to-ho-hotel-con p-tesi">
-	              <div class="to-ho-hotel-con-1">
-	                <div class="hot-page2-hli-3"> <img src="images/hci1.png" alt=""> </div>
-	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/testimonio.jpg" alt=""> </div>
-	              <div class="to-ho-hotel-con-23">
-	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
-	                <div class="to-ho-hotel-con-3">
-	                  <ul>
-	                    <li style="text-align:justify;">Alcatel Group - Lannion. Permanezca del 30 de abril al 11 de mayo. Lima. Arequipa, Chivay, Puno (Titicaca).
-	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-	                    </li>
-	                    <li></li>
-	                  </ul>
-	                </div>
-	              </div>
-	            </div>
-	        </div>
-
-	        <div class="col-md-4">
-	            <div class="to-ho-hotel-con p-tesi">
-	              <div class="to-ho-hotel-con-1">
-	                <div class="hot-page2-hli-3"> <img src="images/hci1.png" alt=""> </div>
-	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/testimonio.jpg" alt=""> </div>
-	              <div class="to-ho-hotel-con-23">
-	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
-	                <div class="to-ho-hotel-con-3">
-	                  <ul>
-	                    <li style="text-align:justify;">Alcatel Group - Lannion. Permanezca del 30 de abril al 11 de mayo. Lima. Arequipa, Chivay, Puno (Titicaca).
-	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-	                    </li>
-	                    <li></li>
-	                  </ul>
-	                </div>
-	              </div>
-	            </div>
-	        </div>
-
-	        <div class="col-md-4">
-	            <div class="to-ho-hotel-con p-tesi">
-	              <div class="to-ho-hotel-con-1">
-	                <div class="hot-page2-hli-3"> <img src="images/hci1.png" alt=""> </div>
-	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/testimonio.jpg" alt=""> </div>
-	              <div class="to-ho-hotel-con-23">
-	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
-	                <div class="to-ho-hotel-con-3">
-	                  <ul>
-	                    <li style="text-align:justify;">Alcatel Group - Lannion. Permanezca del 30 de abril al 11 de mayo. Lima. Arequipa, Chivay, Puno (Titicaca).
-	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-	                    </li>
-	                    <li></li>
-	                  </ul>
-	                </div>
-	              </div>
-	            </div>
-	        </div>
-
-	        <div class="col-md-4">
-	            <div class="to-ho-hotel-con p-tesi">
-	              <div class="to-ho-hotel-con-1">
-	                <div class="hot-page2-hli-3"> <img src="images/hci1.png" alt=""> </div>
-	                <div class="hom-hot-av-tic" style="background:#ff5722;"><span class="tour_rat">4.5</span> </div> <img src="/assets/content/testimonio/testimonio.jpg" alt=""> </div>
-	              <div class="to-ho-hotel-con-23">
-	                <div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
-	                <div class="to-ho-hotel-con-3">
-	                  <ul>
-	                    <li style="text-align:justify;">Alcatel Group - Lannion. Permanezca del 30 de abril al 11 de mayo. Lima. Arequipa, Chivay, Puno (Titicaca).
-	                      <div class="dir-rat-star ho-hot-rat-star"> Votos: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-	                    </li>
-	                    <li></li>
-	                  </ul>
-	                </div>
-	              </div>
-	            </div>
-	        </div>
-    
+	         @endforeach
+	          @endif
       </div>
     </div>
   </div>

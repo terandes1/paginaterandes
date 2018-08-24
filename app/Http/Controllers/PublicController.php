@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Helpers\publicTours;
 use Illuminate\Support\Facades\DB;
 use App\Categorie;
+use App\testimonial;
 use App\Event;
 use App\Itinerarie;
 class PublicController extends Controller
@@ -31,7 +32,8 @@ class PublicController extends Controller
     	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
-    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'abbr'=>$abbr]);
+      $testimonials=PublicController::testimonials($abbr,'approve');
+    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr]);
     }
 
     public function contact($abbr='es')
@@ -249,13 +251,14 @@ class PublicController extends Controller
 	   	return response(['data'=>$tempItinerarioPuntos,'grafica'=> $dataGrfica]);
    }
 
-    public function  testimonials($abbr='es')
+    public static function  testimonials($abbr='es',$estadoHabilitado='approve')
     {
 
-    	 
-       return view('public.'.$abbr.'.testimonials');
-
-    }
+       $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
+      return $testimonials;
+ 	 
+     }
+ 
 
     public function  events($abbr='es')
     {

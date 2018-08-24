@@ -525,86 +525,15 @@ input[type=radio]:checked + label>img {
                       <div class="item active">
                         
                         <ul class="thumbnails">
-                          <li class="col-sm-3" >      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-
-                              <h3>Gutiérrez Aller Andrés</h3>
-                              <h4>Perú en mi caso y sé que el de muchos es ...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
+                          @foreach($testimonials as $item)
 
                           <li class="col-sm-3">      
                             <div class="thumbnail">
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>Gutiérrez Aller Andrés</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
-
-                          <li class="col-sm-3">      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-                              <h3>Gutiérrez Aller Andrés</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
-
-                          <li class="col-sm-3">      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
+                              <h3>{{$item->name}}</h3>
+                              <h4>{{$item->testimonial}}</h4>
                               <a class="link-btn" href="#">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
@@ -621,6 +550,7 @@ input[type=radio]:checked + label>img {
                              </div>
                             </div>
                           </li>
+                          @endforeach
                         </ul>
                       </div><!-- /Slide1 --> 
 
@@ -650,55 +580,6 @@ input[type=radio]:checked + label>img {
                              </div>
                             </div>
                           </li>
-
-                          <li class="col-sm-3">      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
-
-                          <li class="col-sm-3">      
-                            <div class="thumbnail">
-                              <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
-                            </div>
-                            <div class="caption-box" style="text-align: center;">
-                              <h3>Praesent commodo</h3>
-                              <h4>Muy buena organización y puntualidad...</h4>
-                              <a class="link-btn" href="{{('testimonials')}}">Leer Más</a>
-                               <div class="tour_head">
-                                 <h2>
-                                    <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
-                                     </span>
-                                     <span class="tour_rat">4.5</span>
-                                 </h2> 
-                             </div>
-                            </div>
-                          </li>
-
                           <li class="col-sm-3">      
                             <div class="thumbnail">
                               <a href="#"><img src="https://www.terandes.com/tours/cjtFQYqw1SgaQeF.png" alt=""></a>
