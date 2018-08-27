@@ -289,7 +289,7 @@ input[type=radio]:checked + label>img {
                         
                         <div class="col-md-12 col-sm-12 ">
                             <div class="col-md-12" style="margin: 15px;">
-                                <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">APRENDE MÁS SOBRE ESTE VIAJE
+                                <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"> DE MÁS SOBRE ESTE VIAJE
                                 </a>
 
                             </div>
@@ -529,14 +529,18 @@ input[type=radio]:checked + label>img {
                           @foreach($testimonials as $item)
                           <li class="col-sm-3">      
                             <div class="thumbnail">
+                                 @if (empty($item->photo))
+                              <a href="#"><img src="/assets/public/images/sight/5.jpg" alt=""></a>
+                              @else
                               <a href="#"><img src="/assets/content/testimonio/{{$item->id}}.{{$item->photo}}" alt=""></a>
+                              @endif
                             </div>
                             <div class="caption-box" style="text-align: center;">
                               <h3>{{$item->name}} - {{$item->nationality}}</h3>
                               <h5>{{$item->testimonial}}</h5>
                               <h5>{{$item->email}} <h5>
                               <h5>{{$item->date}} <h5>
-                              <a class="link-btn" href="#">Leer Más</a>
+                              <a class="link-btn" href="/es/testimonials">Leer Más</a>
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
