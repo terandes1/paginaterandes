@@ -544,14 +544,21 @@ input[type=radio]:checked + label>img {
                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
+                                        <?php $stars = (int)$item->impresion_global; 
+                                        $k = 1; 
+                                        for($h=1; $h <= 5; $h++)
+                                        { 
+                                            if($stars >= $k){ ?>
+                                             <i class="fa fa-star" aria-hidden="true"></i> 
+                                           <?php } 
+                                            else { ?>
+                                            <i class="fa fa-star-o" aria-hidden="true"> </i>
+                                             <?php } 
+                                             $k++;
+                                          } ?>        
+                                       
                                      </span>
-                                     <span class="tour_rat">4.5</span>
+                                     <span class="tour_rat">{{$item->impresion_global}} </span>
                                  </h2> 
                              </div>
                             </div>
