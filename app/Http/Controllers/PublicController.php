@@ -33,7 +33,8 @@ class PublicController extends Controller
     	
     	//return $toursPrincipal;
       $testimonials=PublicController::testimonialsindex($abbr,'approve');
-    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr]);
+      $promTestimonio=round(PublicController::promTestimonio($abbr));
+    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'promTestimonio'=>$promTestimonio,'abbr'=>$abbr]);
     }
 
     public function contact($abbr='es')
@@ -258,14 +259,23 @@ class PublicController extends Controller
       return $testimonials;
  	 
      }
- public function  testimonials($abbr='es',$estadoHabilitado='approve')
+    public function  testimonials($abbr='es',$estadoHabilitado='approve')
     {
 
        $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
       return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
    
      }
-
+    public static function promTestimonio($abbr='es')
+    {
+        $suma = 0;
+        $testimonials=PublicController::testimonialsindex($abbr,'approve');
+        foreach($testimonials as $item)            
+        {   $suma += (int)$item->impresion_global; }
+        $media =$suma/count($testimonials);
+        return $media;
+    }
+  
     public function  events($abbr='es')
     {
     	$eventos=Event::all();
