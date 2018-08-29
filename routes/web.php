@@ -83,6 +83,8 @@ Route::prefix('admin')->group(function () {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     Route::resource('testimonials','TestimonialController');
     Route::get('/listTestimonioEncuesta/{tipo?}','TestimonialController@listTestimonialEncuesta');
+    Route::get('/cambioEstadoTestimonioEncuesta/{id?}','TestimonialController@cambioEstadoTestimonioEncuesta');
+
 
 });
 

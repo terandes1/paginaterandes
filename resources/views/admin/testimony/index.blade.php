@@ -77,19 +77,19 @@
 				            <td>
 								 @if( $itemp->status=='approve')
 								 
-								 	<button type="button" class="btn btn-success btn-xs" aria-label="Left Align">
+								 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button" class="btn btn-success btn-xs" aria-label="Left Align">
 									 	<span class="fa fa-eye" aria-hidden="true"></span>
-									</button>
+									</a>
 								
 								@else
-								 	<button type="button" class="btn btn-info btn-xs" aria-label="Left Align">
+								 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" class="btn btn-info btn-xs" aria-label="Left Align">
 									 	<span class="fa fa-eye-slash" aria-hidden="true"></span>
-									</button>	
+									</a>	
 								 
 								@endif
-								<button type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
-									 	<span class="fa fa-pencil" aria-hidden="true"></span>
-									</button> 
+									<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
+										 	<span class="fa fa-pencil" aria-hidden="true"></span>
+									</a> 
 				            </td>
 				             
 				          </tr>

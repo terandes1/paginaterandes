@@ -160,6 +160,38 @@ class TestimonialController extends Controller
         //
     }
 
+    public function cambioEstadoTestimonioEncuesta($id)
+    {
+
+        $testimonial = Testimonial::find($id);
+
+        if($testimonial->status=='approve')
+        {
+            $testimonial->status='disapproved';
+            $testimonial->save();
+
+            if($testimonial->tipo=='Testimonio')
+            {
+                  return redirect('admin/listTestimonioEncuesta/testimonio');
+            }else{
+                 return redirect('admin/listTestimonioEncuesta/encuesta'); 
+            }
+
+        }else
+        {
+            $testimonial->status='approve';
+            $testimonial->save();
+
+           if($testimonial->tipo=='Testimonio')
+            {
+                  return redirect('admin/listTestimonioEncuesta/testimonio');
+            }else{
+                 return redirect('admin/listTestimonioEncuesta/encuesta'); 
+            }
+        }
+
+    }
+
     public function insertTestimonials(Request $request)
     {
 
@@ -181,4 +213,5 @@ class TestimonialController extends Controller
         }
 
     }
+
 }
