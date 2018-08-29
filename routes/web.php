@@ -80,9 +80,12 @@ Route::prefix('admin')->group(function () {
     Route::post('trash/restore_user/{id}','TrashController@restore_user');
 
     //testimonio
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     Route::resource('testimonials','TestimonialController');
+    Route::get('/listTestimonioEncuesta/{tipo?}','TestimonialController@listTestimonialEncuesta');
 
 });
+
 //fin de rutas admin
 
 //------------------------------------------------------------------------------

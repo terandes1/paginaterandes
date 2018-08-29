@@ -18,31 +18,36 @@ class TestimonialController extends Controller
      function __construct()
     {
          
-         $this->middleware(['auth' ,'roles:normal,admin']);
+         $this->middleware(['auth' ,'roles:normal,admin'],['except' => ['store']]);
     }
 
     public function index()
     {
         
-        $testimonials = Testimonial::all();
-              
 
+    }
+
+    public function listTestimonialEncuesta($tipo='Testimonio')
+    {
+      
+
+        $testimonialsEncuesta = Testimonial::where('tipo',$tipo)->paginate(4); //listado de testimonios y encuestas
+        
+       
         if(languageUsers::privilege()=='normal')
         {
             
             $language=languageUsers::languageTestimonioEncuesta();
             
-            $testimonials = Testimonial::where('language',$language->abbr)
-            							->where('tipo','Testimonio')
-           								->orderBy('created_at', 'desc')->paginate(6);
+            $testimonialsEncuesta = Testimonial::where('language',$language->abbr)
+                          ->where('tipo',$tipo)//opcion  testimonio encuesta
+                          ->orderBy('created_at', 'desc')->paginate(4);
 
-           	$encuesta = Testimonial::where('language',$language->abbr)
-            							->where('tipo','Encuesta')
-           								->orderBy('created_at', 'desc')->paginate(1);
+             return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
 
        }
 
-        return view('admin.testimony.index',['testimonials'=>$testimonials,'encuesta' => $encuesta]);
+        return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
 
     }
 
@@ -76,7 +81,7 @@ class TestimonialController extends Controller
            $itemp->name=$request->name;
            $itemp->email=$request->email;
            $itemp->date =$date;
-           $itemp->status='approve';
+           $itemp->status='disapproved';
            $itemp->nationality=$request->nacionalidad;
            $itemp->testimonial=$request->testimonial;
            $itemp->language=$request->abbr;
