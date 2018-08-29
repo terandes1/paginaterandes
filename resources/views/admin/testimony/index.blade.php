@@ -48,9 +48,9 @@
 				        <thead class="thead-light">
 				          <tr>
 				            <th style="width: 100px;">Nombre</th>
-				            <th style="width: 100px;">email</th>
+				            <th style="width: 100px;">Email</th>
 				            <th style="width: 150px;">Nacionalidad</th>
-				            <th style="width: 400px;">Testimonio</th>
+				            <th style="width: 400px;text-transform: capitalize;">{!! $tipo !!}</th>
 				            <th style="width: 100px;">Impresión global</th>
 				            <th style="width: 150px;">Creado</th>
 				            <th style="width: 100px;">Acción</th>
