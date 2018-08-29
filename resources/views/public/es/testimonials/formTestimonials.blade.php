@@ -95,14 +95,12 @@
                       </div>
                        <div class="row">
 
-                            <div class="input-field col s12">
-                                  <div class="input-field col s12">
-                                    <textarea name="testimonial" id="testimonial" class="form-control" rows="4" placeholder="Ingrese su testimonio" style="border: 2px solid #e6e6e6;" required="">
-                                    	{{ old('testimonial') }}
-                                    </textarea>
-                                 	<p class="errorValidacion">{{ $errors->first('testimonial') }}</p>
-                                 </div>
-                            </div>
+                          <div class="input-field col s12">
+                                <div class="input-field col s12">
+                                  <textarea name="testimonial" id="testimonial" class="form-control" rows="4" placeholder="Ingrese su testimonio">{{ old('testimonial') }}</textarea>
+                               	  <p class="errorValidacion">{{ $errors->first('testimonial') }}</p>
+                               </div>
+                          </div>
                                 
                       </div>
                       <div class="row">
