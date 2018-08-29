@@ -498,15 +498,22 @@ input[type=radio]:checked + label>img {
                 <div class="title-line">
                      <div class="tour_head">
                                  <h2>
+                                    
                                     <span class="tour_star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"> 
-                                        </i>
+                                         <?php 
+                                        $k = 1; 
+                                        for($s=1; $s<= 5; $s++)
+                                        { 
+                                            if($promTestimonio >= $k){ ?>
+                                             <i class="fa fa-star" aria-hidden="true"></i> 
+                                           <?php } 
+                                            else { ?>
+                                            <i class="fa fa-star-o" aria-hidden="true"> </i>
+                                             <?php } 
+                                             $k++;
+                                          } ?>   
                                      </span>
-                                     <span class="tour_rat"  style="color: white;font-size: 30px;">4.5</span>
+                                     <span class="tour_rat"  style="color: white;font-size: 30px;">{{$promTestimonio}}</span>
                                  </h2> 
                              </div>
                 </div>
@@ -536,8 +543,8 @@ input[type=radio]:checked + label>img {
                               @endif
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3>{{$item->name}} - {{$item->nationality}}</h3>
-                              <h5 style="text-align: justify;">{!!str_limit($item->testimonial, 150)!!}</h5>
+                              <h3 style="color:black; font-size: 20px;">{{$item->name}} - {{$item->nationality}}</h3>
+                              <h5 style="text-align: justify;color:black">{!!str_limit($item->testimonial, 135)!!}</h5>
                              
                               <h5>{{$item->date}} <h5>
                               <a class="link-btn" href="/es/testimonials">Leer Más</a>
