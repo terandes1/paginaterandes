@@ -504,7 +504,7 @@ input[type=radio]:checked + label>img {
                                         $k = 1; 
                                         for($s=1; $s<= 5; $s++)
                                         { 
-                                            if($promTestimonio >= $k){ ?>
+                                            if($media >= $k){ ?>
                                              <i class="fa fa-star" aria-hidden="true"></i> 
                                            <?php } 
                                             else { ?>
@@ -513,7 +513,7 @@ input[type=radio]:checked + label>img {
                                              $k++;
                                           } ?>   
                                      </span>
-                                     <span class="tour_rat"  style="color: white;font-size: 30px;">{{$promTestimonio}}</span>
+                                     <span class="tour_rat"  style="color: white;font-size: 30px;">{{$media}}</span>
                                  </h2> 
                              </div>
                 </div>

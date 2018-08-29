@@ -32,9 +32,16 @@ class PublicController extends Controller
     	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
-      $testimonials=PublicController::testimonialsindex($abbr,'approve');
-      $promTestimonio=round(PublicController::promTestimonio($abbr));
-    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'promTestimonio'=>$promTestimonio,'abbr'=>$abbr]);
+        $suma = 0;
+        foreach($testimonials as $item)            
+        {   
+            $suma += (int)$item->impresion_global; 
+        }
+        $media =round($suma/count($testimonials));
+
+        $testimonials = DB::table('testimonials')->where('status', 'approve')->where("language","=",$abbr)->get();
+     
+    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
     }
 
     public function contact($abbr='es')
@@ -55,9 +62,7 @@ class PublicController extends Controller
 
 		if($search=='')
 		{
-				$todoTours=publicTours::todoTours($abbr);//todo los tours
-
-
+			$todoTours=publicTours::todoTours($abbr);//todo los tours
 
 		}else {
 				if($search=="cuzco")
@@ -66,7 +71,6 @@ class PublicController extends Controller
 				}
 				
 				$todoTours=publicTours::searchTours($abbr,$search);//buscar tours
-
 
 		}
 	    
@@ -252,30 +256,15 @@ class PublicController extends Controller
 	   	return response(['data'=>$tempItinerarioPuntos,'grafica'=> $dataGrfica]);
    }
 
-    public static function  testimonialsindex($abbr='es',$estadoHabilitado)
-    {
-
-       $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
-      return $testimonials;
- 	 
-     }
+    
     public function  testimonials($abbr='es',$estadoHabilitado='approve')
     {
 
        $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
-      return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
+       return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
    
      }
-    public static function promTestimonio($abbr='es')
-    {
-        $suma = 0;
-        $testimonials=PublicController::testimonialsindex($abbr,'approve');
-        foreach($testimonials as $item)            
-        {   $suma += (int)$item->impresion_global; }
-        $media =$suma/count($testimonials);
-        return $media;
-    }
-  
+ 
     public function  events($abbr='es')
     {
     	$eventos=Event::all();
