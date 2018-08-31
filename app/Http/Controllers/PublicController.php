@@ -32,7 +32,7 @@ class PublicController extends Controller
     	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
-        $testimonials = DB::table('testimonials')->where('status', 'approve')->where("language","=",$abbr)->get();
+        $testimonials = DB::table('testimonials')->where('status', 'approve')->where("language","=",$abbr)->take(10)->get();
 
         $suma = 0;
         foreach($testimonials as $item)            

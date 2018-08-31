@@ -498,7 +498,6 @@ input[type=radio]:checked + label>img {
                 <div class="title-line">
                      <div class="tour_head">
                                  <h2>
-                                    
                                     <span class="tour_star">
                                          <?php 
                                         $k = 1; 
@@ -543,12 +542,7 @@ input[type=radio]:checked + label>img {
                               @endif
                             </div>
                             <div class="caption-box" style="text-align: center;">
-                              <h3 style="color:black; font-size: 20px;">{{$item->name}} - {{$item->nationality}}</h3>
-                              <h5 style="text-align: justify;color:black">{!!str_limit($item->testimonial, 135)!!}</h5>
-                             
-                              <h5>{{$item->date}} <h5>
-                              <a class="link-btn" href="/es/testimonials">Leer Más</a>
-                               <div class="tour_head">
+                                <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
                                         <?php $stars = (int)$item->impresion_global; 
@@ -568,6 +562,13 @@ input[type=radio]:checked + label>img {
                                      <span class="tour_rat">{{$item->impresion_global}} </span>
                                  </h2> 
                              </div>
+                              <h3 style="color:black; font-size: 20px;">{{$item->name}} - {{$item->nationality}}</h3>
+                              <h5 style="text-align: justify;color:black">{!!str_limit($item->testimonial, 135)!!}</h5>
+                             
+                              <h5>{{$item->date}} <h5>
+                              
+                               
+
                             </div>
                           </li>
                           <?php
@@ -583,13 +584,12 @@ input[type=radio]:checked + label>img {
                            <?php } //odd
                           ?>
 
-
-                           
-
                           @endforeach
                         </ul>
-                      </div><!-- /Slide1 -->                     
+                      </div><!-- /Slide1 -->  
+
                     </div><!-- /Wrapper for slides .carousel-inner -->
+                    <a style="text-align: right;" href="/es/testimonials">Leer Más</a>    
                     @endif
                     <!-- Control box -->
                     <div class="control-box">                            
