@@ -32,15 +32,15 @@ class PublicController extends Controller
     	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
+        $testimonials = DB::table('testimonials')->where('status', 'approve')->where("language","=",$abbr)->get();
+
         $suma = 0;
         foreach($testimonials as $item)            
         {   
             $suma += (int)$item->impresion_global; 
         }
-        $media =round($suma/count($testimonials));
+        $media =round($suma/count($testimonials));//promedio de impresion global de testimonios
 
-        $testimonials = DB::table('testimonials')->where('status', 'approve')->where("language","=",$abbr)->get();
-     
     	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
     }
 
