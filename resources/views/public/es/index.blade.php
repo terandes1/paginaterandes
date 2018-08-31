@@ -519,7 +519,7 @@ input[type=radio]:checked + label>img {
                 <p> Comparte experiencias de viaje con nosotros. </p>
 
             </div>
-
+             
                 <div class="row">
                 <div class="col-sm-12">
                         
@@ -564,11 +564,7 @@ input[type=radio]:checked + label>img {
                              </div>
                               <h3 style="color:black; font-size: 20px;">{{$item->name}} - {{$item->nationality}}</h3>
                               <h5 style="text-align: justify;color:black">{!!str_limit($item->testimonial, 135)!!}</h5>
-                             
                               <h5>{{$item->date}} <h5>
-                              
-                               
-
                             </div>
                           </li>
                           <?php
@@ -589,33 +585,33 @@ input[type=radio]:checked + label>img {
                       </div><!-- /Slide1 -->  
 
                     </div><!-- /Wrapper for slides .carousel-inner -->
-                    <a style="text-align: right;" href="/es/testimonials">Leer Más</a>    
+                      
                     @endif
                     <!-- Control box -->
                     <div class="control-box">                            
                       <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
                       <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
-                    </div><!-- /.control-box -->   
+                    </div><!-- /.control-box -->  
+
                      <div >
-                        <div class="input-field col s5">
-                            
+                        <div  style="padding: 15px" class="col-md-2 col-md-offset-10 col-sm-12 ">
+                            <a  href="/es/testimonials"> <strong>Leer Más</strong> </a>
+                        </div>
+                        <div  class="col-sm-5">
+                           
                         </div>
                          <div class="input-field col s2">
                             <i class="waves-effect waves-light full-btn waves-input-wrapper" style="">
                                   <input type="submit" value="INGRESE SU TESTIMONIO"  data-toggle="modal" data-target="#idTestimonio" class="waves-button-input">
                             </i> 
-                        </div>
-                     </div>
-                        
+                        </div>                        
+                     </div>                      
                   </div><!-- /#myCarousel -->
-
+                  
                 </div><!-- /.col-sm-12 -->          
                 </div><!-- /.row --> 
 
-           
         </div>
-
-
     </div>
     @include('public.es.testimonials.formTestimonials')
 </section>
