@@ -55,18 +55,16 @@ class PublicController extends Controller
 
 		if($search=='')
 		{
-				$todoTours=publicTours::todoTours($abbr);//todo los tours
-
-
+			$todoTours=publicTours::todoTours($abbr);//todo los tours
 
 		}else {
+
 				if($search=="cuzco")
 				{
 					$search="cusco";
 				}
 				
 				$todoTours=publicTours::searchTours($abbr,$search);//buscar tours
-
 
 		}
 	    
