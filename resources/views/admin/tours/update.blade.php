@@ -92,13 +92,23 @@ i[name="eliminar-categoria"]{
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-5">
           <div class="form-group">
             {!!Form::label('multimedia_id','Multimedia')!!}
             <select name="multimedia_id" id="" class="form-control">
               @foreach($multimedia as $multi)
               <option value="{{$multi->id}}">{{$multi->name}}</option>
               @endforeach
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            {!!Form::label('serie','Es serie')!!}
+             <select name="multimedia_id" id="" class="form-control">
+                <option value="false">NO</option> 
+                <option value="true">SI</option>
             </select>
           </div>
         </div>
