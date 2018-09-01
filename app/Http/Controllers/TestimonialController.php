@@ -18,36 +18,31 @@ class TestimonialController extends Controller
      function __construct()
     {
          
-         $this->middleware(['auth' ,'roles:normal,admin'],['except' => ['store']]);
+         $this->middleware(['auth' ,'roles:normal,admin']);
     }
 
     public function index()
     {
         
+        $testimonials = Testimonial::all();
+              
 
-    }
-
-    public function listTestimonialEncuesta($tipo='Testimonio')
-    {
-      
-
-        $testimonialsEncuesta = Testimonial::where('tipo',$tipo)->paginate(4); //listado de testimonios y encuestas
-        
-       
         if(languageUsers::privilege()=='normal')
         {
             
             $language=languageUsers::languageTestimonioEncuesta();
             
-            $testimonialsEncuesta = Testimonial::where('language',$language->abbr)
-                          ->where('tipo',$tipo)//opcion  testimonio encuesta
-                          ->orderBy('created_at', 'desc')->paginate(4);
+            $testimonials = Testimonial::where('language',$language->abbr)
+            							->where('tipo','Testimonio')
+           								->orderBy('created_at', 'desc')->paginate(6);
 
-             return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
+           	$encuesta = Testimonial::where('language',$language->abbr)
+            							->where('tipo','Encuesta')
+           								->orderBy('created_at', 'desc')->paginate(1);
 
        }
 
-        return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
+        return view('admin.testimony.index',['testimonials'=>$testimonials,'encuesta' => $encuesta]);
 
     }
 
@@ -81,7 +76,7 @@ class TestimonialController extends Controller
            $itemp->name=$request->name;
            $itemp->email=$request->email;
            $itemp->date =$date;
-           $itemp->status='disapproved';
+           $itemp->status='approve';
            $itemp->nationality=$request->nacionalidad;
            $itemp->testimonial=$request->testimonial;
            $itemp->language=$request->abbr;
@@ -160,38 +155,6 @@ class TestimonialController extends Controller
         //
     }
 
-    public function cambioEstadoTestimonioEncuesta($id)
-    {
-
-        $testimonial = Testimonial::find($id);
-
-        if($testimonial->status=='approve')
-        {
-            $testimonial->status='disapproved';
-            $testimonial->save();
-
-            if($testimonial->tipo=='Testimonio')
-            {
-                  return redirect('admin/listTestimonioEncuesta/testimonio');
-            }else{
-                 return redirect('admin/listTestimonioEncuesta/encuesta'); 
-            }
-
-        }else
-        {
-            $testimonial->status='approve';
-            $testimonial->save();
-
-           if($testimonial->tipo=='Testimonio')
-            {
-                  return redirect('admin/listTestimonioEncuesta/testimonio');
-            }else{
-                 return redirect('admin/listTestimonioEncuesta/encuesta'); 
-            }
-        }
-
-    }
-
     public function insertTestimonials(Request $request)
     {
 
@@ -214,4 +177,8 @@ class TestimonialController extends Controller
 
     }
 
+
+    
+
+  
 }

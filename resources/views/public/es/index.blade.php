@@ -541,7 +541,7 @@ input[type=radio]:checked + label>img {
                               <a href="#"><img src="/assets/content/testimonio/{{$item->id}}.{{$item->photo}}" alt=""></a>
                               @endif
                             </div>
-                            <div class="caption-box" style="text-align: center;">
+                            <div class="caption-box" style="text-align: center; min-height: 180px">
                                 <div class="tour_head">
                                  <h2>
                                     <span class="tour_star">
@@ -563,7 +563,8 @@ input[type=radio]:checked + label>img {
                                  </h2> 
                              </div>
                               <h3 style="color:black; font-size: 20px;">{{$item->name}} - {{$item->nationality}}</h3>
-                              <h5 style="text-align: justify;color:black">{!!str_limit($item->testimonial, 135)!!}</h5>
+
+                              <h5 style="text-align: justify;color:black;margin:5%; ">{!!str_limit($item->testimonial, 135)!!}</h5>
                               <h5>{{$item->date}} <h5>
                             </div>
                           </li>
@@ -595,7 +596,7 @@ input[type=radio]:checked + label>img {
 
                      <div >
                         <div  style="padding: 15px" class="col-md-2 col-md-offset-10 col-sm-12 ">
-                            <a  href="/es/testimonials"> <strong>Leer Más</strong> </a>
+                            <a href="/es/testimonials"> <strong><u> &#62;&#62; Leer Más</u> </strong> </a>
                         </div>
                         <div  class="col-sm-5">
                            
@@ -606,8 +607,7 @@ input[type=radio]:checked + label>img {
                             </i> 
                         </div>                        
                      </div>                      
-                  </div><!-- /#myCarousel -->
-                  
+                  </div><!-- /#myCarousel -->   
                 </div><!-- /.col-sm-12 -->          
                 </div><!-- /.row --> 
 
