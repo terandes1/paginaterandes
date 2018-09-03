@@ -34,18 +34,17 @@ class TestimonialController extends Controller
 
         if(languageUsers::privilege()=='normal')
         {
+       		 $language=languageUsers::languageTestimonioEncuesta();
+
              $testimonialsEncuesta = Testimonial::where('language',$language->abbr)
                           ->where('tipo',$tipo)//opcion  testimonio encuesta
                           ->orderBy('created_at', 'desc')->paginate(4);
             
-            $language=languageUsers::languageTestimonioEncuesta();
-            
              return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
-            $encuesta = Testimonial::where('language',$language->abbr)
-                                        ->where('tipo','Encuesta')
-                                        ->orderBy('created_at', 'desc')->paginate(1);
-                }
-                 return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
+ 
+     	}
+        
+        return view('admin.testimony.index',['testimonials'=>$testimonialsEncuesta,'tipo'=>$tipo]);
 
     }
 
