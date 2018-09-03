@@ -106,7 +106,7 @@ i[name="eliminar-categoria"]{
         <div class="col-md-3">
           <div class="form-group">
             {!!Form::label('serie','Es serie')!!}
-             <select name="multimedia_id" id="" class="form-control">
+             <select name="serie" id="" class="form-control">
                 <option value="false">NO</option> 
                 <option value="true">SI</option>
             </select>
