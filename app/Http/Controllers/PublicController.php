@@ -39,7 +39,14 @@ class PublicController extends Controller
         {   
             $suma += (int)$item->impresion_global; 
         }
-        $media =round($suma/count($testimonials));//promedio de impresion global de testimonios
+        if(count($testimonials)>0)
+        {
+                $media =round($suma/count($testimonials));//promedio de impresion global de testimonios
+
+        }else 
+        {
+        	 $media=0;
+        }
 
     	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
     }
