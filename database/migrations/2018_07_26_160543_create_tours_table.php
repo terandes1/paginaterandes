@@ -26,6 +26,7 @@ class CreateToursTable extends Migration
             $table->boolean('principal');
             $table->float('price',8,2);
             $table->string('slug',100)->unique();
+            $table->string('tipo_tour',120);
             $table->unsignedInteger('multimedia_id');
             $table->foreign('multimedia_id')->references('id')->on('multimedia');
             $table->timestamps();
