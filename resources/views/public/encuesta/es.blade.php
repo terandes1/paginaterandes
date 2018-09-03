@@ -812,7 +812,7 @@ html {
 					<div class="form-group text-center">
             <input type="checkbox" name="contactar" id="contactar" value='si'> <label for="contactar">¿Quieres ser contactado por nosotros?</label> <br><br>
                 <h4><strong>Gracias por su tiempo</strong></h4><br>
-            <input type="text" name="lenguaje" value="spanish" hidden>
+            <input type="text" name="lenguaje" value="es" hidden>
 						<button class="btn btn-primary form-control">Enviar</button>
 					</div>
 				</div>
