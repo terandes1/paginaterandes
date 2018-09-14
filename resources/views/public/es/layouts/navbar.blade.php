@@ -130,23 +130,24 @@
     </div> -->
 
     <!-- LOGO AND MENU SECTION -->
-    <div class="top-logo" style="background: #0e4817;height: 80px;" data-spy="affix" data-offset-top="250">
+    <div class="top-logo" style="background: #fff;color: black;height: 80px;" data-spy="affix" data-offset-top="250">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="wed-logo" style="margin-top: 5px;">
-                        <a href="{{('/es')}}"><img style="width:100%;" src="/assets/public/images/logo.png" alt="" />
+                    <div class="wed-logo" style="margin-top: -1px;">
+                        <a href="{{('/es')}}"><img style="width:100%;height: 80px;" src="/assets/public/images/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="main-menu" style="margin-top: 10px;">
                         <ul>
-                            <li><a href="{{('/es')}}">INICIO</a>
-                            </li>
+                           
                             <li class="about-menu">
-                                <a href="{{route('paquetes','es')}}" class="mm-arr">TOURS</a>
+                                <a href="{{route('paquetes','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
                             </li>
                             <li class="admi-menu">
-                                <a href="#" class="mm-arr">NUESTRO VIAJE</a>
+
+                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> ITINERARIOS <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
+                                </a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">
                                     <div class="admi-mm m-menu">
@@ -155,41 +156,35 @@
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places.html">
                                                         <img src="/assets/public/images/sight/1.jpg" alt="">
-                                                        <span>Descubrimiento</span>
+                                                        <span style="font-family: Lovelo Black;">Descubrimiento</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
-                                                <a href="places.html" class="mm-r-m-btn">Lee más</a>
+                                                
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places-1.html">
                                                         <img src="/assets/public/images/sight/2.jpg" alt="">
-                                                        <span>Aventura</span>
+                                                        <span style="font-family: Lovelo Black;">Aventura</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
-                                                <a href="places-1.html" class="mm-r-m-btn">Lee más</a>
+                                                
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places-2.html">
                                                         <img src="/assets/public/images/sight/3.jpg" alt="">
-                                                        <span>Alta Montaña</span>
+                                                        <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
-                                                <a href="places-2.html" class="mm-r-m-btn">Lee más</a>
-                                            </div>
+                                             </div>
                                             <div class="mm2-com mm1-com mm1-s4">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="places-3.html">
                                                         <img src="/assets/public/images/sight/4.jpg" alt="">
-                                                        <span>Excursiones</span>
+                                                        <span style="font-family: Lovelo Black;">Excursiones</span>
                                                     </a>
                                                 </div>
-                                                <p>Donec lacus libero, rutrum ac sollicitudin sed, mattis non eros.</p>
-                                                <a href="places-3.html" class="mm-r-m-btn">Lee más</a>
                                             </div>
 
                                         </div>
@@ -198,32 +193,34 @@
                             </li>
                             <!--<li><a class='dropdown-button ed-sub-menu' href='#'TOURS data-activates='dropdown1'>Courses</a></li>-->
 
-                            <li><a href="{{route('testimonials','es')}}">TESTIMONIOS</a>
-                            </li>
-                            <li><a href="{{route('events','es')}}">EVENTOS</a>
-                            </li>
-                            <li><a href="{{route('our-team','es')}}">NOSOTROS</a>
+                          <!--   <li><a href="{{route('testimonials','es')}}">TESTIMONIOS</a>
+                            </li> -->
+                            <li><a href="{{route('events','es')}}" style="font-family: Lovelo Black;">EVENTOS</a>
+                            </li> 
+                            <li><a href="{{route('our-team','es')}}" style="font-family: Lovelo Black;">NOSOTROS</a>
                             </li>
 
-                            <li><a href="{{route('contact','es')}}">CONTACTO</a>
+                            <li><a href="{{route('contact','es')}}" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> CONTACTO</a>
                             </li>
 
                              <li class="cour-menu">
-                                    <a href="#!" class="mm-arr">LANGUAJE</a>
+                                    <a href="#!" class="mm-arr"><a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="{{URL::asset('assets/public/icons/es.png')}}" alt="Idioma"></a>
+                                        <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
+                                    </a>
                                     <div class="mm-pos" style="width: 100%;float:right;position: relative;">
                                         <div class="cour-mm m-menu" style="">
 
                                                 <div class="mm2-com ">
-                                                    <a class="route-language" href=""><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/fr.png" alt="Idioma"></a>
+                                                    <a class="route-language" href=""><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/de.png')}}" alt="Idioma"></a>
                                                 </div>
                                                 <div class="mm2-com">
-                                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/en.png" alt="Idioma"></a>
+                                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/en.png')}}" alt="Idioma"></a>
                                                 </div>
                                                 <div class="mm2-com">
-                                                 <a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/es.png" alt="Idioma"></a>
+                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/fr.png')}}" alt="Idioma"></a>
                                                 </div>
                                                 <div class="mm2-com">
-                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="width: 38px;height: 25px;" src="https://www.terandes.com/img/lng/fr.png" alt="Idioma"></a>
+                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/it.png')}}" alt="Idioma"></a>
                                                 </div>
 
                                          </div>

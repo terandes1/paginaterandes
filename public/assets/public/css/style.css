@@ -1,4 +1,4 @@
-/*----------------------------------------- [MASTER STYLE SHEET] * Project: The Travel * Version: v2.0 * Copyright 2016-2020 rn53themes * V1.0: 03/09/2016 * V2.0: 24/08/2017 * Author: RN53 Themes * Email: rn53themes@gmail.com * Website: http://www.rn53themes.net -----------------------------------------------*/
+ /*----------------------------------------- [MASTER STYLE SHEET] * Project: The Travel * Version: v2.0 * Copyright 2016-2020 rn53themes * V1.0: 03/09/2016 * V2.0: 24/08/2017 * Author: RN53 Themes * Email: rn53themes@gmail.com * Website: http://www.rn53themes.net -----------------------------------------------*/
 /*------------------------------------------------- = TABLE OF CSS 1.COMMON CSS 2.HEADER(LOG0 & HELP LINE) 3.NAVIGATION MENU 4.SLIDER & INNER PAGE BANNER 5.SLIDER ENQUIRY 6.TOUR PLACES 6.1 HOTELS 7.FREE CONSULTANT 8.EVENTS 9.POPULAR TOUR PLACES 10.REQUEST A QUOTE 11.TIPS BEFORE TRAVEL 11.1 TIPS BEFORE TRAVEL 11.2 CUSTOMER TESTIMONIALS 11.3 ARRANGEMENTS & HELPS 12.FOOTER 1 12.1 OFFERS 12.2 MOST POPULAR VACATIONS 13.FOOTER 2 13.1 ADDRESS 13.2 SUBSCRIBE 13.2 FAQ 13.2 LOCATION 13.5 SOCIAL MEDIA 14.COPY RIGHTS 15.INNER PAGE 15.1 COMMON BANNER 15.2 ALL INNER PAGE STYLES 16.PRE LOADING 17.REVIEWS 18.TOP TRENDINGS 19.INNER PAGE LISTING 20.LISTING 21.LISTING SOCIAL SHARE 22.ROOM AVAILABILITY CHECK 23.SOCIAL MEDIA SHARE 24.MY ACCOUNT DROP DOWN -------------------------------------------------*/
 /*-------------------------------------------------------*/
 /* 1.COMMON CSS
@@ -1131,6 +1131,7 @@
      width: 100%;
      bottom: 0px;
      top: 0px;
+     background: #ffffff;
      background: #e23464;
      background: linear-gradient(to bottom,#f2f9ff,#e1e4e8);
 }
@@ -1730,7 +1731,7 @@
  .inner_banner::before {
      content: '';
      position: absolute;
-     background: linear-gradient(to top, rgb(14, 72, 23) 15%, rgba(0, 0, 0, 0) 100%);
+    /* background: linear-gradient(to top, rgb(14, 72, 23) 15%, rgba(0, 0, 0, 0) 100%);*/
      top: 0px;
      bottom: 0px;
      left: 0px;
@@ -1741,8 +1742,8 @@
      background-size: cover;
 }
  .inner_banner_2 {
-     background: url('../images/banner/2.jpg') no-repeat center center;
-     background-size: cover;
+     background: url('../tour/baner.jpg') no-repeat center center;
+  /*   background-size: cover;*/
 }
  .inner_banner_3 {
      background: url('../images/banner/3.jpg') no-repeat center center;
@@ -4499,10 +4500,11 @@
      position: relative;
      overflow: hidden;
      width: 100%;
-     background: #eaedef;
+    /* background: #eaedef;*/
     /* margin-top: 100px;
      */
-     padding: 50px;
+     padding: -50px;
+     margin-left: -7px;
 }
  .db-l {
      float: left;
@@ -4527,11 +4529,13 @@
      width: 20%;
      position: relative;
      overflow: hidden;
-     background: #fff;
-     border: 1px solid #dadada;
-    /* margin-bottom: 25px;
-     */
-     box-shadow: 0px 2px 4px rgba(224, 224, 224, 0.8);
+   /*  background: #fff;*/
+     background:#ffff;
+     /*border: 1px solid #f2f2dc;*/
+     border: 1px solid #06495c;
+     margin-bottom: 25px;
+     
+    /* box-shadow: 0px 2px 4px rgba(224, 224, 224, 0.8);*/
      border-radius: 4px;
 }
  .db-l-1 {
@@ -4623,7 +4627,7 @@
      padding-left: 20px !important;
 }
  .db-3 ul li {
-     border-bottom: 1px solid #dcdcdc;
+     border-bottom: 1px solid #ccc;
      padding: 12px 0px;
      list-style-type: none;
 }
@@ -4631,10 +4635,11 @@
 }
  .db-3 ul li a img {
      float: left;
-     width: 28px;
-     height: 28px;
-     border-radius: 50px;
+     width: 200px;
+    /* height: 37px;*/
+   /*  border-radius: 50px;*/
      margin-right: 10px;
+     margin-top: -2px;
 }
  .db-3 ul li a h5 {
      color: #333;
@@ -5663,18 +5668,23 @@
      display: inline-block;
 }
  .main-menu ul li a{
-     color: #ffffff;
+     color:#404047;
+     /*color: #ffffff;*/
      padding: 20px 10px;
      line-height: 58px;
-     font-size: 15px;
-     font-weight: 600;
+    /* font-size: 14px;*/
+     font-weight: 400;
     /* text-transform: uppercase;
      */
      position:relative;
-     font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Lato';
+
+}
+
 }
  .main-menu ul li a:hover{
-     color: #ffffff;
+     color: #050505;
 }
  .main-menu ul li a:after{
      content: "";
@@ -6313,7 +6323,8 @@
  .m-menu{
      position: absolute;
      overflow: hidden;
-     width: 100%;
+   /*  width: 100%;*/
+     width: 90%;
      box-shadow: 0px 7px 12px -4px rgba(0, 0, 0, 0.45);
     /* background: url('../images/mm-col-bg.png') no-repeat right bottom, #fff;*/
      background:#fefefe;
@@ -7419,7 +7430,7 @@
  .offer:before {
      content: '';
      position: absolute;
-     background: linear-gradient(to right, rgb(31, 123, 12) -4%, rgba(-40, -49, -65, -91.59) 100%);
+    /* background: linear-gradient(to right, rgb(31, 123, 12) -4%, rgba(-40, -49, -65, -91.59) 100%);*/
      top: 0px;
      bottom: 0px;
      left: 0px;

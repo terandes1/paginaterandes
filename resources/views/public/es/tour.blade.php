@@ -48,7 +48,7 @@
 <section>
   <div class="rows inner_banner inner_banner_4">
     <div class="container">
-      <h2><span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.1em;">{!! $tour->name !!}</span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1em;"> Paquete familiar</h2>
+      <h2><span id="tituloTouRelacionados">{!! $tour->name !!}</span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1em;"> </h2>
        <div class="tour_head">
            
            <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
@@ -57,13 +57,13 @@
         </div>
         
       <ul>
-        <li><a href="#inner-page-title">Inicio</a>
+        <li><a href="#inner-page-title" id="subtitulo">Inicio</a>
         </li>
         <li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
-        <li><a href="{{route('paquetes','es')}}" class="bread-acti">Tours</a>
+        <li><a href="{{route('paquetes','es')}}" class="bread-acti" id="subtitulo">Tours</a>
         </li>
       </ul>
-      <p style="text-shadow: 2px 2px 4px #000;color: #fff;">Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
+      <p style="text-shadow: 2px 2px 4px #000;color: #fff;" id="subtitulo">Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única.</p>
     </div>
   </div>
 </section>
@@ -92,19 +92,19 @@
         <div class="tour_head1" style="text-align: justify;">
           <h3></h3>
 	        <div class="db-2-com db-2-main">
-	          <h4>Descripción</h4>
+	          <h4 id="tituloTou">Descripción</h4>
 	          <div class="db-2-main-com">
 	          </div>
 	        </div>
-          <p>
-          	{!! strip_tags($tour->description_complete) !!}
+          <p id="subtitulo" style="margin-top: -28px;color: black;">
+          	{!! strip_tags($tour->description_complete) !!}.
           </p>
          </div>
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
 
           <div class="db-2-com db-2-main">
-	          <h4>Galería de fotos</h4>
+	          <h4 id="tituloTou">Galería de fotos</h4>
 	          <div class="db-2-main-com">
 	          </div>
 	        </div>
@@ -137,9 +137,9 @@
                   <div class="panel with-nav-tabs panel-success">
                       <div class="panel-heading">
                               <ul class="nav nav-tabs">
-                                  <li class="active"><a href="#tab1default" data-toggle="tab">ITINERARIO</a></li>
-                                  <li><a href="#tab2default" data-toggle="tab">ORGANIZACIÓN</a></li>
-                                  <li><a href="#tab3default" data-toggle="tab">UBICACIÓN</a></li>
+                                  <li class="active"><a href="#tab1default" data-toggle="tab" id="subtitulo">ITINERARIO</a></li>
+                                  <li><a href="#tab2default" data-toggle="tab" id="subtitulo">ORGANIZACIÓN</a></li>
+                                  <li><a href="#tab3default" data-toggle="tab" id="subtitulo">UBICACIÓN</a></li>
                               </ul>
                       </div>
                       <div class="panel-body">
@@ -247,7 +247,7 @@
 										<div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
 										</div>
 										<div class="col-md-6 tr-room-type-list-2">
-											<h4>{!! $item->name !!}</h4>
+											<h4 id="tituloTous">{!! $item->name !!}</h4>
 											<p><b>Description:
 											 </b>
 												{!! str_limit($item->description_short, 150) !!}
@@ -257,7 +257,7 @@
                                                     </a>
                                             </div>
 										</div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Precio por noche</span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn spec-btn-text">Reservar ahora</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Precio por noche</span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
 									</div>
 								</li>
 								@endforeach
@@ -283,7 +283,7 @@
         
         <!--====== PACKAGE SHARE ==========-->
         <div class="tour_right head_right tour_social tour-ri-com">
-          <h3>COMPARTE ESTE PAQUETE</h3>
+          <h3 id="tituloTouLateral">COMPARTE ESTE PAQUETE</h3>
           <ul>
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
             <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
@@ -294,20 +294,20 @@
         </div>
         <!--====== HELP PACKAGE ==========-->
         <div class="tour_right head_right tour_help tour-ri-com">
-          <h3>SERVICIO DE ASISTENCIA</h3>
+          <h3 id="tituloTouLateral">SERVICIO DE ASISTENCIA</h3>
           <div class="tour_help_1">
             <h4 class="tour_help_1_call">Llámanos ahora</h4>
             <h4><i class="fa fa-phone" aria-hidden="true"></i>  00-51-84-247277</h4> </div>
         </div>
         <!--====== PUPULAR TOUR PACKAGES ==========-->
         <div class="tour_right tour_rela tour-ri-com">
-          <h3>TOURS POPULARES</h3>
+          <h3 id="tituloTouLateral">TOURS POPULARES</h3>
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1"> <img src="/{{$item->img}}" alt="" />
 	             <h5 style="color: #f4364f;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
 	            <p style="text-align: justify;">
 	            	 {!! str_limit($item->description_short, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" class="link-btn">MÁS SOBRE ESTE VIAJE</a> 
+	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">MÁS SOBRE ESTE VIAJE</a> 
 	          </div>
 	          @endforeach
         </div>
@@ -350,7 +350,7 @@
                      },
                       success: function(respuesta) {
                         var marcadores=respuesta.data;
- 
+                        console.log(marcadores);
                         var flightPlanCoordinates   = [];
                          $.each(respuesta.grafica,function(index,element)
                             { 
@@ -409,8 +409,8 @@
                             google.maps.event.addListener(marker, 'mouseover', (function(marker, i)
                              {
                               return function() {
-                                infowindow.setContent("<img style='width:250px;' src='../../"+marcadores[i][6]+"'>"+
-                                    "<table> <tr><th><h4><strong> "+marcadores[i][0]+" </strong></th></tr><tr><td style='width:150px; text-align:justify;'></h3></h6>"+marcadores[i][5]+"</h6></td></tr></table>");
+                                infowindow.setContent("<img style='width:350px;text-align:center;' src='/assets/content/itinerario/"+marcadores[i][6]+"'>"+
+                                    "<table> <tr><th><h6><strong> "+marcadores[i][0]+" </strong></h6></th></tr><tr><td style='width:350px; text-align:justify;'></h3></h6>"+marcadores[i][5]+"</h6></td></tr></table>");
                                 infowindow.open(map, marker);
                               }
                             })(marker, i));

@@ -93,24 +93,21 @@ i[name="eliminar-categoria"]{
         </div>
 
         <div class="col-md-5">
-          <div class="form-group">
-            {!!Form::label('multimedia_id','Multimedia')!!}
-            <select name="multimedia_id" id="" class="form-control">
-              @foreach($multimedia as $multi)
-              <option value="{{$multi->id}}">{{$multi->name}}</option>
-              @endforeach
-            </select>
-          </div>
+            <div class="form-group">
+                 {!!Form::label('multimedia_id','Multimedia')!!}
+                <select name="multimedia_id" id="" class="form-control">
+                @foreach($multimedia as $multi)
+                <option value="{{$multi->id}}">{{$multi->name}}</option>
+                @endforeach
+                </select>
+            </div>
         </div>
 
         <div class="col-md-3">
-          <div class="form-group">
-            {!!Form::label('serie','Es serie')!!}
-             <select name="multimedia_id" id="" class="form-control">
-                <option value="false">NO</option> 
-                <option value="true">SI</option>
-            </select>
-          </div>
+            <div class="form-group">
+                {!!Form::label('tipo_tour','Tipo de tour')!!}
+                {!!Form::select('tipo_tour', ['tour' => 'Tour', 'serie' => 'Serie'], 'null',['class'=>'form-control'])!!}
+            </div>
         </div>
 
         <div class="col-md-6">
@@ -154,17 +151,17 @@ i[name="eliminar-categoria"]{
         </div>
 
         <div class="col-md-12">
-          <div class="form-group">
-            {!!Form::label('meta_keywords','Meta Keyword')!!}
-            {!!Form::text('meta_keywords',null,['class'=>'form-control'])!!}
-          </div>
+            <div class="form-group">
+                {!!Form::label('meta_keywords','Meta Keyword')!!}
+                {!!Form::text('meta_keywords',null,['class'=>'form-control'])!!}
+            </div>
         </div>
 
         <div class="col-md-6">
-          <div class="form-group">
-            {!!Form::label('status','Estado')!!}
-            {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], null,['class'=>'form-control'])!!}
-          </div>
+            <div class="form-group">
+                {!!Form::label('status','Estado')!!}
+                {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], null,['class'=>'form-control'])!!}
+            </div>
         </div>
 
         <div class="col-md-12">
@@ -444,7 +441,7 @@ $('#form-tours').validate({
       }
 
 
-      window.location.href = "/admin/tours";
+      window.location.href = "/admin/listTourSerie";
 
     }).fail((data)=>{
         if(data.status == 422){
@@ -457,12 +454,7 @@ $('#form-tours').validate({
         }
     });
   }
-
-
-
 });
-
-
 
 
 

@@ -7,6 +7,7 @@ use App\Itinerarie;
 use App\Tour;
 use App\Http\Requests\UpdateItinerarie;
 use App\Icon;
+use Image;
 class ItinerarieController extends Controller
 {
     public function update($id)
@@ -22,6 +23,7 @@ class ItinerarieController extends Controller
     {
 		
 		
+
         DB::table('itineraries')->insert(
 		    [
 		    'tour_id' => $request['idTourP'],
@@ -142,17 +144,57 @@ class ItinerarieController extends Controller
     public function ubicacionUpdate(Request $request)
     {
        
+        $img = $request->file('img');
         $itinerarie=DB::table('itineraries')->where('id', '=', $request['idItinerario'])->get()[0]; 
+         if(empty($img))
+         {
+
+            $idTourP=$itinerarie->tour_id;
+            DB::table('itineraries')
+                ->where('id', $request['idItinerario'])
+                ->update([
+                    
+                        'latitud' => $request['latitud1'],
+                        'longitud' => $request['longitud1'],
+                        'icono' => $request['Selecticons'],
+
+                    ]);
+
+         }else
+         {
+           
+             $destinationPathEliminar = '../public/assets/content/itinerario/'.$request['idItinerario'].'.'.$itinerarie->photo;
+            if(file_exists(public_path($destinationPathEliminar)))
+                {
+                unlink(public_path($destinationPathEliminar));
+                }else{
+                }
+
+            $url = $img->getClientOriginalExtension();
+             
+            $idTourP=$itinerarie->tour_id;
+            DB::table('itineraries')
+                ->where('id', $request['idItinerario'])
+                ->update([
+                    
+                        'latitud' => $request['latitud1'],
+                        'longitud' => $request['longitud1'],
+                        'icono' => $request['Selecticons'],
+                        'photo'=> $url
+                    ]);
+
+           $nombreImgen = $request['idItinerario'].'.'.$img->getClientOriginalExtension();
+           $destinationPath = '../public/assets/content/itinerario';
+           if (!file_exists($destinationPath)) {
+              mkdir($destinationPath, 666, true);
+             }
+            $thumb_img = Image::make($img->getRealPath())->resize(600,300);
+            $thumb_img->save($destinationPath.'/'.$nombreImgen,20);
+
+         }
         
-        $idTourP=$itinerarie->tour_id;
-        DB::table('itineraries')
-            ->where('id', $request['idItinerario'])
-            ->update([
-                
-                    'latitud' => $request['latitud1'],
-                    'longitud' => $request['longitud1'],
-                    'icono' => $request['Selecticons']
-                ]);
+
+       
         return redirect()->route('itinerario', $idTourP)->with('info' , 'Se registro correctamente');
     }
 

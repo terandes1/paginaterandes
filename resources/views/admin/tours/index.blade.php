@@ -12,12 +12,30 @@
 	  }
 	}
 </style>
-<div class="container-fluid"></br>
-	<div class="card">
-	  <div class="card-header">
-	    		        <a href="{{('/admin/tours/create')}}" class="btn btn-primary">Nuevo Tour</a>
 
-	  </div>
+
+<div class="container-fluid"></br>
+	<p>
+	<div class="card">
+		<div class="card-header">
+			<a style="text-transform: uppercase;" href="{{('/admin/tours/create')}}" class="btn btn-primary"> Nuevo</a>
+		</div>
+		<div class="card-body">
+			
+			<a href="{{('/admin/listTourSerie/tour')}}" type="button" class="btn btn-success">Tours</a>
+
+			<a href="{{('/admin/listTourSerie/serie')}}" type="button" class="btn btn-info">Series</a>
+		</div>
+	</div>
+	</p>
+
+	<div class="card">
+	    <div class="card-header">
+	    	<ol class="breadcrumb">
+	  		<li style="text-transform: uppercase;" class="breadcrumb-item active" aria-current="page">{!! $tipo_tour !!}S</li>
+	  		</ol>      
+
+	    </div>
 	  	<div class="card-body">
 		  <div class="row">
 		    <div class="col-md-12">
@@ -30,7 +48,7 @@
 		          </div>
 		      @endif
 		    </div>
-		    <div class="col-md-12 table-responsive" >
+		    <div id="datos" class="col-md-12 table-responsive" >
 		        <table class="table table-hover" id="table_tours">
 		        <thead class="thead-light">
 		          <tr>
@@ -59,13 +77,16 @@
 		                	@if($tour->principal == '0')
 		                	<span class="badge badge-success">Habilitado</span>
 		                	@endif
+		                	@if($tour->tipo_tour == 'serie')
+		                	<span class="badge badge-primary">Serie</span>
+		                	@endif
 		                	
 		                @else
 		                	 <span class="badge badge-danger">Deshabilitado</span>
 		                @endif
 		            </td>
 
-		            <td> <center><strong>Fecha </strong></center> 
+		            <td> 
 		            	 Creación:
 		            	{{$tour->created_at}}<br>
 		            	 Actualización:
@@ -82,8 +103,15 @@
 			                <a class="dropdown-item" href="{{url('/admin/tours/'. $tour->id )}}">Editar</a>
 			                <a class="dropdown-item" href="{{route('itinerario',$tour->id)}}">Itinerario</a>
 			                <a class="dropdown-item" href="{{url('/admin/price/tour/'.$tour->id)}}">Precio</a>
+			                @if($tour->tipo_tour == 'serie')
 			                <a class="dropdown-item" href="{{url('/admin/serie/tour/'.$tour->id)}}">Serie</a>
+			                @endif
+			                @if($tour->principal == '0')
 			                <a class="dropdown-item" onclick="publicarPrincipal('{{$tour->id}}');" href=" ">Tour de lujo</a>
+			                @else 
+			                <a class="dropdown-item" onclick="publicarPrincipal('{{$tour->id}}');" href=" ">Quitar Tour de lujo</a>
+			                @endif
+
 							<center>{!! Form::open(['method' => 'DELETE','route' => ['tours.destroy', $tour->id]]) !!}
 							{{ Form::button('Eliminar', ['type' => 'submit', 'class' => 'btn btn-danger btn-sm'] )  }}
 				          	{!! Form::close() !!}</center>
@@ -125,11 +153,12 @@
 		   },
 		   error: function() {
 		   },
-		   success: function(data) {
-				 toastr.success('Publicado en la portada principal', 'Correcto')
+		   success: function(respuesta) {
+		   	 	
+				 toastr.success(respuesta.rpta)
+				 $("#datos").load(" #datos");
 		   		}
 			});
-  
    	}
    	
    	$(()=>{

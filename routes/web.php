@@ -82,9 +82,11 @@ Route::prefix('admin')->group(function () {
     //testimonio
     //---------------------------------------------------------------------------------------------------------------------------------------------
     Route::resource('testimonials','TestimonialController');
+    Route::get('/testimonials/destroy/{id?}','TestimonialController@destroy')->name('testimonioDestroy'); 
+    
     Route::get('/listTestimonioEncuesta/{tipo?}','TestimonialController@listTestimonialEncuesta');
     Route::get('/cambioEstadoTestimonioEncuesta/{id?}','TestimonialController@cambioEstadoTestimonioEncuesta');
-
+    Route::get('/listTourSerie/{tipo_tour?}','TourController@listTourSerie');
 
 });
 

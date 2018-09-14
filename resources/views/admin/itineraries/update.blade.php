@@ -57,14 +57,26 @@
 			          <span aria-hidden="true">&times;</span>
 			        </button>
 			      </div>
-			      {!! Form::open(['route' => ['itineUbicacionUpdate'] , 'method' => 'POST', 'class' => 'form-horizontal']) !!}
+			      {!! Form::open(['route' => ['itineUbicacionUpdate'] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data']) !!}
 			      <div class="modal-body">
 			      	<div class="alert alert-success">
 			       		<div id="item"> 							
 			        		 ITINERARIO:<span id="tituloItinerario"> </span>
 			        		 <input type='hidden' id="idItinerario" name="idItinerario">
 			        	</div>
+			        	
 			         </div>
+			        <div class="row justify-content-md-center">
+				        <div class="col-md-8">
+				             {!!Form::label('name','Subir Imagen')!!}
+				             <input type="file" class="form-control" name="img">
+				        </div>
+				        <div class="col-md-4">
+				        	<br>
+				        	<div class="thumbnail" id="imagenItinerario">
+				           	</div>
+				        </div>
+		       		 </div><br>
 			       <div id="googleMap" style="width:100%;height:400px;"></div>
 			       <div class='row' style='margin-left:3px;'>
 						<div class='col-3'>
@@ -128,6 +140,10 @@
    		   $("#longitud1").val(event.latLng.lng());
 
   		 });
+
+		    // $("#latitud1").val('-13.52577301931808');
+   		 //   $("#longitud1").val('-71.94352103906249');
+
 	}
 	
 function agregarUbicaion(idItinerario) {
@@ -143,6 +159,14 @@ function agregarUbicaion(idItinerario) {
 			   error: function() {
 			   },
 		 	  	success: function(respuesta) {
+
+		 	  		$("#imagenItinerario").html('');
+		 	  		var url=idItinerario+'.'+respuesta.data.photo;
+		 	  		var htmlImagen="<img alt='Nature' style='width: 130px;' src='{{URL::asset('assets/content/itinerario')}}/"+url+"'>";
+
+		 	  		$("#imagenItinerario").append(htmlImagen);
+
+		 	  		console.log(idItinerario);
 		 	  		var idIcono=respuesta.data.icono;
 
 		 	  		$( "#tituloItinerario" ).remove();

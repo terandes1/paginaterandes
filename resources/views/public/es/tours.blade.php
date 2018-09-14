@@ -2,7 +2,23 @@
 
 @section('content')
 
+<section>
+ <div class="offer">
 
+        <div class="container" style="">
+ 
+            <div class="row">
+
+                <div class="popu-places-home" style="margin: 230px;">
+                    
+                    
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="container">
   <div class="row">
@@ -15,12 +31,12 @@
       <!--LEFT LISTINGS-->
       <div class="col-md-3 hot-page2-alp-con-left">
         <div class="hot-page2-alp-con-left-1">
-            <h3>CATEGORIA Y PRECIO</h3> </div>
+            <h3 id="tituloTous">CATEGORIA Y PRECIO</h3> </div>
         <!--PART 7 : LEFT LISTINGS-->
         
         <!--PART 4 : LEFT LISTINGS-->
         <div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-          <h4><i class="fa fa-map-marker" aria-hidden="true"></i>  SELECCIONE CATEGORIA</h4>
+          <h4 id="subtitulo"><i class="fa fa-map-marker" aria-hidden="true"></i>  SELECCIONE CATEGORIA</h4>
           <div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
             <form>
               <ul>
@@ -28,7 +44,7 @@
                     <li>
                       <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionCategoria({!! $item->id !!},this);" >
                         <input id="chp{!! $item->id !!}" class="styled" type="checkbox" >
-                        <label for="chp{!! $item->id !!}"> {!! $item->name!!}</label>
+                        <label for="chp{!! $item->id !!}" id="subtitulo"> {!! $item->name!!}</label>
                       </div>
 
                     </li>
@@ -38,32 +54,32 @@
         </div>
         <!--END PART 4 : LEFT LISTINGS-->
     <div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-                            <h4><i class="fa fa-dollar" aria-hidden="true"></i>RANGO DE PRECIOS</h4>
+                            <h4 id="subtitulo"><i class="fa fa-dollar" aria-hidden="true"></i>RANGO DE PRECIOS</h4>
                             <div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
                                 <form>
                                     <ul>
                                         <li>
                                             <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(500,1000,this);" >
                                                 <input id="chp52" class="styled" type="checkbox">
-                                                <label for="chp52"> $ 500 - $ 1000 </label>
+                                                <label for="chp52" id="subtitulo"> $ 500 - $ 1000 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(1000,1500,this);">
                                                 <input id="chp53" class="styled" type="checkbox">
-                                                <label for="chp53"> $ 1000 - $ 1500 </label>
+                                                <label for="chp53" id="subtitulo"> $ 1000 - $ 1500 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(1500,2000,this);">
                                                 <input id="chp54" class="styled" type="checkbox">
-                                                <label for="chp54"> $ 1500 - $ 2000 </label>
+                                                <label for="chp54" id="subtitulo"> $ 1500 - $ 2000 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(2000,2500,this);">
                                                 <input id="chp55" class="styled" type="checkbox">
-                                                <label for="chp55"> $ 2000 - $ 2500 </label>
+                                                <label for="chp55"id="subtitulo"> $ 2000 - $ 2500 </label>
                                             </div>
                                         </li>
                                     </ul>
@@ -99,13 +115,13 @@
                                 <div class="hotel-list-score">4.5</div>
                                 <div class="hot-page2-hli-1">  <img src="/{{$item->img}}" alt=""> </div>
                               </a>
-                              <div class="hom-hot-av-tic"> {{$item->categoriesName}}</div>
+                              <div class="hom-hot-av-tic" style="font-family: Lovelo Black"> {{$item->categoriesName}}</div>
                             </div>
 
                             <div class="col-md-6">
                               <div class="trav-list-bod">
-                              <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"><h3>{{ $item->name }}</h3></a>
-                              <p style="text-align: justify;">{!! str_limit($item->description_short, 150) !!}</p>
+                              <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"><h3  id="tituloTousPrincipal">{{ $item->name }}</h3></a>
+                              <p style="text-align: justify;" id="subtituloTousPrincipal">{!! str_limit($item->description_short, 150) !!}</p>
                               </div>
                               <div class="col-md-12" style="margin: 15px;">
                                       <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
@@ -115,12 +131,12 @@
                             <div class="col-md-3">
                               <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                                 <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <span class="hot-list-p3-1">Precios dede</span> <span class="hot-list-p3-2">$ {{$item->price}}</span><span class="hot-list-p3-4">
-                                  <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn">RESERVAR</a>
+                                  <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
                                 </span> </div>
                             </div>
                             <div>
                               <div class="trav-ami">
-                                <h4>Detalle e Incluye</h4>
+                                <h4 id="tituloTous">Detalle e Incluye</h4>
                                 <ul>
                                   <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Turismo</span></li>
                                   <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>

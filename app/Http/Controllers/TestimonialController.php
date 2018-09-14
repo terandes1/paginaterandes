@@ -85,7 +85,7 @@ class TestimonialController extends Controller
            $itemp->tipo='Testimonio';
 
 
-           if ($request->hasFile('Imagen') && $request->file('Imagen')->getClientSize() < 2097152) 
+           if ($request->hasFile('Imagen') && $request->file('Imagen')->getClientSize() < 8585634) 
             {
                 $img = $request->file('Imagen');
                 $url = $img->getClientOriginalExtension();
@@ -152,9 +152,24 @@ class TestimonialController extends Controller
      * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Testimonial $testimonial)
+    public function destroy($id)
     {
-        //
+
+        $itemTestimonio = Testimonial::where('id', '=',$id)->get()[0];
+        Testimonial::destroy($id);
+        $destinationPath = '../public/assets/content/testimonio/'.$id.'.'.$itemTestimonio->photo;
+
+        if(file_exists(public_path($destinationPath))){
+               unlink(public_path($destinationPath));
+          }else{
+          }
+        
+          if($itemTestimonio->tipo=='Testimonio'){
+               return redirect('/admin/listTestimonioEncuesta/testimonio');
+          }else{
+               return redirect('/admin/listTestimonioEncuesta/encuesta');
+          }
+
     }
 
     public function insertTestimonials(Request $request)

@@ -239,7 +239,7 @@ class PublicController extends Controller
 	   		$tempItinerarioPuntos=[];
 	   		$tempItinerarioGrafica=[];
 	   		$data=DB::table('tours')
-   					->select('itineraries.name','itineraries.day','itineraries.latitud','itineraries.longitud','icons.id as idIcons','icons.url','itineraries.description','tours.img')
+   					->select('itineraries.id','itineraries.name','itineraries.day','itineraries.latitud','itineraries.longitud','icons.id as idIcons','icons.url','itineraries.description','itineraries.photo')
    			  		->join('itineraries','tours.id','=','itineraries.tour_id')
    			  		->join('icons','itineraries.icono','=','icons.id')
    			  		->where('tours.id',$idTour)
@@ -253,7 +253,7 @@ class PublicController extends Controller
 
    			foreach ($data as $item) {
 
-   				  $tempItinerarioPuntos[]=[$item->name,(float)$item->latitud,(float)$item->longitud,$item->idIcons,$item->url,$item->description,$item->img];
+   				  $tempItinerarioPuntos[]=[$item->name,(float)$item->latitud,(float)$item->longitud,$item->idIcons,$item->url,$item->description,$item->id.'.'.$item->photo];
 
    				  $tempItinerarioGrafica[]=[(float)$item->latitud,(float)$item->longitud];
    			}

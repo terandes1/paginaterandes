@@ -4300,7 +4300,7 @@ html {} @media only screen and (min-width: 0) {
     color: #fff;
     font-weight: 600;
     background: #1aa5d8;
-    background: linear-gradient(to bottom, #1aa5d8, #1386b1);
+    background: linear-gradient(to bottom, #3B8900, #3B8900);
     font-family: 'Quicksand', sans-serif;
 }
 .btn:hover,

@@ -75,21 +75,31 @@
 								{{$itemp->created_at}}
 				            </td>
 				            <td>
-								 @if( $itemp->status=='approve')
-								 
-								 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button" class="btn btn-success btn-xs" aria-label="Left Align">
-									 	<span class="fa fa-eye" aria-hidden="true"></span>
-									</a>
+				            	<div class="row">
+				            		<div class="col-md-1">
+								    		@if( $itemp->status=='approve')
+								 			
+										 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button" class="btn btn-success btn-sm" aria-label="Left Align">
+											 	<span class="fa fa-eye" aria-hidden="true">	</span>
+											</a>
 								
-								@else
-								 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" class="btn btn-info btn-xs" aria-label="Left Align">
-									 	<span class="fa fa-eye-slash" aria-hidden="true"></span>
-									</a>	
-								 
-								@endif
-									<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button" class="btn btn-primary btn-xs" aria-label="Left Align">
-										 	<span class="fa fa-pencil" aria-hidden="true"></span>
-									</a> 
+											@else
+											 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button"class="btn btn-info btn-sm" aria-label="Left Align">
+												 	<span class="fa fa-eye-slash" aria-hidden="true"> </span>
+												</a>	
+											 
+											@endif
+									</div>
+									<div class="col-md-1">
+
+									</div>
+									<div class="col-md-1">
+										<a href="{{route('testimonioDestroy',  $itemp->id)}}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estas seguro de querer eliminar?')">
+											<i class="fa fa-trash"></i>
+										</a>
+				          			</div>
+
+								</div>	
 				            </td>
 				             
 				          </tr>
@@ -119,9 +129,24 @@
 @section('script')
    
    <script type="text/javascript">
+
 	   $("#encuesta").click(function(){
 		  	$("#prueba").addClass('container');
 		});
+
+	   function enviar() {
+
+				 var answer = confirm("Deseas eliminar este registro?")
+			    if (answer){
+			        $("#distroyEliminar").submit();
+			    }
+			    else{
+			    	
+			    }
+		   
+		}
+
    </script>
+
 
 @endsection

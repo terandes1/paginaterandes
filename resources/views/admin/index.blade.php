@@ -39,7 +39,7 @@
       <div class="card">
         <div class="card-body text-center">
           <h4>TOUR</h4> <br>
-          <a href="{{('/admin/tours')}}" class="btn btn-primary form-control">IR</a>
+          <a href="{{('/admin/listTourSerie')}}/tour" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@
       <div class="card">
         <div class="card-body text-center">
           <h4>TESTIMONIOS</h4> <br>
-          <a href="{{('/admin/languages')}}" class="btn btn-primary form-control">IR</a>
+          <a href="{{('/admin/listTestimonioEncuesta')}}/testimonio" class="btn btn-primary form-control">IR</a>
         </div>
       </div>
     </div>

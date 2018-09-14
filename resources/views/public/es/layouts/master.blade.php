@@ -9,15 +9,18 @@
     <!-- FAV ICON -->
     <link rel="shortcut icon" href="/assets/public/images/icons.png">
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet"> -->
+    {!! Html::style('assets/public/css/lovelo.css') !!}
     <!-- FONT-AWESOME ICON CSS -->
-    {!!Html::style('assets/public/css/font-awesome.min.css')!!}
+    {!!Html::style('assets/public/css/font-awesome.min.css')!!} 
     <!--== ALL CSS FILES ==-->
     {!!Html::style('assets/public/css/style.css')!!}
     {!!Html::style('assets/public/css/materialize.css')!!}
     {!!Html::style('assets/public/css/bootstrap.css')!!}
     {!!Html::style('assets/public/css/mob.css')!!}
     {!!Html::style('assets/public/css/animate.css')!!}
+    {!!Html::style('assets/public/video/css/video.css')!!}
+
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -133,6 +136,37 @@ input::-moz-focus-inner { border: 0; }
   color:red;
   font-size: 11px;
 }
+#titulo{
+  font-family: Lovelo Black; font-size: 1.8em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#tituloNosotros{
+  font-family: Lovelo Black; font-size: 1.2em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#tituloEvento{
+  font-family: Lovelo Black; font-size: 0.8em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#tituloTous{
+  font-family: Lovelo Black; font-size: 1.2em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#tituloTouLateral{
+  font-family: Lovelo Black; font-size: 0.9em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#tituloTousPrincipal{
+  font-family: Lovelo Black; font-size: 1.5em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#subtituloTousPrincipal{
+  font-family: NewsGoth CN BT;
+  font-size: 1.1em;
+}
+#tituloTou{
+  font-family: Lovelo Black; font-size: 1.2em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#tituloTouRelacionados{
+  font-family: Lovelo Black; font-size: 0.8em;font-weight: 100; letter-spacing: 3px;line-height: 1.4em;  text-transform: uppercase;
+}
+#subtitulo{
+  font-family: NewsGoth CN BT;
+}
 </style>
 </head>
 
@@ -157,6 +191,7 @@ input::-moz-focus-inner { border: 0; }
     {!!Html::script('assets/public/js/wow.min.js')!!}
     {!!Html::script('assets/public/js/materialize.min.js')!!}
     {!!Html::script('assets/public/js/custom.js')!!}
+    {!!Html::script('assets/public/video/js/video.js')!!}
      @yield('script')
 </body>
  <script>
@@ -209,4 +244,13 @@ input::-moz-focus-inner { border: 0; }
     })
   });
   </script>
+  <script>
+        $(".js-video-button").modalVideo({
+            youtube:{
+                controls:0,
+                nocookie: true
+            }
+        });
+    </script>
+   
 </html>

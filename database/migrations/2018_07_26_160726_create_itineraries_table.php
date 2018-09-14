@@ -27,6 +27,7 @@ class CreateItinerariesTable extends Migration
             $table->string('latitud')->nullable();
             $table->string('longitud')->nullable();
             $table->string('icono')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

@@ -30,11 +30,9 @@
     font-weight: normal;
 }
 
-
 i[name="eliminar-categoria"]{
   cursor: pointer;
 }
-
 
 </style>
 @endsection
@@ -105,11 +103,9 @@ i[name="eliminar-categoria"]{
 
         <div class="col-md-3">
           <div class="form-group">
-            {!!Form::label('serie','Es serie')!!}
-             <select name="serie" id="" class="form-control">
-                <option value="false">NO</option> 
-                <option value="true">SI</option>
-            </select>
+            {!!Form::label('tipo_tour','Tipo de tour')!!}
+            {!!Form::select('tipo_tour', ['tour' => 'Tour', 'serie' => 'Serie'], 'tour',['class'=>'form-control'])!!}
+             
           </div>
         </div>
 
@@ -119,7 +115,6 @@ i[name="eliminar-categoria"]{
             <button type="button" class="btn btn-primary form-control" data-toggle="modal" data-target="#exampleModal">
               Asignar Categoria
             </button>
-
           </div>
         </div>
 
@@ -164,6 +159,7 @@ i[name="eliminar-categoria"]{
           <div class="form-group">
             {!!Form::label('status','Estado')!!}
             {!!Form::select('status', ['A' => 'habilitado', 'D' => 'desabilitado'], 'A',['class'=>'form-control'])!!}
+            
           </div>
         </div>
 
@@ -423,7 +419,7 @@ $('#form-tours').validate({
       }
 
 
-      window.location.href = "/admin/tours";
+      window.location.href = "/admin/listTourSerie";
 
     }).fail((data)=>{
         if(data.status == 422){

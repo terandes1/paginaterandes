@@ -21,7 +21,7 @@
           <a class="nav-link" href="{{('/admin/categories')}}">Categorias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{('/admin/tours')}}">Tour</a>
+          <a class="nav-link" href="{{('/admin/listTourSerie')}}/tour">Tour</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{('/admin/icons')}}">Icons</a>

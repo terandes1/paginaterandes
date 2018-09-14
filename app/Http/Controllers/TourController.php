@@ -24,15 +24,20 @@ class TourController extends Controller
      * @return \Illuminate\Http\Response
      */
      function __construct()
-    {
-         
+    {      
          $this->middleware(['auth' ,'roles:normal,admin']);
     }
     public function index()
+    {        
+      
+    }  
+
+    public function listTourSerie($tipo_tour='tour')
     {
 
         $tours = DB::table('languages')
 			        ->select('tours.*','languages.name as nameLenguage')
+                    ->where('tours.tipo_tour',$tipo_tour)
 			        ->join('categories', 'languages.id', '=', 'categories.language_id')
 			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -48,11 +53,13 @@ class TourController extends Controller
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
 			        ->where('languages.id',languageUsers::idLanguage())
              		->where('tours.status','A')
+                    ->where('tours.tipo_tour',$tipo_tour)
 			       ->orderBy('tours.id', 'desc')
-              ->get();
+                ->get();
+            return view('admin.tours.index',['tours'=>$tours, 'tipo_tour' =>$tipo_tour ]);
      	 }
 
-        return view('admin.tours.index',['tours'=>$tours]);
+        return view('admin.tours.index',['tours'=>$tours, 'tipo_tour' =>$tipo_tour ]);
 
     }
 
@@ -88,14 +95,12 @@ class TourController extends Controller
 
       $slug = Str::slug($request['name']);
 
-
       $file =  $request->file('img');
       $extension = $file->getClientOriginalExtension();
       $fileName = time() . '.' . $extension;
       $size = $file->getClientSize();
       $file->move(public_path('assets/content/'),$fileName);
       $ruta = 'assets/content/'.$fileName;
-
 
         $tour = Tour::create([
           'name'=>$request->name,
@@ -106,13 +111,13 @@ class TourController extends Controller
           'multimedia_id'=>$request->multimedia_id,
           'status'=>$request->status,
           'slug'=>$slug,
+          'tipo_tour'=>$request->tipo_tour,
           'meta_description'=>$request->meta_description,
           'meta_keywords'=>$request->meta_keywords,
           'price'=>$request->price 
         ]);
 
       return response($tour->id);
-
 
     }
 
@@ -160,19 +165,15 @@ class TourController extends Controller
      */
     public function update(UpdateTour $request, Tour $tour)
     {
-
-
         if($request->name != $tour->name){
           $request->validate([
             'name' => 'required|unique:tours,name'
           ]);
         }
 
-
         $slug = Str::slug($request['name']);
 
         if ($request->img != null) {
-
 
           \File::delete(public_path($tour->img));
 
@@ -181,11 +182,9 @@ class TourController extends Controller
             $fileName = time() . '.' . $extension;
             $file->move(public_path('assets/content/'),$fileName);
             $ruta = 'assets/content/'.$fileName;
-
             $tour->fill([
                 'img'=>$ruta
             ]);
-
         }
 
         $tour->fill([
@@ -196,15 +195,19 @@ class TourController extends Controller
           'multimedia_id'=>$request->multimedia_id,
           'status'=>$request->status,
           'slug'=>$slug,
+          'tipo_tour'=>$request->tipo_tour,
           'meta_description'=>$request->meta_description,
           'meta_keywords'=>$request->meta_keywords,
           'price'=>$request->price 
         ]);
-
-
         $tour->save();
-
-
+         if($tour->tipo_tour=='tour')
+            {
+                  return redirect('admin/listTourSerie/tour');
+            }
+            else{
+                 return redirect('admin/listTourSerie/serie'); 
+            }
     }
 
     /**
@@ -222,34 +225,44 @@ class TourController extends Controller
                         ->with('success','Member deleted successfully');
     }
 
-    public function get_categoria($id){
-
+    public function get_categoria($id)
+    {
         $categories = Categorie::where('language_id',$id)->get();
         return response($categories);
     }
 
-
-    public function delete_categoria($id){
-        
+    public function delete_categoria($id)
+    {
         $categories = CategorieTour::where('tour_id',$id)->get();
-
         foreach($categories as $categorie){
             $c = CategorieTour::find($categorie->id);
             $c->delete();
         }
-
     }
 
-    public function publicarPrincipal($id){
+    public function publicarPrincipal($id)
+    { 
+        $tour = Tour::find($id);
+        if ((int)$tour->principal== 0)
+        {
+            $NroTourLujo=  DB::table('tours')
+                        ->where('principal', 1)
+                        ->where('status', 'A')
+                        ->count();
 
- 
-          $tour = Tour::find($id);
-          $tour->principal =1;
-          $tour->save();
-
-          return response()->json(['resul'=>'correcto']);
-  
-
-    }
-
+            if ($NroTourLujo<6){
+                $tour->principal =1;
+                $tour->save();
+                return response()->json(['rpta'=>'Publicado en la portada principal' ]);
+            }
+            else{
+                return response()->json(['rpta'=>'No se publicó, Máximo 6 tours en la portada principal' ]);
+            }
+        }
+        else{
+            $tour->principal =0;
+            $tour->save();
+            return response()->json(['rpta'=>'Se quitó de la portada principal']);
+        }
+    }     
 }
