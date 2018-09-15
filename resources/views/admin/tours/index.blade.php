@@ -101,20 +101,23 @@
 		              </a>
 			                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 			                <a class="dropdown-item" href="{{url('/admin/tours/'. $tour->id )}}">Editar</a>
-			                <a class="dropdown-item" href="{{route('itinerario',$tour->id)}}">Itinerario</a>
-			                <a class="dropdown-item" href="{{url('/admin/price/tour/'.$tour->id)}}">Precio</a>
-			                @if($tour->tipo_tour == 'serie')
-			                <a class="dropdown-item" href="{{url('/admin/serie/tour/'.$tour->id)}}">Serie</a>
-			                @endif
-			                @if($tour->principal == '0')
-			                <a class="dropdown-item" onclick="publicarPrincipal('{{$tour->id}}');" href=" ">Tour de lujo</a>
-			                @else 
-			                <a class="dropdown-item" onclick="publicarPrincipal('{{$tour->id}}');" href=" ">Quitar Tour de lujo</a>
-			                @endif
-
-							<center>{!! Form::open(['method' => 'DELETE','route' => ['tours.destroy', $tour->id]]) !!}
-							{{ Form::button('Eliminar', ['type' => 'submit', 'class' => 'btn btn-danger btn-sm'] )  }}
-				          	{!! Form::close() !!}</center>
+			                
+				            <a class="dropdown-item" href="{{route('itinerario',$tour->id)}}">Itinerario</a>
+				            <a class="dropdown-item" href="{{url('/admin/price/tour/'.$tour->id)}}">Precio</a>
+				            @if($tour->tipo_tour == 'serie')
+				            <a class="dropdown-item" href="{{url('/admin/serie/tour/'.$tour->id)}}">Serie</a>
+				            @endif
+			                @if ($tour->status == 'A')
+				                @if($tour->principal == '0')
+				                <a class="dropdown-item" onclick="publicarPrincipal('{{$tour->id}}');" href=" ">Tour de lujo</a>
+				                @else 
+				                <a class="dropdown-item" onclick="publicarPrincipal('{{$tour->id}}');" href=" ">Quitar Tour de lujo</a>
+				                @endif
+			               		<center>{!! Form::open(['method' => 'DELETE','route' => ['tours.destroy', $tour->id]]) !!}
+								{{ Form::button('Eliminar', ['type' => 'submit', 'class' => 'btn btn-danger btn-sm'] )  }}
+				          		{!! Form::close() !!}</center>
+				          	   
+				          	@endif
 			                </div>
 		                </div>
 		            </td>

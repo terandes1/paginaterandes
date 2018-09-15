@@ -693,33 +693,10 @@ input[type=radio]:checked + label>img {
             </div>
             <div class="popu-places-home">
                 <!-- POPULAR PLACES 1 -->
-                <div class="col-md-6 col-sm-6 col-xs-12 place">
+                <div class="col-md-8 col-md-offset-2 col-sm-12  place">
                     <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/04.png" alt="" /> </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3><span>Honeymoon Package</span> 7 Days / 6 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
-                </div>
-                <!-- POPULAR PLACES 2 -->
-                <div class="col-md-6 col-sm-6 col-xs-12 place">
-                    <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/03.png" alt="" /> </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h3><span>Family package</span> 14 Days / 13 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
-                </div>
-            </div>
-            <div class="popu-places-home">
-                <!-- POPULAR PLACES 3 -->
-                <div class="col-md-6 col-sm-6 col-xs-12 place">
-                    <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/02.png" alt="" /> </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h3><span>Weekend Package </span> 3 Days / 2 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
-                </div>
-                <!-- POPULAR PLACES 4 -->
-                <div class="col-md-6 col-sm-6 col-xs-12 place">
-                    <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/01.png" alt="" /> </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h3><span>Group Package</span> 10 Days / 9 Nights</h3>
                         <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
                 </div>
             </div>
@@ -840,11 +817,7 @@ input[type=radio]:checked + label>img {
 
             <div class="spe-title spe-title-1">
                 <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">TOP TESTIMONIOS DE ESTE MES</h2>
-                <div class="title-line">
-                        <div class="tl-1"></div>
-                        <div class="tl-2"></div>
-                        <div class="tl-3"></div>
-                    </div>
+                
                 <div class="title-line">
                      <div class="tour_head">
                                  <h2>

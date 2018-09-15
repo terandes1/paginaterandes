@@ -137,12 +137,10 @@ color: #999999;
 <section>
   <div class="rows inner_banner inner_banner_4">
     <div class="container">
-      <h2><span id="tituloTouRelacionados">{!! $tour->name !!}</span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1em;"> </h2>
+      <h2><span id="tituloTouRelacionados">   </span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 3em;"> </h2>
        <div class="tour_head">
            
-           <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-
-           <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span>
+          
         </div>
         
       <ul>
@@ -152,7 +150,7 @@ color: #999999;
         <li><a href="{{route('paquetes','es')}}" class="bread-acti" id="subtitulo">Tours</a>
         </li>
       </ul>
-      <p style="text-shadow: 2px 2px 4px #000;color: #fff;" id="subtitulo">Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única.</p>
+      <!--p style="text-shadow: 2px 2px 4px #000;color: #fff; font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;" id="subtitulo">{!! $tour->description_short !!}</p> -->
     </div>
   </div>
 </section>
@@ -161,12 +159,17 @@ color: #999999;
   <div class="rows banner_book" id="inner-page-title">
     <div class="container">
       <div class="banner_book_1">
-        <ul>
-          <li class="dl1">Ubicación: Rio, Brasil</li>
-          <li class="dl2">Precio: $ 500</li>
-          <li class="dl3">Duración: 8 noches / 9 días</li>
-          <li class="dl4"><a href="{{route('contact','es')}}">Recervar ahora</a> </li>
-        </ul>
+        
+          <!--li class="dl1">{!! $tour->name !!}</li>
+          <li class="dl2">$ {!! $tour->price !!}</li>
+          <li class="dl3"> <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+
+           <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span></li>
+          <li class="dl4"><a href="{{route('contact','es')}}">Reservar ahora</a> </li-->
+          <h3 class="dl4" >{!! $tour->name !!} &nbsp <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+
+           <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span><h3>
+        
       </div>
     </div>
   </div>
@@ -176,15 +179,17 @@ color: #999999;
 <section>
   <div class="rows inn-page-bg com-colo">
     <div class="container inn-page-con-bg tb-space">
-      <div class="col-md-9" style="margin-top: -140px;">
+      <div class="col-md-9" style="margin-top: -100px;">
  		
         <div class="tour_head1" style="text-align: justify;">
-          <h3></h3>
-	        <div class="db-2-com db-2-main">
-	          <h4 id="tituloTou">Descripción</h4>
-	          <div class="db-2-main-com">
-	          </div>
-	        </div>
+             <!--p style="text-shadow: 2px 2px 4px #000;color: #fff; font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;" id="subtitulo">{!! $tour->description_short !!}</p> -->
+
+          
+	        
+
+	          <h3 >Descripción</h3>
+	        
+	       
           <p id="subtitulo" style="margin-top: -28px;color: black;">
           	{!! strip_tags($tour->description_complete) !!}.
           </p>
@@ -192,11 +197,9 @@ color: #999999;
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
 
-          <div class="db-2-com db-2-main">
-	          <h4 id="tituloTou">Galería de fotos</h4>
-	          <div class="db-2-main-com">
-	          </div>
-	        </div>
+          
+	          <h3 >Galería de fotos</h3>
+	          
           <div id="myCarousel1" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators carousel-indicators-1">
@@ -329,33 +332,37 @@ color: #999999;
       
 
         <div>
-          <div class="dir-rat">
-            <div class="dir-rat-inn dir-rat-title">
-              <h3>CONTÁCTENOS</h3>
-              <p>Gracias por su interés en tener una experiencia de viaje personalizada comisariada por Tierra de los Andes Perú</p>
-              
-            </div>
-            <div class="dir-rat-inn">
-              <form class="dir-rat-form">
-                <div class="form-group col-md-6 pad-left-o">
-                  <input type="text" class="form-control" id="email11" placeholder="Ingrese su nombre"> </div>
-                <div class="form-group col-md-6 pad-left-o">
-                  <input type="number" class="form-control" id="email12" placeholder="Ingresa móvil"> </div>
-                <div class="form-group col-md-6 pad-left-o">
-                  <input type="email" class="form-control" id="email13" placeholder="Ingresar correo electrónico"> </div>
-                <div class="form-group col-md-6 pad-left-o">
-                  <input type="text" class="form-control" id="email14" placeholder="Ingrese su ciudad"> </div>
-                <div class="form-group col-md-12 pad-left-o">
-                  <textarea placeholder="Escribe tu mensaje"></textarea>
+            <div class="dir-rat">
+                <div class="dir-rat-inn dir-rat-title">
+                  <h3>CONTÁCTENOS</h3>
+                  <p>Gracias por su interés en tener una experiencia de viaje personalizada comisariada por Tierra de los Andes Perú</p>
+                  
                 </div>
-                <div class="form-group col-md-12 pad-left-o">
-                  <input type="submit" value="Enviar" class="link-btn"> </div>
-              </form>
-            </div>
+                <div class="dir-rat-inn">
+                  <form class="dir-rat-form">
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="text" class="form-control" id="email11" placeholder="Ingrese su nombre"> </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="number" class="form-control" id="email12" placeholder="Ingresa móvil"> </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="email" class="form-control" id="email13" placeholder="Ingresar correo electrónico"> </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="text" class="form-control" id="email14" placeholder="Ingrese su ciudad"> </div>
+                    <div class="form-group col-md-12 pad-left-o">
+                      <textarea placeholder="Escribe tu mensaje"></textarea>
+                    </div>
+                    <div class="form-group col-md-12 pad-left-o">
+                      <input type="submit" value="Enviar" class="link-btn"> </div>
+                  </form>
+                </div>
+
+
 
             <!--tours relacionados-->
-           <div class="tour_head1">
-						<h3>TOUR RELACIONADOS</h3>
+           <div class="tour_head1" >
+                <div class="db-2-com db-2-main">
+						<h4>TOURS RELACIONADOS</h4>
+                </div>
 						<div class="tr-room-type">
 							<ul>
 								@foreach($toursRelacionados  as $item)
@@ -391,9 +398,9 @@ color: #999999;
         <div class="tour_right tour_offer">
 
           <div class="band1"><img src="/assets/public/images/offer.png" alt="" /> </div>
-          <p>Oferta especial</p>
-          <h4>$500<span class="n-td">
-              <span class="n-td-1">$800</span>
+          <p>fg </p>
+          <h4>${{ $tour->price}}<span class="n-td">
+              <span class="n-td-1">${{ (int)$item->price*1.25}}</span>
               </span>
             </h4> <a href="{{route('contact','es')}}" class="link-btn">RESERVAR AHORA</a> </div>
         <!--====== TRIP INFORMATION ==========-->
@@ -413,7 +420,7 @@ color: #999999;
         <div class="tour_right head_right tour_help tour-ri-com">
           <h3 id="tituloTouLateral">SERVICIO DE ASISTENCIA</h3>
           <div class="tour_help_1">
-            <h4 class="tour_help_1_call">Llámanos ahora</h4>
+            
             <h4><i class="fa fa-phone" aria-hidden="true"></i>  00-51-84-247277</h4> </div>
         </div>
         <!--====== PUPULAR TOUR PACKAGES ==========-->
