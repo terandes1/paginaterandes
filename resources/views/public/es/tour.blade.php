@@ -1,7 +1,96 @@
 @extends('public.es.layouts.master')
 
 @section('content')
+<style>
 
+/* links: outlines and underscores */  
+a.btn,          
+a.btn:active,   
+a.btn:focus, 
+
+.nav-tabs li a,
+.nav-tabs li a:active,
+.nav-tabs li a:focus { outline:0px !important; -webkit-appearance:none;  text-decoration:none; }  
+
+</style>
+
+<style>
+
+.panel {margin-top: 10px;margin-bottom: 5px;    font-family: Lovelo Black;}
+.panel .panel-heading { padding: 5px 5px 0 5px;}
+.panel .nav-tabs {border-bottom: none;}
+
+
+.nav > li > a               { background-color: #f5f5f5; color: #676767; border-color: #dddddd; border-width: 1px; padding: 5px 15px; line-height: 2; -webkit-transition: all 0.75s; -moz-transition: all 0.75s; transition: all 0.75s; }} 
+.nav > li > a:active        { background-color: #f5f5f5; color: #676767;}
+.nav > li > a:focus         { background-color: #f5f5f5; color: #676767;} 
+.nav > li > a:hover         { background-color: #eeeeee; color: #676767; border-color: #dddddd;} 
+
+.nav > li.active > a:hover  {color: #222222;} 
+
+
+.btn-default.btn-outline:active,
+.btn-default.btn-outline:focus, 
+.btn-default.btn-outline        { color: #676767; border-color: #676767; background-color: transparent; border-width: 2px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; transition: all 0.25s;}   
+.btn-default.btn-outline:hover  { color: #000000; border-color: #000000; background-color: transparent; border-width: 2px; -webkit-transition: all 0.75s; -moz-transition: all 0.75s; transition: all 0.75s; } 
+
+.btn-group button.btn.btn-outline.btn-default           { background-color: #f5f5f5; color: #676767; border-color: #dddddd; border-width: 1px; padding: 5px 15px; line-height: 2; -webkit-transition: all 0.75s; -moz-transition: all 0.75s; transition: all 0.75s; }} 
+.btn-group button.btn.btn-outline.btn-default:focus     { background-color: #f5f5f5;} 
+.btn-group button.btn.btn-outline.btn-default:active    { background-color: #f5f5f5;}
+.btn-group button.btn.btn-outline.btn-default:hover     { background-color: #eeeeee; border-width: 1px; -webkit-transition: all 0.75s; -moz-transition: all 0.75s; transition: all 0.75s; } 
+
+.btn-outline.btn-highlight  { color: #676767; border-color: #676767; background-color: transparent; border-width: 2px;}
+
+.display-title { font family: verdana, arial, helvetica; color:#008400;}
+
+
+ul.nav.nav-tabs li.btn-group.active > a.btn.btn-default
+{
+border: 1px solid #dddddd;
+background-color: #ffffff;
+border-right:0px;
+margin-right: 0px;
+border-bottom: 0px;
+}
+
+ul.nav.nav-tabs li.btn-group > a.btn.btn-default
+{
+border: 1px solid #F5F5F5;
+border-right:0px;
+margin-right: 0px;
+border-bottom: 0px;
+}
+
+ul.nav.nav-tabs > li.btn-group.active > a.btn.dropdown-toggle
+{
+border: 1px solid #dddddd;
+background-color: #ffffff;
+margin-left: 0px;
+border-left:0px;
+border-bottom: 0px;
+ 
+}
+
+ul.nav.nav-tabs > li.btn-group > a.btn.dropdown-toggle
+{
+border: 1px solid #F5F5F5;
+margin-left: 0px;
+border-left: 0px;
+border-bottom: 0px;
+}
+
+ ul.nav.nav-tabs li.btn-group a.btn.dropdown-toggle span.caret
+{
+color: #F5F5F5;
+}
+
+ ul.nav.nav-tabs li.btn-group.active > a.btn.dropdown-toggle > span.caret
+{
+color: #999999;
+}
+    
+    </style>
+    
 <?php 
 	function carousel($carrusel)
 	{
@@ -131,83 +220,111 @@
           </div>
         </div>
         <!--====== DURATION ==========-->
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9" style="margin-left: -20px;">
-                  <div class="panel with-nav-tabs panel-success">
-                      <div class="panel-heading">
-                              <ul class="nav nav-tabs">
-                                  <li class="active"><a href="#tab1default" data-toggle="tab" id="subtitulo">ITINERARIO</a></li>
-                                  <li><a href="#tab2default" data-toggle="tab" id="subtitulo">ORGANIZACIÓN</a></li>
-                                  <li><a href="#tab3default" data-toggle="tab" id="subtitulo">UBICACIÓN</a></li>
-                              </ul>
-                      </div>
-                      <div class="panel-body">
-                          <div class="tab-content">
-                              <div class="tab-pane fade in active" id="tab1default">
-                                <div class="panel-group" id="accordion">
-                                	@foreach($itinerarioTour as $itemp)
+            <div class="rows inn-page-bg com-colo">
+                <div class="col-md-12"> 
+                        
+                    <div class="panel panel-default panel-fade">
+                    
+                        <div class="panel-heading">
+                       
+                            <span class="panel-title">
+                            
+                                <div class="pull-left">
+                                
+                                <ul class="nav nav-tabs">
+                                    <li class="active" style="">
+                                        <a href="#letters" data-toggle="tab"><i style="color:black;" class="fa fa-address-card-o"></i>
+                                            <span style="font-family: Lovelo Black;">ITINERARIO</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#emails" data-toggle="tab">
+                                            <i style="color:black;" class="fa fa-users"></i> 
+                                            <span style="font-family: Lovelo Black;">
+                                                 ORGANIZACIÓN
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#loglist" data-toggle="tab">
+                                            <i style="color:black;" class="fa fa-map-marker"></i> 
+                                            <span style="font-family: Lovelo Black;">
+                                                 UBICACIÓN
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                    
+                                </div>
+                                
+                                <div class="btn-group pull-right">
+                                    <div class="btn-group">
+                                        <a href="#" class="btn  dropdown-toggle" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-cog"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action 1</a></li>
+                                            <li><a href="#">Action 2</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Another Action</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-	                                  <div class="panel panel-default">
-	                                    <div class="panel-heading">
-	                                      <h4 class="panel-title">
-	                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{!! $itemp->day !!}"">
-	                                          <h4><span>D{!!  $itemp->day !!} - {!! $itemp->name !!}:</span></span> 
-	                                           </h4>
-	                                        </a>
-	                                      </h4>
-	                                    </div>
-	                                    <div id="collapse{!! $itemp->day !!}" class="panel-collapse collapse">
-	                                      <div class="panel-body">
-	                                          <p>
-	                                          	{!!  $itemp->description !!}
-	                                          </p>
-	                                      </div>
-	                                    </div>
-	                                  </div>
+                                <div class="clearfix"></div>
 
-                                  @endforeach
+                            </span>
+                            
+                        </div>
 
-                                </div> 
+                        <div class="panel-body">
+                                    
+                            <div class="tab-content">
+                            
+                                 <div class="tab-pane fade in active" id="letters">
+                                 <!--    <h3>Letters</h3> -->
+                                         @foreach($itinerarioTour as $itemp)
 
-                              </div>
-                              <div class="tab-pane fade" id="tab2default">
-                                  <div class="row">
-                                      
-                                      <div class="col-sm-12">
-                                             <div class="tour_head1 tout-map map-container">
-                                             
-                                             	{!! $tour->organization !!}
-                                            </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                  <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse{!! $itemp->day !!}"">
+                                                      <h4><span>D{!!  $itemp->day !!} - {!! $itemp->name !!}:</span></span> 
+                                                       </h4>
+                                                    </a>
+                                                  </h4>
+                                                </div>
+                                                <div id="collapse{!! $itemp->day !!}" class="panel-collapse collapse">
+                                                  <div class="panel-body">
+                                                      <p>
+                                                        {!!  $itemp->description !!}
+                                                      </p>
+                                                  </div>
+                                                </div>
+                                              </div>
 
-                                      </div>
-                                       
-                                  </div>
-                              </div>
+                                          @endforeach
+                                </div>
+                            
+                                                    
+                                <div class="tab-pane fade" id="emails">                            
+                                        {!! $tour->organization !!}
+                                </div>
+                                
+                                <div class="tab-pane fade" id="loglist">                                  
+                                 <div id="map_ubicacion" style="height: 450px;"></div>
+                                </div>
 
-                              <div class="tab-pane fade" id="tab3default">
-                                  <div class="row">
-                                      
-                                      <div class="col-sm-12" style="margin-top: -50px;">
+                            </div>
+                            
+                        </div>
 
-                                             <div class="tour_head1 tout-map map-container">
-                                              <h3>Ubicación</h3>
-                                              
-                                            </div>
-                                            <div id="map_ubicacion" style="height: 450px;"></div>
-
-                                      </div>
-                                       
-                                  </div>
-                              </div>
-                              
-                          </div>
-                      </div>
-                  </div>
-              </div> 
-        </div>
-      </div>
-
+                    </div>
+                        
+                </div>
+            </div>
+            
+    
         <!--====== TOUR LOCATION ==========-->
       
 
@@ -426,6 +543,34 @@
     $(document).ready(function(e) { initialize() });
 
 </script>
-
+    <script>
+ 
+        $('a.btn.btn-default').hover(function(e) {
+        $('a.btn.dropdown-toggle').trigger(e.type);
+        })
+    </script>
+                
+    <script type="text/javascript">
+        $(".display-fade").delay(25).animate({"opacity": "1"}, 800);
+        $(".table-fade").delay(25).animate({"opacity": "1"}, 800);
+    </script>
+                
+    <script type="text/javascript">
+        var def="black";
+        function showNotification(color)
+        {
+            $( "#notification" ).removeClass(def);
+            $( "#notification" ).addClass(color);
+            def=color;
+            $( "#notification" ).fadeIn( "slow" );
+            //alert('hi');
+            $(".win8-notif-button").click(function()
+            {
+            //alert('hi');
+            $(".notification").fadeOut("slow");
+            });
+    
+    }
+    </script>
 
 @endsection
