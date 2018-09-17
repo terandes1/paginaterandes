@@ -221,7 +221,7 @@ class TourController extends Controller
         $tour = Tour::find($tour->id);
         $tour->status = 'D';
         $tour->save();
-        return redirect()->route('tours.index')
+        return redirect('admin/listTourSerie/tour')
                         ->with('success','Member deleted successfully');
     }
 
