@@ -58,7 +58,7 @@ class PublicController extends Controller
 
     }
 
-   public function tours($abbr='es',$search='')
+   public function tours($abbr='es',$searchCategoria='')
    {
 
    		$categorias = DB::table('languages')
@@ -67,18 +67,18 @@ class PublicController extends Controller
 			    ->get();
 
 
-		if($search=='')
+		if($searchCategoria=='')
 		{
 			$todoTours=publicTours::todoTours($abbr);//todo los tours
 
 		}else {
-
-				if($search=="cuzco")
-				{
-					$search="cusco";
-				}
+                if($searchCategoria=='Alta-Montaña')
+                {
+                    $searchCategoria=str_replace("-"," ",$searchCategoria);
+                   
+                }
 				
-				$todoTours=publicTours::searchTours($abbr,$search);//buscar tours
+				$todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
 
 		}
 	    

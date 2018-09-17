@@ -154,8 +154,8 @@
                                         <div class="m-menu-inn">
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="places.html">
-                                                        <img src="/assets/public/images/sight/1.jpg" alt="">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Descubrir">
+                                                        <img src="{{URL::asset('assets/public/category/menu/5.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Descubrimiento</span>
                                                     </a>
                                                 </div>
@@ -163,8 +163,8 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="places-1.html">
-                                                        <img src="/assets/public/images/sight/2.jpg" alt="">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Aventura">
+                                                        <img src="{{URL::asset('assets/public/category/menu/2.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Aventura</span>
                                                     </a>
                                                 </div>
@@ -172,24 +172,27 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="places-2.html">
-                                                        <img src="/assets/public/images/sight/3.jpg" alt="">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Alta-Montaña">
+                                                        <img src="{{URL::asset('assets/public/category/menu/3.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>
                                                 </div>
                                              </div>
+                                            
                                             <div class="mm2-com mm1-com mm1-s4">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="places-3.html">
-                                                        <img src="/assets/public/images/sight/4.jpg" alt="">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Excursiones">
+                                                        <img src="{{URL::asset('assets/public/category/menu/4.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Excursiones</span>
                                                     </a>
                                                 </div>
                                             </div>
-
+                                            
                                         </div>
+                                        
                                     </div>
                                 </div>
+
                             </li>
                             <!--<li><a class='dropdown-button ed-sub-menu' href='#'TOURS data-activates='dropdown1'>Courses</a></li>-->
 

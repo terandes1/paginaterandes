@@ -1,7 +1,7 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-
+<!-- 
 <section>
  <div class="offer">
 
@@ -9,7 +9,7 @@
  
             <div class="row">
 
-                <div class="popu-places-home" style="margin: 230px;">
+                <div class="popu-places-home" style="height: 500px;">
                     
                     
                    
@@ -18,7 +18,21 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<section>
+    <div class="rows inner_banner inner_banner_1" style="height: 400px;">
+      <div class="container">
+        
+        <ul style="background-color: rgba(2, 50, 31, 0.57);font-family: Lovelo Black;">
+          <li><a href="{{route('paquetes','es')}}">Inicio</a> </li>
+          <li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
+          <li><a href="{{route('paquetes','es')}}" class="bread-acti">Itinerarios</a> </li>
+        </ul>
+        <h2 style="background-color: rgba(2, 50, 31, 0.57);">
+          <span style="font-family: Lovelo Black;">PERÚ TOURS DE LUJO EN AMÉRICA DEL SUR </span></h2>
+      </div>
+    </div>
+  </section>
 
 <section class="container">
   <div class="row">
@@ -138,7 +152,7 @@
                               <div class="trav-ami">
                                 <h4 id="tituloTous">Detalle e Incluye</h4>
                                 <ul>
-                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Turismo</span></li>
+                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Duración:{{ $item->dias }} días / {{ (int)$item->dias-1}} noches</span></li>
                                   <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
                                   <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transferir</span></li>
                                   <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Equipaje</span></li>

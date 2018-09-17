@@ -68,7 +68,7 @@ class publicTours
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
 			        ->leftJoin('itineraries', 'itineraries.tour_id', '=', 'tours.id')
 			        ->where("languages.abbr","=",$abbr)
-			        ->where("itineraries.department","=",$search)
+			        ->where("categories.name","=",$search)
 			        ->groupBy('tours.name')
 			        ->paginate(12);
 
