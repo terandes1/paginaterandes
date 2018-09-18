@@ -188,7 +188,6 @@ input::-moz-focus-inner { border: 0; }
     <!--========= Scripts ===========-->
     {!!Html::script('assets/public/js/jquery-latest.min.js')!!}
     {!!Html::script('assets/public/js/jquery-ui.js')!!}
-    {!!Html::script('assets/public/js/bootstrap.js')!!}
     {!!Html::script('assets/public/js/wow.min.js')!!}
     {!!Html::script('assets/public/js/materialize.min.js')!!}
     {!!Html::script('assets/public/js/custom.js')!!}
