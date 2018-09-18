@@ -172,7 +172,7 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Alta-Montaña">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/alta-Montania">
                                                         <img src="{{URL::asset('assets/public/category/menu/3.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>

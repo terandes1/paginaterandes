@@ -945,7 +945,7 @@ input[type=radio]:checked + label>img {
        
         <div class="db" style="margin-top: 49px;" >
  
-             <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;">
+             <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;  ">
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">AFILIADOS</h3>
                 <ul>
                     <li style="border-bottom: 1px solid #fff;">

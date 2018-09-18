@@ -145,7 +145,7 @@
                             <div class="col-md-3">
                               <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
                                 <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <span class="hot-list-p3-1">Precios dede</span> <span class="hot-list-p3-2">$ {{$item->price}}</span><span class="hot-list-p3-4">
-                                  <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
+                                  <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
                                 </span> </div>
                             </div>
                             <div>
@@ -232,7 +232,7 @@
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
                                                      " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+
                                                       "<span class='hot-list-p3-1'>Precios dede</span> <span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route('contact','es')}}' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
+                                                       " <a href='{{route('reservation','es')}}' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+
@@ -310,7 +310,7 @@
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
                                                      " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+
                                                       "<span class='hot-list-p3-1'>Precios dede</span> <span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route('contact','es')}}' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
+                                                       " <a href='{{route('reservation','es')}}' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+

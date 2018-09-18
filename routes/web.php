@@ -121,6 +121,7 @@ Route::get('umfrage',function(){
 Route::get('/', [ 'uses' => 'PublicController@index' ]);
 Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
 Route::get('{lang?}/contact/', [ 'uses' => 'PublicController@contact' ])->name('contact');
+Route::get('{lang?}/reservartion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');
 Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetes');
 
 Route::post('toursOpcion/', [ 'uses' => 'PublicController@toursOpcion' ])->name('toursOpcion');

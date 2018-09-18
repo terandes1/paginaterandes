@@ -58,6 +58,29 @@ class PublicController extends Controller
 
     }
 
+    public function reservation($abbr='es',$idTour='')
+    {
+
+      $tourCompra = DB::table('tours')
+              ->select('tours.name','tours.img','tours.price', 'tours.tipo_tour','categories.id as idCtagoria')
+              ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+              ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+              ->where("tours.id","=",$idTour)
+              ->get()[0];
+
+  
+      $toursRelacionados = DB::table('tours')
+              ->select('tours.name','tours.img','tours.slug')
+              ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+              ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+              ->where("categories.id","=",$tourCompra->idCtagoria)
+              ->get()->take(3);
+
+
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados]);
+
+    }
+
    public function tours($abbr='es',$searchCategoria='')
    {
 
@@ -72,12 +95,13 @@ class PublicController extends Controller
 			$todoTours=publicTours::todoTours($abbr);//todo los tours
 
 		}else {
-                if($searchCategoria=='Alta-Montaña')
+
+                if($searchCategoria=='alta-Montania')
                 {
-                    $searchCategoria=str_replace("-"," ",$searchCategoria);
-                   
+                    $searchCategoria=str_replace("alta-Montania","Alta Montaña",$searchCategoria);
+
                 }
-				
+
 				$todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
 
 		}
