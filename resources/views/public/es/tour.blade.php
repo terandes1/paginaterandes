@@ -182,17 +182,13 @@ color: #999999;
       <div class="col-md-9" style="margin-top: -100px;">
  		
         <div class="tour_head1" style="text-align: justify;">
-             <!--p style="text-shadow: 2px 2px 4px #000;color: #fff; font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;" id="subtitulo">{!! $tour->description_short !!}</p> -->
+             <!--p style="text-shadow: 2px 2px 4px #000;color: #fff; font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;" id="subtitulo">{!! $tour->description_short !!}</p> --> 
 
-          
-	        
-
-	          <h3 >Descripción</h3>
-	        
-	       
-          <p id="subtitulo" style="margin-top: -28px;color: black;">
+	        <h3 >Descripción</h3>
+	           
+            <p id="subtitulo" style="margin-top: -28px;color: black; font-size:larger">
           	{!! strip_tags($tour->description_complete) !!}.
-          </p>
+            </p>
          </div>
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
@@ -360,11 +356,13 @@ color: #999999;
 
             <!--tours relacionados-->
            <div class="tour_head1" >
-                <div class="db-2-com db-2-main">
+                <div class="db-2-com db-2-main" style ="margin-bottom: 40px">
 						<h4>TOURS RELACIONADOS</h4>
+                      
                 </div>
 						<div class="tr-room-type">
 							<ul>
+
 								@foreach($toursRelacionados  as $item)
 								<li>
 									<div class="tr-room-type-list">
@@ -398,10 +396,9 @@ color: #999999;
         <div class="tour_right tour_offer">
 
           <div class="band1"><img src="/assets/public/images/offer.png" alt="" /> </div>
-          <p>fg </p>
-          <h4>${{ $tour->price}}<span class="n-td">
-              <span class="n-td-1">${{ (int)$item->price*1.25}}</span>
-              </span>
+          <p>   &nbsp  </p><br>
+          <h4>   ${{ $tour->price}}
+               
             </h4> <a href="{{route('contact','es')}}" class="link-btn">RESERVAR AHORA</a> </div>
         <!--====== TRIP INFORMATION ==========-->
         
@@ -409,11 +406,10 @@ color: #999999;
         <div class="tour_right head_right tour_social tour-ri-com">
           <h3 id="tituloTouLateral">COMPARTE ESTE PAQUETE</h3>
           <ul>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-            <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+            <li><a href="https://www.facebook.com/tierrasdelosandes" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+            <li><a href="https://www.youtube.com/channel/UC0MniFzf-lvtteI9CIKTQnw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+            <li><a href="https://www.instagram.com/tierrasdelosandes/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+            <li><a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
           </ul>
         </div>
         <!--====== HELP PACKAGE ==========-->

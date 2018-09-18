@@ -151,11 +151,11 @@
                                 <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 30px; height: 30px; background: rgb(4, 137, 33);; color: #FFF;  font-size: 18px; " class="fa fa-facebook" aria-hidden="true">
                                  </i>
                             </a> 
-                             <a href="https://www.facebook.com/tierrasdelosandes" target="_blank">
+                             <a href="https://www.instagram.com/tierrasdelosandes/" target="_blank">
                                 <i style="padding: 8px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 30px; height: 30px; background: rgb(4, 137, 33);; color: #FFF;  font-size: 18px; " class="fa fa-instagram" aria-hidden="true">
                                  </i>
                             </a> 
-                             <a href="https://www.facebook.com/tierrasdelosandes" target="_blank">
+                             <a href="https://www.youtube.com/channel/UC0MniFzf-lvtteI9CIKTQnw" target="_blank">
                                 <i style="padding: 8px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 30px; height: 30px; background: rgb(4, 137, 33);; color: #FFF;  font-size: 18px; " class="fa fa-youtube" aria-hidden="true">
                                  </i>
                             </a> 

@@ -12,3 +12,14 @@ npm-debug.log
 yarn-error.log
 .env
 # /public/assets/content/*
+public/assets/content/testimonio/default.png
+public/assets/content/testimonio/6.jpg
+*.png
+*.jpg
+*.jpg
+public/assets/content/itinerario/4.jpg
+*.jpg
+public/assets/content/UrZA9PPTCFZgikT.png1536611008.png
+resources/views/public/encuesta/de.blade.php
+resources/views/public/encuesta/de.blade.php
+resources/views/public/encuesta/de.blade.php
