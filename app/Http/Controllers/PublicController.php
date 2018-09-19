@@ -62,7 +62,7 @@ class PublicController extends Controller
     {
 
       $tourCompra = DB::table('tours')
-              ->select('tours.name','tours.img','tours.price', 'tours.tipo_tour','categories.id as idCtagoria')
+              ->select('tours.id','tours.name','tours.img','tours.price', 'tours.tipo_tour','categories.id as idCtagoria')
               ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
               ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
               ->where("tours.id","=",$idTour)

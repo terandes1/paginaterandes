@@ -35,7 +35,23 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+           $reservation = new Reservation;
+           $reservation->name =$request->name;
+           $reservation->email = $request->email;
+           $reservation->phone = $request->phone;
+           $reservation->skype =$request->skype;
+           $reservation->fecha =$request->fecha;
+           $reservation->country =$request->country;
+           $reservation->travel_type =$request->travel_type;
+           $reservation->numberPersonas =$request->numberPersonas;
+           $reservation->room_type =$request->room_type;
+           $reservation->guide_service =$request->guide_service;
+           $reservation->message =$request->message;
+           $reservation->tour_id =$request->tour_id;
+           $reservation->status ='disapproved';
+           $reservation->save();
+
     }
 
     /**
