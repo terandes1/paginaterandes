@@ -20,6 +20,9 @@
     {!!Html::style('assets/public/css/mob.css')!!}
     {!!Html::style('assets/public/css/animate.css')!!}
     {!!Html::style('assets/public/video/css/video.css')!!}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+
 
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -167,6 +170,10 @@ input::-moz-focus-inner { border: 0; }
 #subtitulo{
   font-family: NewsGoth CN BT;
 }
+#tituloReserva{
+    font-family: 'NewsGoth CN BT';
+    font-size: 16px;
+}
 </style>
 </head>
 
@@ -192,6 +199,8 @@ input::-moz-focus-inner { border: 0; }
     {!!Html::script('assets/public/js/materialize.min.js')!!}
     {!!Html::script('assets/public/js/custom.js')!!}
     {!!Html::script('assets/public/video/js/video.js')!!}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
      @yield('script')
 </body>
  <script>

@@ -4699,9 +4699,11 @@
      margin-bottom: 20px;
 }
  .db-2-main-com span {
-     font-size: 24px;
-     font-weight: 600;
+     font-size: 15px;
+ /*    font-weight: 600;*/
      font-family: 'Quicksand', sans-serif;
+     font-weight: 200;
+    /*font-family: NewsGoth CN BT;*/
 }
  .db-2-main-com ul {
      margin-bottom: 0px;
