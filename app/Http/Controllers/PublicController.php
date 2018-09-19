@@ -68,16 +68,23 @@ class PublicController extends Controller
               ->where("tours.id","=",$idTour)
               ->get()[0];
 
-  
-      $toursRelacionados = DB::table('tours')
-              ->select('tours.name','tours.img','tours.slug')
-              ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
-              ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
-              ->where("categories.id","=",$tourCompra->idCtagoria)
-              ->get()->take(3);
+     $tourItinerario= DB::table('itineraries')
+		              ->select('itineraries.id')
+		              ->where("itineraries.tour_id","=",$idTour)
+		              ->get();
+	 $dia=count($tourItinerario);
+	  
+	 $toursRelacionados = DB::table('tours')
+	          ->select('tours.name','tours.img','tours.slug')
+	          ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+	          ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+	          ->where("categories.id","=",$tourCompra->idCtagoria)
+	          ->get()->take(3);
 
-
-      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados]);
+     $paises = DB::table('paises')
+                            ->get();
+       
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia]);
 
     }
 

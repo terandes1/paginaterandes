@@ -55,7 +55,7 @@
 			<div class="db-2">
 				
 				<div class="db-2-com db-2-main">
-					<h4 style="font-family: Lovelo Black;">Reservar : {!! $tour->name !!}. </h4>
+					<h4 style="font-family: Lovelo Black;">Reservar : {!! $tour->name !!}. <span class="db-pay-amount" style="font-family: Lovelo Black;font-size: 15px;"> <span class="fa fa-clock-o"></span> {{ $dia}} Días: / {{ $dia-1 }} Noches </span> </h4>
 					<div class="db-2-main-com">
             
                     <form>   
@@ -84,8 +84,12 @@
 	                                     <input type="text" class="form-control" name="skype" placeholder="Skype" value="">
 	                                </div>
 	                                <div class="col-sm-4">
-		                             	 <h5 id="tituloReserva">Nacionalidad</h5>
-	                                	<input type="text" class="form-control" name="nationality" placeholder="Pais" value="" required="">
+		                             	 <h5 id="tituloReserva">Pais</h5>
+	                                	 <select  class="js-example-placeholder-single js-states form-control">
+												@foreach($paises as $itemp)
+												  <option> {{$itemp->pais}}</option>
+												 @endforeach
+										</select>
 									</div>
 									
 	                             </div>   
@@ -98,11 +102,17 @@
 	                                	<input type="date" class="form-control" name="nationality" placeholder="Pais" value="" required="">
 									</div>
 									<div class="col-sm-4">
-	                                  	  <h5 id="tituloReserva">Duración</h5>
-	                                  <input type="number" name="adults" class="form-control" placeholder="Personnes" value="1">
-	                                </div>
+                                    	<h5 id="tituloReserva">Tipo de viaje</h5>
+                                    	  <select  class="js-example-placeholder-single js-states form-control">
+												  <option> Luna de miel </option>
+												  <option> Vacaciones</option>
+												  <option> En grupo</option>
+												  <option> Otros</option>
+
+										</select>
+                                    </div>
 	                                <div class="col-sm-4">
-                                    	 <h5 id="tituloReserva">Numero de personas</h5>
+                                    	 <h5 id="tituloReserva">Número de personas</h5>
                                     	<input type="number" name="adults" class="form-control" placeholder="Personnes" value="1">
                                     </div>
                                 </div>
@@ -112,28 +122,19 @@
                                
                                 <div class="row">
                                     
-                                    <div class="col-sm-4">
-                                    	<h5 id="tituloReserva">Tipo de viaje</h5>
-                                    	  <select  class="js-example-placeholder-single js-states form-control" sty>
-												  <option> Luna de miel </option>
-												  <option> Vacaciones</option>
-												  <option> En grupo</option>
-												  <option> Otros</option>
-
-										</select>
-                                    </div>
-                                    <div class="col-sm-4">
+                                    
+                                    <div class="col-sm-6">
                                     	<h5 id="tituloReserva">Tipo de habitaciones</h5>
-                                    	  <select  class="js-example-placeholder-single js-states form-control" sty>
+                                    	  <select  class="js-example-placeholder-single js-states form-control">
 												  <option> Maison Habitante</option>
 												  <option> Standard(2**/B&B)</option>
 												  <option> Confort / Chame 3**</option>
 												  <option> Luxe 4**** +</option>
 										</select>
                                     </div>
-                                    <div class="col-sm-4">
-                                    	<h5 id="tituloReserva">Servicios de guia extra</h5>
-                                    	  <select  class="js-example-placeholder-single js-states form-control" sty>
+                                    <div class="col-sm-6">
+                                    	  <h5 id="tituloReserva">Servicios de guia extra</h5>
+                                    	  <select  class="js-example-placeholder-single js-states form-control">
 												  <option> Francophone</option>
 												  <option> Anglophone</option>
 												  <option> Hispanophone</option>
@@ -213,8 +214,8 @@
   
  <script type="text/javascript">
  	$(".js-example-placeholder-single").select2({
-	     tags: true,
-	     width: 'resolve'
+	     selectOnClose: false,
+	     width: 'resolve',
 	});
  </script>
   
