@@ -3,7 +3,7 @@
 @section('content')
 
 <section>
-		<div class="db"  style="padding: 50px;background: #a2b4c2;">
+		<div class="db"  style="padding: 20px;background: #a2b4c2;">
 			<!--LEFT SECTION-->
 			<div class="db-l">
 				<div class="db-l-1">
@@ -16,7 +16,7 @@
 				<div class="db-l-2">
 					<ul>
 						<li>
-							<a href="{{route('paquetes','es')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Todas los tours</a>
+							<a href="{{route('paquetes','es')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Todos los tours</a>
 						</li>
 						<li>
 							<a href="{{route('paquetes','es')}}/Descubrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Descubrimiento.png')}}" alt="" /> Descubrimiento</a>
@@ -30,15 +30,32 @@
 						<li>
 							<a href="{{route('paquetes','es')}}/Excursiones" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Excursiones.png')}}" alt="" /> Excursiones</a>
 						</li>
+						<li>
+							<a href="{{route('paquetes','es')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Todas las series</a>
+						</li>
+						<li>
+							<a href="{{route('paquetes','es')}}/Aventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Aventura.png')}}" alt="" /> Aventura</a>
+						</li>
+						<li>
+							<a href="{{route('paquetes','es')}}/Aventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Aventura.png')}}" alt="" /> Aventura</a>
+						</li>
+						<li>
+							<a href="{{route('paquetes','es')}}/Descubrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Descubrimiento.png')}}" alt="" /> Descubrimiento</a>
+						</li>
+						<li>
+							<a href="{{route('paquetes','es')}}/Descubrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Descubrimiento.png')}}" alt="" /> Descubrimiento</a>
+						</li>
+					
 						
 					</ul>
 				</div>
+
 			</div>
 			<!--CENTER SECTION-->
 			<div class="db-2">
 				
 				<div class="db-2-com db-2-main">
-					<h4 style="font-family: Lovelo Black;">{!! $tour->name !!} </h4>
+					<h4 style="font-family: Lovelo Black;">Reservar : {!! $tour->name !!}. </h4>
 					<div class="db-2-main-com">
             
                     <form>   
@@ -165,22 +182,28 @@
 			
 			
 			<!--RIGHT SECTION-->
+			
 			<div class="db-3" style="border: 1px solid #a2b4c2;">
-				<h4 style="font-family: Lovelo Black;">TOURS RELACIONADOS</h4>
-				<ul>
-					@foreach($toursRelacionados as $itemp)
-					<li>
-						<a href="{{ $itemp->slug}}"> <img  src="{{URL::asset($itemp->img)}}" alt="" />
-							
-							<p style="font-family: Lovelo Black;margin-left: -7px;">{{$itemp->name}}</p>
-						</a>
+					
+					
+						<div class="tour_right tour_rela tour-ri-com">
+							<h3 style="font-family: Lovelo Black;">TOURS RELACIONADOS</h3>
+							@foreach($toursRelacionados as $itemp)
+							<a href="{{ $itemp->slug}}">
+								<div class="tour_rela_1"> <img  src="{{URL::asset($itemp->img)}}" alt="" />
+									<h4 style="font-family: Lovelo Black;text-align: center;">{{$itemp->name}}<br>
+									<span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+									<span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span>
+									</h4>
+
+								</div>
+							</a>
+							@endforeach
 						
-					</li>
+						</div>
 					
-					@endforeach
-					
-				</ul>
 			</div>
+			
 			
 		</div>
 	</section>
