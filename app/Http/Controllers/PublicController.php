@@ -84,7 +84,7 @@ class PublicController extends Controller
      $paises = DB::table('paises')
                             ->get();
        
-      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia]);
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr' =>$abbr ]);
 
     }
 

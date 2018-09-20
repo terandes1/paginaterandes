@@ -52,6 +52,12 @@ class ReservationController extends Controller
            $reservation->status ='disapproved';
            $reservation->save();
 
+           $abbr=$request->abbr;
+           $tour_id=$request->tour_id;
+           // return redirect()->route('reservation','es','$tour_id');
+           return redirect($abbr.'/reservartion/'.$tour_id);
+           // {{route('reservation','es')}}/{{$item->id}}
+
     }
 
     /**

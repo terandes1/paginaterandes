@@ -72,6 +72,7 @@
 	                                </div>
 	                            </div>
 	                             <input type="hidden" class="form-control" name="tour_id" value="{{$tour->id}}">
+	                             <input type="hidden" class="form-control" name="abbr" value="{{$abbr}}">
                             </div>
                             
                             <div class="form-group">
