@@ -379,7 +379,7 @@ color: #999999;
                                                     </a>
                                             </div>
 										</div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Precio por noche</span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('contact','es')}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Precio por noche</span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
 									</div>
 								</li>
 								@endforeach
@@ -399,7 +399,7 @@ color: #999999;
           <p>   &nbsp  </p><br>
           <h4>   ${{ $tour->price}}
                
-            </h4> <a href="{{route('contact','es')}}" class="link-btn">RESERVAR AHORA</a> </div>
+            </h4> <a href="{{route('reservation','es')}}/{{$item->id}}" class="link-btn">RESERVAR AHORA</a> </div>
         <!--====== TRIP INFORMATION ==========-->
         
         <!--====== PACKAGE SHARE ==========-->

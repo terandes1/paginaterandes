@@ -56,7 +56,7 @@ class ReservationController extends Controller
            $abbr=$request->abbr;
            $tour_id=$request->tour_id;
 
-           Session::flash('flash_message', '¡ Muchas gracias! Su reserva ha sido registrada. En breves minutos no comunicaremos');
+           Session::flash('flash_message', '¡ Muchas gracias! Su reserva ha sido registrada. En breves minutos nos comunicaremos');
 
            return redirect($abbr.'/reservartion/'.$tour_id);
            
