@@ -99,17 +99,22 @@ class PublicController extends Controller
 
 		switch ($searchCategoria) {
             case '':
-                $todoTours=publicTours::todoTours($abbr);//todo los tours
-                break;
+                        $todoTours=publicTours::todoTours($abbr);//todo los tours
+                        break;
             case 'Series':
-                 $todoTours=publicTours::searchSeries($abbr);//buscar tours tipo serie
-                break;
-            case 'Alta-Montaña':
-               // $searchCategoria=str_replace("-"," ",$searchCategoria);
-                 $todoTours=publicTours::searchTours($abbr,'Alta Montaña');
-                break;
+                         $todoTours=publicTours::searchSeries($abbr);//buscar tours tipo serie
+                        break;
+           
             default:
-                $todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
+
+                        if($searchCategoria=='alta-Montania'){
+
+                            $searchCategoria=str_replace("-"," ",$searchCategoria);
+                            $searchCategoria=str_replace("alta-Montania","Alta Montaña",$searchCategoria);
+
+                        }
+                        
+                        $todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
                 break;
         } 
 	    
