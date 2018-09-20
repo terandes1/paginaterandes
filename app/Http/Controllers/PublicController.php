@@ -259,11 +259,21 @@ class PublicController extends Controller
 			        ->join('itineraries', 'tours.id', '=', 'itineraries.tour_id')
 			        ->where("tours.id","=",$tour->id)
 			        ->get();
+    $seriesTour     = DB::table('tours')
+                    ->select('series.cant_person','series.date_start','series.date_end','series.status')
+                    ->join('series', 'tours.id', '=', 'series.tour_id')
+                    ->where("tours.id","=",$tour->id)
+                    ->get(); 
+    $pricesTour     = DB::table('prices')
+                    ->select('prices.range_first','prices.range_end','prices.monto')
+                    /*->join('prices', 'tours.id', '=', 'prices.tour_id')*/
+                    ->where("prices.tour_id","=",$tour->id)
+                    ->get();                               
    
     $toursPrincipal=publicTours::tours($abbr,'1');//Retorne de  tours  en español y principal(1 y 0)
     $toursRelacionados=publicTours::toursRelacionados($abbr,$tourCategoria->id);//Retorne de  tours  relacionados
 
-   	 return view('public.'.$abbr.'.tour',['tour' => $tour,'multimediaTour' => $multimediaTour,'toursPrincipal' => $toursPrincipal,'itinerarioTour' => $itinerarioTour,'toursRelacionados' => $toursRelacionados,'abbr'=>$abbr]);
+   	 return view('public.'.$abbr.'.tour',['tour' => $tour,'multimediaTour' => $multimediaTour,'toursPrincipal' => $toursPrincipal,'itinerarioTour' => $itinerarioTour,'toursRelacionados' => $toursRelacionados,'seriesTour'=>$seriesTour,'pricesTour'=>$pricesTour,'abbr'=>$abbr]);
 
    }
    public function tourItinerario(Request $request)

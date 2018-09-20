@@ -218,6 +218,7 @@ color: #999999;
 			</a>
           </div>
         </div>
+        @if ($tour->tipo_tour == 'serie')
         <div class="db">
             <!--LEFT SECTION-->
           
@@ -229,16 +230,15 @@ color: #999999;
                         <table class="responsive-table">
                             <thead>
                                 <tr>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De 4 a 6 personas</h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De 7 a 9 personas</h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De 9 a 12 personas</h4></th>
+                                    @foreach($pricesTour as $itemprice)
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De {!!  $itemprice->range_first  !!} a {!!  $itemprice->range_end !!} personas</h4></th>
+                                    @endforeach
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="font-size: 15px;">1990 USD</td>
-                                    <td style="font-size: 15px;">1700 USD</td>
-                                    <td style="font-size: 15px;">1600 USD</td>                                   
+                                    @foreach($pricesTour as $itemprices)
+                                    <td style="font-size: 15px;padding-left: 15px">{!!  $itemprices->monto  !!} USD</td>  @endforeach                                  
                                 </tr>
                                
                             </tbody>
@@ -248,6 +248,7 @@ color: #999999;
 
                 </div>
             </div>&nbsp;
+
             <div class="db-2" style="width: 98%;">
                 <div class="db-2-com db-2-main">
                     <!-- <h4>Travel Booking</h4> -->
@@ -262,18 +263,14 @@ color: #999999;
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($seriesTour as $items)
                                 <tr>
-                                    <td style="font-size: 15px;">miercoles, 4 de Abril de 2018</td>
-                                    <td style="font-size: 15px;">miercoles, 18 de Abril de 2018</td>
-                                    <td style="font-size: 15px;">12 VACANTES</td>
-                                    <td style="font-size: 15px;"><span class="db-done">ABIERTO</span></td>
+                                    <td style="font-size: 14px;padding-left: 15px">{!!  $items->date_start !!}</td>
+                                    <td style="font-size: 14px;padding-left: 15px">{!!  $items->date_end !!}</td>
+                                    <td style="font-size: 14px;padding-left: 15px">{!!  $items->cant_person !!} VACANTES</td>
+                                    <td style="font-size: 14px;padding-left: 15px"><span class="db-done">{!!  $items->status !!}</span></td>
                                 </tr>
-                                <tr>
-                                    <td style="font-size: 15px;">viernes, 20 de Abril de 2018</td>
-                                    <td style="font-size: 15px;">sábado, 4 de Mayo de 2018</td>
-                                    <td style="font-size: 15px;">12 VACANTES</td>
-                                    <td style="font-size: 15px;"><span class="db-done">ABIERTO</span></td>
-                                </tr>
+                                @endforeach
                                
                             </tbody>
                         </table>
@@ -283,6 +280,7 @@ color: #999999;
                 </div>
             </div>
         </div>
+        @endif
         <br>
         <!--====== DURATION ==========-->
             <div class="rows inn-page-bg com-colo">
@@ -439,13 +437,13 @@ color: #999999;
 											<p><b>Description:
 											 </b>
 												{!! str_limit($item->description_short, 150) !!}
-												</br> <b>Maxinum </b> : 4 Persons</span> 
+												
                                             <div class="col-md-12" style="margin: 15px;">
                                                     <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
                                                     </a>
                                             </div>
 										</div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Precio por noche</span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
 									</div>
 								</li>
 								@endforeach
