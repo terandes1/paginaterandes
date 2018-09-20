@@ -331,30 +331,32 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
-                                 
-                             <img  style="height: 540px;" src="{{URL::asset('assets/public/category/6.jpg')}}" /> 
-                              <div class="tour-mig-lc-con" style="text-align: center;">
-                                  
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">
-                                        Descubrir
-                                    </span>
-                                    <div>
-                                        <span class="tour_star">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                             <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span> 
-                                    </div>
-                                    <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
-                                        <div style="border: 1px solid #fff; line-height: 1em; background-color: rgba(0,0,0,.65);padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
-                                                 
-                                                  <span class="fa fa-film"></span>  Ver video
-                                               
+                             <a class="course-overlay" href="{{route('paquetes','es')}}/Descubrir">    
+                                 <img  style="height: 540px;" src="{{URL::asset('assets/public/category/6.jpg')}}" /> 
+                            </a>
+                                  <div class="tour-mig-lc-con" style="text-align: center;">
+                                      
+                                        <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">
+                                            Descubrir
+                                        </span>
+                                        <div>
+                                            <span class="tour_star">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                 <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span> 
                                         </div>
-                                     </a>
-                              </div>
+                                        <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
+                                            <div style="border: 1px solid #fff; line-height: 1em; background-color: rgba(0,0,0,.65);padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
+                                                     
+                                                      <span class="fa fa-film"></span>  Ver video
+                                                   
+                                            </div>
+                                         </a>
+                                  </div>
+
 
                         </div>
                     </div>
@@ -374,7 +376,9 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
+                        <a class="course-overlay" href="{{route('paquetes','es')}}/Aventura">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/category/10.jpg')}}" /> 
+                        </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
                                     <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Aventura</span>
@@ -413,7 +417,9 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
+                        <a class="course-overlay" href="{{route('paquetes','es')}}/alta-Montania">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/category/8.jpg')}}" /> 
+                        </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
                                     <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Alta montaña</span>
@@ -453,7 +459,9 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
+                          <a class="course-overlay" href="{{route('paquetes','es')}}/Excursiones">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/category/9.jpg')}}" /> 
+                          </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
                                     <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Excursiones</span>

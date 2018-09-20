@@ -225,7 +225,7 @@
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                     "<div class='col-md-12' style='margin: 15px;'> "+
-                                                        "<a class='link-btn'href='../tour/es/"+element.slug+"'>VER MÁS DETALLE"+
+                                                        "<a class='link-btn'href='/tour/es/"+element.slug+"'>VER MÁS DETALLE"+
                                                         "</a>"+
                                                     "</div>"+
                                                   "</div>"+
@@ -303,7 +303,7 @@
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                     "<div class='col-md-12' style='margin: 15px;'> "+
-                                                        "<a class='link-btn'href='../tour/es/"+element.slug+"'>VER MÁS DETALLE"+
+                                                        "<a class='link-btn'href='/tour/es/"+element.slug+"'>VER MÁS DETALLE"+
                                                         "</a>"+
                                                     "</div>"+
                                                   "</div>"+
