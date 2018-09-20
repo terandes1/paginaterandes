@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Reservation;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\StoreReservation;
+use Session;
 class ReservationController extends Controller
 {
     /**
@@ -33,7 +34,7 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreReservation $request)
     {
        
            $reservation = new Reservation;
@@ -54,9 +55,11 @@ class ReservationController extends Controller
 
            $abbr=$request->abbr;
            $tour_id=$request->tour_id;
-           // return redirect()->route('reservation','es','$tour_id');
+
+           Session::flash('flash_message', '¡ Muchas gracias! Su reserva ha sido registrada. En breves minutos no comunicaremos');
+
            return redirect($abbr.'/reservartion/'.$tour_id);
-           // {{route('reservation','es')}}/{{$item->id}}
+           
 
     }
 

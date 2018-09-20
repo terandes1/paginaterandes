@@ -57,18 +57,25 @@
 				<div class="db-2-com db-2-main">
 					<h4 style="font-family: Lovelo Black;">Reservar : {!! $tour->name !!}. <span class="db-pay-amount" style="font-family: Lovelo Black;font-size: 15px;"> <span class="fa fa-clock-o"></span> {{ $dia}} Días: / {{ $dia-1 }} Noches </span> </h4>
 					<div class="db-2-main-com">
-            
+            			@if(Session::has('flash_message'))
+						   <div class="alert alert-success alert-dismissible" role="alert">
+						      <button type="button" class="close" data-dismiss="alert" arial-label="Close"><span aria-      hidden="true">x</span></button>
+						         {{ Session::get('flash_message') }}	
+						    </div>
+						@endif
   					{!! Form::open(['route' => ['reservations.store'] , 'method' => 'POST']) !!}
                         <div class="form-wrap-two">  
                             <div class="form-group ">
                                	<div class="row">
 	                               <div class="col-sm-6">
 		                                <h5 id="tituloReserva">Nombre</h5>
-		                                <input type="text" class="form-control" name="name" placeholder="Escriba su nombre" value="" required="">
+		                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Escriba su nombre" value="" required="">
+										<p class="errorValidacion">{{ $errors->first('name') }}</p>
 									</div>
 									<div class="col-sm-6">
 	                                  	  <h5 id="tituloReserva">Email</h5>
-	                               		 <input type="email" class="form-control" name="email" placeholder="E-mail" value="" required="">
+	                               		 <input type="email" class="form-control" name="email" placeholder="E-mail" value="{{ old('email') }}" required="">
+	                               		 <p class="errorValidacion">{{ $errors->first('email') }}</p>
 	                                </div>
 	                            </div>
 	                             <input type="hidden" class="form-control" name="tour_id" value="{{$tour->id}}">
@@ -79,7 +86,8 @@
 	                            <div class="row">
 	                            	 <div class="col-sm-4">
 		                             	 <h5 id="tituloReserva">Teléfono</h5>
-	                               		 <input type="text" class="form-control" name="phone" placeholder="Numero de telephone" value="" required="">
+	                               		 <input type="text" class="form-control" name="phone" placeholder="Numero de telephone" value="{{ old('phone') }}" required="">
+	                               		 <p class="errorValidacion">{{ $errors->first('phone') }}</p>
 									</div>
 									<div class="col-sm-4">
 	                                  	 <h5 id="tituloReserva">Skype</h5>
@@ -89,9 +97,12 @@
 		                             	 <h5 id="tituloReserva">Pais</h5>
 	                                	 <select  class="js-example-placeholder-single js-states form-control" name="country">
 												@foreach($paises as $itemp)
-												  <option value="{{$itemp->pais}}"> {{$itemp->pais}}</option>
+												 	 <option value="{{$itemp->pais}}" {{(old('country') == $itemp->pais?'selected':'')}}> 
+												 	 	{{$itemp->pais}}
+												 	 </option>
 												 @endforeach
 										</select>
+										<p class="errorValidacion">{{ $errors->first('country') }}</p>
 									</div>
 									
 	                             </div>   
@@ -101,21 +112,24 @@
 	                             <div class="row">	
 	                            	 <div class="col-sm-4">
 		                             	 <h5 id="tituloReserva">Fecha</h5>
-	                                	 <input type="date" class="form-control" name="fecha" value="" required="">
+	                                	 <input type="date" class="form-control" name="fecha"  value="{{ old('fecha') }}" required="">
+	                                	 <p class="errorValidacion">{{ $errors->first('fecha') }}</p>
 									</div>
 									<div class="col-sm-4">
                                     	<h5 id="tituloReserva">Tipo de viaje</h5>
-                                    	  <select  class="js-example-placeholder-single js-states form-control" name="travel_type">
-												  <option value="Luna de miel"> Luna de miel </option>
-												  <option value="Vacaciones"> Vacaciones</option>
-												  <option value="En grupo"> En grupo</option>
-												  <option value="Otros"> Otros</option>
+                                    	  <select  class="js-example-placeholder-single js-states form-control"  name="travel_type">
+												  <option value="Luna de miel" {{ old('travel_type') == 'Luna de miel' ? 'selected' : '' }}> Luna de miel </option>
+												  <option value="Vacaciones" {{ old('travel_type') == 'Vacaciones' ? 'selected' : '' }}> Vacaciones</option>
+												  <option value="En grupo" {{ old('travel_type') == 'En grupo' ? 'selected' : '' }}> En grupo</option>
+												  <option value="Otros" {{ old('travel_type') == 'Otros' ? 'selected' : '' }}> Otros</option>
 
 										</select>
+										<p class="errorValidacion">{{ $errors->first('travel_type') }}</p>
                                     </div>
 	                                <div class="col-sm-4">
                                     	 <h5 id="tituloReserva">Número de personas</h5>
-                                    	<input type="number" name="numberPersonas" class="form-control" placeholder="Personnes" value="1">
+                                    	<input type="number" name="numberPersonas" class="form-control" placeholder="1" value="{{ old('numberPersonas') }}" >
+                                    	<p class="errorValidacion">{{ $errors->first('numberPersonas') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -127,21 +141,23 @@
                                     
                                     <div class="col-sm-6">
                                     	<h5 id="tituloReserva">Tipo de habitaciones</h5>
-                                    	  <select  class="js-example-placeholder-single js-states form-control" name="room_type">
-												  <option value="Maison Habitante"> Maison Habitante</option>
-												  <option value="Standard(2**/B&B)"> Standard(2**/B&B)</option>
-												  <option value="Confort / Chame 3**"> Confort / Chame 3**</option>
-												  <option value="Luxe 4**** +"> Luxe 4**** +</option>
+                                    	  <select  class="js-example-placeholder-single js-states form-control" name="room_type" value="{{ old('room_type') }}">
+												  <option value="Maison Habitante" {{ old('travel_type') == 'Maison Habitante' ? 'selected' : '' }}> Maison Habitante</option>
+												  <option value="Standard(2**/B&B)" {{ old('travel_type') == 'Standard(2**/B&B)' ? 'selected' : '' }}> Standard(2**/B&B)</option>
+												  <option value="Confort / Chame 3**" {{ old('travel_type') == 'Confort / Chame 3**' ? 'selected' : '' }}> Confort / Chame 3**</option>
+												  <option value="Luxe 4**** +" {{ old('travel_type') == 'Luna de miel' ? 'selected' : 'Luxe 4**** +' }}> Luxe 4**** +</option>
 										</select>
+										<p class="errorValidacion">{{ $errors->first('room_type') }}</p>
                                     </div>
                                     <div class="col-sm-6">
                                     	  <h5 id="tituloReserva">Servicios de guia extra</h5>
-                                    	  <select  class="js-example-placeholder-single js-states form-control" name="guide_service">
-												  <option value="Francophone"> Francophone</option>
-												  <option value="Anglophone"> Anglophone</option>
-												  <option value="Hispanophone"> Hispanophone</option>
-												  <option value="Otros servicios extra"> Otros servicios extra</option>
+                                    	  <select  class="js-example-placeholder-single js-states form-control" name="guide_service" value="{{ old('guide_service') }}">
+												  <option value="Francophone" {{ old('travel_type') == 'Francophone' ? 'selected' : 'Luxe 4**** +' }}> Francophone</option>
+												  <option value="Anglophone" {{ old('travel_type') == 'Anglophone' ? 'selected' : 'Luxe 4**** +' }}> Anglophone</option>
+												  <option value="Hispanophone" {{ old('travel_type') == 'Hispanophone' ? 'selected' : 'Luxe 4**** +' }}> Hispanophone</option>
+												  <option value="Otros servicios extra" {{ old('travel_type') == 'Otros servicios extra' ? 'selected' : 'Luxe 4**** +' }}> Otros servicios extra</option>
 										</select>
+										<p class="errorValidacion">{{ $errors->first('guide_service') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -151,12 +167,29 @@
                                     
                                     <div class="col-sm-12">
                                     	<h5 id="tituloReserva">Describe tu viaje</h5>
-                                    	 <textarea class="form-control" rows="5" name="message"></textarea>
+                                    	 <textarea class="form-control" rows="5" name="message">{{ old('message') }}</textarea>
+                                    	 <p class="errorValidacion">{{ $errors->first('message') }}</p>
                                     </div>
                                    
                                 </div>
                             </div>
-                            
+                            <div class="form-group">
+                               
+                                <div class="row">
+                                    
+                                     <div class="col-sm-4">
+                                    	 
+                                    </div>
+                                    <div class="col-sm-4">
+                                    	{!! Recaptcha::render() !!}
+ 										<p class="errorValidacion">{{ $errors->first('g-recaptcha-response') }}</p>
+                                    </div>
+                                     <div class="col-sm-4">
+                                    	 
+                                    </div>
+                                   
+                                </div>
+                            </div>
                           
                             <div class="form-group">
                                
