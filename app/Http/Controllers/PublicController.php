@@ -84,7 +84,7 @@ class PublicController extends Controller
      $paises = DB::table('paises')
                             ->get();
        
-      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia]);
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr'=>$abbr]);
 
     }
 
@@ -113,7 +113,7 @@ class PublicController extends Controller
                             $searchCategoria=str_replace("alta-Montania","Alta Montaña",$searchCategoria);
 
                         }
-                        
+
                         $todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
                 break;
         } 
@@ -121,7 +121,7 @@ class PublicController extends Controller
    		return view('public.'.$abbr.'.tours',['categorias' =>$categorias ,'abbr' => $abbr,'todoTours' =>$todoTours]);
 
    }
-   public function toursOpcion()//filtrado por catagoria y ciudades
+   public function toursOpcion()//filtrado por catagori
    {
    		
    		if(request()->ajax())
