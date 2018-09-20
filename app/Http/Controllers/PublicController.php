@@ -84,7 +84,7 @@ class PublicController extends Controller
      $paises = DB::table('paises')
                             ->get();
        
-      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr' =>$abbr ]);
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia]);
 
     }
 
@@ -97,21 +97,21 @@ class PublicController extends Controller
 			    ->get();
 
 
-		if($searchCategoria=='')
-		{
-			$todoTours=publicTours::todoTours($abbr);//todo los tours
-
-		}else {
-
-                if($searchCategoria=='alta-Montania')
-                {
-                    $searchCategoria=str_replace("alta-Montania","Alta Montaña",$searchCategoria);
-
-                }
-
-				$todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
-
-		}
+		switch ($searchCategoria) {
+            case '':
+                $todoTours=publicTours::todoTours($abbr);//todo los tours
+                break;
+            case 'Series':
+                 $todoTours=publicTours::searchSeries($abbr);//buscar tours tipo serie
+                break;
+            case 'Alta-Montaña':
+               // $searchCategoria=str_replace("-"," ",$searchCategoria);
+                 $todoTours=publicTours::searchTours($abbr,'Alta Montaña');
+                break;
+            default:
+                $todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
+                break;
+        } 
 	    
    		return view('public.'.$abbr.'.tours',['categorias' =>$categorias ,'abbr' => $abbr,'todoTours' =>$todoTours]);
 
@@ -126,7 +126,7 @@ class PublicController extends Controller
 				if($_POST['cantidaPeticion']<1)
 				{
 					$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.id','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -139,7 +139,7 @@ class PublicController extends Controller
 			
 				
 				$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.id','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -164,7 +164,7 @@ class PublicController extends Controller
 				if($_POST['cantidaPeticion']<2)
 				{
 					$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.id','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -193,7 +193,7 @@ class PublicController extends Controller
 							$maxPrecio=$value;
 							
 								$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.id','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -208,8 +208,7 @@ class PublicController extends Controller
                   				  		 	"description_short" => $item->description_short,
                   				  		 	"price" => $item->price,
                   				  		 	"slug" => $item->slug,
-                  				  		 	"img" => $item->img,
-                                            "id" => $item->id
+                  				  		 	"img" => $item->img
                   				  		 );
                   				  }
                   				 
@@ -300,7 +299,7 @@ class PublicController extends Controller
     public function  testimonials($abbr='es',$estadoHabilitado='approve')
     {
 
-       $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->get();
+       $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->latest()->take(20)->get();
        return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
    
      }

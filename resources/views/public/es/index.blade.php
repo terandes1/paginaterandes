@@ -682,22 +682,22 @@ input[type=radio]:checked + label>img {
         <div class="pla1 p-home container">
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title spe-title-1">
-                <h2 style="font-family: Lovelo Black;font-size: 20px;">Usted define su estilo de viaje</h2>
+                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Usted define su estilo de viaje</h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
                 </div>
-                <p style="font-family: 'NewsGoth CN BT'">Desde tours culinarios peruanos para la familia,grupos,parejas y amigos, nos especializamos en la elaboración de viajes privados únicos diseñados especialmente para usted. ¿Desea planear su aventura sudamericana? 
-                    Contáctanos y comienza a rodar.</p>
+                <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">¿Desea planear su aventura sudamericana? </p>
             </div>
-            <div class="popu-places-home">
+            <div class="popu-places-home" style="padding-bottom: 30px">
                 <!-- POPULAR PLACES 1 -->
                 <div class="col-md-8 col-md-offset-2 col-sm-12  place">
-                    <div class="col-md-6 col-sm-12 col-xs-12"> <img src="/imagenesprueba/peques/04.png" alt="" /> </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12" > <img  style="border:3px inset ;" src="/imagenesprueba/peques/04.png" alt="" /> </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h3><span>Honeymoon Package</span> 7 Days / 6 Nights</h3>
-                        <p>lorem ipsum simplelorem ipsum simplelorem ipsum simplelorem ipsum simple</p> <a href="{{'paquetes'}}" class="link-btn">more info</a> </div>
+                        <h3><span>   </span>    </h3>
+                        <p style = "text-align: justify;"> Desde tours culinarios peruanos para la familia,grupos,parejas y  amigos, nos especializamos en la elaboración de viajes privados únicos diseñados especialmente para usted.<br>
+                        Contáctanos y comienza a rodar.</p> <a href="{{route('paquetes','es')}}/Series" class="link-btn">mas informacion</a> </div>
                 </div>
             </div>
         </div>
