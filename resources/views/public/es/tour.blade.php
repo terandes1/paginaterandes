@@ -218,6 +218,72 @@ color: #999999;
 			</a>
           </div>
         </div>
+        <div class="db">
+            <!--LEFT SECTION-->
+          
+            <!--CENTER SECTION-->
+            <div class="db-2" style="width: 98%;">
+                <div class="db-2-com db-2-main">
+                    <!-- <h4>Travel Booking</h4> -->
+                    <div class="db-2-main-com db-2-main-com-table">
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De 4 a 6 personas</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De 7 a 9 personas</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De 9 a 12 personas</h4></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-size: 15px;">1990 USD</td>
+                                    <td style="font-size: 15px;">1700 USD</td>
+                                    <td style="font-size: 15px;">1600 USD</td>                                   
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>&nbsp;
+            <div class="db-2" style="width: 98%;">
+                <div class="db-2-com db-2-main">
+                    <!-- <h4>Travel Booking</h4> -->
+                    <div class="db-2-main-com db-2-main-com-table">
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">LLEGADAS A LIMA</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">SALIDAS DE LIMA </h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">DISPONIBILIDAD</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">ESTADO</h4></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-size: 15px;">miercoles, 4 de Abril de 2018</td>
+                                    <td style="font-size: 15px;">miercoles, 18 de Abril de 2018</td>
+                                    <td style="font-size: 15px;">12 VACANTES</td>
+                                    <td style="font-size: 15px;"><span class="db-done">ABIERTO</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 15px;">viernes, 20 de Abril de 2018</td>
+                                    <td style="font-size: 15px;">sábado, 4 de Mayo de 2018</td>
+                                    <td style="font-size: 15px;">12 VACANTES</td>
+                                    <td style="font-size: 15px;"><span class="db-done">ABIERTO</span></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <br>
         <!--====== DURATION ==========-->
             <div class="rows inn-page-bg com-colo">
                 <div class="col-md-12"> 
@@ -322,7 +388,7 @@ color: #999999;
                         
                 </div>
             </div>
-            
+          
     
         <!--====== TOUR LOCATION ==========-->
       
