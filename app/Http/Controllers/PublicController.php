@@ -259,10 +259,10 @@ class PublicController extends Controller
 			        ->join('itineraries', 'tours.id', '=', 'itineraries.tour_id')
 			        ->where("tours.id","=",$tour->id)
 			        ->get();
-    $seriesTour     = DB::table('tours')
+    $seriesTour     = DB::table('series')
                     ->select('series.cant_person','series.date_start','series.date_end','series.status')
-                    ->join('series', 'tours.id', '=', 'series.tour_id')
-                    ->where("tours.id","=",$tour->id)
+                    /*->join('series', 'tours.id', '=', 'series.tour_id')*/
+                    ->where("series.tour_id","=",$tour->id)
                     ->get(); 
     $pricesTour     = DB::table('prices')
                     ->select('prices.range_first','prices.range_end','prices.monto')

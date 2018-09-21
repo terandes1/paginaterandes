@@ -218,11 +218,12 @@ color: #999999;
 			</a>
           </div>
         </div>
-        @if ($tour->tipo_tour == 'serie')
+        @if ($tour->tipo_tour == 'serie') 
         <div class="db">
             <!--LEFT SECTION-->
           
             <!--CENTER SECTION-->
+            @if (count($pricesTour) > 0)
             <div class="db-2" style="width: 98%;">
                 <div class="db-2-com db-2-main">
                     <!-- <h4>Travel Booking</h4> -->
@@ -248,7 +249,8 @@ color: #999999;
 
                 </div>
             </div>&nbsp;
-
+            @endif
+            @if (count($seriesTour) > 0)
             <div class="db-2" style="width: 98%;">
                 <div class="db-2-com db-2-main">
                     <!-- <h4>Travel Booking</h4> -->
@@ -279,6 +281,7 @@ color: #999999;
                     
                 </div>
             </div>
+            @endif
         </div>
         @endif
         <br>
