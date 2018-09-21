@@ -9,6 +9,7 @@ use App\Categorie;
 use App\testimonial;
 use App\Event;
 use App\Itinerarie;
+use Carbon\Carbon;
 class PublicController extends Controller
 {
     function __construct()
@@ -264,6 +265,7 @@ class PublicController extends Controller
                     /*->join('series', 'tours.id', '=', 'series.tour_id')*/
                     ->where("series.tour_id","=",$tour->id)
                     ->get(); 
+
     $pricesTour     = DB::table('prices')
                     ->select('prices.range_first','prices.range_end','prices.monto')
                     /*->join('prices', 'tours.id', '=', 'prices.tour_id')*/

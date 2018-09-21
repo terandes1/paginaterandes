@@ -131,6 +131,13 @@ color: #999999;
               
               return $htmlTemp1;
 	}
+    function fecha($date)
+    {
+       
+        setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
+        $fecha = strftime("%d de %B de %Y", strtotime($date));
+        return $fecha;
+    }
 
 ?>
 <!--====== BANNER ==========-->
@@ -218,6 +225,7 @@ color: #999999;
 			</a>
           </div>
         </div>
+        
         @if ($tour->tipo_tour == 'serie') 
         <div class="db">
             <!--LEFT SECTION-->
@@ -267,9 +275,17 @@ color: #999999;
                             <tbody>
                                 @foreach($seriesTour as $items)
                                 <tr>
-                                    <td style="font-size: 14px;padding-left: 15px">{!!  $items->date_start !!}</td>
-                                    <td style="font-size: 14px;padding-left: 15px">{!!  $items->date_end !!}</td>
-                                    <td style="font-size: 14px;padding-left: 15px">{!!  $items->cant_person !!} VACANTES</td>
+                                    <td style="font-size: 14px;padding-left: 15px">
+
+                                        <?=fecha($items->date_start);?>
+                                       
+                                    </td>
+                                    <td style="font-size: 14px;padding-left: 15px">
+                                         <?=fecha($items->date_end);?>
+                                    </td>
+                                    <td style="font-size: 14px;padding-left: 15px">
+                                        {!!  $items->cant_person !!} VACANTES
+                                    </td>
                                     <td style="font-size: 14px;padding-left: 15px"><span class="db-done">{!!  $items->status !!}</span></td>
                                 </tr>
                                 @endforeach
