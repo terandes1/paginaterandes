@@ -12,6 +12,7 @@ class Serie extends Model
         'tour_id',
         'cant_person',
         'date_start',
-        'date_end'
+        'date_end',
+        'status'
     ];
 }

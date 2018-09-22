@@ -34,6 +34,7 @@
         <thead>
           <tr>
             <th>Cantidad Personas</th>
+            <th>Estado</th>
             <th>Fecha de Creación</th>
             <th>Fecha de Actualización</th>
             <th>Acciones</th>
@@ -43,6 +44,7 @@
           @foreach($series as $serie)
           <tr>
             <td>{{$serie->cant_person}}</td>
+            <td>{{$serie->status}}</td>
             <td>{{$serie->created_at}}</td>
             <td>{{$serie->updated_at}}</td>
             <td class="text-right">

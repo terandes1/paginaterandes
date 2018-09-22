@@ -286,7 +286,7 @@ color: #999999;
                                     <td style="font-size: 14px;padding-left: 15px">
                                         {!!  $items->cant_person !!} VACANTES
                                     </td>
-                                    <td style="font-size: 14px;padding-left: 15px"><span class="db-done">{!!  $items->status !!}</span></td>
+                                    <td style="font-size: 14px;padding-left: 15px"><span class="db-done" style="text-transform: capitalize;">{!!  $items->status !!}</span></td>
                                 </tr>
                                 @endforeach
                                
