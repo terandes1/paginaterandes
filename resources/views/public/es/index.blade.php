@@ -206,38 +206,6 @@ input[type=radio]:checked + label>img {
                '</a>'.
             '</div>';
 
-         // $i=$i+1;
-         // if($i<3)
-         //     {
-         //        $htmltemp.='<div class="col-md-6">'.
-         //                '<a href="tour/es/'.$item->slug.'">'.
-         //                    '<div class="tour-mig-like-com">'.
-         //                        '<div class="tour-mig-lc-img">'.
-         //                              '<img src="'.$item->img.'" alt="" style="height:377px;">'.
-         //                        '</div>'.
-         //                        '<div class="tour-mig-lc-con">'.
-         //                            '<h6 style="text-align:center;">'.$item->name.' </h6> <br><br>'.
-         //                            '<p><span>12 Packages</span> A partir de $ '.$item->price.'</p>'.
-         //                        '</div>'.
-         //                    '</div>'.
-         //               '</a>'.
-         //            '</div>';
-         //     }else {
-
-         //         $htmltemp.='<div class="col-md-3">'.
-         //                        '<a href="tour/es/'.$item->slug.'">'.
-         //                            '<div class="tour-mig-like-com">'.
-         //                                '<div class="tour-mig-lc-img">'.
-         //                                      '<img src="'.$item->img.'" alt="" style="height:200px;">'.
-         //                                '</div>'.
-         //                                '<div class="tour-mig-lc-con">'.
-         //                                     '<h6 style="text-align:center;">'.$item->name.' </h6><br><br>'.
-         //                                    '<p><span></span>A partir de $ '.$item->price.'</p>'.
-         //                                '</div>'.
-         //                            '</div>'.
-         //                       '</a>'.
-         //                    '</div>';
-         //     }
         
       }
             
@@ -510,143 +478,7 @@ input[type=radio]:checked + label>img {
            
         </div>
     </section>
-<!-- <section style="margin-top: -160px;">
-    <div class="rows pad-bot-redu tb-space"> -->
-        <!--<div class="container" >
-                    <div class="row" style=" margin-top: -80px;">
-                         <div class="col-sm-3">
-                         </div>
-                         <div class="col-sm-9">
-                            <form class="tourz-search-form">
-                                <div class="input-field">
-                                    <label for="select-city">Ciudad</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="text" id="select-search" class="autocomplete">
-                                    <label for="select-search" class="search-hotel-type">Buscar tours y viajes, visitas turísticas, hoteles y más</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
-                            </form>
-                            
-                        </div>
-                    </div>
-        </div>-->
-      <!--   <div class="search-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="search-form">
-                        <form class="tourz-search-form">
-                            <div class="input-field">
-                                <label for="select-city" style="color: #679e02">Enter city</label>
-                                <input  style="background: #679e02;border: 2px solid #679e02;" type="text" id="select-city" class="autocomplete">
-                            </div>
-                            <div class="input-field">
-                                <input type="text" id="select-search" name="select-search" class="autocomplete">
-                                <label for="select-search" class="search-hotel-type">Buscar tour por ciudad</label>
-                            </div>
-                            <div class="input-field" style="text-align: center;">
-                                <input type="button" id="buscar" value="Buscar" class="waves-effect waves-light tourz-sear-btn"> </div>
-                        </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><br><br><br> -->
-        <!-- <div class="container">
-            
-            
-            <div class="spe-title" style="z-index: -1000;">
-                <h2>Paquetes De Viaje <span style="color:#36691D">Principales </span></h2>
-                <div class="title-line">
-                    <div class="tl-1"></div>
-                    <div class="tl-2"></div>
-                    <div class="tl-3"></div>
-                </div>
-                <p>El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
-            </div>
-            <div> -->
 
-               <!--  @foreach($toursPrincipal as $item)
-                <div id="tort" class="col-md-4 col-sm-6 col-xs-12 b_packages wow slideInUp" data-wow-duration="0.5s">
-                    
-                    <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
-                        <div class="v_place_img"> 
-                            <img style="height:220px;" src="/{{$item->img}}" alt="Tour Booking" title="Tour Booking" /> 
-                            
-                            <div class="hom-hot-av-tic"> -->
-                                <!-- {!! $item->categoriesName!!} -->
-                         <!--        <h5 style="text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
-                            </div>
-                            
-                        </div>
-                     </a>
- -->
-                    
-                   <!--  <div class="b_pack rows">
-                      
-                        <div class="col-md-12 col-sm-12" style="text-align: center;">
-                            <h4>
-                                <a style="font-size: 12px; href="{{'paquetes'}}">{{ $item->name }}
-                                </a>
-                                <a style=" font-size: 1.05em;color: #f15a23;text-align: center;font-family:Roboto;font-weight:400;font-style:normaltext-align: right;" href="#!">
-                                        <div class="col-md-3 col-sm-4 pack_icon">
-                             
-                                               
-                                        </div>
-                                        <div class="col-md-6 col-sm-6  pack_icon">
-                             
-                                                 
-                                             
-                                        </div>
-
-
-                                </a>
-
-                            </h4>   
-                        </div> -->
-                        
-                        <!-- <div class="col-md-12 col-sm-12" style="text-align: justify;margin-top: -15px;">
-                            <p>
-                              {!! str_limit($item->description_short, 150) !!}
-
-                            </p>
-                            
-                        </div>
-                
-                        
-                        <div class="col-md-12 col-sm-12 ">
-                            <div class="col-md-12" style="margin: 15px;">
-                                <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"> MÁS SOBRE ESTE VIAJE
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-       <!--          @endforeach
-                   
-            </div>
-        </div>
-    </div>
-</section>
- -->
-
-<!-- <section style="">
-    <div class="rows tb-space pad-top-o pad-bot-redu" >
-        <div class="container">
-           
-            <div class="spe-title">
-               </br>
-                <p>El sitio web de reservas de tour líder en el latinomarica, más de 30,000 personas  disfrute de sus vacaciones con una experiencia única</p>
-            </div>
-         
-            <?=DostourDeLujos($toursLujos);?>
-
-        </div>
-    </div>
-</section> -->
 
 <!--====== SECTION: FREE CONSULTANT ==========-->
 <section style="margin-top: 50px;">
@@ -687,137 +519,61 @@ input[type=radio]:checked + label>img {
 </section>
 <section>
     <div class="rows pla pad-bot-redu tb-space">
-        <div class="pla1 p-home container">
-            <!-- TITLE & DESCRIPTION -->
-            <div class="spe-title spe-title-1">
-                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Usted define su estilo de viaje</h2>
-                <div class="title-line">
-                    <div class="tl-1"></div>
-                    <div class="tl-2"></div>
-                    <div class="tl-3"></div>
+       <div class="rows container">
+                <div class="spe-title spe-title-1">
+                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Usted define su estilo de viaje</h2>
+                    <div class="title-line">
+                        <div class="tl-1"></div>
+                        <div class="tl-2"></div>
+                        <div class="tl-3"></div>
+                    </div>
                 </div>
-                <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">¿Desea planear su aventura sudamericana? </p>
+                    <div class="col-md-6 col-sm-6 col-xs-12 family"> 
+                        <img src="{!! URL::asset('assets/public/serie/serie.png') !!}" alt="" /> <div style="margin-top: 130px;"> </div>
+                    </div>
+                    <!-- REQUEST A QUOTE -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <!-- THANK YOU MESSAGE -->
+                        <div class="foot-mob-app">
+                            <h3 style="color:black;font-family: Lovelo Black;">Desea planear su aventura sudamericana?</h3>
+                            <p>Como diseñadores de viajes personalizados, estamos aquí para hacer su viaje único:</p>
+                            <ul>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> 
+                                   <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series">Familiares</a>
+                                </li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> 
+                                <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series">                                Grupos
+                                </a>
+                                </li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> 
+                                      <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series">
+                                      Parejas
+                                      </a>
+                                  </li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i> 
+                                       <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series"> Amigos
+                                       </a>
+                                </li>
+                            </ul>
+                            
+                                <div class="row" style="margin-top:-12px;">
+                                        
+                                                <div class="input-field col s6" >
+                                                    <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
+                                                        <a style="color:white;" href="{{route('paquetes','es')}}/Series"> VER TOURS</a>
+                                                    </i>
+                                                </div>
+                                </div>
+
+                        </div>
+                    </div>
+                    
             </div>
-            <div class="popu-places-home" style="padding-bottom: 30px">
-                <!-- POPULAR PLACES 1 -->
-                <div class="col-md-8 col-md-offset-2 col-sm-12  place">
-                    <div class="col-md-6 col-sm-12 col-xs-12" > <img  style="border:3px inset ;" src="/imagenesprueba/peques/04.png" alt="" /> </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h3><span>   </span>    </h3>
-                        <p style = "text-align: justify;"> Desde tours culinarios peruanos para la familia,grupos,parejas y  amigos, nos especializamos en la elaboración de viajes privados únicos diseñados especialmente para usted.<br>
-                        Contáctanos y comienza a rodar.</p> <a href="{{route('paquetes','es')}}/Series" class="link-btn">mas informacion</a> </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </section>
-<!--====== EVENTS ==========-->
-<!-- <section style="margin-top: -55px;">
-    <div class="rows tb-space" style="background: #f6f6f6;">
-        <div class="container events events-1" id="inner-page-title">
-           
-            <div class="spe-title">
-                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Viaje en grupo</h2>
-                <div class="title-line">
-                    <div class="tl-1"></div>
-                    <div class="tl-2"></div>
-                    <div class="tl-3"></div>
-                </div>
-                <p style="font-family: 'NewsGoth CN BT'">World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience</p>
-            </div>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Event Name.." title="Type in a name">
-            <table id="myTable">
-                <tbody>
-                    <tr>
-                        <th>#</th>
-                        <th>Event Name</th>
-                        <th class="e_h1">Date</th>
-                        <th class="e_h1">Time</th>
-                        <th class="e_h1">Location</th>
-                        <th>Book</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><img src="/imagenesprueba/peques/01.png" alt="" /><a href="hotels-list.html" class="events-title">Taj Mahal,Agra, India</a> </td>
-                        <td class="e_h1">16.12.2016</td>
-                        <td class="e_h1">10.00 PM</td>
-                        <td class="e_h1">Australia</td>
-                        <td><a href="booking.html" class="link-btn">Book Now</a> </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section> -->
-<!-- <section>
-    <div class="offer">
-
-        <div class="container" style="">
  
-            <div class="row">
 
-                <div class="popu-places-home" style="margin: 10px;margin-left: 51px;">
-                    <span class="ol-4" style="text-align: center;font-family: 'Oswald', sans-serif;">A medida</span> 
-                    <div class="db-3" style="margin: 14px;">
-                        <h4>En grupo</h4>
-                        <ul>
-                            <li>
-                                <img src="/assets/public/icons/grupo1icono.png" alt="" />
-                                <a href="#!">
-                                    <h5>50% de descuento</h5>
-                                    <p>Un viaje que satisfaga a todos</p>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                    <div class="db-3" style="margin: 14px;">
-                        <h4>En Familia</h4>
-                        <ul>
-                            <li>
-                                <img src="/assets/public/icons/familia1icono.png" alt="" /> 
-                                <a href="#!">
-                                    <h5>50% de descuento</h5>
-                                    <p>Aproveche un viaje adecuado tanto para adultos como para jóvenes.</p>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                    <div class="db-3" style="margin: 14px;">
-                        <h4>Pareja</h4>
-                        <ul>
-                            <li>
-                                 <img src="/assets/public/icons/couple1icono.png" alt="" />
-                                <a href="#!">
-                                    <h5>50% de descuento</h5>
-                                    <p>Comparte momentos inolvidables con tu pareja.</p>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                    <div class="db-3" style="margin: 14px;">
-                        <h4>Amigos</h4>
-                        <ul>
-                            <li>
-                                <img src="{{URL::asset('assets/public/icons/amigos1icono.png')}}" alt="" /> 
-                                <a href="#!"> <img src="{{URL::asset('assets/public/images/icon/dbr1.jpg')}}" alt="" />
-                                    <h5>50% de descuento</h5>
-                                    <p>Comparte momentos inolvidables entre amigos.</p>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                  
-                   
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section> -->
 <section>
     <div class="rows pla pad-bot-redu tb-space" style="margin-top: -98px;">
         <div class="pla1 p-home container" style="background: #f6f6f6;">
@@ -946,6 +702,7 @@ input[type=radio]:checked + label>img {
     </div>
     @include('public.es.testimonials.formTestimonials')
 </section>
+
 <!--====== socios ==========-->
 <section style="background: white;">
         <div class="container">
@@ -1055,12 +812,6 @@ input[type=radio]:checked + label>img {
     @endif
 
     <script>
-
-        $("#buscar").click(function(){
-
-              $texto=$("#select-search").val();
-              window.location.href = "/es/tours/"+$texto;
-        });
 
      $(window).resize(function() {
           var width = $(window).width();

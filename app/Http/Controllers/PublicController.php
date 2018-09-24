@@ -14,7 +14,7 @@ class PublicController extends Controller
 {
     function __construct()
     {
-         $this->middleware('verificarIdioma');
+       
     }
 
     public function index()
@@ -27,13 +27,15 @@ class PublicController extends Controller
 
     public function lang($abbr='es'){
 
-    	$toursPrincipal=publicTours::tours($abbr,'0');//Retoro de  tours  en español y principal(es y 0)
+    	
+    	$toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
     	
     	//return $toursPrincipal;
-    	$toursLujos=publicTours::tours($abbr,'1');//Retoro de  turs de lujos (es y 1)
-    	
-    	//return $toursPrincipal;
-        $testimonials = DB::table('testimonials')->where('status', 'approve')->where("language","=",$abbr)->latest()->take(10)->get();
+        $testimonials = DB::table('testimonials')
+                        ->select('id','name','photo','impresion_global','nationality','testimonial','date')
+                        ->where('status', 'approve')
+                        ->where("language","=",$abbr)
+                        ->latest()->take(10)->get();
 
         $suma = 0;
         foreach($testimonials as $item)            
@@ -49,7 +51,7 @@ class PublicController extends Controller
         	 $media=0;
         }
 
-    	return view('public.'.$abbr.'.index',['toursPrincipal' => $toursPrincipal,'toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
+    	return view('public.'.$abbr.'.index',['toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
     }
 
     public function contact($abbr='es')
@@ -93,6 +95,7 @@ class PublicController extends Controller
    {
 
    		$categorias = DB::table('languages')
+   				->select('categories.name','languages.abbr','categories.id')
 			    ->join('categories', 'languages.id', '=', 'categories.language_id')
 			    ->where('languages.abbr','=',$abbr)
 			    ->get();
@@ -132,7 +135,7 @@ class PublicController extends Controller
 				if($_POST['cantidaPeticion']<1)
 				{
 					$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.id','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -145,7 +148,7 @@ class PublicController extends Controller
 			
 				
 				$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.name','tours.id','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -256,7 +259,7 @@ class PublicController extends Controller
 			        ->get();
 
 	$itinerarioTour = DB::table('tours')
-			        ->select('itineraries.name','itineraries.description','itineraries.day','itineraries.department','itineraries.province','itineraries.district','itineraries.altitud','itineraries.altitud','itineraries.latitud','itineraries.longitud','itineraries.icono')
+			        ->select('itineraries.name','itineraries.description','itineraries.day')
 			        ->join('itineraries', 'tours.id', '=', 'itineraries.tour_id')
 			        ->where("tours.id","=",$tour->id)
 			        ->get();

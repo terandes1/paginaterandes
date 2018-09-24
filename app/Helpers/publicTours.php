@@ -23,6 +23,22 @@ class publicTours
 		return $toursPublic;
 
 	}
+	public static function toursIndex($abbr,$estadoPublicado)
+	{
+		
+         $toursPublic = DB::table('languages')
+			           ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.img','tours.slug','categories.name as categoriesName')
+			           ->join('categories', 'languages.id', '=', 'categories.language_id')
+			           ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
+			           ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+			           ->where("tours.principal","=",$estadoPublicado)
+			           ->where("languages.abbr","=",$abbr)
+			           ->groupBy('tours.name')
+			           ->paginate(6);
+
+		return $toursPublic;
+
+	}
 	public static function toursRelacionados($abbr,$catagoriaId)
 	{
 		

@@ -328,7 +328,7 @@ color: #999999;
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#loglist" data-toggle="tab">
+                                        <a href="#loglist" data-toggle="tab" id="ubicacion">
                                             <i style="color:black;" class="fa fa-map-marker"></i> 
                                             <span style="font-family: Lovelo Black;">
                                                  UBICACIÓN
@@ -527,11 +527,13 @@ color: #999999;
 @section('script')
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback&sensor=true&callback=initialize">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback&sensor=true">
 </script>
 
  <script>
-
+    $( "#ubicacion" ).click(function() {
+      initialize();
+    });
 
     //ListItinerarioMap();
     function initialize()
