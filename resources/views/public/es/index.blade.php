@@ -220,7 +220,7 @@ input[type=radio]:checked + label>img {
        
         <div class="contenedor_video">
             <video id="videoId" style=" /*width: 1348px;*/ margin-top: -22px;"poster="{{URL::asset('assets/public/inicio/portada.jpg')}}" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
-             <source src="https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4" type="video/mp4"></video>
+             <source src="https://www.kuodatravel.com/wp-content/uploads/2018/09/kuoda-travel-video6.mp4" type="video/mp4"></video>
         </div>
          <dir id="texto" style="font-family: Lovelo Black;">
              AVENTURE 

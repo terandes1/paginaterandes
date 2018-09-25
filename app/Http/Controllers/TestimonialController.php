@@ -99,7 +99,7 @@ class TestimonialController extends Controller
                   mkdir($destinationPath, 666, true);
                  }
                $thumb_img = Image::make($img->getRealPath())->resize(600,300);
-               $thumb_img->save($destinationPath.'/'.$nombreImgen,20);
+               $thumb_img->save($destinationPath.'/'.$nombreImgen,70);
             }else
             {
                 $itemp->save();
