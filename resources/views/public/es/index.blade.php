@@ -558,11 +558,16 @@ input[type=radio]:checked + label>img {
                             
                                 <div class="row" style="margin-top:-12px;">
                                         
-                                                <div class="input-field col s6" >
-                                                    <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
-                                                        <a style="color:white;" href="{{route('paquetes','es')}}/Series"> VER TOURS</a>
-                                                    </i>
-                                                </div>
+                                     <div class="col-sm-4">
+                                    
+                                        
+                                            <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
+                                                <a style="color:white;" href="{{route('paquetes','es')}}/Series"> VER TOURS</a>
+                                            </i>
+                                        
+
+                                      </div>
+                                                
                                 </div>
 
                         </div>
@@ -649,10 +654,10 @@ input[type=radio]:checked + label>img {
                                      <span class="tour_rat">{{$item->impresion_global}} </span>
                                  </h2> 
                              </div>
-                              <h3 style="color:black; font-size: 15px;font-family: Lovelo Black;">{{$item->name}} - {{$item->nationality}}</h3>
+                              <h2 style="color:black; font-size: 15px;font-family: Lovelo Black;">{{$item->name}} - {{$item->nationality}}</h2>
 
-                              <h2 style="text-align: justify;margin:5%;font-family: 'NewsGoth CN BT';font-size:1em; ">{!!str_limit($item->testimonial, 135)!!}</h2>
-                              <h5>{{$item->date}} <h5>
+                              <h4 style="text-align: justify;margin:5%;font-family: 'NewsGoth CN BT';font-size:1em; ">{!!str_limit($item->testimonial, 135)!!}</h4>
+                                <a href="/es/testimonials" style="background: #253d52;" class="db-done">{{$item->date}}</a>
                             </div>
                           </li>
                           <?php
@@ -685,14 +690,23 @@ input[type=radio]:checked + label>img {
                         <div  style="padding: 15px" class="col-md-2 col-md-offset-10 col-sm-12 ">
                             <a href="/es/testimonials"> <strong><u> &#62;&#62; Leer Más</u> </strong> </a>
                         </div>
-                        <div  class="col-sm-5">
-                           
-                        </div>
-                         <div class="input-field col s2">
-                            <i class="waves-effect waves-light full-btn waves-input-wrapper" style="">
-                                  <input type="submit" value="INGRESE SU TESTIMONIO"  data-toggle="modal" data-target="#idTestimonio" class="waves-button-input">
-                            </i> 
-                        </div>                        
+                        
+                         <div class="col-sm-12">
+                             <div class="col-sm-4">
+                                
+                            </div>
+                            <div class="col-sm-4">
+                                <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="">
+                                    <input type="submit" value="INGRESE SU TESTIMONIO"  data-toggle="modal" data-target="#idTestimonio" class="waves-button-input">
+                                </i> 
+                            </div>
+                             <div class="col-sm-4">
+                                
+                            </div>
+                            
+                        </div> 
+                      
+
                      </div>                      
                   </div><!-- /#myCarousel -->   
                 </div><!-- /.col-sm-12 -->          

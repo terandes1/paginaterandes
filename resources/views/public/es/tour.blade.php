@@ -614,8 +614,7 @@ color: #999999;
                             google.maps.event.addListener(marker, 'mouseover', (function(marker, i)
                              {
                               return function() {
-                                infowindow.setContent("<img style='width:350px;text-align:center;' src='/assets/content/itinerario/"+marcadores[i][6]+"'>"+
-                                    "<table> <tr><th><h6><strong> "+marcadores[i][0]+" </strong></h6></th></tr><tr><td style='width:350px; text-align:justify;'></h3></h6>"+marcadores[i][5]+"</h6></td></tr></table>");
+                                infowindow.setContent("<table> <tr><th><h6><strong> "+marcadores[i][0]+" </strong></h6></th></tr><tr><td style='width:350px; text-align:justify;'></h3></td></tr></table>");
                                 infowindow.open(map, marker);
                               }
                             })(marker, i));
