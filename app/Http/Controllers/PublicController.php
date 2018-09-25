@@ -27,37 +27,54 @@ class PublicController extends Controller
 
     public function lang($abbr='es'){
 
+    	if($abbr=='es')
+      {
     	
-    	$toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
+          $toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
+        	
+        	//return $toursPrincipal;
+            $testimonials = DB::table('testimonials')
+                            ->select('id','name','photo','impresion_global','nationality','testimonial','date')
+                            ->where('status', 'approve')
+                            ->where("language","=",$abbr)
+                            ->latest()->take(10)->get();
+
+            $suma = 0;
+            foreach($testimonials as $item)            
+            {   
+                $suma += (int)$item->impresion_global; 
+            }
+            if(count($testimonials)>0)
+            {
+                    $media =round($suma/count($testimonials));//promedio de impresion global de testimonios
+
+            }else 
+            {
+            	 $media=0;
+            }
+
+            return view('public.'.$abbr.'.index',['toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
+
+
+        } else {
+
+            return view('errors.404');
+        }
+
     	
-    	//return $toursPrincipal;
-        $testimonials = DB::table('testimonials')
-                        ->select('id','name','photo','impresion_global','nationality','testimonial','date')
-                        ->where('status', 'approve')
-                        ->where("language","=",$abbr)
-                        ->latest()->take(10)->get();
-
-        $suma = 0;
-        foreach($testimonials as $item)            
-        {   
-            $suma += (int)$item->impresion_global; 
-        }
-        if(count($testimonials)>0)
-        {
-                $media =round($suma/count($testimonials));//promedio de impresion global de testimonios
-
-        }else 
-        {
-        	 $media=0;
-        }
-
-    	return view('public.'.$abbr.'.index',['toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
     }
 
     public function contact($abbr='es')
     {
 
-    	return view('public.'.$abbr.'.contact');
+    	if($abbr=='es')
+         {
+            return view('public.'.$abbr.'.contact');
+
+         } else {
+
+             return view('errors.404');
+         }
 
     }
 

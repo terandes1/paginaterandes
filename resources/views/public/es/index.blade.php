@@ -267,9 +267,8 @@ input[type=radio]:checked + label>img {
     </div>
 </section><br>
 
-    <section style="margin-top: -170px;">
-        <div class="rows pad-bot-redu tb-space">
-            <div class="container">
+    <section>
+     <div class="db" style="margin-left: 0px;">
                 <div class="spe-title">
                     <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Categoría</h2>
                     <div class="title-line">
@@ -458,11 +457,11 @@ input[type=radio]:checked + label>img {
                     
                     </div>
                 </div>
-            </div>
+           
         </div>
     </section><br>
 <!--====== HOME HOTELS ==========-->
-<section style="margin-top: -50px;">
+<section style="margin-top: 50px;">
      <div class="spe-title" style="z-index: -1000;">
                     <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Tour lujos </h2>
                     <div class="title-line">
@@ -477,7 +476,7 @@ input[type=radio]:checked + label>img {
             <?=DostourDeLujos($toursLujos);?>
            
         </div>
-    </section>
+</section>
 
 
 <!--====== SECTION: FREE CONSULTANT ==========-->
