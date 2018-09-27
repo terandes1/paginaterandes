@@ -51,7 +51,7 @@ class ReservationController extends Controller
            $reservation->guide_service =$request->guide_service;
            $reservation->message =$request->message;
            $reservation->tour_id =$request->tour_id;
-           $reservation->status ='disapproved';
+           $reservation->status ='pendiente';
            $reservation->save();
 
            $abbr=$request->abbr;
@@ -95,7 +95,14 @@ class ReservationController extends Controller
      */
     public function update(Request $request, Reservation $reservation)
     {
-        //
+      
+    
+      /**  $reservation = reservation::find($reservation->id);
+        $reservation->status = 'atendido';
+        $reservation->save();
+        return redirect('admin/reservartions/atendido')
+                        ->with('success','Member deleted successfully'); */
+    
     }
 
     /**
@@ -107,5 +114,39 @@ class ReservationController extends Controller
     public function destroy(Reservation $reservation)
     {
         //
+    }
+     public function listReservationsStatus($status='pendiente')
+    {
+      
+         $Reserva = Reservation::where('status',$status)->paginate(4); //listado de Reservaciones
+
+        /*if(languageUsers::privilege()=='normal')
+        {
+             $language=languageUsers::languageTestimonioEncuesta();
+
+             $ReservationPendiente = Reservation::where('language',$language->abbr)
+                          ->where('status',$status)//opcion  testimonio encuesta
+                          ->orderBy('created_at', 'desc')->paginate(4);
+            
+             return view('admin.reservation.index',['reservartions'=>$ReservationPendiente,'status'=>$status]);
+ 
+        }*/
+        
+        return view('admin.reserva.index',['reserva'=>$Reserva,'status'=>$status]);
+
+    }
+
+    public function moverAtendido($id)
+    { 
+        $reservartion = Reservation::find($id);
+        if ($reservartion->status== 'pendiente')
+        {
+            $reservartion->status ='atendido';
+            $reservartion->save();
+                return response()->json(['rpta'=>'Se movio a Atendidos' ]);
+        }
+        else{ 
+            return response()->json(['rpta'=>'No se realizo el cambio']);
+        }
     }
 }

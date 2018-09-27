@@ -17,14 +17,9 @@
 <div class="container-fluid"></br>
 	<p>
 	<div class="card">
-		<div class="card-header">
-			<!-- <a style="text-transform: uppercase;" href="{{('/admin/tours/create')}}" class="btn btn-primary"> Nuevo</a> -->
-		</div>
 		<div class="card-body">
-			
-			<!-- <a href="{{('/admin/listTourSerie/tour')}}" type="button" class="btn btn-success">Tours</a>
-
-			<a href="{{('/admin/listTourSerie/serie')}}" type="button" class="btn btn-info">Series</a> -->
+			<a href="{{('/admin/listReservationStatus/pendiente')}}" type="button" class="btn btn-success">Pendiente</a>
+			<a href="{{('/admin/listReservationStatus/atendido')}}" type="button" class="btn btn-info">Atendido</a>
 		</div>
 	</div>
 	</p>
@@ -32,9 +27,8 @@
 	<div class="card">
 	    <div class="card-header">
 	    	<ol class="breadcrumb">
-	  		<li style="text-transform: uppercase;" class="breadcrumb-item active" aria-current="page"></li>
+				<li style="text-transform: uppercase;" class="breadcrumb-item active" aria-current="page">{!! $status !!}</li>			  
 	  		</ol>      
-
 	    </div>
 	  	<div class="card-body">
 		  <div class="row">
@@ -68,59 +62,27 @@
 		        </thead>
 		        <tbody>
 		          @foreach($reserva as $itemp)
-		          <tr>
-		            <td><span style="text-transform: uppercase;">{!! $itemp->name !!}</span></td>
-		            <td>{{$itemp->email}}</td>
-		            <td>{{$itemp->skype}}</td>
-		            <td>{{$itemp->country}}</td>
-		            <td>
-		            	{{$itemp->fecha}}
-		                <!-- @if($itemp->status == 'A')
-		                	@if($itemp->principal == '1')
-		                	<span class="badge badge-success">Habilitado</span>
-		                	<span class="badge badge-primary">itemp de lujo</span>
-		                	@endif
-		                	@if($itemp->principal == '0')
-		                	<span class="badge badge-success">Habilitado</span>
-		                	@endif
-		                	@if($itemp->tipo_itemp == 'serie')
-		                	<span class="badge badge-primary">Serie</span>
+		            <tr>
+		            	<td><span style="text-transform: uppercase;">{!! $itemp->name !!}</span></td>
+		            	<td>{{$itemp->email}}</td>
+		            	<td>{{$itemp->skype}}</td>
+		            	<td>{{$itemp->country}}</td>
+		            	<td>{{$itemp->fecha}}</td>
+		            	<td>{{$itemp->travel_type}}</td>
+ 						<td>{{$itemp->numberPersonas}}</td>
+						<td>{{$itemp->room_type}}</td>
+		            	<td>{{$itemp->guide_service}}</td>
+						<td>{{$itemp->message}}</td>
+						<td> 
+							@if($itemp->status == 'pendiente')
+		                	<!--<span class="badge badge-danger">Pendiente</span> -->
+		                	<a class="btn btn-success btn-sm" onclick="moverAtendido('{{$itemp->id}}');" href=" ">Mover a Atendido</a>
+		                	@else
+		                	<span class="badge badge-success">Atendido</span>
 		                	@endif
 		                	
-		                @else
-		                	 <span class="badge badge-danger">Deshabilitado</span>
-		                @endif -->
-		            </td>
-
-					
-		            <td> 
-		            	  <td>{{$itemp->travel_type}}</td>
-
-		            </td>
-
-		            <td> 
-		            	  <td>{{$itemp->numberPersonas}}</td>
-
-		            </td>
-
-		            <td> 
-		            	  <td>{{$itemp->room_type}}</td>
-
-		            </td>
-		             <td> 
-		            	  <td>{{$itemp->guide_service}}</td>
-
-		            </td>
-
-		            <td>
-		            	 <td>{{$itemp->message}}</td>
-		              
-		            </td>
-		            <td> 
-		            	
-
-		            </td>
-		          </tr>
+				        </td>
+		            </tr>
 		          @endforeach
 		        </tbody>
 		      </table>
@@ -130,41 +92,36 @@
 	 </div>
 </div>
 
-
-
-
-
 @endsection
-
 
 @section('script')
    <script>
-   	// var id=1;
-   // 	function publicarPrincipal(id)
-   // 	{
+   	 var id=1;
+   	function moverAtendido(id)
+    	{
    		
-   // 		event.preventDefault();
+   		event.preventDefault();
  
-   //    	   $.ajax({
-		 //   url:'{{ route('publicarTourPrincipal','') }}'+'/'+id,
-		 //   type: 'get',
-		 //   data:'_token = <?php echo csrf_token() ?>',
-		 //   dataType: 'JSON',
-		 //   beforeSend: function() {
+       	   $.ajax({
+		    url:'{{ route('moveraAtendido','') }}'+'/'+id,
+		    type: 'get',
+		    data:'_token = <?php echo csrf_token() ?>',
+		    dataType: 'JSON',
+		    beforeSend: function() {
 		    
-		 //   },
-		 //   error: function() {
-		 //   },
-		 //   success: function(respuesta) {
+		    },
+		    error: function() {
+		    },
+		    success: function(respuesta) {
 		   	 	
-			// 	 toastr.success(respuesta.rpta)
-			// 	 $("#datos").load(" #datos");
-		 //   		}
-			// });
-   // 	}
+			 	 toastr.success(respuesta.rpta)
+			 	 $("#datos").load(" #datos");
+		    		}
+			 });
+    	}
    	
    	$(()=>{
-      $('#table_tours').DataTable();
+      $('#table_reserva').DataTable();
     });
 
   </script>
