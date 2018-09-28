@@ -88,6 +88,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/cambioEstadoTestimonioEncuesta/{id?}','TestimonialController@cambioEstadoTestimonioEncuesta');
     Route::get('/listTourSerie/{tipo_tour?}','TourController@listTourSerie');
 
+    Route::get('/listReservationStatus/{status?}','ReservationController@listReservationsStatus');
+
 });
 
 //fin de rutas admin
@@ -121,6 +123,8 @@ Route::get('umfrage',function(){
 Route::get('/', [ 'uses' => 'PublicController@index' ]);
 Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
 Route::get('{lang?}/contact/', [ 'uses' => 'PublicController@contact' ])->name('contact');
+
+Route::get('/reservations/moverAtendido/{id?}','ReservationController@moverAtendido')->name('moveraAtendido');
 Route::get('{lang?}/reservartion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');
 Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetes');
 

@@ -27,7 +27,7 @@
           <a class="nav-link" href="{{('/admin/icons')}}">Icons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{('/admin/reservations')}}">Reserva</a>
+          <a class="nav-link" href="{{('/admin/listReservationStatus')}}/pendiente">Reserva</a>
         </li>
 
         <li class="nav-item">
