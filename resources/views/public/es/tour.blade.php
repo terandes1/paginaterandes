@@ -142,7 +142,7 @@ color: #999999;
 ?>
 <!--====== BANNER ==========-->
 <section>
-  <div class="rows inner_banner inner_banner_4">
+  <div class="rows inner_banner inner_banner_4" style="height: 400px;">
     <div class="container">
       <h2><span id="tituloTouRelacionados">   </span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 3em;"> </h2>
        <div class="tour_head">
@@ -163,7 +163,7 @@ color: #999999;
 </section>
 <!--====== TOUR DETAILS - BOOKING ==========-->
 <section>
-  <div class="rows banner_book" id="inner-page-title">
+  <div class="rows banner_book" id="inner-page-title" >
     <div class="container">
       <div class="banner_book_1">
         
@@ -506,11 +506,11 @@ color: #999999;
         <div class="tour_right tour_rela tour-ri-com">
           <h3 id="tituloTouLateral">TOURS POPULARES</h3>
           	@foreach($toursPrincipal as $item)
-	          <div class="tour_rela_1"> <img src="/{{$item->img}}" alt="" />
-	             <h5 style="color: #f4364f;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
-	            <p style="text-align: justify;">
+	          <div class="tour_rela_1" style="text-align: center;"> <img src="/{{$item->img}}" alt="" />
+	             <h5  style="color: #f4364f;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
+	            <p style="text-align: justify;color:black;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->description_short, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">MÁS SOBRE ESTE VIAJE</a> 
+	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
 	          </div>
 	          @endforeach
         </div>

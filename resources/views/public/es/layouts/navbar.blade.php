@@ -202,10 +202,10 @@
                             </li> 
                             <li><a href="{{route('our-team','es')}}" style="font-family: Lovelo Black;">NOSOTROS</a>
                             </li>
-
+                            
                             <li><a href="{{route('contact','es')}}" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> CONTACTO</a>
-                            </li>
-
+                            </li>   
+        
                              <li class="cour-menu">
                                     <a href="#!" class="mm-arr"><a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="{{URL::asset('assets/public/icons/es.png')}}" alt="Idioma"></a>
                                         <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>

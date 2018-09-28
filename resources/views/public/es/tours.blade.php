@@ -1,37 +1,23 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-<!-- 
-<section>
- <div class="offer">
-
-        <div class="container" style="">
- 
-            <div class="row">
-
-                <div class="popu-places-home" style="height: 500px;">
-                    
-                    
-                   
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section> -->
 <section>
     <div class="rows inner_banner inner_banner_1" style="height: 400px;">
-      <div class="container">
+      
+    </div>
+    <section>
+  <div class="rows banner_book" id="inner-page-title">
+    <div class="container">
+      <div class="banner_book_1">
+      
+          <h3 class="dl4" >PERÚ TOURS DE LUJO EN AMÉRICA DEL SUR <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+
+           <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span><h3>
         
-        <ul style="background-color: rgba(2, 50, 31, 0.57);font-family: Lovelo Black;">
-          <li><a href="{{route('paquetes','es')}}">Inicio</a> </li>
-          <li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
-          <li><a href="{{route('paquetes','es')}}" class="bread-acti">Itinerarios</a> </li>
-        </ul>
-        <h2 style="background-color: rgba(2, 50, 31, 0.57);">
-          <span style="font-family: Lovelo Black;">PERÚ TOURS DE LUJO EN AMÉRICA DEL SUR </span></h2>
       </div>
     </div>
+  </div>
+</section>
   </section>
 
 <section class="container">
@@ -52,53 +38,79 @@
         <div class="hot-page2-alp-l3 hot-page2-alp-l-com">
           <h4 id="subtitulo"><i class="fa fa-map-marker" aria-hidden="true"></i>  SELECCIONE CATEGORIA</h4>
           <div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
-            <form>
-              <ul>
-                @foreach($categorias as $item)
-                    <li>
-                      <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionCategoria({!! $item->id !!},this);" >
-                        <input id="chp{!! $item->id !!}" class="styled" type="checkbox" >
-                        <label for="chp{!! $item->id !!}" id="subtitulo"> {!! $item->name!!}</label>
-                      </div>
+                <form>
+                  <ul>
+                    @foreach($categorias as $item)
+                        <li>
+                          <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionCategoria({!! $item->id !!},this);" >
+                            <input id="chp{!! $item->id !!}" class="styled" type="checkbox" >
+                            <label for="chp{!! $item->id !!}" id="subtitulo"> {!! $item->name!!}</label>
+                          </div>
 
-                    </li>
-                @endforeach
-              </ul>
-            </form>  </div>
+                        </li>
+                    @endforeach
+                  </ul>
+                </form>  
+            </div>
         </div>
         <!--END PART 4 : LEFT LISTINGS-->
     <div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-                            <h4 id="subtitulo"><i class="fa fa-dollar" aria-hidden="true"></i>RANGO DE PRECIOS</h4>
-                            <div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
-                                <form>
-                                    <ul>
-                                        <li>
-                                            <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(500,1000,this);" >
-                                                <input id="chp52" class="styled" type="checkbox">
-                                                <label for="chp52" id="subtitulo"> $ 500 - $ 1000 </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(1000,1500,this);">
-                                                <input id="chp53" class="styled" type="checkbox">
-                                                <label for="chp53" id="subtitulo"> $ 1000 - $ 1500 </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(1500,2000,this);">
-                                                <input id="chp54" class="styled" type="checkbox">
-                                                <label for="chp54" id="subtitulo"> $ 1500 - $ 2000 </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(2000,2500,this);">
-                                                <input id="chp55" class="styled" type="checkbox">
-                                                <label for="chp55"id="subtitulo"> $ 2000 - $ 2500 </label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </form> </div>
+        <h4 id="subtitulo"><i class="fa fa-dollar" aria-hidden="true"></i>RANGO DE PRECIOS</h4>
+        <div class="hot-page2-alp-l-com1 hot-page2-alp-p6">
+            <form>
+                <ul>
+                  
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(1000,1500,this);">
+                            <input id="chp53" class="styled" type="checkbox">
+                            <label for="chp53" id="subtitulo"> $ 1000 - $ 1500 </label>
                         </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(1500,2000,this);">
+                            <input id="chp54" class="styled" type="checkbox">
+                            <label for="chp54" id="subtitulo"> $ 1500 - $ 2000 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(2000,2500,this);">
+                            <input id="chp55" class="styled" type="checkbox">
+                            <label for="chp55"id="subtitulo"> $ 2000 - $ 2500 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(2000,2500,this);">
+                            <input id="chp55" class="styled" type="checkbox">
+                            <label for="chp55"id="subtitulo"> $ 2500 - $ 3000 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(3000,3500,this);">
+                            <input id="chp56" class="styled" type="checkbox">
+                            <label for="chp56"id="subtitulo"> $ 3000 - $ 3500 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(3500,4000,this);">
+                            <input id="chp57" class="styled" type="checkbox">
+                            <label for="chp57"id="subtitulo"> $ 3500 - $ 4000 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(4000,4500,this);">
+                            <input id="chp58" class="styled" type="checkbox">
+                            <label for="chp58"id="subtitulo"> $ 4000 - $ 4500 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-info checkbox-circle" onchange="tourOpcionPrecio(4500,5000,this);">
+                            <input id="chp59" class="styled" type="checkbox">
+                            <label for="chp59"id="subtitulo"> $ 4500 - $ 5000 </label>
+                        </div>
+                    </li>
+                </ul>
+            </form> </div>
+    </div>
     
       </div>
       <!--END LEFT LISTINGS-->
@@ -106,6 +118,9 @@
       <div class="col-md-9 hot-page2-alp-con-right">
         <div class="hot-page2-alp-con-right-1">
           <!--LISTINGS-->
+          <div id="carga" style="text-align:center;">
+                       
+          </div>
           <div class="row" id="tours">
             @if (count($todoTours) == 0)<br>
                <div class="spe-title col-md-12">
@@ -129,7 +144,13 @@
                                 <div class="hotel-list-score">4.5</div>
                                 <div class="hot-page2-hli-1">  <img src="/{{$item->img}}" alt=""> </div>
                               </a>
-                              <div class="hom-hot-av-tic" style="font-family: Lovelo Black"> {{$item->categoriesName}}</div>
+                              <div class="hom-hot-av-tic" style="font-family: Lovelo Black">
+                                    @if($item->tipo_tour=='serie')
+                                      SERIE
+                                    @else
+                                     {!!$item->categoriesName !!} 
+                                    @endif
+                              </div>
                             </div>
 
                             <div class="col-md-6">
@@ -152,13 +173,12 @@
                               <div class="trav-ami">
                                 <h4 id="tituloTous">Detalle e Incluye</h4>
                                 <ul>
-                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Duración:{{ $item->dias }} días / {{ (int)$item->dias-1}} noches</span></li>
+                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Duración:{{ $item->dias }} Días / {{ (int)$item->dias-1}} Noches</span></li>
                                   <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
                                   <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transferir</span></li>
                                   <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Equipaje</span></li>
-                                  <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Duración 8N / 9D</span></li>
-                                  <li><img src="/assets/public/images/icon/a19.png" alt=""> <span>Ubicación: Rio, Brasil</span></li>
-                                  <li><img src="/assets/public/images/icon/dbl4.png" alt=""> <span>Stay Planw</span></li>
+                                  <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Guía de excursiones</span></li>
+                                  <li><img src="/assets/public/images/icon/a5.png" alt=""> <span>Menú</span></li>
                                 </ul>
                               </div>
                             </div>
@@ -182,6 +202,7 @@
     function tourOpcionPrecio(precio1,precio2,element)
     {
 
+         $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Cargando...</h4>');
         element.checked = !element.checked;
         if(element.checked==true)
         {
@@ -208,7 +229,6 @@
                  },
                   success: function(respuesta) {
 
-                       console.log(respuesta.data);
                         $.each(respuesta.data,function(index,element)
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
@@ -240,20 +260,19 @@
                                                     "<div class='trav-ami'>"+
                                                      " <h4>Detalle e Incluye</h4>"+
                                                     "  <ul>"+
-                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>Turismo</span></li>"+
+                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>"+element.dias+" Días / "+(parseInt(element.dias)-1)+" Noches</span></li>"+
                                                       "  <li><img src='/assets/public/images/icon/a15.png' alt=''> <span>Hotel</span></li>"+
                                                        " <li><img src='/assets/public/images/icon/a16.png' alt=''> <span>Transferir</span></li>"+
                                                         "<li><img src='/assets/public/images/icon/a17.png' alt=''> <span>Equipaje</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Duración 8N / 9D</span></li>"+
-                                                        "<li><img src='/assets/public/images/icon/a19.png' alt=''> <span>Ubicación: Rio, Brasil</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/dbl4.png' alt=''> <span>Stay Planw</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Guía de excursiones</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a5.png' alt=''> <span>Menú</span></li>"+
                                                       "</ul>"+
                                                     "</div>"+
                                                  " </div>"+
                                                 "</div>";
                         });
-
                         $("#tours").append(htmlTours);
+                        $('#carga').html('');
                   }
               });
       
@@ -262,6 +281,8 @@
    
      function tourOpcionCategoria(id,element)
     {
+         $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Cargando...</h4>');
+
         element.checked = !element.checked;
         if(element.checked==true)
         {
@@ -287,6 +308,7 @@
                  error: function() {
                  },
                   success: function(respuesta) {
+                   
                         $.each(respuesta.data,function(index,element)
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
@@ -318,13 +340,12 @@
                                                     "<div class='trav-ami'>"+
                                                      " <h4>Detalle e Incluye</h4>"+
                                                     "  <ul>"+
-                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>Turismo</span></li>"+
+                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>"+element.dias+" Días / "+(parseInt(element.dias)-1)+" Noches</span></li>"+
                                                       "  <li><img src='/assets/public/images/icon/a15.png' alt=''> <span>Hotel</span></li>"+
                                                        " <li><img src='/assets/public/images/icon/a16.png' alt=''> <span>Transferir</span></li>"+
                                                         "<li><img src='/assets/public/images/icon/a17.png' alt=''> <span>Equipaje</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Duración 8N / 9D</span></li>"+
-                                                        "<li><img src='/assets/public/images/icon/a19.png' alt=''> <span>Ubicación: Rio, Brasil</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/dbl4.png' alt=''> <span>Stay Planw</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Guía de excursiones</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a5.png' alt=''> <span>Menú</span></li>"+
                                                       "</ul>"+
                                                     "</div>"+
                                                  " </div>"+
@@ -332,11 +353,12 @@
                         });
 
                         $("#tours").append(htmlTours);
+                         $('#carga').html('');
                   }
               });
         
     }
-
+    
 $(document).ready(function(){
     
    

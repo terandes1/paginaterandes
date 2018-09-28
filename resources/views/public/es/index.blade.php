@@ -17,19 +17,6 @@ div.contenedor_video {
 background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
 }
 
-/*
-@media screen and (min-width: 1602px) {
-  div.contenedor_video {
-   background: white;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 35px;  
-  }
-   #texto{
-    width: 100%;height: auto;font-family: 'Oswald', sans-serif;    color: white;text-transform: uppercase;text-align: center;    font-size: 50px; margin-top: -25%;z-index: 1; position: absolute;text-shadow: 2px 2px 4px #000;
- }
-
-}*/
 @media screen and (max-width: 1400px) , screen and (max-height: 1601px) {
   div.contenedor_video {
    background: white;
@@ -256,16 +243,20 @@ input[type=radio]:checked + label>img {
                      <div class="input-field col s4">
 
                      </div>
-                        <div class="input-field col s4" >
-                            <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
-                                <a style="color:white;" href="{{route('our-team','es')}}"> ¡APRENDA MÁS SOBRE TERANDES!</a>
-                            </i>
-                        </div>
-            </div><br>
+                      
+                            <div class="input-field col s4" >
+                                  <a style="color:white;font-size: 15px;" href="{{route('our-team','es')}}">
+                                        <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper">
+                                            <span>¡APRENDA MÁS SOBRE TERANDES!</span>
+                                        </i>
+                                 </a>
+                            </div>
+                        
+            </div>
             
         </div>
     </div>
-</section><br>
+</section>
 
     <section>
      <div class="db" style="margin-left: 0px;">
@@ -481,6 +472,15 @@ input[type=radio]:checked + label>img {
 
 <!--====== SECTION: FREE CONSULTANT ==========-->
 <section style="margin-top: 50px;">
+    <div class="spe-title" style="z-index: -1000;">
+        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Oferta del mes</h2>
+        <div class="title-line">
+            <div class="tl-1"></div>
+            <div class="tl-2"></div>
+            <div class="tl-3"></div>
+        </div>
+        <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">Estamos cada día trabajando para poder ofrecerte las mejores ofertas en tours.</p>
+    </div>
     <div class="offer">
         <div class="container">
             <div class="row">
@@ -489,7 +489,7 @@ input[type=radio]:checked + label>img {
                         <ul>
                             <li class="wow fadeInUp" data-wow-duration="0.5s">
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis1.png" alt="">
-              </a><span>Free WiFi</span>
+                                </a><span>Free WiFi</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="0.7s">
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis2.png" alt=""> </a><span>Breakfast</span>
@@ -508,8 +508,8 @@ input[type=radio]:checked + label>img {
                 </div>
                 <div class="col-md-6">
                     <div class="offer-r">
-                        <div class="or-1"> <span class="or-11">go</span> <span class="or-12">Stays</span> </div>
-                        <div class="or-2"> <span class="or-21">Get</span> <span class="or-22">70%</span> <span class="or-23">Off</span> <span class="or-24">use code: RG5481WERQ</span> <span class="or-25"></span> </div>
+                        <div class="or-1"> <span class="or-11">Ir</span> <span class="or-12">Stays</span> </div>
+                        <div class="or-2"> <span class="or-21">Obten un</span> <span class="or-22">70%</span> <span class="or-23">Off</span> <span class="or-24">Código: RG5481WERQ</span> <span class="or-25"></span> </div>
                     </div>
                 </div>
             </div>
@@ -559,11 +559,11 @@ input[type=radio]:checked + label>img {
                                         
                                      <div class="col-sm-4">
                                     
-                                        
-                                            <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
-                                                <a style="color:white;" href="{{route('paquetes','es')}}/Series"> VER TOURS</a>
-                                            </i>
-                                        
+                                            <a style="color:white;" href="{{route('paquetes','es')}}/Series">
+                                                    <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
+                                                         <span>VER TOURS</span>
+                                                    </i>
+                                            </a>
 
                                       </div>
                                                 
@@ -695,9 +695,12 @@ input[type=radio]:checked + label>img {
                                 
                             </div>
                             <div class="col-sm-4">
-                                <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="">
-                                    <input type="submit" value="INGRESE SU TESTIMONIO"  data-toggle="modal" data-target="#idTestimonio" class="waves-button-input">
-                                </i> 
+                                 <a style="color:white;" data-toggle="modal" data-target="#idTestimonio">
+                                                    <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
+                                                         <span>INGRESE SU TESTIMONIO</span>
+                                                    </i>
+                                </a>
+                                
                             </div>
                              <div class="col-sm-4">
                                 

@@ -43,7 +43,7 @@ class publicTours
 	{
 		
          $toursPublic = DB::table('languages')
-			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
+			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.tipo_tour','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
 			        ->join('categories', 'languages.id', '=', 'categories.language_id')
 			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -61,7 +61,7 @@ class publicTours
 		{
 		
          $toursPublic = DB::table('languages')
-			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
+			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.tipo_tour','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
 			        ->join('categories', 'languages.id', '=', 'categories.language_id')
 			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -78,7 +78,7 @@ class publicTours
 		{
 		
          $toursPublic = DB::table('languages')
-			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
+			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.tipo_tour','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
 			        ->join('categories', 'languages.id', '=', 'categories.language_id')
 			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
@@ -94,7 +94,7 @@ class publicTours
 		public static function searchSeries($abbr)
 		{
 		$toursPublic = DB::table('languages')
-			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.name','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
+			        ->select('tours.id', DB::raw('count(*) as dias'),'tours.tipo_tour','tours.name','tours.description_short','tours.img','tours.price','tours.slug','categories.name as categoriesName','itineraries.department')
 			        ->join('categories', 'languages.id', '=', 'categories.language_id')
 			        ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			        ->join('tours', 'cat_t.tour_id', '=', 'tours.id')

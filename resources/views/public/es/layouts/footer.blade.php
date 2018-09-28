@@ -8,129 +8,7 @@
         font-family: NewsGoth CN BT; 
       }
   </style>
-  <!-- <section>
-    <div class="rows">
-            <div class="container" style="margin-top: 20px;">
-                <div class="col-sm-3"> 
-                    <div  class="thumbnail">
-                      <img src="https://www.cantturperu.org/public/images/socios/terandes.png" class="img-rounded" alt="Cinque Terre" width="200" height="100"> 
-                  </div>
-               
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumbnail" style="">
-                      <img src="https://www.cantturperu.org/public/images/socios/illapa.png" class="img-rounded" alt="Cinque Terre" width="200" height="100"> 
-                  </div>
-               </div>
-               <div class="col-sm-3">
-                  <div class="thumbnail"style="">
-                    <br/>
-                      <img src="https://www.cantturperu.org/public/images/logo.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="10"> 
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumbnail" style="">
-                      <br/>
-                      <br/>
-                      <img src="https://www.turismorural.com.pe/public/images/logo.png" class="img-rounded" alt="Cinque Terre" width="250" height="100"> 
-                  </div>
-                 </div>
-            </div>
-     </div> 
-   </section> -->
-    <!--====== FOOTER 2 ==========-->
-    <!-- <section>
-        <div class="rows">
-            <div class="footer" style="background-color: #f2f2dc;padding-bottom: 25px;padding-top: 25px;">
-                <div class="container" >
-                    <div class="foot-sec2">
-                        <div>
-                            <div class="row">
-                                <div class="col-sm-3 col-md-3 foot-social foot-spec foot-com">
-                                    <h3 style="color: black;  margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;">REDES SOCIALES </h3>
-                                    <ul >
-                                        <li><a href="https://www.facebook.com/tierrasdelosandes" target="_blank"><i style="background: #42423c;    font-size: 18px;    margin-right: 13px" class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-                                        <li><a href="https://www.instagram.com/tierrasdelosandes/?hl=fr" target="_blank"><i style="background: #42423c;font-size: 18px;    margin-right: 13px" class="fa fa-instagram" aria-hidden="true"></i></a> </li>
-                                        <li><a href="https://www.youtube.com/channel/UC0MniFzf-lvtteI9CIKTQnw" target="_blank"><i style="background: #42423c;font-size: 18px;    margin-right: 13px; margin-bottom: 45px" class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-                                        
-                                    </ul>
-                                    
-                                    <h3 style="color: black; margin-bottom: 15px ;padding-top: 45px ;font-family: 'Roboto', sans-serif;    font-weight: 200;">CONTACTO </h3>
-                                    <ul >
-                                    <li><a style="color:black; " href="#"><i style="background: #363630;margin: 5px" class="fa fa-phone" ></i>51 84 247277</a> </li>
-                                    <li><a style="color:black; " href="mailto:terandes@terandes.com"><i style="background: #363630;margin: 5px" class="fa fa-envelope" ></i>terandes@terandes.com</a> </li>
-                                    </ul>
-                                    <p>hola</p>
-                                </div>
-                                <div class="col-sm-3 col-md-3foot-spec foot-com">
-                                    <h3 style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;"> CATEGORIA </h3>
-                                    <p><a style="color: black; " href="#">- Aventura</a></p>
-                                    <p><a style="color: black; " href="#">- Excursion</a></p>
-                                    <p><a style="color: black; " href="#">- Alta Montaña</a></p>
-                                    <p><a style="color: black; " href="#">- Descubrir</a></p>
-                                </div>
-                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
-                                    <h3  style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;">UBICACION </h3>
-                                    <p style="color: black;"><strong>Dirección:</strong> Calle Turquezas E-11 Urb. Kennedy A - Cusco </p>
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.0751097731018!2d-71.95507168561765!3d-13.530981990490638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5f812e94329%3A0xb98b5a81432a4fca!2sTierras+de+los+Andes+%7C+Travel+Agency+in+Peru!5e0!3m2!1ses!2spe!4v1536266980651" width="100%" height="310" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                </div>
-                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
-                                    <h3  style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;">FACEBOOK</h3>
-                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftierrasdelosandes&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="350" height="370" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>            
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-   <!--  <section>
-        <div class="rows">
-            <div class="footer" style="background-color: #f2f2dc">
-                <div class="container" >
-                    <div class="foot-sec2">
-                        <div>
-                            <div class="row">
-                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
-                                    <h3  style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;"> AFILIADOS </h3>
-                                    <p><a style="color: black; " href="#">- Aventura</a></p>
-                                    <p><a style="color: black; " href="#">- Excursion</a></p>
-                                    <p><a style="color: black; " href="#">- Alta Montaña</a></p>
-                                    <p><a style="color: black; " href="#">- Descubrir</a></p>
-                                </div>
-                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
-                                    <h3  style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;"> SOCIOS </h3>
-                                    <p><a style="color: black; " href="#">- Aventura</a></p>
-                                    <p><a style="color: black; " href="#">- Excursion</a></p>
-                                    <p><a style="color: black; " href="#">- Alta Montaña</a></p>
-                                    <p><a style="color: black; " href="#">- Descubrir</a></p>
-                                </div>
-                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
-                                    <h3  style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;"> 
-                                        CERTIFICACIONES 
-                                    </h3>
-                                    <p><a style="color: black; " href="#">- Aventura</a></p>
-                                    <p><a style="color: black; " href="#">- Excursion</a></p>
-                                    <p><a style="color: black; " href="#">- Alta Montaña</a></p>
-                                    <p><a style="color: black; " href="#">- Descubrir</a></p>
-                                </div>
-                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
-                                    <h3  style="color: black; margin-bottom: 15px;font-family: 'Roboto', sans-serif;    font-weight: 200;"> RESPONSABILIDAD SOCIAL Y EMPRESARIAL </h3>
-                                    <p><a style="color: black; " href="#">- Aventura</a></p>
-                                    <p><a style="color: black; " href="#">- Excursion</a></p>
-                                    <p><a style="color: black; " href="#">- Alta Montaña</a></p>
-                                    <p><a style="color: black; " href="#">- Descubrir</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    
+  
     <section style="background:#06495c;">
          <div class="container">
             
@@ -256,8 +134,7 @@
                             Calle Turquezas E-11 Urb. Kennedy A - Cusco
                         </a>
                     </li>
-                 <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.0751097731018!2d-71.95507168561765!3d-13.530981990490638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5f812e94329%3A0xb98b5a81432a4fca!2sTierras+de+los+Andes+%7C+Travel+Agency+in+Peru!5e0!3m2!1ses!2spe!4v1536266980651" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-                   
+               
                 </ul>
             </div>
 
@@ -279,41 +156,27 @@
         <div class="rows copy" style="background:#06495c;">
             <div class="container" >
                 <div class="row">
-                    <div class="col-md-3">
-                      <div class="thumbnail">
-                        <a href="/w3images/lights.jpg" target="_blank">
-                          <img class="img-rounded" src="https://www.turismorural.com.pe/content/images/asociados/terandes.png" alt="Lights" style="width:50%">
+                    
+                    </div>
+                    <div class="col-md-2">
+                      <div class="">
+                        <a href="" target="_blank">
+                          <img src="{!! URL::asset('assets/public/images/icons-footer/illapa.png') !!}" alt="Fjords" style="width:80%">
+                         
+                        </a>
+                      </div>
+                    </div>
+                   <div class="col-md-2">
+                      <div class="">
+                        <a href="" target="_blank">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/terandes.png') !!}" alt="Lights" style="width:80%">
                           
                         </a>
                       </div>
                      
                     </div>
-                    <div class="col-md-3">
-                      <div class="thumbnail">
-                        <a href="/w3images/nature.jpg" target="_blank">
-                          <img src="https://www.turismorural.com.pe/content/images/asociados/terandes.png" alt="Nature" style="width:50%">
-                         
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="thumbnail">
-                        <a href="/w3images/fjords.jpg" target="_blank">
-                          <img src="https://www.turismorural.com.pe/content/images/asociados/illapa.png" alt="Fjords" style="width:50%">
-                         
-                        </a>
-                      </div>
-                    </div>
-                   <div class="col-md-3">
-                      <div class="thumbnail">
-                        <a href="/w3images/lights.jpg" target="_blank">
-                          <img class="img-rounded" src="https://www.turismorural.com.pe/content/images/asociados/terandes.png" alt="Lights" style="width:45%">
-                          
-                        </a>
-                      </div>
-                     
-                    </div>
-                </div>
+                    
+                </div><br>
             </div>
         </div>
     </section>
@@ -326,21 +189,7 @@
             </div>
         </div>
     </section>
-    <!--<section>
-        <div class="icon-float">
-            <ul>
-                <li><a href="#" class="sh">1k <br> Share</a> </li>
-                <li><a href="#" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-                <li><a href="#" class="gp1"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
-                <li><a href="#" class="tw1"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-                <li><a href="#" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-                <li><a href="#" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
-                <li><a href="#" class="sh1"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li>
-                
-                
-            </ul>
-        </div>
-    </section> -->
+    
  <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

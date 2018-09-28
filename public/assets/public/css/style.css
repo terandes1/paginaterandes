@@ -1933,8 +1933,11 @@
      background: linear-gradient(to bottom, #8BC34A, #70ab2c);
 }
  .banner_book {
-     background: #0c4014;
-     z-index: 9999;
+     /*background: #0c4014;*/
+     background-color: rgba(22, 23, 19, 0.57);
+     margin-top: -67px;
+     position: relative;
+    /* z-index: 9999;*/
      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.37);
 }
  .banner_book_1 {
@@ -2180,9 +2183,9 @@
      left: 19px;
 }
  .tour_right h3 {
-     background: #0e4817;
+     background:#ccc;
      padding-left: 40px;
-     color: #ffffff;
+     color: #191717;
      font-size: 14px;
      background-size: 22px;
     /* margin: 24px 0px;
@@ -5716,6 +5719,7 @@
      visibility: visible;
      transform: scaleX(1);
      transition: all .25s ease-out;
+     background: #579C87;
 }
  .main-menu ul li:last-child a{
      padding-right:0px;
@@ -6431,7 +6435,7 @@
      color: #203245;
 }
  .mm2-com > .ed-course-in{
-     margin-bottom:15px;
+     margin-bottom: -21px
 }
  .m-menu-inn > .mm2-com > a{
      background: #002147;

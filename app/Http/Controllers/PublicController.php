@@ -145,17 +145,20 @@ class PublicController extends Controller
    public function toursOpcion()//filtrado por catagori
    {
    		
-   		if(request()->ajax())
+
+      if(request()->ajax())
 			{
 				
 				$abbr=$_POST['abbr'];
 				if($_POST['cantidaPeticion']<1)
 				{
 					$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.id','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName', DB::raw('count(*) as dias'),'tours.id','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+                                  ->leftJoin('itineraries', 'itineraries.tour_id', '=', 'tours.id')
+                                  ->groupBy('tours.name')
                   				  ->where('languages.abbr',$abbr)->get();
 
 					return response(['data' => $categories,'can' => $_POST['cantidaPeticion']]);
@@ -165,10 +168,12 @@ class PublicController extends Controller
 			
 				
 				$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.id','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName',DB::raw('count(*) as dias'),'tours.name','tours.id','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+                                  ->leftJoin('itineraries', 'itineraries.tour_id', '=', 'tours.id')
+                                  ->groupBy('tours.name')
                   				  ->whereIn('categories.id', $categorie)
                   				  ->where('languages.abbr',$abbr)->get();
 
@@ -186,14 +191,17 @@ class PublicController extends Controller
    		if(request()->ajax())
 			{
 				
-				$abbr=$_POST['abbr'];
+
+                $abbr=$_POST['abbr'];
 				if($_POST['cantidaPeticion']<2)
 				{
 					$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName',DB::raw('count(*) as dias'),'tours.name','tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+                                  ->leftJoin('itineraries', 'itineraries.tour_id', '=', 'tours.id')
+                                  ->groupBy('tours.name')
                   				  ->where('languages.abbr',$abbr)->get();
 
 					return response(['data' => $categories,'can' => $_POST['cantidaPeticion']]);
@@ -219,10 +227,12 @@ class PublicController extends Controller
 							$maxPrecio=$value;
 							
 								$categories = DB::table('categories')
-								  ->select('categories.name as categoriaName','tours.name','tours.slug','tours.description_short','tours.price','tours.img')
+								  ->select('categories.name as categoriaName','tours.name',DB::raw('count(*) as dias'),'tours.slug','tours.description_short','tours.price','tours.img')
                     			  ->join('languages', 'languages.id', '=', 'categories.language_id')
                   				  ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
 			       				  ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+                                  ->leftJoin('itineraries', 'itineraries.tour_id', '=', 'tours.id')
+                                  ->groupBy('tours.name')
                   				  ->whereBetween('tours.price',[$minPrecio,$maxPrecio])
                   				  ->where('languages.abbr',$abbr)->get();
                   				  foreach ($categories as  $item) {
@@ -234,7 +244,8 @@ class PublicController extends Controller
                   				  		 	"description_short" => $item->description_short,
                   				  		 	"price" => $item->price,
                   				  		 	"slug" => $item->slug,
-                  				  		 	"img" => $item->img
+                  				  		 	"img" => $item->img,
+                                            "dias" => $item->dias
                   				  		 );
                   				  }
                   				 
