@@ -196,7 +196,7 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img src="{!! URL::asset('assets/public/images/icons-footer/illapa.png') !!}" alt="Fjords" style="width:85%">
+                          <img src="{!! URL::asset('assets/public/images/icons-footer/peru.png') !!}" alt="Fjords" style="width:85%">
                          
                         </a>
                       </div>
