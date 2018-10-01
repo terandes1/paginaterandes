@@ -161,7 +161,7 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img src="{!! URL::asset('assets/public/images/icons-footer/illapa.png') !!}" alt="Fjords" style="width:80%">
+                          <img src="{!! URL::asset('assets/public/images/icons-footer/illapa.png') !!}" alt="Fjords" style="width:85%">
                          
                         </a>
                       </div>
@@ -169,7 +169,7 @@
                    <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/terandes.png') !!}" alt="Lights" style="width:80%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/terandes.png') !!}" alt="Lights" style="width:85%">
                           
                         </a>
                       </div>
@@ -178,7 +178,7 @@
                      <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/patronato.png') !!}" alt="Lights" style="width:80%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/patronato.png') !!}" alt="Lights" style="width:85%">
                           
                         </a>
                       </div>
@@ -187,7 +187,7 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaA.png') !!}" alt="Lights" style="width:80%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaA.png') !!}" alt="Lights" style="width:85%">
                           
                         </a>
                       </div>
@@ -196,12 +196,22 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaT.png') !!}" alt="Lights" style="width:80%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaT.png') !!}" alt="Lights" style="width:85%">
                           
                         </a>
                       </div>
                      
                     </div>
+                    <div class="col-md-2">
+                      <div class="">
+                        <a href="" target="_blank">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/carbono.png') !!}" alt="Lights" style="width:85%">
+                          
+                        </a>
+                      </div>
+                     
+                    </div>
+
                     
                 </div><br>
             </div>

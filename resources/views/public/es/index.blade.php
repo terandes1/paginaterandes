@@ -289,7 +289,7 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
-                             <a class="course-overlay" href="{{route('paquetes','es')}}/Descubrir">    
+                             <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">    
                                  <img  style="height: 540px;" src="{{URL::asset('assets/public/category/6.jpg')}}" /> 
                             </a>
                                   <div class="tour-mig-lc-con" style="text-align: center;">
@@ -334,7 +334,7 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
-                        <a class="course-overlay" href="{{route('paquetes','es')}}/Aventura">
+                        <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/category/10.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -375,7 +375,7 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
-                        <a class="course-overlay" href="{{route('paquetes','es')}}/alta-Montania">
+                        <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/category/8.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -417,7 +417,7 @@ input[type=radio]:checked + label>img {
                                                     </i>
                                                
                                         </div>
-                          <a class="course-overlay" href="{{route('paquetes','es')}}/Excursiones">
+                          <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/category/9.jpg')}}" /> 
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">

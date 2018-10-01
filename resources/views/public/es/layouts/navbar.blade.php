@@ -154,7 +154,7 @@
                                         <div class="m-menu-inn">
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Descubrir">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">
                                                         <img src="{{URL::asset('assets/public/category/menu/5.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Descubrimiento</span>
                                                     </a>
@@ -163,7 +163,7 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Aventura">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
                                                         <img src="{{URL::asset('assets/public/category/menu/2.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Aventura</span>
                                                     </a>
@@ -172,7 +172,7 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/alta-Montania">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
                                                         <img src="{{URL::asset('assets/public/category/menu/3.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>
@@ -181,7 +181,7 @@
                                             
                                             <div class="mm2-com mm1-com mm1-s4">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/Excursiones">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
                                                         <img src="{{URL::asset('assets/public/category/menu/4.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Excursiones</span>
                                                     </a>
