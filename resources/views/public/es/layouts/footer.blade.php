@@ -127,13 +127,48 @@
 
             <div class="db-3" id="footerContact" style="width: 280px;">
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">UBICACIÓN</h3>
+                 
                 <ul>
+                    <h3 style="font-family: NewsGoth CN BT;;font-size: 1.1em;">
+                                     Cusco
+                    </h3>
                     <li>
                         <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
-                            <h5 id="textFooter">Dirección:</h5>
+                           
+                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
                             Calle Turquezas E-11 Urb. Kennedy A - Cusco
                         </a>
+                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                            <h5 id="textFooter"  style="font-size: 1.1em; color: #a1a2a7;">Teléfono: <span style="font-size: 10px;color:#ffffff;" >00 51 84 247277</span></h5>
+                             
+                        </a>
                     </li>
+                    <h3 style="font-family: NewsGoth CN BT;;font-size: 1.1em;">
+                                     Lima
+                    </h3>
+                    <li>
+                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                           
+                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
+                            Calle Bolivar 221 Oficina 4 1er piso Miraflores - Lima - Perú
+                        </a>
+                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                            <h5 id="textFooter" style="font-size: 1.1em; color: #a1a2a7;">Teléfono: <span  style="font-size: 10px;color:#ffffff;">00 51 1 2434475</span></h5>
+                            
+                        </a>
+                    </li>
+                     <h3 style="font-family: NewsGoth CN BT;;font-size: 1.1em;">
+                                     Arequipa
+                    </h3>
+                    <li>
+                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                           
+                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
+                            Jr. Puno 633 - 2do piso - barrio central-puno
+                        </a>
+                       
+                    </li>
+
                
                 </ul>
             </div>
@@ -141,8 +176,8 @@
         
              <div class="db-3" id="footerContact" style="width: 280px;">
 
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">FACEBOOK</h3>
-              <div class="fb-page" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/tierrasdelosandes" data-tabs="timeline" data-width="280" data-height="382" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tierrasdelosandes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tierrasdelosandes">Tierras de los Andes</a></blockquote></div>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">FACEBOOK</h3><br><br>
+              <div class="fb-page" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/tierrasdelosandes" data-tabs="timeline" data-width="280" data-height="392" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tierrasdelosandes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tierrasdelosandes">Tierras de los Andes</a></blockquote></div>
             </div>
 
           
@@ -187,7 +222,7 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaA.png') !!}" alt="Lights" style="width:85%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaA.png') !!}" alt="Lights" style="width:85%;">
                           
                         </a>
                       </div>
