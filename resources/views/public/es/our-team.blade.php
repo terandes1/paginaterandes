@@ -7,7 +7,7 @@
       <div class="container" style="background-color: rgba(22, 23, 19, 0.57)">
 
 	        <h2><span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; ">Conoce a la familia de Tierras de los Andes </span></h2>
-        <p style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; text-align: center;">"Cada uno de nuestros miembros únicos del equipo"</p>
+        <p style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; text-align: center;">" Cada uno de nuestros miembros únicos del equipo "</p>
       </div>
     </div>
   </section>
@@ -28,75 +28,73 @@
         </div>
         <div class="tourb2-ab-p1 com-colo-abou">
           <div class="col-md-12 col-sm-12">
-            <div class="tourb2-ab-p1-right"> <img src="{{ asset('assets/public/nosotros/equipo.jpg') }}" alt="" /> </div>
+            <div class="tourb2-ab-p1-right"> <img  src="{{ asset('assets/public/nosotros/equipo.jpg') }}" alt="" /> </div>
           </div>
         </div>
         <div class="tips_travel_1">
           <ul>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/1.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros">Thomas Pirame Leonce</h4>
+                <p id="subtitulo">EJECUTIVO DE VENTAS </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/2.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros">Justine Weiss Quénéa</h4>
+                <p id="subtitulo">EJECUTIVO DE VENTAS </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/3.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros">Michael Scheneider</h4>
+                <p id="subtitulo">EJECUTIVO DE VENTAS </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/4.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros">Wendy Watson Yamashita</h4>
+                <p id="subtitulo">EJECUTIVO DE VENTAS </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/5.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros">Ronald Hinojosa Guevara</h4>
+                <p id="subtitulo">EJECUTIVO DE VENTAS </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/6.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros">Emma Duvic Robin</h4>
+                <p id="subtitulo">EJECUTIVO DE VENTAS </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/7.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros"></h4>
+                <p id="subtitulo"> </p>
               </div>
             </li>
             <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/8.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros"></h4>
+                <p id="subtitulo"></p>
               </div>
             </li>
-            <!--TIPS LIST-->
             <li class="col-md-4 col-sm-4 b_packages">
-              <div class="tips_travel_2"><img src="{{ asset('assets/public/nosotros/persona.jpg') }}" alt="" /> 
-                <h4 id="tituloNosotros">Bring copies of your passport</h4>
-                <p id="subtitulo">Contrary to popular belief, Lorem Ipsum. </p>
+              <div class="tips_travel_2"><img style="width: 80%;" src="{{ asset('assets/public/nosotros//trabajadores/9.jpg') }}" alt="" /> 
+                <h4 id="tituloNosotros"></h4>
+                <p id="subtitulo"></p>
               </div>
             </li>
-            <!--TIPS LIST-->
            
           </ul>
         </div>
