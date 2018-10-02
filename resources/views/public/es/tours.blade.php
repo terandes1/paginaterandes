@@ -10,7 +10,7 @@
     <div class="container">
       <div class="banner_book_1">
       
-          <h3 class="dl4" >PERÚ TOURS DE LUJO EN AMÉRICA DEL SUR <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+          <h3 class="dl4">PERÚ TOURS DE LUJO EN AMÉRICA DEL SUR <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
 
            <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span><h3>
         

@@ -485,7 +485,9 @@ input[type=radio]:checked + label>img {
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="offer-l"> <span class="ol-1"></span> <span class="ol-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> <span class="ol-4">Standardized Budget Rooms</span>                            <span class="ol-3"></span> <span class="ol-5">$99/-</span>
+                    <div class="offer-l"> <span class="ol-1"></span> <span class="ol-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> <span class="ol-4">
+                      GRAN VIAJE AL SUR DE PERÚ - EN GRUPO
+                    </span>                            <span class="ol-3"></span> <span class="ol-5">$99/-</span>
                         <ul>
                             <li class="wow fadeInUp" data-wow-duration="0.5s">
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis1.png" alt="">
