@@ -39,22 +39,22 @@ width:100%!important;
 							<a href="{{route('paquetes','es')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Categoría</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','es')}}/Descubrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Descubrimiento.png')}}" alt="" /> Descubrimiento</a>
+							<a href="{{route('paquetes','es')}}/Descubrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Descubrimiento.png')}}" alt="" /> Descubrimiento</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','es')}}/Aventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Aventura.png')}}" alt="" /> Aventura</a>
+							<a href="{{route('paquetes','es')}}/Aventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Aventura.png')}}" alt="" /> Aventura</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','es')}}/alta-Montania" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/AltaMontania.png')}}" alt="" /> Alta Montaña</a>
+							<a href="{{route('paquetes','es')}}/alta-Montania" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/AltaMontania.png')}}" alt="" /> Alta Montaña</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','es')}}/Excursiones" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Excursiones.png')}}" alt="" /> Excursiones</a>
+							<a href="{{route('paquetes','es')}}/Excursiones" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Excursiones.png')}}" alt="" /> Excursiones</a>
 						</li>
 						<li>
 							<a href="{{route('paquetes','es')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Series</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','es')}}/Aventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/icons/tours/Aventura.png')}}" alt="" /> Aventura</a>
+							<a href="{{route('paquetes','es')}}/Aventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Aventura.png')}}" alt="" /> Aventura</a>
 						</li>
 						
 					</ul>

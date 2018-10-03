@@ -98,7 +98,7 @@ html {
   		<div class="container">
   			<div class="row">
   				<div class="col-sm-12"><br>
-                    <img src="/assets/public/encuesta/terandes.png" height="100px" alt="">
+                    <img src="{{ URL::asset('/assets/public/images/logo.png') }}" height="100px" alt="">
   				    <h1 class="text-center"><strong>UMFRAGE</strong></h1>
                     <br>
   					 <p>Wir freuen uns über Ihr Feedback und Anregungen zu unseren Dienstleistungen während Ihrer Reise. Vielen Dank, dass Sie sich Zeit genommen haben, um auf diese schnelle Umfrage zu antworten. </p>
@@ -161,25 +161,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="global" id="global1" class="radio input-hidden" value="5">
-  						<label for="global1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden </label>
+  						<label for="global1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="global" id="global2" class="radio input-hidden" value="4">
-  						<label for="global2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="global2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="global" id="global3" class="radio input-hidden" value="3">
-  						<label for="global3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden  </label>
+  						<label for="global3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden  </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="global" id="global4" class="radio input-hidden" value="2">
-  						<label for="global4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="global4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -223,25 +223,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_organizacion" id="itinerarioO1" class="radio input-hidden" value="5">
-  						<label for="itinerarioO1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="itinerarioO1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_organizacion" id="itinerarioO2" class="radio input-hidden" value="4">
-  						<label for="itinerarioO2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="itinerarioO2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_organizacion" id="itinerarioO3" class="radio input-hidden" value="3">
-  						<label for="itinerarioO3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="itinerarioO3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_organizacion" id="itinerarioO4" class="radio input-hidden" value="2">
-  						<label for="itinerarioO4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="itinerarioO4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -259,25 +259,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_transporte" id="itinerarioT1" class="radio input-hidden" value="5">
-  						<label for="itinerarioT1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="itinerarioT1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_transporte" id="itinerarioT2" class="radio input-hidden" value="4">
-  						<label for="itinerarioT2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="itinerarioT2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_transporte" id="itinerarioT3" class="radio input-hidden" value="3">
-  						<label for="itinerarioT3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="itinerarioT3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_transporte" id="itinerarioT4" class="radio input-hidden" value="2">
-  						<label for="itinerarioT4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="itinerarioT4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -295,25 +295,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_chofer" id="itinerarioC1" class="radio input-hidden" value="5">
-  						<label for="itinerarioC1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="itinerarioC1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_chofer" id="itinerarioC2" class="radio input-hidden" value="4">
-  						<label for="itinerarioC2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="itinerarioC2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_chofer" id="itinerarioC3" class="radio input-hidden" value="3">
-  						<label for="itinerarioC3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="itinerarioC3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="i_chofer" id="itinerarioC4" class="radio input-hidden" value="2">
-  						<label for="itinerarioC4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="itinerarioC4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -358,25 +358,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_conocimiento" id="guiaC1" class="radio input-hidden" value="5">
-  						<label for="guiaC1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="guiaC1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_conocimiento" id="guiaC2" class="radio input-hidden" value="4">
-  						<label for="guiaC2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="guiaC2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_conocimiento" id="guiaC3" class="radio input-hidden" value="3">
-  						<label for="guiaC3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="guiaC3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_conocimiento" id="guiaC4" class="radio input-hidden" value="2">
-  						<label for="guiaC4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="guiaC4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -394,25 +394,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_simpatia" id="guiaS1" class="radio input-hidden" value="5">
-  						<label for="guiaS1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="guiaS1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_simpatia" id="guiaS2" class="radio input-hidden" value="4">
-  						<label for="guiaS2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="guiaS2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_simpatia" id="guiaS3" class="radio input-hidden" value="3">
-  						<label for="guiaS3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="guiaS3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_simpatia" id="guiaS4" class="radio input-hidden" value="2">
-  						<label for="guiaS4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="guiaS4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -431,25 +431,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_eficacia" id="guiaE1" class="radio input-hidden" value="5">
-  						<label for="guiaE1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="guiaE1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_eficacia" id="guiaE2" class="radio input-hidden" value="4">
-  						<label for="guiaE2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="guiaE2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_eficacia" id="guiaE3" class="radio input-hidden" value="3">
-  						<label for="guiaE3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="guiaE3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_eficacia" id="guiaE4" class="radio input-hidden" value="2">
-  						<label for="guiaE4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="guiaE4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -468,25 +468,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_comunicacion" id="guiaCC1" class="radio input-hidden" value="5">
-  						<label for="guiaCC1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="guiaCC1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_comunicacion" id="guiaCC2" class="radio input-hidden" value="4">
-  						<label for="guiaCC2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="guiaCC2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_comunicacion" id="guiaCC3" class="radio input-hidden" value="3">
-  						<label for="guiaCC3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="guiaCC3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="g_comunicacion" id="guiaCC4" class="radio input-hidden" value="2">
-  						<label for="guiaCC4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="guiaCC4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -544,25 +544,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_limpieza" id="alojamientoL1" class="radio input-hidden" value="5">
-  						<label for="alojamientoL1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="alojamientoL1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_limpieza" id="alojamientoL2" class="radio input-hidden" value="4">
-  						<label for="alojamientoL2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="alojamientoL2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_limpieza" id="alojamientoL3" class="radio input-hidden" value="3">
-  						<label for="alojamientoL3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="alojamientoL3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_limpieza" id="alojamientoL4" class="radio input-hidden" value="2">
-  						<label for="alojamientoL4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="alojamientoL4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -580,25 +580,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_servicio" id="alojamientoS1" class="radio input-hidden" value="5">
-  						<label for="alojamientoS1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="alojamientoS1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_servicio" id="alojamientoS2" class="radio input-hidden" value="4">
-  						<label for="alojamientoS2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="alojamientoS2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_servicio" id="alojamientoS3" class="radio input-hidden" value="3">
-  						<label for="alojamientoS3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="alojamientoS3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="alojamiento_servicio" id="alojamientoS4" class="radio input-hidden" value="2">
-  						<label for="alojamientoS4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="alojamientoS4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -651,25 +651,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_cantidad" id="comidasC1" class="radio input-hidden" value="5">
-  						<label for="comidasC1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="comidasC1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_cantidad" id="comidasC2" class="radio input-hidden" value="4">
-  						<label for="comidasC2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="comidasC2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_cantidad" id="comidasC3" class="radio input-hidden" value="3">
-  						<label for="comidasC3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="comidasC3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_cantidad" id="comidasC4" class="radio input-hidden" value="2">
-  						<label for="comidasC4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="comidasC4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>
@@ -689,25 +689,25 @@ html {
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_servicio" id="comidaS1" class="radio input-hidden" value="5">
-  						<label for="comidaS1"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Sehr zufrieden</label>
+  						<label for="comidaS1"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Sehr zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_servicio" id="comidaS2" class="radio input-hidden" value="4">
-  						<label for="comidaS2"><img src="/assets/public/encuesta/smile.png" alt="I'm sad" />Zufrieden</label>
+  						<label for="comidaS2"><img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" alt="I'm sad" />Zufrieden</label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_servicio" id="comidaS3" class="radio input-hidden" value="3">
-  						<label for="comidaS3"><img src="/assets/public/encuesta/serious.png.png" alt="I'm sad" />Unzufrieden </label>
+  						<label for="comidaS3"><img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" alt="I'm sad" />Unzufrieden </label>
   					</div>
   				</div>
   				<div class="col-sm-3">
   					<div class="form-grup">
   						<input type="radio" name="comida_servicio" id="comidaS4" class="radio input-hidden" value="2">
-  						<label for="comidaS4"><img src="/assets/public/encuesta/sad.png" alt="I'm sad" />Sehr unzufrieden</label>
+  						<label for="comidaS4"><img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" alt="I'm sad" />Sehr unzufrieden</label>
   					</div>
   				</div>
   			</div>

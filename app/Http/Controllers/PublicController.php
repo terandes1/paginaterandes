@@ -69,7 +69,15 @@ class PublicController extends Controller
 
     	if($abbr=='es')
          {
-            return view('public.'.$abbr.'.contact');
+             $tour = DB::table('tours')
+                      ->select('tours.name')
+                      ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+                      ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+                      ->join('languages', 'languages.id', '=', 'categories.language_id')
+                      ->where('languages.abbr','=',$abbr)
+                      ->get();
+
+            return view('public.'.$abbr.'.contact',['tour' =>$tour ]);
 
          } else {
 
@@ -122,7 +130,7 @@ class PublicController extends Controller
             case '':
                         $todoTours=publicTours::todoTours($abbr);//todo los tours
                         break;
-            case 'Series':
+            case 'series':
                          $todoTours=publicTours::searchSeries($abbr);//buscar tours tipo serie
                         break;
            

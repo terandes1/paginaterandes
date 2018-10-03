@@ -96,26 +96,26 @@
                 <ul>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                        <a id="textFooter" href="#!">
                          Aventura
                      
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a id="textFooter"> <img src="images/icon/dbr2.jpg" alt="" />
+                        <a id="textFooter">
                             Excursión
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="#!" id="textFooter"> <img src="images/icon/dbr3.jpg" alt="" />
+                        <a href="#!" id="textFooter"> 
                             Alta Montaña
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="#!" id="textFooter"> <img src="images/icon/dbr4.jpg" alt="" />
+                        <a href="#!" id="textFooter"> 
                             Descubrir
                         </a>
                     </li>
@@ -133,12 +133,12 @@
                                      Cusco
                     </h3>
                     <li>
-                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                        <a id="textFooter" href="#!"> 
                            
                             <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
                             Calle Turquezas E-11 Urb. Kennedy A - Cusco
                         </a>
-                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                        <a id="textFooter" href="#!"> 
                             <h5 id="textFooter"  style="font-size: 1.1em; color: #a1a2a7;">Teléfono: <span style="font-size: 10px;color:#ffffff;" >00 51 84 247277</span></h5>
                              
                         </a>
@@ -147,12 +147,12 @@
                                      Lima
                     </h3>
                     <li>
-                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                        <a id="textFooter" href="#!"> 
                            
                             <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
                             Calle Bolivar 221 Oficina 4 1er piso Miraflores - Lima - Perú
                         </a>
-                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                        <a id="textFooter" href="#!"> 
                             <h5 id="textFooter" style="font-size: 1.1em; color: #a1a2a7;">Teléfono: <span  style="font-size: 10px;color:#ffffff;">00 51 1 2434475</span></h5>
                             
                         </a>
@@ -161,7 +161,7 @@
                                      Arequipa
                     </h3>
                     <li>
-                        <a id="textFooter" href="#!"> <img src="images/icon/dbr1.jpg" alt="" />
+                        <a id="textFooter" href="#!"> <img src="" alt="" />
                            
                             <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
                             Jr. Puno 633 - 2do piso - barrio central-puno
@@ -180,9 +180,6 @@
               <div class="fb-page" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/tierrasdelosandes" data-tabs="timeline" data-width="280" data-height="392" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tierrasdelosandes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tierrasdelosandes">Tierras de los Andes</a></blockquote></div>
             </div>
 
-          
-             
-           
 
         </div>
          </div>

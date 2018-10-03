@@ -207,7 +207,7 @@ input[type=radio]:checked + label>img {
     
        
         <div class="contenedor_video">
-            <video id="videoId" style=" /*width: 1348px;*/ margin-top: -22px;"poster="{{URL::asset('assets/public/inicio/portada.jpg')}}" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
+            <video id="videoId" style=" /*width: 1348px;*/ margin-top: -22px;"poster="{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
              <source src="https://www.kuodatravel.com/wp-content/uploads/2018/09/kuoda-travel-video6.mp4" type="video/mp4"></video>
         </div>
          <dir id="texto" style="font-family: Lovelo Black;">
@@ -291,7 +291,7 @@ input[type=radio]:checked + label>img {
                                                
                                         </div>
                              <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">    
-                                 <img  style="height: 540px;" src="{{URL::asset('assets/public/category/6.jpg')}}" /> 
+                                 <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/6.jpg')}}" /> 
                             </a>
                                   <div class="tour-mig-lc-con" style="text-align: center;">
                                       
@@ -336,7 +336,7 @@ input[type=radio]:checked + label>img {
                                                
                                         </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
-                             <img  style="height: 540px;" src="{{URL::asset('assets/public/category/10.jpg')}}" /> 
+                             <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
@@ -377,7 +377,7 @@ input[type=radio]:checked + label>img {
                                                
                                         </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
-                             <img  style="height: 540px;" src="{{URL::asset('assets/public/category/8.jpg')}}" /> 
+                             <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/8.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
@@ -419,7 +419,7 @@ input[type=radio]:checked + label>img {
                                                
                                         </div>
                           <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
-                             <img  style="height: 540px;" src="{{URL::asset('assets/public/category/9.jpg')}}" /> 
+                             <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/9.jpg')}}" /> 
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
@@ -531,7 +531,7 @@ input[type=radio]:checked + label>img {
                     </div>
                 </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 family"> 
-                        <img src="{!! URL::asset('assets/public/serie/serie.png') !!}" alt="" /> <div style="margin-top: 130px;"> </div>
+                        <img src="{!! URL::asset('assets/public/images/serie/serie.png') !!}" alt="" /> <div style="margin-top: 130px;"> </div>
                     </div>
                     <!-- REQUEST A QUOTE -->
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -562,7 +562,7 @@ input[type=radio]:checked + label>img {
                                         
                                      <div class="col-sm-4">
                                     
-                                            <a style="color:white;" href="{{route('paquetes','es')}}/Series">
+                                            <a style="color:white;" href="{{route('paquetes','es')}}/series">
                                                     <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
                                                          <span>VER TOURS</span>
                                                     </i>
@@ -733,19 +733,19 @@ input[type=radio]:checked + label>img {
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">AFILIADOS</h3>
                 <ul>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.asta.org/" style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/asta.jpg') }}" alt="" />
+                        <a href="https://www.asta.org/" style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/asta.jpg') }}" alt="" />
                           <!-- ASTA -->
                      
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/cantur.jpg') }}" alt="" />
+                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/cantur.jpg') }}" alt="" />
                           <!--  DATA -->
                         </a>
                     </li>
                     
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://udgart.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/atr.jpg') }}" alt="" />
+                        <a href="http://udgart.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/atr.jpg') }}" alt="" />
                          <!--   ART -->
                         </a>
                     </li>
@@ -756,13 +756,13 @@ input[type=radio]:checked + label>img {
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">SOCIOS</h3>
                 <ul>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/illapaA.jpg') }}" white="20px;" alt="" />
+                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaA.jpg') }}" white="20px;" alt="" />
                            <!--  ILLAPA TRANSPORTE -->
                      
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/illapaT.jpg') }}" alt="" />
+                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaT.jpg') }}" alt="" />
                            <!--  ILLAPA CULTURAS ANDINA -->
                         </a>
                     </li>
@@ -774,23 +774,23 @@ input[type=radio]:checked + label>img {
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">CERTIFICACIONES</h3>
                 <ul>
                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.indecopi.gob.pe/inicio"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/indecopi.jpg') }}" alt="" />
+                        <a href="https://www.indecopi.gob.pe/inicio"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/indecopi.jpg') }}" alt="" />
                            <!--  INDECOPI -->
                      
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.gob.pe/mincetur"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/mincetur.png') }}" alt="" />
+                        <a href="https://www.gob.pe/mincetur"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/mincetur.png') }}" alt="" />
                           <!--  MINCETUR -->
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://dirceturcusco.gob.pe/"  style="color:black;"> <img style="background: #b61632;" src="{{URL::asset('assets/public/icons/social/dircusco.png') }}" alt="" />
+                        <a href="http://dirceturcusco.gob.pe/"  style="color:black;"> <img style="background: #b61632;" src="{{URL::asset('assets/public/images/socios/dircusco.png') }}" alt="" />
                             <!--  DIRCETUR CUSCO -->
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://www.sernanp.gob.pe/cusco"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/sernanp.png') }}" alt="" />
+                        <a href="http://www.sernanp.gob.pe/cusco"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/sernanp.png') }}" alt="" />
                           <!--   SERNANP -->
                         </a>
                     </li>
@@ -802,7 +802,7 @@ input[type=radio]:checked + label>img {
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;padding: 2PX;">RESPONSABILIDAD SOCIAL Y EMPRESARIAL</h3>
              <ul>
                    <li>
-                        <a href="https://www.patronatomachupicchu.org/"  style="color:black;"> <img src="{{URL::asset('assets/public/icons/social/patronato.png') }}" alt="" />
+                        <a href="https://www.patronatomachupicchu.org/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/patronato.png') }}" alt="" />
                             <!-- PATRONATO DE CULTURA MACHUPICCHU -->
                         </a>
                     </li>
@@ -836,7 +836,7 @@ input[type=radio]:checked + label>img {
           var width = $(window).width();
           if (width < 598){
                 $( "#videoId" ).remove();
-                $( ".contenedor_video" ).html( "<div id='portada'><img src='{{URL::asset('assets/public/inicio/portada.jpg')}}'></img> </div>" );
+                $( ".contenedor_video" ).html( "<div id='portada'><img src='{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}'></img> </div>" );
           }else{
              $( "#portada" ).remove();
              var video="<source src='https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4' type='video/mp4'>";

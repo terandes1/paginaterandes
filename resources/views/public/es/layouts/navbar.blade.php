@@ -76,7 +76,7 @@
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">
-                                                        <img src="{{URL::asset('assets/public/category/menu/5.jpg')}}" alt="">
+                                                        <img src="{{URL::asset('assets/public/images/category/menu/5.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Descubrimiento</span>
                                                     </a>
                                                 </div>
@@ -85,7 +85,7 @@
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
-                                                        <img src="{{URL::asset('assets/public/category/menu/2.jpg')}}" alt="">
+                                                        <img src="{{URL::asset('assets/public/images/category/menu/2.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Aventura</span>
                                                     </a>
                                                 </div>
@@ -94,7 +94,7 @@
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
-                                                        <img src="{{URL::asset('assets/public/category/menu/3.jpg')}}" alt="">
+                                                        <img src="{{URL::asset('assets/public/images/category/menu/3.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>
                                                 </div>
@@ -103,7 +103,7 @@
                                             <div class="mm2-com mm1-com mm1-s4">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
-                                                        <img src="{{URL::asset('assets/public/category/menu/4.jpg')}}" alt="">
+                                                        <img src="{{URL::asset('assets/public/images/category/menu/4.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Excursiones</span>
                                                     </a>
                                                 </div>
@@ -128,23 +128,23 @@
                             </li>   
         
                              <li class="cour-menu">
-                                    <a href="#!" class="mm-arr"><a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="{{URL::asset('assets/public/icons/es.png')}}" alt="Idioma"></a>
+                                    <a href="#!" class="mm-arr"><a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="{{URL::asset('assets/public/images/icon/es.png')}}" alt="Idioma"></a>
                                         <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                     </a>
                                     <div class="mm-pos" style="width: 100%;float:right;position: relative;">
                                         <div class="cour-mm m-menu" style="">
 
                                                 <div class="mm2-com ">
-                                                    <a class="route-language" href=""><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/de.png')}}" alt="Idioma"></a>
+                                                    <a class="route-language" href=""><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/de.png')}}" alt="Idioma"></a>
                                                 </div>
                                                 <div class="mm2-com">
-                                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/en.png')}}" alt="Idioma"></a>
+                                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/en.png')}}" alt="Idioma"></a>
                                                 </div>
                                                 <div class="mm2-com">
-                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/fr.png')}}" alt="Idioma"></a>
+                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/fr.png')}}" alt="Idioma"></a>
                                                 </div>
                                                 <div class="mm2-com">
-                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/icons/it.png')}}" alt="Idioma"></a>
+                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/it.png')}}" alt="Idioma"></a>
                                                 </div>
 
                                          </div>

@@ -55,7 +55,7 @@
                                 
                                     <input type="radio" name="global" id="global1" class="radio input-hidden" value="5">
                                     <label for="global1">
-                                        <img src="https://www.terandes.com/img/grupo/smile.png" >
+                                        <img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" >
                                         
                                         <div class="ticket">
                                             <ul>
@@ -69,7 +69,7 @@
                                 
                                     <input type="radio" name="global" id="global2" class="radio input-hidden" value="4">
                                         <label for="global2">
-                                            <img src="https://www.terandes.com/img/grupo/smile.png" > 
+                                            <img src="{{ URL::asset('/assets/public/images/encuestas/smile.png') }}" > 
                                             <strong>SATISFECHO </strong> 
                                        </label>
                                 
@@ -78,7 +78,7 @@
                                 
                                     <input type="radio" name="global" id="global3" class="radio input-hidden" value="3">
                                     <label for="global3">
-                                        <img src="https://www.terandes.com/img/grupo/serious.png" ><strong>INSATISFECHO</strong>
+                                        <img src="{{ URL::asset('/assets/public/images/encuestas/serious.png') }}" ><strong>INSATISFECHO</strong>
                                     </label>
                                 
                             </div>
@@ -86,7 +86,7 @@
                                 
                                     <input type="radio" name="global" id="global4" class="radio input-hidden" value="2">
                                      <label for="global4" >
-                                        <img src="https://www.terandes.com/img/grupo/sad.png" ><br><span style="font-size: 9px;"><strong>MUY INSATISFECHO </strong></span> 
+                                        <img src="{{ URL::asset('/assets/public/images/encuestas/sad.png') }}" ><br><span style="font-size: 9px;"><strong>MUY INSATISFECHO </strong></span> 
                                     </label>
                                 
                             </div>

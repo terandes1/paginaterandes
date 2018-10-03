@@ -167,12 +167,6 @@ color: #999999;
     <div class="container">
       <div class="banner_book_1">
         
-          <!--li class="dl1">{!! $tour->name !!}</li>
-          <li class="dl2">$ {!! $tour->price !!}</li>
-          <li class="dl3"> <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-
-           <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span></li>
-          <li class="dl4"><a href="{{route('contact','es')}}">Reservar ahora</a> </li-->
           <h3 class="dl4" >{!! $tour->name !!} &nbsp <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
 
            <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span><h3>
@@ -189,7 +183,6 @@ color: #999999;
       <div class="col-md-9" style="margin-top: -100px;">
  		
         <div class="tour_head1" style="text-align: justify;">
-             <!--p style="text-shadow: 2px 2px 4px #000;color: #fff; font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;" id="subtitulo">{!! $tour->description_short !!}</p> --> 
 
 	        <h3 >Descripción</h3>
 	           
@@ -527,7 +520,7 @@ color: #999999;
 @section('script')
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback&sensor=true">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&callback">
 </script>
 
  <script>
@@ -555,7 +548,6 @@ color: #999999;
                      },
                       success: function(respuesta) {
                         var marcadores=respuesta.data;
-                        console.log(marcadores);
                         var flightPlanCoordinates   = [];
                          $.each(respuesta.grafica,function(index,element)
                             { 
