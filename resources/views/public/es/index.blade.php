@@ -69,8 +69,9 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
 @media (max-width: 768px) {
     #texto {
          
-        font-size: 20px;
-        margin-top: -105px;
+        font-size: 14px;
+        margin-top: -83px;
+        margin-left: -14px;
     }
     .search-top{
         margin-top: 10px;
@@ -247,7 +248,7 @@ input[type=radio]:checked + label>img {
                             <div class="input-field col s4" >
                                   <a style="color:white;font-size: 15px;" href="{{route('our-team','es')}}">
                                         <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper">
-                                            <span>¡APRENDA MÁS SOBRE TERANDES!</span>
+                                            <span id="aprendaMas">¡MÁS SOBRE TERANDES!</span>
                                         </i>
                                  </a>
                             </div>

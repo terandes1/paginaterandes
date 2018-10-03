@@ -413,7 +413,7 @@ color: #999999;
         <div>
             <div class="dir-rat">
                 <div class="dir-rat-inn dir-rat-title">
-                  <h3>CONTÁCTENOS</h3>
+                  <h3 style="text-align: center;">CONTÁCTENOS</h3>
                   <p>Gracias por su interés en tener una experiencia de viaje personalizada comisariada por Tierra de los Andes Perú</p>
                   
                 </div>
@@ -430,7 +430,7 @@ color: #999999;
                     <div class="form-group col-md-12 pad-left-o">
                       <textarea placeholder="Escribe tu mensaje"></textarea>
                     </div>
-                    <div class="form-group col-md-12 pad-left-o">
+                    <div class="form-group col-md-12 pad-left-o" style="text-align: center;">
                       <input type="submit" value="Enviar" class="link-btn"> </div>
                   </form>
                 </div>

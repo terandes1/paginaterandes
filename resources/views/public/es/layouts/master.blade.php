@@ -174,7 +174,45 @@ input::-moz-focus-inner { border: 0; }
     font-family: 'NewsGoth CN BT';
     font-size: 16px;
 }
+
+ 
+   @media (min-width: 200px) and (max-width: 480px) {
+  
+   #logoTerandes {
+       width: 100%;
+  }
+
+  #aprendaMas
+  {
+    font-size: 8px;
+  }
+}
+
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+   #logoTerandes {
+       width: 110%;
+  }
+   #aprendaMas
+  {
+    font-size: 9px;
+  }
+  
+}
+ @media (min-width: 768px) and (max-width: 1200px) {
+  
+   #logoTerandes {
+       width: 110%;
+  }
+  #aprendaMas
+  {
+    font-size: 11px;
+  }
+  
+}
+
 </style>
+
 </head>
 
 <body>

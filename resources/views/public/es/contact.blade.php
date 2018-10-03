@@ -1,7 +1,25 @@
 @extends('public.es.layouts.master')
 
 @section('content')
+<style type="text/css">
+.select2  {
+width:100%!important;
 
+}
+.select2-container .select2-selection--single {
+    height: 45px !important;
+}
+.select2-container .select2-choice {
+    display: block!important;
+    height: 36px!important;
+    white-space: nowrap!important;
+    line-height: 26px!important;
+}
+.select2-selection__rendered{
+	margin-top: 10px!important;
+}
+
+</style>
 
 
 <!--====== FAQ ==========-->
@@ -24,22 +42,52 @@
 				<form id="home_form" name="home_form" action="mail/send.php">
 					<ul>
 						<li>
-							<input type="text" name="ename" value="" id="ename" placeholder="Name" required> </li>
+							<input type="text" name="name" value="" id="name" placeholder="Escriba su nombre" required> </li>
 						<li>
-							<input type="tel" name="emobile" value="" id="emobile" placeholder="Mobile" required> </li>
+							<input type="tel" name="telefono" value="" id="telefono" placeholder="Número de telephone" required> </li>
 						<li>
-							<input type="email" name="eemail" value="" id="eemail" placeholder="Email id" required> </li>
+							<input type="email" name="email" value="" id="email" placeholder="E-mail" required> </li>
 						<li>
-							<input type="text" name="esubject" value="" id="esubject" placeholder="Subject" required> </li>
+							<input type="text" name="nacionalidad" value="" id="nacionalidad" placeholder="Nacionalidad" required> </li>
 						<li>
-							<input type="text" name="ecity" value="" id="ecity" placeholder="City" required> </li>
+							<select  class="select2 form-control input-lg" style="border: 2px solid #e6e6e6;">
+                            						   <option value="" active="true">Seleccionar Itinerario</option>
+                                                       <option value="ASCENDER AL AUSANGATE">ASCENDER AL AUSANGATE</option>
+                                                       <option value="TREK CAMINO INKA">TREK CAMINO INKA</option>
+                                                       <option value="TREK DE HUCHUY QOSQO">TREK DE HUCHUY QOSQO</option>
+                                                       <option value="TREK SALKANTAY">TREK SALKANTAY</option>
+                                                       <option value="TREK DEL VALLE DE LARES">TREK DEL VALLE DE LARES</option>
+                                                       <option value="ALPAMAYO Y AUSANGATE, CERCA DE LA CUMBRE">ALPAMAYO Y AUSANGATE, CERCA DE LA CUMBRE</option>
+                                                       <option value="ALPAMAYO (5947 M) - CHOPICALQUI (6354 M)">ALPAMAYO (5947 M) - CHOPICALQUI (6354 M)</option>
+                                                       <option value="DE COLCA AL AUSANGATE">DE COLCA AL AUSANGATE</option>
+                                                       <option value="CORDILLERA DE HUAYHUASH">CORDILLERA DE HUAYHUASH</option>
+                                                       <option value="DESCUBRIMIENTO DEL ALTIPLANO: PERÚ Y BOLIVIA">DESCUBRIMIENTO DEL ALTIPLANO: PERÚ Y BOLIVIA</option>
+                                                       <option value="DESCUBRIMIENTO de paisajes bolivianos">DESCUBRIMIENTO de paisajes bolivianos</option>
+                                                       <option value="DE CHOQUEQUIRAO A MACHU PICCHU">DE CHOQUEQUIRAO A MACHU PICCHU</option>
+                                                       <option value="DESDE MACHU PICCHU HASTA LA CORDILLERA BLANCA">DESDE MACHU PICCHU HASTA LA CORDILLERA BLANCA</option>
+                                                       <option value="LOS ASPECTOS ESENCIALES DEL PERÚ Y DE BOLIVIA">LOS ASPECTOS ESENCIALES DEL PERÚ Y DE BOLIVIA</option>
+                                                       <option value="VIAJES DE BOLIVIA">VIAJES DE BOLIVIA</option>
+                                                       <option value="EN EL CORAZÓN DE LAS COMUNIDADES ANDINAS">EN EL CORAZÓN DE LAS COMUNIDADES ANDINAS</option>
+                                                       <option value="EN EL CORAZÓN DE LAS COMUNIDADES ANDINAS EN FAMILIA">EN EL CORAZÓN DE LAS COMUNIDADES ANDINAS EN FAMILIA</option>
+                                                       <option value="PÉROU-BOLIVIE EXPRESS">PÉROU-BOLIVIE EXPRESS</option>
+                                                       <option value="SENSACIONES EXTREMAS EN EL PERÚ">SENSACIONES EXTREMAS EN EL PERÚ</option>
+                                                       <option value="TESOROS DEL SUR PERÚ - EN GRUPO">TESOROS DEL SUR PERÚ - EN GRUPO</option>
+                                                       <option value="PERU EN FAMILIA">PERU EN FAMILIA</option>
+                                                       <option value="PERÚ CULTURAL, DEL NORTE AL SUR">PERÚ CULTURAL, DEL NORTE AL SUR</option>
+                                                       <option value="VIAJE DE LUNA DE MIEL EN PERÚ">VIAJE DE LUNA DE MIEL EN PERÚ</option>
+                                                       <option value="PERÚ Y BOLIVIA EXPRESS">PERÚ Y BOLIVIA EXPRESS</option>
+                                                       <option value="TOUR DEL AUSANGATE">TOUR DEL AUSANGATE</option>
+                                                       <option value="TRESORS DU SUD PEROU - EN GROUPE">TRESORS DU SUD PEROU - EN GROUPE</option>
+                                                       <option value="GRAN VIAJE AL SUR DE PERÚ - EN GRUPO">GRAN VIAJE AL SUR DE PERÚ - EN GRUPO</option>
+                                                      <option value="Otros">Autres</option>
+                            </select>
 						<li>
 							<input type="text" name="ecount" value="" id="ecount" placeholder="Country" required> </li>
 						<li>
-							<textarea name="emess" cols="40" rows="3" id="text-comment" placeholder="Enter your message"></textarea>
+							<textarea name="emess" cols="40" rows="3" id="text-comment" placeholder="Ingrese su mensaje"></textarea>
 						</li>
 						<li>
-							<input type="submit" value="Submit" id="send_button"> </li>
+							<input type="submit" value="Enviar" id="send_button"> </li>
 					</ul>
 				</form>
 			</div>
@@ -50,4 +98,16 @@
 		</div>
 	</div>
 </section>
+@endsection
+@section('script')
+  
+ <script type="text/javascript">
+ 	$(".select2").select2({
+	     selectOnClose: false,
+	     width: 'resolve',
+	});
+
+ </script>
+  
+
 @endsection
