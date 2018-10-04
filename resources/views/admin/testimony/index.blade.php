@@ -53,7 +53,7 @@
 				            <th style="width: 400px;text-transform: capitalize;">{!! $tipo !!}</th>
 				            <th style="width: 100px;">Impresión global</th>
 				            <th style="width: 150px;">Creado</th>
-				            <th style="width: 100px;">Acción</th>
+				            <th style="width: 150px;">Acción</th>
 
 				          </tr>
 				        </thead>
@@ -79,13 +79,13 @@
 				            		<div class="col-md-1">
 								    		@if( $itemp->status=='approve')
 								 			
-										 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button" class="btn btn-success btn-sm" aria-label="Left Align">
-											 	<span class="fa fa-eye" aria-hidden="true">	</span>
+										 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}"  aria-label="Left Align">
+											 	<i class="fa fa-eye">	</i>
 											</a>
 								
 											@else
-											 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}" type="button"class="btn btn-info btn-sm" aria-label="Left Align">
-												 	<span class="fa fa-eye-slash" aria-hidden="true"> </span>
+											 	<a href="/admin/cambioEstadoTestimonioEncuesta/{{$itemp->id}}"  aria-label="Left Align">
+												 	<i class="fa fa-eye-slash"> </i>
 												</a>	
 											 
 											@endif

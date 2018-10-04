@@ -48,14 +48,16 @@ class UserController extends Controller
     public function store(StoreUser $request)
     {
 
+
         User::create([
           'name'=>$request->name,
           'email'=>$request->email,
-          'password'=>bcrypt($request->Password),
+          'password'=>bcrypt( $request->input('password') ),
           'language_id'=>$request->language_id,
           'privilege'=>$request->privilege,
           'status'=>$request->status
         ]);
+
         return redirect('admin/users')->with('status','El usuario "' . $request->name . '" ha sido creado exitosamente');
     }
 
@@ -91,7 +93,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-
+        
       if ($request->password != ''){
         $user->fill(['password'=>bcrypt($request->password)]);
       }

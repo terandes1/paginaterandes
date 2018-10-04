@@ -12,7 +12,7 @@ $(document).ready(function() {
         $(".admi-mm").fadeIn();
     });
     $(".admi-menu").mouseleave(function() {
-        $(".admi-mm").hide();
+        $(".admi-mm").slideUp();
     });
     //MEGA MENU	
     $(".cour-menu").mouseover(function() {
