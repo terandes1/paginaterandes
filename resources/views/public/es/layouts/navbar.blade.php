@@ -131,21 +131,16 @@
                                     <a href="#!" class="mm-arr"><a class="route-language" href="{{route('idiomas','es')}}"><img class="img-lng" style="width: 38px;height: 25px;" src="{{URL::asset('assets/public/images/icon/es.png')}}" alt="Idioma"></a>
                                         <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                     </a>
-                                    <div class="mm-pos" style="width: 100%;float:right;position: relative;">
-                                        <div class="cour-mm m-menu" style="">
+                                    <div class="mm-pos" style="width: 400%; float:right;position: relative;">
+                                        <div class="cour-mm m-menu" style="height:40px;background: rgb(255, 255, 255);margin-left: 130px; width: 250px;">
 
-                                                <div class="mm2-com ">
-                                                    <a class="route-language" href=""><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/de.png')}}" alt="Idioma"></a>
+                                                <div class="mm2-com" style="text-align: center;margin-top: -30px;">
+                                                    <a class="route-language" href=""><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/de.png')}}" alt="Idioma"></a>
+                                                    <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/en.png')}}" alt="Idioma"></a>
+                                                     <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/fr.png')}}" alt="Idioma"></a>
+                                                      <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/it.png')}}" alt="Idioma"></a>
                                                 </div>
-                                                <div class="mm2-com">
-                                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/en.png')}}" alt="Idioma"></a>
-                                                </div>
-                                                <div class="mm2-com">
-                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/fr.png')}}" alt="Idioma"></a>
-                                                </div>
-                                                <div class="mm2-com">
-                                                    <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -5px;" src="{{URL::asset('assets/public/images/icon/it.png')}}" alt="Idioma"></a>
-                                                </div>
+                                               
 
                                          </div>
                                     </div>

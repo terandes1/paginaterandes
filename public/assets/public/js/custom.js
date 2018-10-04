@@ -8,18 +8,18 @@ $(document).ready(function() {
         $(".about-mm").fadeOut();
     });
     //MEGA MENU	
-    $(".admi-menu").hover(function() {
+    $(".admi-menu").mouseover(function() {
         $(".admi-mm").fadeIn();
     });
     $(".admi-menu").mouseleave(function() {
-        $(".admi-mm").fadeOut();
+        $(".admi-mm").hide();
     });
     //MEGA MENU	
-    $(".cour-menu").hover(function() {
+    $(".cour-menu").mouseover(function() {
         $(".cour-mm").fadeIn();
     });
     $(".cour-menu").mouseleave(function() {
-        $(".cour-mm").fadeOut();
+        $(".cour-mm").slideUp();
     });
     //SINGLE DROPDOWN MENU
     $(".top-drop-menu").on('click', function() {
