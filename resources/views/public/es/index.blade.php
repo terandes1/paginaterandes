@@ -49,6 +49,12 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
      .item {
      display: none;
      }
+     #portada {
+        width: 100%;
+    }
+    #portada img {
+        width: 100%;
+    }
  }
 
 @media screen and (max-width: 767px) {
@@ -207,7 +213,7 @@ input[type=radio]:checked + label>img {
     
        
         <div class="contenedor_video">
-            <video id="videoId" style=" /*width: 1348px;*/ margin-top: -22px;"poster="{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
+            <video id="videoId" style=" /*width: 1348px;*/ margin-top: -22px;" poster="{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
              <source src="https://www.kuodatravel.com/wp-content/uploads/2018/09/kuoda-travel-video6.mp4" type="video/mp4"></video>
         </div>
          <dir id="texto" style="font-family: Lovelo Black;">
