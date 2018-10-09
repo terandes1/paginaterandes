@@ -123,6 +123,7 @@ Route::get('umfrage',function(){
 Route::get('/', [ 'uses' => 'PublicController@index' ]);
 Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
 Route::get('{lang?}/contacto/', [ 'uses' => 'PublicController@contact' ])->name('contact');
+Route::resource('contacto-reserva','ContactController');
 
 Route::get('/reservations/moverAtendido/{id?}','ReservationController@moverAtendido')->name('moveraAtendido');
 Route::get('{lang?}/reservacion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');

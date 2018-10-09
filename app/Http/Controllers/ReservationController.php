@@ -6,6 +6,10 @@ use App\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreReservation;
 use Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ReservationMail;
+use App\User;
+use App\Tour;
 class ReservationController extends Controller
 {
     /**
@@ -38,6 +42,11 @@ class ReservationController extends Controller
     public function store(StoreReservation $request)
     {
        
+          
+            $tour=Tour::select('name')
+                 ->where('id',$request->tour_id)
+                 ->get()[0];
+
            $reservation = new Reservation;
            $reservation->name =$request->name;
            $reservation->email = $request->email;
@@ -52,12 +61,13 @@ class ReservationController extends Controller
            $reservation->message =$request->message;
            $reservation->tour_id =$request->tour_id;
            $reservation->status ='pendiente';
-           $reservation->save();
+           //$reservation->save();
 
            $abbr=$request->abbr;
            $tour_id=$request->tour_id;
+           Mail::to('michael101136@gmail.com')->send(new ReservationMail($request,$tour));
 
-           Session::flash('flash_message', '¡ Muchas gracias! Su reserva ha sido registrada. En breves minutos nos comunicaremos');
+           Session::flash('flash_message', '¡ Muchas gracias! Su reserva ha sido registrada. En breves minutos nos comunicaremos con usted');
 
            return redirect($abbr.'/reservacion/'.$tour_id);
            
