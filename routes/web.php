@@ -32,6 +32,7 @@ Route::prefix('admin')->group(function () {
     Route::get('publicar/tour/{id}','TourController@publicarPrincipal')->name('publicarTourPrincipal');
 
     Route::resource('reservations','ReservationController');
+    Route::post('reservationTour/','ReservationController@reservartionTour')->name('reservationTour');
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //ruta para los multimedias del tour

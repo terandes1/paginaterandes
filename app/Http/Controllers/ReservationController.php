@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreReservation;
+use App\Http\Requests\StoreReservationTour;
 use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReservationMail;
@@ -158,5 +159,11 @@ class ReservationController extends Controller
         else{ 
             return response()->json(['rpta'=>'No se realizo el cambio']);
         }
+    }
+
+    public function reservartionTour(StoreReservationTour $request)
+    {
+
+            return( $request->all());
     }
 }

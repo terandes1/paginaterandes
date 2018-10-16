@@ -407,24 +407,42 @@ color: #999999;
             <div class="dir-rat">
                 <div class="dir-rat-inn dir-rat-title">
                   <h3 style="text-align: center;">CONTÁCTENOS</h3>
-                  <p>Gracias por su interés en tener una experiencia de viaje personalizada comisariada por Tierra de los Andes Perú</p>
+                  <p>Gracias por su interés en tener una experiencia de viaje personalizada con Tierra de los Andes Perú.</p>
                   
                 </div>
                 <div class="dir-rat-inn">
-                  <form class="dir-rat-form">
-                    <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="email11" placeholder="Ingrese su nombre"> </div>
-                    <div class="form-group col-md-6 pad-left-o">
-                      <input type="number" class="form-control" id="email12" placeholder="Ingresa móvil"> </div>
-                    <div class="form-group col-md-6 pad-left-o">
-                      <input type="email" class="form-control" id="email13" placeholder="Ingresar correo electrónico"> </div>
-                    <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="email14" placeholder="Ingrese su ciudad"> </div>
+                    {!! Form::open(['method' => 'POST' , 'class' => 'dir-rat-form' ,'id' => "formEnvio"]) !!}
+                 <form class ='dir-rat-form'>
                     <div class="form-group col-md-12 pad-left-o">
-                      <textarea placeholder="Escribe tu mensaje"></textarea>
+                      <input type="text" class="form-control" id="nameTour" name="nameTour" value="{!! $tour->name !!}"> 
                     </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre"> 
+                      <p class="errorValidacion" id="errorName"></p>
+                    </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="number" class="form-control" id="numero"  name="numero" placeholder="Ingresa móvil">
+                      <p class="errorValidacion" id="errorNumero"></p>
+                     </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Ingresar correo electrónico"> 
+                      <p class="errorValidacion" id="errorEmail"></p>
+                    </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad"> 
+                      <p class="errorValidacion" id="errorCiudad"></p>
+                    </div>
+                    <div class="form-group col-md-12 pad-left-o">
+                      <textarea placeholder="Escribe tu mensaje" id="mensaje" name="mensaje"></textarea>
+                        <p class="errorValidacion" id="errorMensaje"></p>
+                    </div>
+                    <div class="form-group col-md-6 pad-left-o">
+                      {!! Recaptcha::render() !!}
+                      <p class="errorValidacion" id="errorCapcha"></p>
+                    </div>
+                    
                     <div class="form-group col-md-12 pad-left-o" style="text-align: center;">
-                      <input type="submit" value="Enviar" class="link-btn"> </div>
+                      <input type="submit" value="Enviar" id="EnviarReservationTour" name="EnviarReservationTour" class="link-btn"> </div>
                   </form>
                 </div>
 
@@ -524,6 +542,41 @@ color: #999999;
 </script>
 
  <script>
+   $("#EnviarReservationTour").click(function (e) {
+        $("#errorName").html('');
+        $("#errorNumero").html('');
+        $("#errorEmail").html('');
+        $("#errorCiudad").html('');
+        $("#errorMensaje").html('');
+        var response = grecaptcha.getResponse();
+        if(response.length == 0){
+            $("#errorCapcha").html('Verificar capcha');
+          alert("dsf");
+            } else {
+               $("#errorCapcha").html('');
+            }
+      e.preventDefault();
+       var data = $('#formEnvio').serialize();
+         $.ajax({
+             url:'{{ route('reservationTour') }}',
+                 type: 'POST',
+                 data:data,
+             success: function(data) {
+
+            },
+             error:function(data){
+
+                var errors = data.responseJSON.errors;
+
+                $("#errorName").html(errors.name);
+                $("#errorNumero").html(errors.numero);
+                $("#errorEmail").html(errors.email);
+                $("#errorCiudad").html(errors.ciudad);
+                $("#errorMensaje").html(errors.mensaje);
+            }
+        });
+    });
+
     $( "#ubicacion" ).click(function() {
       initialize();
     });
