@@ -543,6 +543,7 @@ color: #999999;
 
  <script>
    $("#EnviarReservationTour").click(function (e) {
+        e.preventDefault();
         $("#errorName").html('');
         $("#errorNumero").html('');
         $("#errorEmail").html('');
@@ -551,30 +552,33 @@ color: #999999;
         var response = grecaptcha.getResponse();
         if(response.length == 0){
             $("#errorCapcha").html('Verificar capcha');
-          alert("dsf");
+         
             } else {
                $("#errorCapcha").html('');
+                var data = $('#formEnvio').serialize();
+                 $.ajax({
+                     url:'{{ route('reservationTour') }}',
+                         type: 'POST',
+                         data:data,
+                     success: function(data) {
+
+                    },
+                     error:function(data){
+
+                        var errors = data.responseJSON.errors;
+
+                        $("#errorName").html(errors.name);
+                        $("#errorNumero").html(errors.numero);
+                        $("#errorEmail").html(errors.email);
+                        $("#errorCiudad").html(errors.ciudad);
+                        $("#errorMensaje").html(errors.mensaje);
+                    }
+                });
             }
-      e.preventDefault();
-       var data = $('#formEnvio').serialize();
-         $.ajax({
-             url:'{{ route('reservationTour') }}',
-                 type: 'POST',
-                 data:data,
-             success: function(data) {
+     
+       
 
-            },
-             error:function(data){
 
-                var errors = data.responseJSON.errors;
-
-                $("#errorName").html(errors.name);
-                $("#errorNumero").html(errors.numero);
-                $("#errorEmail").html(errors.email);
-                $("#errorCiudad").html(errors.ciudad);
-                $("#errorMensaje").html(errors.mensaje);
-            }
-        });
     });
 
     $( "#ubicacion" ).click(function() {

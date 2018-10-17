@@ -457,24 +457,7 @@ input[type=radio]:checked + label>img {
                 </div>
            
         </div>
-    </section><br>
-<!--====== HOME HOTELS ==========-->
-<section style="margin-top: 50px;">
-     <div class="spe-title" style="z-index: -1000;">
-                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Tour lujos </h2>
-                    <div class="title-line">
-                        <div class="tl-1"></div>
-                        <div class="tl-2"></div>
-                        <div class="tl-3"></div>
-                    </div>
-                    <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
-                </div>
-        <div class="db">
-            <!--LEFT SECTION-->
-            <?=DostourDeLujos($toursLujos);?>
-           
-        </div>
-</section>
+    </section>
 
 
 <!--====== SECTION: FREE CONSULTANT ==========-->
@@ -525,70 +508,101 @@ input[type=radio]:checked + label>img {
         </div>
     </div>
 </section>
-<section>
-    <div class="rows pla pad-bot-redu tb-space">
-       <div class="rows container">
-                <div class="spe-title spe-title-1">
-                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Usted define su estilo de viaje</h2>
+<br>
+<!--====== HOME HOTELS ==========-->
+<section style="margin-top: 50px;">
+     <div class="spe-title" style="z-index: -1000;">
+                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Tour lujos </h2>
                     <div class="title-line">
                         <div class="tl-1"></div>
                         <div class="tl-2"></div>
                         <div class="tl-3"></div>
                     </div>
+                    <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
                 </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 family"> 
-                        <img src="{!! URL::asset('assets/public/images/serie/serie.png') !!}" alt="" /> <div style="margin-top: 130px;"> </div>
-                    </div>
-                    <!-- REQUEST A QUOTE -->
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <!-- THANK YOU MESSAGE -->
-                        <div class="foot-mob-app">
-                            <h3 style="color:black;font-family: Lovelo Black;">Desea planear su aventura sudamericana?</h3>
-                            <p>Como diseñadores de viajes personalizados, estamos aquí para hacer su viaje único:</p>
-                            <ul>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> 
-                                   <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series">Familiares</a>
-                                </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> 
-                                <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series">                                Grupos
-                                </a>
-                                </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> 
-                                      <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series">
-                                      Parejas
-                                      </a>
-                                  </li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> 
-                                       <a style="color:black;font-family: Lovelo Black;" href="{{route('paquetes','es')}}/Series"> Amigos
-                                       </a>
-                                </li>
-                            </ul>
+        <div class="db">
+            <!--LEFT SECTION-->
+            <?=DostourDeLujos($toursLujos);?>
+           
+        </div>
+</section><br><br><br>
+<section>
+     <div class="spe-title spe-title-1">
+        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Viaje en grupo</h2>
+        <div class="title-line">
+            <div class="tl-1"></div>
+            <div class="tl-2"></div>
+            <div class="tl-3"></div>
+        </div>
+    </div>
+
+    <div class="v2-hom-search">
+
+      <div class="container">
+
+        <div class="row">
+             <div class="col-md-4">
                             
-                                <div class="row" style="margin-top:-12px;">
-                                        
-                                     <div class="col-sm-4">
-                                    
-                                            <a style="color:white;" href="{{route('paquetes','es')}}/series">
-                                                    <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
-                                                         <span>VER TOURS</span>
-                                                    </i>
-                                            </a>
-
-                                      </div>
-                                                
-                                </div>
-
+             </div>  
+             <div class="col-md-8">
+                <div class="v2-ho-se-ri">
+                <h5>TERANDES LIDES EN PAQUETES TURÍSTICOS.</h5>
+                <h1>VIAJE EN GRUPO</h1>
+                <h1 style="font-size: 1.3em;font-family: Lovelo Black;text-align: justify;">Como diseñadores de viajes personalizados, <br>estamos aquí para hacer su viaje único.</h1>
+                        <div class="tourz-hom-ser v2-hom-ser">
+                          <ul>
+                            <li>
+                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
+                            </li>
+                            <li>
+                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
+                            </li>
+                            <li>
+                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
+                            </li>
+                            <li>
+                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
+                            </li>               
+                          </ul>
                         </div>
-                    </div>
-                    
-            </div>
+                         <div class="col-md-14">
+                           
+                             <div class="">
+                                    <div class="tourz-hom-ser v2-hom-ser">
+                                          <ul>
+                                           
+                                            <li>
+                                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                                  <h4>VER TOURS  </h4>   
+                                               </a>
+                                            </li>
+                                                        
+                                          </ul>
+                                    </div>
+                            
+                             </div>  
+                                       
+                      </div>
+                 </div>            
+             </div> 
+              <div class="col-md-2">
+                            
+             </div>
+                  
+        </div>
+      </div>
+    </div>
+  </section>
+<section>
+    <div class="rows pla pad-bot-redu tb-space">
+       
 
     </div>
 </section>
  
 
 <section>
-    <div class="rows pla pad-bot-redu tb-space" style="margin-top: -98px;">
+    <div class="rows pla pad-bot-redu tb-space" style="margin-top: -220px;">
         <div class="pla1 p-home container" style="background: #f6f6f6;">
             <!-- TITLE & DESCRIPTION -->
 
