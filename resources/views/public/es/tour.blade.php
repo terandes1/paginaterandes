@@ -460,10 +460,17 @@ color: #999999;
 								@foreach($toursRelacionados  as $item)
 								<li>
 									<div class="tr-room-type-list">
-										<div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
-										</div>
+										 <a  href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+                        <div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
+
+    										</div>
+                     </a>
 										<div class="col-md-6 tr-room-type-list-2">
-											<h4 id="tituloTous">{!! $item->name !!}</h4>
+                       <a  href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+  											<h4 id="tituloTous" style="color: #F27612;">
+                          {!! $item->name !!}
+                        </h4>
+                      </a>
 											<p><b>Description:
 											 </b>
 												{!! str_limit($item->description_short, 150) !!}
@@ -517,10 +524,14 @@ color: #999999;
         <div class="tour_right tour_rela tour-ri-com">
           <h3 id="tituloTouLateral">TOURS POPULARES</h3>
           	@foreach($toursPrincipal as $item)
-	          <div class="tour_rela_1" style="text-align: center;"> <img src="/{{$item->img}}" alt="" />
-	             <h5  style="color: #f4364f;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
-	            <p style="text-align: justify;color:black;font-family: 'NewsGoth CN BT', sans-serif;">
-	            	 {!! str_limit($item->description_short, 150) !!}
+	          <div class="tour_rela_1" style="text-align: center;"> 
+              
+              <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" >
+                <img src="/{{$item->img}}" alt="" />
+              </a> 
+	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
+	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
+	            	 {!! str_limit($item->name, 150) !!}
 	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
 	          </div>
 	          @endforeach

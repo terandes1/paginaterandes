@@ -3597,7 +3597,7 @@
  .hot-list-p3-2 {
      font-size: 32px;
      font-weight: 600;
-     color: #f4364f;
+     color: #DA2A04;;
      padding: 10px 0px;
 }
  .hot-list-p3-3 {
@@ -3829,7 +3829,7 @@
      list-style-type: none;
 }
  .hot-page2-hli-1 {
-     position: relative;
+  /*   position: relative;*/
 }
  .hot-page2-hli-1:before {
      content: '';
@@ -7882,7 +7882,7 @@
  .trav-list-bod{
 }
  .trav-list-bod a h3{
-     color: #f4364f;
+     color: #F27612;
 }
  .trav-list-bod p{
      font-size: 13px;
