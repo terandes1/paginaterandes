@@ -165,7 +165,7 @@ class ReservationController extends Controller
     public function reservartionTour(StoreReservationTour $request)
     {
 
-             Mail::to('michael101136@gmail.com')->send(new ReservationTourMail($request));
+            Mail::to('michael101136@gmail.com')->send(new ReservationTourMail($request));
             return response()->json(['data'=>'correcto']);
   
 
