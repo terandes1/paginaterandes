@@ -119,7 +119,12 @@ class PublicController extends Controller
    public function tours($abbr='es',$searchCategoria='')
    {
 
-   		$categorias = DB::table('languages')
+   		if($searchCategoria=='viaje-en-grupo')
+      {
+        $searchCategoria='series';
+      }
+
+      $categorias = DB::table('languages')
    				->select('categories.name','languages.abbr','categories.id')
 			    ->join('categories', 'languages.id', '=', 'categories.language_id')
 			    ->where('languages.abbr','=',$abbr)

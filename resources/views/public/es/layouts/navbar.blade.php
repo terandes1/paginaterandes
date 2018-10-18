@@ -100,7 +100,7 @@
                                                 </div>
                                              </div>
                                             
-                                            <div class="mm2-com mm1-com mm1-s4">
+                                            <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/4.jpg')}}" alt="">
@@ -108,17 +108,20 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            
+                                             <div class="mm2-com mm1-com mm1-s1">
+                                                <div class="ed-course-in">
+                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/viaje-en-grupo">
+                                                        <img src="{{URL::asset('assets/public/images/category/menu/1.jpg')}}" alt="">
+                                                        <span style="font-family: Lovelo Black;">Viaje en grupo</span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                         
                                     </div>
                                 </div>
 
                             </li>
-                            <!--<li><a class='dropdown-button ed-sub-menu' href='#'TOURS data-activates='dropdown1'>Courses</a></li>-->
-
-                          <!--   <li><a href="{{route('testimonials','es')}}">TESTIMONIOS</a>
-                            </li> -->
                             <li><a href="{{route('events','es')}}" style="font-family: Lovelo Black;">EVENTOS</a>
                             </li> 
                             <li><a href="{{route('our-team','es')}}" style="font-family: Lovelo Black;">NOSOTROS</a>

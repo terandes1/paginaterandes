@@ -572,7 +572,7 @@ input[type=radio]:checked + label>img {
                                           <ul>
                                            
                                             <li>
-                                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                              <a href="{{route('paquetes','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
                                                   <h4>VER TOURS  </h4>   
                                                </a>
                                             </li>
@@ -710,7 +710,7 @@ input[type=radio]:checked + label>img {
 
                      <div >
                         <div  style="padding: 15px" class="col-md-2 col-md-offset-10 col-sm-12 ">
-                            <a href="/es/testimonials"> <strong><u> &#62;&#62; Leer Más</u> </strong> </a>
+                            <a href="/es/testimonios"> <strong><u> &#62;&#62; Leer Más</u> </strong> </a>
                         </div>
                         
                          <div class="col-sm-12">

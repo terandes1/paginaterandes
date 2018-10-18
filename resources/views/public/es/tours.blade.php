@@ -31,7 +31,7 @@
       <!--LEFT LISTINGS-->
       <div class="col-md-3 hot-page2-alp-con-left">
         <div class="hot-page2-alp-con-left-1">
-            <h3 id="tituloTous">CATEGORIA Y PRECIO</h3> </div>
+            <h3 id="tituloTous">FILTRO POR CATEGORIA Y PRECIO</h3> </div>
         <!--PART 7 : LEFT LISTINGS-->
         
         <!--PART 4 : LEFT LISTINGS-->
