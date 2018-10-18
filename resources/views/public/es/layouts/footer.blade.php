@@ -193,7 +193,7 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img src="{!! URL::asset('assets/public/images/icons-footer/peru.png') !!}" alt="Fjords" style="width:85%">
+                          <img src="{!! URL::asset('assets/public/images/icons-footer/peru.png') !!}" alt="Fjords" style="width:70%">
                          
                         </a>
                       </div>
@@ -210,7 +210,7 @@
                      <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/patronato.png') !!}" alt="Lights" style="width:85%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/patronato.png') !!}" alt="Lights" style="width:85%;margin-top: 10px;">
                           
                         </a>
                       </div>
@@ -237,7 +237,7 @@
                     <div class="col-md-2">
                       <div class="">
                         <a href="" target="_blank">
-                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/carbono.png') !!}" alt="Lights" style="width:85%">
+                          <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/carbono.png') !!}" alt="Lights" style="width:50%">
                           
                         </a>
                       </div>

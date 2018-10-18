@@ -422,7 +422,7 @@ color: #999999;
                  <form class ='dir-rat-form'>
                     <div class="form-group col-md-12 pad-left-o">
                       <input type="text" class="form-control" id="nameTour" name="nameTour" value="{!! $tour->name !!}"> 
-                      <input type="hidden" value="es"> 
+                      <input type="hidden"  id="abbr"  name="abbr" value="es"> 
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
                       <input type="text" class="form-control" id="nameCategoria" name="nameCategoria" placeholder="Ingrese su nombre"> 

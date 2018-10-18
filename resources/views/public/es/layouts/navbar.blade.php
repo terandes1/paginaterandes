@@ -7,7 +7,7 @@
         <div class="ed-mob-menu-con">
             <div class="ed-mm-left">
                 <div class="wed-logo"  style="width: 130px;" >
-                    <a href="index.html"><img  id="logoTerandes" src="/assets/public/images/logo.png" alt="" />
+                    <a href="{{('/es')}}"><img  id="logoTerandes" src="/assets/public/images/logo.png" alt="" />
                      </a>
                 </div>
 
@@ -42,7 +42,30 @@
                         <ul>
                             <li><a href="{{route('contact','es')}}">Contacto</a></li>
                         </ul>
+                        <h4>Idiomas</h4>
+                        <ul>
+                            <li>
+                                
+                                    <a class="route-language" href="{{route('idiomas','es')}}">
+                                        <img lass="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/es.png')}}" alt="Idioma">
+                                    </a>
+                            </li>
+                             <li>
+                                  <a class="route-language" href=""><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/de.png')}}" alt="Idioma"></a>
+                            </li>
+                            <li>
+                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/en.png')}}" alt="Idioma"></a>
+                            </li>
+                            <li>
+                                 <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/fr.png')}}" alt="Idioma"></a>
+                            </li>
+                             <li>
+                                 <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/it.png')}}" alt="Idioma"></a>
+                            </li>
+                           
+                        </ul>
                        
+                          
                     </div>
                 </div>
             </div>
