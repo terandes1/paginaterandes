@@ -6,20 +6,19 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-class ReservationMail extends Mailable
+
+class ReservationTourMail extends Mailable
 {
     use Queueable, SerializesModels;
-      public $content;
-      public $tour;
+     public $content;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($content,$tour)
+    public function __construct($content)
     {
          $this->content = $content;
-         $this->tour =$tour;
     }
 
     /**
@@ -29,7 +28,7 @@ class ReservationMail extends Mailable
      */
     public function build()
     {
-          return $this->markdown('public.emails.reservation')
-            ->with(['detalle' => $this->content,'tour' => $this->tour])->subject('RESERVA DE TOURS');
+          return $this->markdown('public.emails.ReservationTour')
+            ->with(['detalle' => $this->content])->subject('RESERVA DE TOURS ');
     }
 }

@@ -408,7 +408,14 @@ color: #999999;
                 <div class="dir-rat-inn dir-rat-title">
                   <h3 style="text-align: center;">CONTÁCTENOS</h3>
                   <p>Gracias por su interés en tener una experiencia de viaje personalizada con Tierra de los Andes Perú.</p>
-                  
+                   <div id="carga" style="text-align:center;">
+                       
+                    </div>
+                  <div id="mensajeRespuesta"> 
+
+					
+                  </div>
+                    
                 </div>
                 <div class="dir-rat-inn">
                     {!! Form::open(['method' => 'POST' , 'class' => 'dir-rat-form' ,'id' => "formEnvio"]) !!}
@@ -417,8 +424,8 @@ color: #999999;
                       <input type="text" class="form-control" id="nameTour" name="nameTour" value="{!! $tour->name !!}"> 
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre"> 
-                      <p class="errorValidacion" id="errorName"></p>
+                      <input type="text" class="form-control" id="nameCategoria" name="nameCategoria" placeholder="Ingrese su nombre"> 
+                      <p class="errorValidacion" id="errorCategoria"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
                       <input type="number" class="form-control" id="numero"  name="numero" placeholder="Ingresa móvil">
@@ -555,16 +562,18 @@ color: #999999;
  <script>
    $("#EnviarReservationTour").click(function (e) {
         e.preventDefault();
-        $("#errorName").html('');
+        $("#errorCategoria").html('');
         $("#errorNumero").html('');
         $("#errorEmail").html('');
         $("#errorCiudad").html('');
         $("#errorMensaje").html('');
+        $("#mensajeRespuesta").html('');
         var response = grecaptcha.getResponse();
         if(response.length == 0){
             $("#errorCapcha").html('Verificar capcha');
          
             } else {
+                 $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Cargando...</h4>');
                $("#errorCapcha").html('');
                 var data = $('#formEnvio').serialize();
                  $.ajax({
@@ -573,16 +582,23 @@ color: #999999;
                          data:data,
                      success: function(data) {
 
+                     		var html1="<div class='alert alert-success alert-dismissable'>"+
+				                      "<button type='button' class='close' data-dismiss='alert'>&times;</button>"+
+				                      "<strong>¡ Muchas gracias!</strong>  Su reserva ha sido registrada. En breves minutos nos comunicaremos con usted.</div>";
+				            $("#mensajeRespuesta").append(html1);
+                            $('#carga').html('');
+                             window.setTimeout('location.reload()', 3000);
                     },
                      error:function(data){
 
                         var errors = data.responseJSON.errors;
 
-                        $("#errorName").html(errors.name);
+                        $("#errorCategoria").html(errors.nameCategoria);
                         $("#errorNumero").html(errors.numero);
                         $("#errorEmail").html(errors.email);
                         $("#errorCiudad").html(errors.ciudad);
                         $("#errorMensaje").html(errors.mensaje);
+                        $('#carga').html('');
                     }
                 });
             }

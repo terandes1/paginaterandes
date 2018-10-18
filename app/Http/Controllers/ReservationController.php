@@ -9,6 +9,7 @@ use App\Http\Requests\StoreReservationTour;
 use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReservationMail;
+use App\Mail\ReservationTourMail;
 use App\User;
 use App\Tour;
 class ReservationController extends Controller
@@ -164,6 +165,9 @@ class ReservationController extends Controller
     public function reservartionTour(StoreReservationTour $request)
     {
 
-            return( $request->all());
+             Mail::to('michael101136@gmail.com')->send(new ReservationTourMail($request));
+            return response()->json(['data'=>'correcto']);
+  
+
     }
 }

@@ -25,7 +25,7 @@ class StoreReservationTour extends FormRequest
     {
         return [
              'nameTour' => 'required',
-             'name' => 'required',
+             'nameCategoria' => 'required',
              'numero' => 'required',
              'email' => 'email',
              'ciudad' => 'required',
@@ -37,7 +37,7 @@ class StoreReservationTour extends FormRequest
     {
        return [
           'nameTour.required' => 'Error del servidor',
-          'name.required' => 'Ingresar su nombre',
+          'nameCategoria.required' => 'Ingresar su nombre',
           'numero.required' => 'Ingresar su número de teléfono o celular ',
           'email.required' => 'Ingresar su email',
           'ciudad.required' => 'Ingresar su país ',
