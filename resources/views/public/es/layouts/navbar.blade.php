@@ -22,7 +22,7 @@
                         <ul>
                             <li><a href="{{route('paquetes','es')}}">Tours</a></li>
                         </ul>
-                        <h4>ITINERARIOS</h4>
+                        <h4>CATEGORIAS</h4>
                         <ul>
                             <li><a href="{{route('paquetes','es')}}/descubrir"> Descubrir</a></li>
                             <li><a href="{{route('paquetes','es')}}/aventura"> Aventura</a></li>
@@ -90,7 +90,7 @@
                             </li>
                             <li class="admi-menu">
 
-                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> ITINERARIOS <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
+                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> CATEGORIAS <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                 </a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">

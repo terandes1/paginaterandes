@@ -134,7 +134,7 @@ Route::post('toursOpcion/', [ 'uses' => 'PublicController@toursOpcion' ])->name(
 Route::post('toursOpcionPrecio/', [ 'uses' => 'PublicController@toursOpcionPrecio' ])->name('toursOpcionPrecio');
 
 
-Route::get('/tour/{lang?}/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+Route::get('{lang?}/tour/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
 Route::post('listItinerarioMap/', [ 'uses' => 'PublicController@tourItinerario' ])->name('listItinerarioMap');
 //Route::get('/tour/{tour?}/{lang?}', [ 'uses' => 'PublicController@tour' ])->name('tour');
 Route::get('{lang?}/testimonios/', [ 'uses' => 'PublicController@testimonials' ])->name('testimonios');

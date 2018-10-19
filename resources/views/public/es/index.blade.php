@@ -284,17 +284,7 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
 
-                                        <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
-                                                 
-                                                   <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-child" aria-hidden="true">
-                                                    </i> 
-                                                  <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-car" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-plane" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-ship" aria-hidden="true">
-                                                    </i>
-                                               
+                                        <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">   
                                         </div>
                              <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">    
                                  <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/6.jpg')}}" /> 
@@ -330,16 +320,6 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
-                                                 
-                                                   <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-child" aria-hidden="true">
-                                                    </i> 
-                                                  <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-car" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-plane" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-ship" aria-hidden="true">
-                                                    </i>
-                                               
                                         </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
@@ -372,15 +352,7 @@ input[type=radio]:checked + label>img {
                         <div class="v_place_img">
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                                  
-                                                   <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-child" aria-hidden="true">
-                                                    </i> 
-                                                  <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-car" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-plane" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-ship" aria-hidden="true">
-                                                    </i>
-                                               
+                                                
                                         </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/8.jpg')}}" /> 
@@ -413,16 +385,7 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
-                                                 
-                                                   <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-child" aria-hidden="true">
-                                                    </i> 
-                                                  <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-car" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-plane" aria-hidden="true">
-                                                    </i>
-                                                    <i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000;width: 32px; height: 32px; background: rgba(11, 149, 123, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-ship" aria-hidden="true">
-                                                    </i>
-                                               
+                                    
                                         </div>
                           <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/9.jpg')}}" /> 

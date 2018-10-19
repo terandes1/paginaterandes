@@ -281,7 +281,8 @@ class PublicController extends Controller
    public function tour($abbr='es',$slug)
    {
    	 
-   	 $tour = Tour::where('slug', '=', $slug)->get()[0];
+   	
+     $tour = Tour::where('slug', '=', $slug)->get()[0];
 
 
    	 $tourCategoria = DB::table('tours')

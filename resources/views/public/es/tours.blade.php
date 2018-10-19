@@ -124,23 +124,23 @@
           <div class="row" id="tours">
             @if (count($todoTours) == 0)<br>
                <div class="spe-title col-md-12">
-					<h2>Lo sentimos</h2>
-					<h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
-					<div class="title-line">
-						<div class="tl-1"></div>
-						<div class="tl-2"></div>
-						<div class="tl-3"></div>
-					</div>
-					<p>
-						<a href="/es" type="button" class="btn btn-link">Volver a buscar</a>
-					</p>
-				</div>
+          <h2>Lo sentimos</h2>
+          <h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
+          <div class="title-line">
+            <div class="tl-1"></div>
+            <div class="tl-2"></div>
+            <div class="tl-3"></div>
+          </div>
+          <p>
+            <a href="/es" type="button" class="btn btn-link">Volver a buscar</a>
+          </p>
+        </div>
             @else
                   @foreach($todoTours as $item)
                           <div class="hot-page2-alp-r-list">
 
                             <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                              <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+                              <a href="{{url('es/tour',['slug' => $item->slug])}}">
                                 <div class="hotel-list-score">4.5</div>
                                 <div class="hot-page2-hli-1">  
                                      <img src="/{{$item->img}}" alt=""> 
@@ -157,15 +157,15 @@
 
                             <div class="col-md-6">
                               <div class="trav-list-bod">
-                              <a href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}"><h3  id="tituloTousPrincipal">{{ $item->name }}</h3></a>
+                                <a href="{{url('es/tour',['slug' => $item->slug])}}"><h3  id="tituloTousPrincipal">{{ $item->name }}</h3></a>
                               <p style="text-align: justify;" id="subtituloTousPrincipal">{!! str_limit($item->description_short, 150) !!}</p>
                               </div>
                               
                             </div>
                             <div class="col-md-3">
                               <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                                <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <span class="hot-list-p3-1">Precios de</span>
-                                 <span class="hot-list-p3-1" style="text-decoration:line-through;">$ {{(int)$item->price+200}}</span>
+                                <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <br><span class="hot-list-p3-4"><strong>Desde</strong></span>
+                                <!-- <span class="hot-list-p3-1" style="text-decoration:line-through;">$ {{(int)$item->price+200}}</span>-->
                                  <span class="hot-list-p3-2">$ {{($item->price)}}</span> <span class="hot-list-p3-4">
                                   <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
                                 </span> </div>
@@ -234,7 +234,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../tour/es/"+element.slug+"'>"+
+                                                         "<a href='../es/tour/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -242,15 +242,15 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../tour/es/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../es/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
                                                   "<div class='col-md-3'>"+
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
                                                      " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+
-                                                      "<span class='hot-list-p3-1'>Precios de</span> "+
-                                                       "<span class='hot-list-p3-1' style='text-decoration:line-through;'>$ "+(element.price+200)+"</span>"+
+                                                      "<br><span class='hot-list-p3-4'><strong>Desde</strong></span> "+
+                                                       
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
                                                        " <a href='{{route('reservation','es')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
                                                      " </span> </div>"+
@@ -312,7 +312,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../tour/es/"+element.slug+"'>"+
+                                                         "<a href='../es/tour/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -320,15 +320,13 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../tour/es/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../es/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
                                                   "<div class='col-md-3'>"+
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
-                                                     " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+
-                                                      "<span class='hot-list-p3-1'>Precios de</span>"+
-                                                       "<span class='hot-list-p3-1' style='text-decoration:line-through;'>$ "+(element.price+200)+"</span>"+
+                                                     " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+"<br><span class='hot-list-p3-4'><strong>Desde</strong></span> "+
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
                                                        " <a href='{{route('reservation','es')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
                                                      " </span> </div>"+

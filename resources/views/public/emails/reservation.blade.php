@@ -22,7 +22,7 @@
 | Fecha             | {{$detalle->fecha}}         |                          
 | Tipo de viaje     | {{$detalle->travel_type}}   | 
 | Número de personas| {{$detalle->numberPersonas}}| 
-| Servicios de guia extra | {{$detalle->email}}   | 
+| Servicios de guia extra | {{$detalle->guide_service}}   | 
 <strong>MENSAJE:</strong></br>
 {{$detalle->message}}   
 @endcomponent

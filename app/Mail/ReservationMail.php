@@ -30,6 +30,6 @@ class ReservationMail extends Mailable
     public function build()
     {
           return $this->markdown('public.emails.reservation')
-            ->with(['detalle' => $this->content,'tour' => $this->tour])->subject('RESERVA DE TOURS');
+            ->with(['detalle' => $this->content,'tour' => $this->tour])->subject('RESERVA DE TOURS '.  $this->tour->name);
     }
 }

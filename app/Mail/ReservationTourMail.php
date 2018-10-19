@@ -28,7 +28,7 @@ class ReservationTourMail extends Mailable
      */
     public function build()
     {
-          return $this->markdown('public.emails.ReservationTour')
-            ->with(['detalle' => $this->content])->subject('RESERVA DE TOURS ');
+           return $this->markdown('public.emails.reservationTour')
+            ->with(['detalle' => $this->content])->subject('RESERVA DEL TOURS  '.$this->content->nameTour);
     }
 }
