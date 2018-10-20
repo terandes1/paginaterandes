@@ -67,8 +67,20 @@ class ReservationController extends Controller
 
            $abbr=$request->abbr;
            $tour_id=$request->tour_id;
-           Mail::to('michael101136@gmail.com')->send(new ReservationMail($request,$tour));
-
+           if($abbr=='es')
+           {
+             
+              Mail::to('solicitudes@terandes.com')->send(new ReservationMail($request,$tour));
+            //   Mail::to('terandes@terandes.com')->send(new ContactMail($request));
+            //   Mail::to('ventascusco8@terandes.com')->send(new ContactMail($request));
+          
+          
+            //   Mail::to('ventascusco2@terandes.com')->send(new ContactMail($request));
+            //   Mail::to('ventascusco4@terandes.com')->send(new ContactMail($request));
+              
+               
+           }
+           
            Session::flash('flash_message', '¡ Muchas gracias! Su reserva ha sido registrada. En breves minutos nos comunicaremos con usted');
 
            return redirect($abbr.'/reservacion/'.$tour_id);
@@ -165,9 +177,20 @@ class ReservationController extends Controller
     public function reservartionTour(StoreReservationTour $request)
     {
 
-            Mail::to('michael101136@gmail.com')->send(new ReservationTourMail($request));
-            return response()->json(['data'=>'correcto']);
-  
+           if($request->abbr=='es')
+           {
 
+              Mail::to('solicitudes@terandes.com')->send(new ReservationTourMail($request));
+            //   Mail::to('terandes@terandes.com')->send(new ReservationTourMail($request));
+            //   Mail::to('ventascusco8@terandes.com')->send(new ReservationTourMail($request));
+               
+            //   Mail::to('ventascusco2@terandes.com')->send(new ReservationTourMail($request));
+            //   Mail::to('ventascusco4@terandes.com')->send(new ReservationTourMail($request));
+               
+              return response()->json(['data'=>'correcto']); 
+           }
+           
+  
+        
     }
 }

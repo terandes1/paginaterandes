@@ -39,9 +39,20 @@ class ContactController extends Controller
     public function store(storeContact $request)
     {
 
-        Mail::to('michael101136@gmail.com')->send(new ContactMail($request));
-        Session::flash('flash_message', '¡ Muchas gracias! Su mensaje ha sido registrada. En breves minutos nos comunicaremos con usted');
-        return Redirect::back();   
+        if($request->idioma=='es')
+        {
+           Mail::to('solicitudes@terandes.com')->send(new ContactMail($request));
+        //   Mail::to('terandes@terandes.com')->send(new ContactMail($request));
+        //   Mail::to('ventascusco8@terandes.com')->send(new ContactMail($request));
+
+
+        //   Mail::to('ventascusco2@terandes.com')->send(new ContactMail($request));
+        //   Mail::to('ventascusco4@terandes.com')->send(new ContactMail($request));
+ 
+           Session::flash('flash_message', '¡ Muchas gracias! Su mensaje ha sido registrada. En breves minutos nos comunicaremos con usted.');
+           return Redirect::back();     
+        }
+       
 
     }
 
