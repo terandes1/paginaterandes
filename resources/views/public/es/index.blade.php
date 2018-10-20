@@ -214,7 +214,7 @@ input[type=radio]:checked + label>img {
        
         <div class="contenedor_video">
             <video id="videoId" style=" /*width: 1348px;*/ margin-top: -22px;" poster="{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}" playsinline="" autoplay="" loop="" preload="auto" muted=""> 
-             <source src="https://www.kuodatravel.com/wp-content/uploads/2018/09/kuoda-travel-video6.mp4" type="video/mp4"></video>
+             <source src="{{URL::asset('assets/public/video/Definitivo.mp4')}}" type="video/mp4"></video>
         </div>
          <dir id="texto" style="font-family: Lovelo Black;">
              AVENTURE 
@@ -284,7 +284,7 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
 
-                                        <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">   
+                                        <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                         </div>
                              <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">    
                                  <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/6.jpg')}}" /> 
@@ -320,6 +320,9 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
+                                                 
+                                                 
+                                               
                                         </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
@@ -351,8 +354,8 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
-                                                 
-                                                
+                                            
+                                               
                                         </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/8.jpg')}}" /> 
@@ -385,7 +388,7 @@ input[type=radio]:checked + label>img {
 
                         <div class="v_place_img">
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
-                                    
+                                                 
                                         </div>
                           <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/9.jpg')}}" /> 
@@ -722,7 +725,7 @@ input[type=radio]:checked + label>img {
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/cantur.jpg') }}" alt="" />
+                        <a href="https://www.cantturperu.org/es"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/cantur.jpg') }}" alt="" />
                           <!--  DATA -->
                         </a>
                     </li>
@@ -739,13 +742,13 @@ input[type=radio]:checked + label>img {
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">SOCIOS</h3>
                 <ul>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaA.jpg') }}" white="20px;" alt="" />
+                        <a href="http://www.illapa.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaA.jpg') }}" white="20px;" alt="" />
                            <!--  ILLAPA TRANSPORTE -->
                      
                         </a>
                     </li>
                     <li style="border-bottom: 1px solid #fff;">
-                        <a href="#!"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaT.jpg') }}" alt="" />
+                        <a href="http://illapatransportes.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaT.jpg') }}" alt="" />
                            <!--  ILLAPA CULTURAS ANDINA -->
                         </a>
                     </li>
@@ -822,7 +825,7 @@ input[type=radio]:checked + label>img {
                 $( ".contenedor_video" ).html( "<div id='portada'><img src='{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}'></img> </div>" );
           }else{
              $( "#portada" ).remove();
-             var video="<source src='https://www.kuodatravel.com/wp-content/uploads/2017/11/discover-south-america-kt.mp4' type='video/mp4'>";
+             var video="<source src='{{URL::asset('assets/public/video/Definitivo.mp4')}}' type='video/mp4'>";
              var html= "<video id='videoId' playsinline='' autoplay='' loop='' preload='auto' muted=''>"+video+"</video>";
              $( ".contenedor_video" ).html(html);
           }

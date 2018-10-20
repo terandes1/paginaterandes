@@ -119,6 +119,12 @@
                             Descubrir
                         </a>
                     </li>
+                    <li>
+                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        <a href="{{route('paquetes','es')}}/viaje-en-grupo" id="textFooter"> 
+                            Viaje en grupo
+                        </a>
+                    </li>
 
 
                    
@@ -192,7 +198,7 @@
                     </div>
                     <div class="col-md-2">
                       <div class="">
-                        <a href="" target="_blank">
+                        <a href="https://peru.info/es-pe/" target="_blank">
                           <img src="{!! URL::asset('assets/public/images/icons-footer/peru.png') !!}" alt="Fjords" style="width:70%">
                          
                         </a>
@@ -200,7 +206,7 @@
                     </div>
                    <div class="col-md-2">
                       <div class="">
-                        <a href="" target="_blank">
+                        <a href="https://www.terandes.com/" target="_blank">
                           <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/terandes.png') !!}" alt="Lights" style="width:85%">
                           
                         </a>
@@ -209,7 +215,7 @@
                     </div>
                      <div class="col-md-2">
                       <div class="">
-                        <a href="" target="_blank">
+                        <a href="https://www.patronatomachupicchu.org/" target="_blank">
                           <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/patronato.png') !!}" alt="Lights" style="width:85%;margin-top: 10px;">
                           
                         </a>
@@ -218,7 +224,7 @@
                     </div>
                     <div class="col-md-2">
                       <div class="">
-                        <a href="" target="_blank">
+                        <a href="http://www.illapa.com/" target="_blank">
                           <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaA.png') !!}" alt="Lights" style="width:85%;">
                           
                         </a>
@@ -227,7 +233,7 @@
                     </div>
                     <div class="col-md-2">
                       <div class="">
-                        <a href="" target="_blank">
+                        <a href="http://illapatransportes.com/" target="_blank">
                           <img class="img-rounded" src="{!! URL::asset('assets/public/images/icons-footer/illapaT.png') !!}" alt="Lights" style="width:85%">
                           
                         </a>
