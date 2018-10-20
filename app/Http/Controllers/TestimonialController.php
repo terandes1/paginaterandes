@@ -8,6 +8,8 @@ use App\Http\Requests\StoreTestimonial;
 use Image;
 use DB;
 use App\Helpers\languageUsers;
+use App\Mail\testimonioEncuestaMail;
+use Illuminate\Support\Facades\Mail;
 class TestimonialController extends Controller
 {
     /**
@@ -105,8 +107,14 @@ class TestimonialController extends Controller
                 $itemp->save();
             }
 
+            if($request->abbr=='es')
+            {
+                 $tipoEnvio='TESTIMONIO';
+                 $nombre= $request->name;
+                 Mail::to('michael@gmail.com')->send(new testimonioEncuestaMail($nombre, $tipoEnvio));
+            }
            
-
+         
            return redirect()->route('idiomas',$request->abbr)->with('info' , 'Se registro correctamente');
 
 

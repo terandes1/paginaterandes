@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Encuesta;
 use App\Img;
 use App\Testimonial;
-
+use App\Mail\testimonioEncuestaMail;
+use Illuminate\Support\Facades\Mail;
 class EncuestaController extends Controller
 {
     /**
@@ -70,7 +71,12 @@ class EncuestaController extends Controller
 
         ]);
         
-        
+         if($request->lenguaje=='es')
+            {
+                 $tipoEnvio='ENCUESTA';
+                 $nombre=$request['nombres_apellidos'];
+                 Mail::to('michael@gmail.com')->send(new testimonioEncuestaMail($nombre, $tipoEnvio));
+            }
 
         return redirect('/encuesta/enviada');
         
