@@ -319,11 +319,9 @@ input[type=radio]:checked + label>img {
                    <div class="col-md-3 col-sm-6 col-xs-12 b_packages wow slideInUp" data-wow-duration="0.5s">
 
                         <div class="v_place_img">
-                            <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
-                                                 
-                                                 
+                            <div style="text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">            
                                                
-                                        </div>
+                            </div>
                         <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
                         </a>

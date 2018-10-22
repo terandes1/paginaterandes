@@ -5,4 +5,4 @@
 {!!Html::script('assets/public/js/materialize.min.js')!!}
 {!!Html::script('assets/public/js/custom.js')!!}
 {!!Html::script('assets/public/video/js/video.js')!!}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+{!!Html::script('assets/public/js/select2.min.js')!!}

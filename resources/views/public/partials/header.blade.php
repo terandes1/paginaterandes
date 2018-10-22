@@ -15,7 +15,7 @@
     {!!Html::style('assets/public/css/mob.css')!!}
     {!!Html::style('assets/public/css/animate.css')!!}
     {!!Html::style('assets/public/video/css/video.css')!!}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    {!!Html::style('assets/public/css/select2.min.css')!!}
 
 
 
