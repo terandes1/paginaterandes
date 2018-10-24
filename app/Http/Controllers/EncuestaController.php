@@ -75,7 +75,7 @@ class EncuestaController extends Controller
             {
                  $tipoEnvio='ENCUESTA';
                  $nombre=$request['nombres_apellidos'];
-                 Mail::to('michael@gmail.com')->send(new testimonioEncuestaMail($nombre, $tipoEnvio));
+                 Mail::to('webmaster@terandes.com')->send(new testimonioEncuestaMail($nombre, $tipoEnvio));
             }
 
         return redirect('/encuesta/enviada');

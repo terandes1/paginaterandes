@@ -34,4 +34,15 @@ class languageUsers
 
 	}
 
+	public static function lenguajeFaltantes($abbr)
+	{
+	
+         $lenguaje=['es'=>'es','fr' => 'fr', 'en' => 'en','de' => 'de', 'it' => 'it'];
+
+		 $lenguajeFaltantes = array_diff($lenguaje, array($abbr));
+
+        return ($lenguajeFaltantes);
+
+	}
+
 }

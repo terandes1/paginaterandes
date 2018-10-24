@@ -10,6 +10,7 @@ use App\testimonial;
 use App\Event;
 use App\Itinerarie;
 use Carbon\Carbon;
+use App\Helpers\languageUsers;
 class PublicController extends Controller
 {
     function __construct()
@@ -27,12 +28,12 @@ class PublicController extends Controller
 
     public function lang($abbr='es'){
 
-    	if($abbr=='es')
+    	if($abbr =='es' || $abbr=='fr')
       {
-    	
-          $toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
+    	     
+            $toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
         	
-        	//return $toursPrincipal;
+        	  //return $toursPrincipal;
             $testimonials = DB::table('testimonials')
                             ->select('id','name','photo','impresion_global','nationality','testimonial','date')
                             ->where('status', 'approve')
@@ -53,7 +54,9 @@ class PublicController extends Controller
             	 $media=0;
             }
 
-            return view('public.'.$abbr.'.index',['toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'media'=>$media]);
+            $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+
+            return view('public.'.$abbr.'.index',['toursLujos' => $toursLujos,'testimonials'=>$testimonials,'abbr'=>$abbr,'lenguajeFaltantes' => $lenguajeFaltantes,'media'=>$media]);
 
 
         } else {
@@ -64,28 +67,7 @@ class PublicController extends Controller
     	
     }
 
-    public function contact($abbr='es')
-    {
-
-    	if($abbr=='es')
-         {
-             $tour = DB::table('tours')
-                      ->select('tours.name')
-                      ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
-                      ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
-                      ->join('languages', 'languages.id', '=', 'categories.language_id')
-                      ->where('languages.abbr','=',$abbr)
-                      ->get();
-
-            return view('public.'.$abbr.'.contact',['tour' =>$tour ]);
-
-         } else {
-
-             return view('errors.404');
-         }
-
-    }
-
+   
     public function reservation($abbr='es',$idTour='')
     {
 
@@ -111,8 +93,10 @@ class PublicController extends Controller
 
      $paises = DB::table('paises')
                             ->get();
-       
-      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr'=>$abbr]);
+      
+     $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr'=>$abbr,'lenguajeFaltantes' => $lenguajeFaltantes]);
 
     }
 
@@ -147,12 +131,19 @@ class PublicController extends Controller
                             $searchCategoria=str_replace("alta-Montania","Alta Montaña",$searchCategoria);
 
                         }
+                         if($searchCategoria=='voyage-en-groupe'){
+
+                            $searchCategoria=str_replace("-"," ",$searchCategoria);
+                           
+                        }
 
                         $todoTours=publicTours::searchTours($abbr,$searchCategoria);//buscar tours
+
                 break;
         } 
+        $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
 	    
-   		return view('public.'.$abbr.'.tours',['categorias' =>$categorias ,'abbr' => $abbr,'todoTours' =>$todoTours]);
+   		return view('public.'.$abbr.'.tours',['categorias' =>$categorias ,'lenguajeFaltantes' => $lenguajeFaltantes,'abbr' => $abbr,'todoTours' =>$todoTours]);
 
    }
    public function toursOpcion()//filtrado por catagori
@@ -300,7 +291,7 @@ class PublicController extends Controller
 			        ->where("tours.id","=",$tour->id)
 			        ->get();
 
-	$itinerarioTour = DB::table('tours')
+	 $itinerarioTour = DB::table('tours')
 			        ->select('itineraries.name','itineraries.description','itineraries.day')
 			        ->join('itineraries', 'tours.id', '=', 'itineraries.tour_id')
 			        ->where("tours.id","=",$tour->id)
@@ -320,7 +311,9 @@ class PublicController extends Controller
     $toursPrincipal=publicTours::tours($abbr,'1');//Retorne de  tours  en español y principal(1 y 0)
     $toursRelacionados=publicTours::toursRelacionados($abbr,$tourCategoria->id);//Retorne de  tours  relacionados
 
-   	 return view('public.'.$abbr.'.tour',['tour' => $tour,'multimediaTour' => $multimediaTour,'toursPrincipal' => $toursPrincipal,'itinerarioTour' => $itinerarioTour,'toursRelacionados' => $toursRelacionados,'seriesTour'=>$seriesTour,'pricesTour'=>$pricesTour,'abbr'=>$abbr]);
+    $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+
+   	 return view('public.'.$abbr.'.tour',['tour' => $tour,'multimediaTour' => $multimediaTour,'toursPrincipal' => $toursPrincipal,'itinerarioTour' => $itinerarioTour,'toursRelacionados' => $toursRelacionados,'seriesTour'=>$seriesTour,'pricesTour'=>$pricesTour,'abbr'=>$abbr,'lenguajeFaltantes' => $lenguajeFaltantes]);
 
    }
    public function tourItinerario(Request $request)
@@ -357,26 +350,62 @@ class PublicController extends Controller
 	   	return response(['data'=>$tempItinerarioPuntos,'grafica'=> $dataGrfica]);
    }
 
-    
-    public function  testimonials($abbr='es',$estadoHabilitado='approve')
-    {
-
-       $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->latest()->take(20)->get();
-       return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials]);
-   
-     }
  
-    public function  events($abbr='es')
+  
+    public function paginasIndependientes($abbr='es',$pagina)
     {
-    	$eventos=Event::all();
+      
+       if($pagina=='evenements' || $pagina=='eventos')
+       {
+          $eventos=Event::all();
+          $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+         
+          return view('public.'.$abbr.'.events',['eventos'=>$eventos,'lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
+       }
+     
+      
+      if($pagina=='nosotros' || $pagina=='nous')
+      {
+             $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+             return view('public.'.$abbr.'.our-team',['lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
+      }
 
-    	return view('public.'.$abbr.'.events',['eventos'=>$eventos]);
+      if($pagina=='contacto' || $pagina=='contact')
+      {
+            
+           
+            if($abbr=='es' || $abbr=='fr')
+             {
+                 $tour = DB::table('tours')
+                          ->select('tours.name')
+                          ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+                          ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+                          ->join('languages', 'languages.id', '=', 'categories.language_id')
+                          ->where('languages.abbr','=',$abbr)
+                          ->get();
+                $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
 
-    }
+                return view('public.'.$abbr.'.contact',['tour' =>$tour ,'abbr'=>$abbr,'lenguajeFaltantes' => $lenguajeFaltantes]);
 
-    public function   our_team($abbr='es')
-    {
-    	return view('public.'.$abbr.'.our-team');
+             } else {
+
+                 return view('errors.404');
+             }
+
+      }
+
+      if($pagina=='testimonios' || $pagina=='temoignages')
+      {
+        
+         $estadoHabilitado='approve';
+         $testimonials = DB::table('testimonials')->where('status', $estadoHabilitado)->where("language","=",$abbr)->latest()->take(20)->get();
+       
+         $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+
+         return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials,'lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
+      }
+
+
     }
     
 }   

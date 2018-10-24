@@ -123,7 +123,6 @@ Route::get('umfrage',function(){
 });
 Route::get('/', [ 'uses' => 'PublicController@index' ]);
 Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
-Route::get('{lang?}/contacto/', [ 'uses' => 'PublicController@contact' ])->name('contact');
 Route::resource('contacto-reserva','ContactController');
 
 Route::get('/reservations/moverAtendido/{id?}','ReservationController@moverAtendido')->name('moveraAtendido');
@@ -136,12 +135,8 @@ Route::post('toursOpcionPrecio/', [ 'uses' => 'PublicController@toursOpcionPreci
 
 Route::get('{lang?}/tour/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
 Route::post('listItinerarioMap/', [ 'uses' => 'PublicController@tourItinerario' ])->name('listItinerarioMap');
-//Route::get('/tour/{tour?}/{lang?}', [ 'uses' => 'PublicController@tour' ])->name('tour');
-Route::get('{lang?}/testimonios/', [ 'uses' => 'PublicController@testimonials' ])->name('testimonios');
 
-Route::get('{lang?}/eventos/', [ 'uses' => 'PublicController@events' ])->name('events');
-Route::get('{lang?}/nosotros/', [ 'uses' => 'PublicController@our_team' ])->name('our-team');
-
+Route::get('{lang?}/{paginas?}/', [ 'uses' => 'PublicController@paginasIndependientes' ])->name('paginas');//paginas independiente, nosotros ,contacto,etc;
 //fin de vistas publicas
 
 

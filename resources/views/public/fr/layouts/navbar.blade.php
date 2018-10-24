@@ -7,7 +7,7 @@
         <div class="ed-mob-menu-con">
             <div class="ed-mm-left">
                 <div class="wed-logo"  style="width: 130px;" >
-                    <a href="{{('/es')}}"><img  id="logoTerandes" src="/assets/public/images/logo.png" alt="" />
+                    <a href="{{('/fr')}}"><img  id="logoTerandes" src="/assets/public/images/logo.png" alt="" />
                      </a>
                 </div>
 
@@ -24,24 +24,24 @@
                         </ul>
                         <h4>CATEGORIAS</h4>
                         <ul>
-                            <li><a href="{{route('paquetes','es')}}/descubrir"> Descubrir</a></li>
-                            <li><a href="{{route('paquetes','es')}}/aventura"> Aventura</a></li>
-                            <li><a href="{{route('paquetes','es')}}/alta-montania"> Alta monta単a</a></li>
-                            <li><a href="{{route('paquetes','es')}}/excursiones">Excursion</a></li>
-                             <li><a href="{{route('paquetes','es')}}/viaje-en-grupo">Viaje en grupo</a></li>
+                            <li><a href="{{route('paquetes','fr')}}/decouvrir"> Découverte</a></li>
+                            <li><a href="{{route('paquetes','fr')}}/aventure"> Aventure</a></li>
+                            <li><a href="{{route('paquetes','fr')}}/haute-montagne"> Haute montagne</a></li>
+                            <li><a href="{{route('paquetes','fr')}}/excursions">Excursions</a></li>
+                             <li><a href="{{route('paquetes','fr')}}/voyage-en-groupe">Voyage de groupeo</a></li>
                         </ul>
                         <h4>Eventos</h4>
                         <ul>
-                            <li><a href="{{route('paginas','es')}}/eventos" style="font-family: Lovelo Black;">EVENTOS</a></li>
+                            <li><a href="{{route('paginas','fr')}}/evenements" style="font-family: Lovelo Black;">NOUS</a></li>
                         </ul>
                         <h4>Empresa</h4>
                         <ul>
-                            <li><a href="{{route('paginas','es')}}/nosotros" style="font-family: Lovelo Black;">NOSOTROS</a></li>
+                             <li><a href="{{route('paginas','fr')}}/nous" style="font-family: Lovelo Black;">NOUS</a></li>
                         </ul>
 
                          <h4>Contacto</h4>
                         <ul>
-                           <li><a href="{{route('paginas','es')}}/contacto" style="font-family: Lovelo Black;">CONTACTO</a></li>
+                            <li><a href="{{route('paginas','fr')}}/contact" style="font-family: Lovelo Black;">CONTACT</a></li>
                         </ul>
                         <h4>Idiomas</h4>
                         <ul>
@@ -80,18 +80,18 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="wed-logo" style="margin-top: -1px;">
-                        <a href="{{('/es')}}"><img style="width:100%;height: 80px;"  src="/assets/public/images/logo.png" alt="" />
+                        <a href="{{('/fr')}}"><img style="width:100%;height: 80px;"  src="/assets/public/images/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="main-menu" style="margin-top: 10px;">
                         <ul>
                            
                             <li class="about-menu">
-                                <a href="{{route('paquetes','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
+                                <a href="{{route('paquetes','fr')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> Visites</a>
                             </li>
                             <li class="admi-menu">
 
-                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> CATEGORIAS <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
+                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> Catégories  <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                 </a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">
@@ -99,44 +99,44 @@
                                         <div class="m-menu-inn">
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">
+                                                    <a class="course-overlay" href="{{route('paquetes','fr')}}/decouvrir">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/5.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Descubrimiento</span>
+                                                        <span style="font-family: Lovelo Black;">Découverte</span>
                                                     </a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
+                                                    <a class="course-overlay" href="{{route('paquetes','fr')}}/aventure">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/2.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Aventura</span>
+                                                        <span style="font-family: Lovelo Black;">Aventure</span>
                                                     </a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
+                                                    <a class="course-overlay" href="{{route('paquetes','fr')}}/haute-montagne">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/3.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Alta Monta単a</span>
+                                                        <span style="font-family: Lovelo Black;">Haute montagne</span>
                                                     </a>
                                                 </div>
                                              </div>
                                             
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
+                                                    <a class="course-overlay" href="{{route('paquetes','fr')}}/excursions">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/4.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Excursiones</span>
+                                                        <span style="font-family: Lovelo Black;">Excursions</span>
                                                     </a>
                                                 </div>
                                             </div>
                                              <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/viaje-en-grupo">
+                                                    <a class="course-overlay" href="{{route('paquetes','fr')}}/voyage-en-groupe">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/1.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Viaje en grupo</span>
+                                                        <span style="font-family: Lovelo Black;">Voyage de groupe</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -146,15 +146,15 @@
                                 </div>
 
                             </li>
-                            <li><a href="{{route('paginas','es')}}/eventos" style="font-family: Lovelo Black;">EVENTOS</a>
+                            <li><a href="{{route('paginas','fr')}}/evenements" style="font-family: Lovelo Black;">Événements</a>
                             </li> 
-                            <li><a href="{{route('paginas','es')}}/nosotros" style="font-family: Lovelo Black;">NOSOTROS</a>
+                            <li><a href="{{route('paginas','fr')}}/nous" style="font-family: Lovelo Black;">Nous</a>
                             </li>
                             
-                            <li><a href="{{route('paginas','es')}}/contacto" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> CONTACTO</a>
+                            <li><a href="{{route('paginas','fr')}}/contact" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> CONTACT</a>
                             </li>   
         
-                            <li class="cour-menu">
+                             <li class="cour-menu">
                                     <a href="#!" class="mm-arr"><a class="route-language" href="{{route('idiomas',$abbr)}}"><img class="img-lng" style="width: 38px;height: 25px;" src="{{URL::asset('assets/public/images/icon')}}/{!! $abbr !!}.png" alt="Idioma"></a>
                                         <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                     </a>

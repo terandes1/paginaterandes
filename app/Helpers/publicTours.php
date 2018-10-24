@@ -86,8 +86,7 @@ class publicTours
 			        ->where("languages.abbr","=",$abbr)
 			        ->where("categories.name","=",$search)
 			        ->groupBy('tours.name')
-			        ->paginate(12);
-
+			        ->paginate(12);    
 				return $toursPublic;
 
 		}
