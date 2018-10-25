@@ -26,7 +26,7 @@
                         <ul>
                             <li><a href="{{route('paquetes','es')}}/descubrir"> Descubrir</a></li>
                             <li><a href="{{route('paquetes','es')}}/aventura"> Aventura</a></li>
-                            <li><a href="{{route('paquetes','es')}}/alta-montania"> Alta monta単a</a></li>
+                            <li><a href="{{route('paquetes','es')}}/alta-montania"> Alta montaña</a></li>
                             <li><a href="{{route('paquetes','es')}}/excursiones">Excursion</a></li>
                              <li><a href="{{route('paquetes','es')}}/viaje-en-grupo">Viaje en grupo</a></li>
                         </ul>
@@ -119,7 +119,7 @@
                                                 <div class="ed-course-in">
                                                     <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/3.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Alta Monta単a</span>
+                                                        <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>
                                                 </div>
                                              </div>

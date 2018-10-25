@@ -126,7 +126,8 @@ Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
 Route::resource('contacto-reserva','ContactController');
 
 Route::get('/reservations/moverAtendido/{id?}','ReservationController@moverAtendido')->name('moveraAtendido');
-Route::get('{lang?}/reservacion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');
+Route::get('{lang?}/reservacion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservacion');
+Route::get('{lang?}/reservation/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');
 Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetes');
 
 Route::post('toursOpcion/', [ 'uses' => 'PublicController@toursOpcion' ])->name('toursOpcion');

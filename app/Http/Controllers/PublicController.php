@@ -67,38 +67,6 @@ class PublicController extends Controller
     	
     }
 
-   
-    public function reservation($abbr='es',$idTour='')
-    {
-
-      $tourCompra = DB::table('tours')
-              ->select('tours.id','tours.name','tours.img','tours.price', 'tours.tipo_tour','categories.id as idCtagoria')
-              ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
-              ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
-              ->where("tours.id","=",$idTour)
-              ->get()[0];
-
-     $tourItinerario= DB::table('itineraries')
-		              ->select('itineraries.id')
-		              ->where("itineraries.tour_id","=",$idTour)
-		              ->get();
-	 $dia=count($tourItinerario);
-	  
-	 $toursRelacionados = DB::table('tours')
-	          ->select('tours.name','tours.img','tours.slug')
-	          ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
-	          ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
-	          ->where("categories.id","=",$tourCompra->idCtagoria)
-	          ->get()->take(3);
-
-     $paises = DB::table('paises')
-                            ->get();
-      
-     $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
-
-      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr'=>$abbr,'lenguajeFaltantes' => $lenguajeFaltantes]);
-
-    }
 
    public function tours($abbr='es',$searchCategoria='')
    {
@@ -405,6 +373,38 @@ class PublicController extends Controller
          return view('public.'.$abbr.'.testimonials',['testimonials'=>$testimonials,'lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
       }
 
+
+    }
+
+    public function reservation($abbr='es',$idTour='')
+    {
+
+      $tourCompra = DB::table('tours')
+              ->select('tours.id','tours.name','tours.img','tours.price', 'tours.tipo_tour','categories.id as idCtagoria')
+              ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+              ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+              ->where("tours.id","=",$idTour)
+              ->get()[0];
+
+     $tourItinerario= DB::table('itineraries')
+                  ->select('itineraries.id')
+                  ->where("itineraries.tour_id","=",$idTour)
+                  ->get();
+   $dia=count($tourItinerario);
+    
+   $toursRelacionados = DB::table('tours')
+            ->select('tours.name','tours.img','tours.slug')
+            ->join('categories_has_tours', 'tours.id', '=', 'categories_has_tours.tour_id')
+            ->join('categories', 'categories.id', '=', 'categories_has_tours.categorie_id')
+            ->where("categories.id","=",$tourCompra->idCtagoria)
+            ->get()->take(3);
+
+     $paises = DB::table('paises')
+                            ->get();
+      
+     $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
+
+      return view('public.'.$abbr.'.reservation',['tour' => $tourCompra,'toursRelacionados' =>$toursRelacionados, 'paises' =>$paises,'dia' => $dia,'abbr'=>$abbr,'lenguajeFaltantes' => $lenguajeFaltantes]);
 
     }
     

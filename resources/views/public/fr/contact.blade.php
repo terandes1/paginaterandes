@@ -28,13 +28,13 @@ width:100%!important;
 		<div class="container">
 			<!-- TITLE & DESCRIPTION -->
 			<div class="spe-title col-md-12">
-				<h2 id="titulo">CONTACTENOS</h2>
+				<h2 id="titulo">CONTACTEZ NOUS</h2>
 				<div class="title-line">
 					<div class="tl-1"></div>
 					<div class="tl-2"></div>
 					<div class="tl-3"></div>
 				</div>
-				<p id="subtitulo">Tierras de los andes  líder mundial en tours, más de 30,000 paquetes en todo el mundo. Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
+				<p id="subtitulo">Pays des Andes, leader mondial des circuits, plus de 30 000 forfaits à travers le monde. Réservez des forfaits de voyage et profitez de vos vacances avec une expérience unique</p>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12 form_1 wow fadeInLeft" data-wow-duration="1s">
 				<!--====== THANK YOU MESSAGE ==========-->
@@ -48,17 +48,17 @@ width:100%!important;
 				  	{!! Form::open(['route' => ['contacto-reserva.store'] , 'method' => 'POST']) !!}
 					<ul>
 						<li>
-							<input type="text" name="name"  id="name" value="{{ old('name') }}" placeholder="Escriba su nombre" required>
+							<input type="text" name="name"  id="name" value="{{ old('name') }}" placeholder="Écris ton nom" required>
 							<p class="errorValidacion">{{ $errors->first('name') }}</p>
 						 </li>
 						<li>
-							<input type="tel" name="telefono"  id="telefono" value="{{ old('telefono') }}" placeholder="Número de telephone" required> 
+							<input type="tel" name="telefono"  id="telefono" value="{{ old('telefono') }}" placeholder="Numéro de téléphone" required> 
 							<p class="errorValidacion">{{ $errors->first('telefono') }}</p>
 						</li>
 						<li>
 							<input type="email" name="email"  id="email" placeholder="E-mail" value="{{ old('email') }}" required> 
 							<p class="errorValidacion">{{ $errors->first('email') }}</p>
-							<input type="hidden" name="idioma"  id="idioma" value="es" value="{{ old('idioma') }}"> 
+							<input type="hidden" name="idioma"  id="idioma" value="fr" value="{{ old('idioma') }}"> 
 							<p class="errorValidacion">{{ $errors->first('idioma') }}</p>
 						</li>
 						<li>
@@ -75,7 +75,7 @@ width:100%!important;
 						<li>
 							<input type="text" name="ecount" value="" id="ecount" placeholder="Country" required> </li> -->
 						<li style="width: 100%;text-align: center;">
-							<textarea class="form-control" name="message"  cols="120" rows="3"  placeholder="Ingrese su mensaje">{{ old('message') }}</textarea>
+							<textarea class="form-control" name="message"  cols="120" rows="3"  placeholder="Entrez votre message">{{ old('message') }}</textarea>
 							<p class="errorValidacion">{{ $errors->first('message') }}</p>
 							
 										{!! Recaptcha::render() !!}

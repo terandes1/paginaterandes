@@ -515,16 +515,16 @@ input[type=radio]:checked + label>img {
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> La famille</a>
+                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> La famille</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groupes</a>
+                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groupes</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Les couples</a>
+                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Les couples</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Les amis</a>
+                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Les amis</a>
                             </li>               
                           </ul>
                         </div>
@@ -535,7 +535,7 @@ input[type=radio]:checked + label>img {
                                           <ul>
                                            
                                             <li>
-                                              <a href="{{route('paquetes','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
                                                   <h4>VOIR LES TOURS </h4>   
                                                </a>
                                             </li>
@@ -702,7 +702,7 @@ input[type=radio]:checked + label>img {
 
         </div>
     </div>
-    @include('public.es.testimonials.formTestimonials')
+    @include('public.fr.testimonials.formTestimonials')
 </section>
 
 <!--====== socios ==========-->

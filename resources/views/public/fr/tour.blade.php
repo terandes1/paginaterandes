@@ -151,7 +151,7 @@ color: #999999;
         </div>
         
       <ul>
-        <li><a href="#inner-page-title" id="subtitulo">Inicio</a>
+        <li><a href="#inner-page-title" id="subtitulo">Accueil</a>
         </li>
         <li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
         <li><a href="{{route('paquetes','fr')}}" class="bread-acti" id="subtitulo">Tours</a>
@@ -184,7 +184,7 @@ color: #999999;
  		
         <div class="tour_head1" style="text-align: justify;">
 
-	        <h3 >Descripción</h3>
+	        <h3 >Description</h3>
 	           
             <p id="subtitulo" style="margin-top: -28px;color: black; font-size:larger">
           	{!! strip_tags($tour->description_complete) !!}.
@@ -194,7 +194,7 @@ color: #999999;
         <div class="tour_head1 hotel-book-room">
 
           
-	          <h3 >Galería de fotos</h3>
+	          <h3>Galerie de photos</h3>
 	          
           <div id="myCarousel1" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -233,7 +233,7 @@ color: #999999;
                             <thead>
                                 <tr>
                                     @foreach($pricesTour as $itemprice)
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De {!!  $itemprice->range_first  !!} a {!!  $itemprice->range_end !!} personas</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">De {!!  $itemprice->range_first  !!} un {!!  $itemprice->range_end !!} les gens</h4></th>
                                     @endforeach
                                 </tr>
                             </thead>
@@ -259,10 +259,10 @@ color: #999999;
                         <table class="responsive-table">
                             <thead>
                                 <tr>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">LLEGADAS A LIMA</h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">SALIDAS DE LIMA </h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">DISPONIBILIDAD</h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">ESTADO</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">ARRIVÉES À LIMA</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">SORTIES DE LIMA </h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">DISPONIBILITÉ</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">ÉTAT</h4></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -277,7 +277,7 @@ color: #999999;
                                          <?=fecha($items->date_end);?>
                                     </td>
                                     <td style="font-size: 14px;padding-left: 15px">
-                                        {!!  $items->cant_person !!} VACANTES
+                                        {!!  $items->cant_person !!} VACANCES
                                     </td>
                                     <td style="font-size: 14px;padding-left: 15px"><span class="db-done" style="text-transform: capitalize;">{!!  $items->status !!}</span></td>
                                 </tr>
@@ -309,14 +309,14 @@ color: #999999;
                                 <ul class="nav nav-tabs">
                                     <li class="active" style="">
                                         <a href="#letters" data-toggle="tab"><i style="color:black;" class="fa fa-address-card-o"></i>
-                                            <span style="font-family: Lovelo Black;">ITINERARIO</span>
+                                            <span style="font-family: Lovelo Black;">ITINERAIRE</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#emails" data-toggle="tab">
                                             <i style="color:black;" class="fa fa-users"></i> 
                                             <span style="font-family: Lovelo Black;">
-                                                 ORGANIZACIÓN
+                                                 ORGANISATION
                                             </span>
                                         </a>
                                     </li>
@@ -324,7 +324,7 @@ color: #999999;
                                         <a href="#loglist" data-toggle="tab" id="ubicacion">
                                             <i style="color:black;" class="fa fa-map-marker"></i> 
                                             <span style="font-family: Lovelo Black;">
-                                                 UBICACIÓN
+                                                 Emplacement
                                             </span>
                                         </a>
                                     </li>
@@ -406,8 +406,8 @@ color: #999999;
         <div>
             <div class="dir-rat">
                 <div class="dir-rat-inn dir-rat-title">
-                  <h3 style="text-align: center;">CONTÁCTENOS</h3>
-                  <p>Gracias por su interés en tener una experiencia de viaje personalizada con Tierra de los Andes Perú.</p>
+                  <h3 style="text-align: center;">CONTACTEZ NOUS</h3>
+                  <p>Merci de votre intérêt pour une expérience de voyage personnalisée avec Tierra de Los Andes au Pérou.</p>
                    <div id="carga" style="text-align:center;">
                        
                     </div>
@@ -425,23 +425,23 @@ color: #999999;
                       <input type="hidden"  id="abbr"  name="abbr" value="fr"> 
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="nameCategoria" name="nameCategoria" placeholder="Ingrese su nombre"> 
+                      <input type="text" class="form-control" id="nameCategoria" name="nameCategoria" placeholder="Entrez votre nom"> 
                       <p class="errorValidacion" id="errorCategoria"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="number" class="form-control" id="numero"  name="numero" placeholder="Ingresa móvil">
+                      <input type="number" class="form-control" id="numero"  name="numero" placeholder="Entrez mobile">
                       <p class="errorValidacion" id="errorNumero"></p>
                      </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Ingresar correo electrónico"> 
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Entrer email"> 
                       <p class="errorValidacion" id="errorEmail"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad"> 
+                      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Entrez votre ville"> 
                       <p class="errorValidacion" id="errorCiudad"></p>
                     </div>
                     <div class="form-group col-md-12 pad-left-o">
-                      <textarea placeholder="Escribe tu mensaje" id="mensaje" name="mensaje"></textarea>
+                      <textarea placeholder="Ecrivez votre message" id="mensaje" name="mensaje"></textarea>
                         <p class="errorValidacion" id="errorMensaje"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
@@ -450,7 +450,7 @@ color: #999999;
                     </div>
                     
                     <div class="form-group col-md-12 pad-left-o" style="text-align: center;">
-                      <input type="submit" value="Enviar" id="EnviarReservationTour" name="EnviarReservationTour" class="link-btn"> </div>
+                      <input type="submit" value="Envoyer" id="EnviarReservationTour" name="EnviarReservationTour" class="link-btn"> </div>
                   </form>
                 </div>
 
@@ -459,7 +459,7 @@ color: #999999;
             <!--tours relacionados-->
            <div class="tour_head1" >
                 <div class="db-2-com db-2-main" style ="margin-bottom: 40px">
-						<h4>TOURS RELACIONADOS</h4>
+						<h4>VISITES CONNEXES</h4>
                       
                 </div>
 						<div class="tr-room-type">
@@ -468,13 +468,13 @@ color: #999999;
 								@foreach($toursRelacionados  as $item)
 								<li>
 									<div class="tr-room-type-list">
-										 <a  href="{{url('tour',['lang' => 'fr','slug' => $item->slug])}}">
+										 <a  href="{{url('fr/tour',['slug' => $item->slug])}}">
                         <div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
 
     										</div>
                      </a>
 										<div class="col-md-6 tr-room-type-list-2">
-                       <a  href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+                       <a  href="{{url('fr/tour',['slug' => $item->slug])}}">
   											<h4 id="tituloTous" style="color: #F27612;">
                           {!! $item->name !!}
                         </h4>
@@ -484,11 +484,11 @@ color: #999999;
 												{!! str_limit($item->description_short, 150) !!}
 												
                                             <div class="col-md-12" style="margin: 15px;">
-                                                    <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'fr','slug' => $item->slug])}}">VER MÁS DETALLE
+                                                    <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'fr','slug' => $item->slug])}}">VOIR PLUS DE DÉTAIL
                                                     </a>
                                             </div>
 										</div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservation','fr')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservation','fr')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Réservez maintenant</a> </div>
 									</div>
 								</li>
 								@endforeach
@@ -508,12 +508,12 @@ color: #999999;
           <p>   &nbsp  </p><br>
           <h4>   ${{ $tour->price}}
                
-            </h4> <a href="{{route('reservation','fr')}}/{{$item->id}}" class="link-btn">RESERVAR AHORA</a> </div>
+            </h4> <a href="{{route('reservation','fr')}}/{{$item->id}}" class="link-btn">RÉSERVEZ DÈS MAINTENANT</a> </div>
         <!--====== TRIP INFORMATION ==========-->
         
         <!--====== PACKAGE SHARE ==========-->
         <div class="tour_right head_right tour_social tour-ri-com">
-          <h3 id="tituloTouLateral">COMPARTE ESTE PAQUETE</h3>
+          <h3 id="tituloTouLateral">PARTAGER CE FORFAIT</h3>
           <ul>
             <li><a href="https://www.facebook.com/tierrasdelosandes" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
             <li><a href="https://www.youtube.com/channel/UC0MniFzf-lvtteI9CIKTQnw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
@@ -523,24 +523,24 @@ color: #999999;
         </div>
         <!--====== HELP PACKAGE ==========-->
         <div class="tour_right head_right tour_help tour-ri-com">
-          <h3 id="tituloTouLateral">SERVICIO DE ASISTENCIA</h3>
+          <h3 id="tituloTouLateral">SERVICE D'ASSISTANCE</h3>
           <div class="tour_help_1">
             
             <h4><i class="fa fa-phone" aria-hidden="true"></i>  00-51-84-247277</h4> </div>
         </div>
         <!--====== PUPULAR TOUR PACKAGES ==========-->
         <div class="tour_right tour_rela tour-ri-com">
-          <h3 id="tituloTouLateral">TOURS POPULARES</h3>
+          <h3 id="tituloTouLateral">VISITES POPULAIRES</h3>
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1" style="text-align: center;"> 
               
-              <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" >
+              <a style="text-align: center;" href="{{url('fr/tour',['slug' => $item->slug])}}" >
                 <img src="/{{$item->img}}" alt="" />
               </a> 
-	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
+	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} JOURS / {{ ((int)($item->dias)-1)}} Nuits </h5>
 	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->name, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'fr','slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
+	            </p> <a style="text-align: center;" href="{{url('fr/tour',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Voir plus de détail</a> 
 	          </div>
 	          @endforeach
         </div>

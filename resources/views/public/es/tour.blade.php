@@ -474,7 +474,7 @@ color: #999999;
     										</div>
                      </a>
 										<div class="col-md-6 tr-room-type-list-2">
-                       <a  href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+                       <a  href="{{url('es/tour',['slug' => $item->slug])}}">
   											<h4 id="tituloTous" style="color: #F27612;">
                           {!! $item->name !!}
                         </h4>
@@ -484,11 +484,11 @@ color: #999999;
 												{!! str_limit($item->description_short, 150) !!}
 												
                                             <div class="col-md-12" style="margin: 15px;">
-                                                    <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">VER MÁS DETALLE
+                                                    <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('es/tour',['slug' => $item->slug])}}">VER MÁS DETALLE
                                                     </a>
                                             </div>
 										</div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
 									</div>
 								</li>
 								@endforeach
@@ -508,7 +508,7 @@ color: #999999;
           <p>   &nbsp  </p><br>
           <h4>   ${{ $tour->price}}
                
-            </h4> <a href="{{route('reservation','es')}}/{{$item->id}}" class="link-btn">RESERVAR AHORA</a> </div>
+            </h4> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="link-btn">RESERVAR AHORA</a> </div>
         <!--====== TRIP INFORMATION ==========-->
         
         <!--====== PACKAGE SHARE ==========-->
@@ -540,7 +540,7 @@ color: #999999;
 	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
 	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->name, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
+	            </p> <a style="text-align: center;" href="{{url('es/tour',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
 	          </div>
 	          @endforeach
         </div>

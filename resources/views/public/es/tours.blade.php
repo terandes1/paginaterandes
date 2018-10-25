@@ -167,7 +167,7 @@
                                 <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <br><span class="hot-list-p3-4"><strong>Desde</strong></span>
                                 <!-- <span class="hot-list-p3-1" style="text-decoration:line-through;">$ {{(int)$item->price+200}}</span>-->
                                  <span class="hot-list-p3-2">$ {{($item->price)}}</span> <span class="hot-list-p3-4">
-                                  <a href="{{route('reservation','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
+                                  <a href="{{route('reservacion','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
                                 </span> </div>
                             </div>
                             <div>

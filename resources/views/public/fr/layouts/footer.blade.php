@@ -103,7 +103,7 @@
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','fr')}}/excursiones" id="textFooter">
+                        <a href="{{route('paquetes','fr')}}/excursions" id="textFooter">
                             Excursion
                         </a>
                     </li>
@@ -116,7 +116,7 @@
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','fr')}}/excursions" id="textFooter"> 
+                        <a href="{{route('paquetes','fr')}}/decouvrir" id="textFooter"> 
                             Découvrir
                         </a>
                     </li>

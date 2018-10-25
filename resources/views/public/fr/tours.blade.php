@@ -140,7 +140,7 @@
                           <div class="hot-page2-alp-r-list">
 
                             <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                              <a href="{{url('es/tour',['slug' => $item->slug])}}">
+                              <a href="{{url('fr/tour',['slug' => $item->slug])}}">
                                 <div class="hotel-list-score">4.5</div>
                                 <div class="hot-page2-hli-1">  
                                      <img src="/{{$item->img}}" alt=""> 
@@ -242,7 +242,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../es/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../fr/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
@@ -252,7 +252,7 @@
                                                       "<br><span class='hot-list-p3-4'><strong>Desde</strong></span> "+
                                                        
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route('reservation','es')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVER</a>"+
+                                                       " <a href='{{route('reservation','fr')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVER</a>"+
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+
@@ -312,7 +312,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../es/tour/"+element.slug+"'>"+
+                                                         "<a href='../fr/tour/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -320,7 +320,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../es/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../fr/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
@@ -328,7 +328,7 @@
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
                                                      " <div class='hot-page2-alp-r-hot-page-rat'>25% de réduction</div> "+"<br><span class='hot-list-p3-4'><strong>À partir de</strong></span> "+
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route('reservation','es')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVER</a>"+
+                                                       " <a href='{{route('reservation','fr')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVER</a>"+
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+
