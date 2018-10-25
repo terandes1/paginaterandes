@@ -285,7 +285,7 @@ input[type=radio]:checked + label>img {
 
                                         <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                         </div>
-                             <a class="course-overlay" href="{{route('paquetes','fr')}}/decouvrir">    
+                             <a class="course-overlay" href="{{route('paquetesFr','fr')}}/decouvrir">    
                                  <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/6.jpg')}}" /> 
                             </a>
                                   <div class="tour-mig-lc-con" style="text-align: center;">
@@ -321,7 +321,7 @@ input[type=radio]:checked + label>img {
                             <div style="text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">            
                                                
                             </div>
-                        <a class="course-overlay" href="{{route('paquetes','fr')}}/aventure">
+                        <a class="course-overlay" href="{{route('paquetesCategoriaFr','fr')}}/aventure">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -354,7 +354,7 @@ input[type=radio]:checked + label>img {
                                             
                                                
                                         </div>
-                        <a class="course-overlay" href="{{route('paquetes','fr')}}/haute-montagne">
+                        <a class="course-overlay" href="{{route('paquetesCategoriaFr','fr')}}/haute-montagne">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/8.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -387,7 +387,7 @@ input[type=radio]:checked + label>img {
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                                  
                                         </div>
-                          <a class="course-overlay" href="{{route('paquetes','fr')}}/excursions">
+                          <a class="course-overlay" href="{{route('paquetesCategoriaFr','fr')}}/excursions">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/9.jpg')}}" /> 
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -515,16 +515,16 @@ input[type=radio]:checked + label>img {
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> La famille</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> La famille</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groupes</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groupes</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Les couples</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Les couples</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Les amis</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Les amis</a>
                             </li>               
                           </ul>
                         </div>
@@ -535,7 +535,7 @@ input[type=radio]:checked + label>img {
                                           <ul>
                                            
                                             <li>
-                                              <a href="{{route('paquetes','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
                                                   <h4>VOIR LES TOURS </h4>   
                                                </a>
                                             </li>

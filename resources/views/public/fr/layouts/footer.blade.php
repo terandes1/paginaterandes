@@ -96,33 +96,33 @@
                 <ul>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a id="textFooter" href="{{route('paquetes','fr')}}/aventure">
+                        <a id="textFooter" href="{{route('paquetesCategoriaFr','fr')}}/aventure">
                           Aventure
                      
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','fr')}}/excursions" id="textFooter">
+                        <a href="{{route('paquetesCategoriaFr','fr')}}/excursions" id="textFooter">
                             Excursion
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','fr')}}/haute-montagne" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaFr','fr')}}/haute-montagne" id="textFooter"> 
                            Haute montagne
 
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','fr')}}/decouvrir" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaFr','fr')}}/decouvrir" id="textFooter"> 
                             Découvrir
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','fr')}}/voyage-en-groupe" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" id="textFooter"> 
                             Voyage de groupe
                         </a>
                     </li>
@@ -156,7 +156,7 @@
                     <li>
                         <a id="textFooter" href="#!"> 
                            
-                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
+                            <h5 id="textFooter" style="color: #a1a2a7;">Adresse:</h5>
                             Calle Bolivar 221 Oficina 4 1er piso Miraflores - Lima - Perú
                         </a>
                         <a id="textFooter" href="#!"> 

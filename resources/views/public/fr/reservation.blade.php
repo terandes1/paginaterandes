@@ -36,22 +36,22 @@ width:100%!important;
 				<div class="db-l-2">
 					<ul>
 						<li>
-							<a href="{{route('paquetes','fr')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Catégorie</a>
+							<a href="{{route('paquetesCategoriaFr','fr')}}" style="font-size: 0.8em;font-family: Lovelo Black;">Catégorie</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','fr')}}/decouvrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Descubrimiento.png')}}" alt="" /> Découverte</a>
+							<a href="{{route('paquetesCategoriaFr','fr')}}/decouvrir" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Descubrimiento.png')}}" alt="" /> Découverte</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','fr')}}/aventure" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Aventura.png')}}" alt="" /> Aventure</a>
+							<a href="{{route('paquetesCategoriaFr','fr')}}/aventure" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Aventura.png')}}" alt="" /> Aventure</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','fr')}}/haute-montagne" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/AltaMontania.png')}}" alt="" /> Haute montagne</a>
+							<a href="{{route('paquetesCategoriaFr','fr')}}/haute-montagne" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/AltaMontania.png')}}" alt="" /> Haute montagne</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','fr')}}/excursions" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Excursiones.png')}}" alt="" /> Excursions</a>
+							<a href="{{route('paquetesCategoriaFr','fr')}}/excursions" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Excursiones.png')}}" alt="" /> Excursions</a>
 						</li>
 						<li>
-							<a href="{{route('paquetes','fr')}}/voyage-en-groupe" style="font-size: 0.8em;font-family: Lovelo Black;">Voyage de groupe</a>
+							<a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" style="font-size: 0.8em;font-family: Lovelo Black;">Voyage de groupe</a>
 						</li>
 						
 						
@@ -232,7 +232,7 @@ width:100%!important;
 						<div class="tour_right tour_rela tour-ri-com">
 							<h3 style="font-family: Lovelo Black;">VISITES CONNEXES</h3>
 							@foreach($toursRelacionados as $itemp)
-							<a href="/../tour/es/{{ $itemp->slug}}">
+							<a href="{{url('fr/nos-voyages/details',['slug' => $itemp->slug])}}">
 								<div class="tour_rela_1"> <img  src="{{URL::asset($itemp->img)}}" alt="" />
 									<h4 style="font-family: Lovelo Black;text-align: center;">{{$itemp->name}}<br>
 									<span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>

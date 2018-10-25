@@ -126,15 +126,33 @@ Route::get('/{lang?}', [ 'uses' => 'PublicController@lang' ])->name('idiomas');
 Route::resource('contacto-reserva','ContactController');
 
 Route::get('/reservations/moverAtendido/{id?}','ReservationController@moverAtendido')->name('moveraAtendido');
+
+//lista de reservas por idiomas
 Route::get('{lang?}/reservacion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservacion');
 Route::get('{lang?}/reservation/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');
-Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetes');
+//fin
+
+//lista de tours categoria idiomas
+Route::get('{lang?}/category/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaFr');
+Route::get('{lang?}/categoria/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaES');
+//fin
+
+//lista tours
+Route::get('{lang?}/nos-voyages/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesFr');
+Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesEs');
+//fin 
+
+//tour por idiomas
+Route::get('{lang?}/tour/detalle/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+Route::get('{lang?}/nos-voyages/details/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+//fin
 
 Route::post('toursOpcion/', [ 'uses' => 'PublicController@toursOpcion' ])->name('toursOpcion');
 Route::post('toursOpcionPrecio/', [ 'uses' => 'PublicController@toursOpcionPrecio' ])->name('toursOpcionPrecio');
 
 
-Route::get('{lang?}/tour/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+
+
 Route::post('listItinerarioMap/', [ 'uses' => 'PublicController@tourItinerario' ])->name('listItinerarioMap');
 
 Route::get('{lang?}/{paginas?}/', [ 'uses' => 'PublicController@paginasIndependientes' ])->name('paginas');//paginas independiente, nosotros ,contacto,etc;

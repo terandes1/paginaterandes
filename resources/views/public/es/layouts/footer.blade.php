@@ -96,32 +96,32 @@
                 <ul>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a id="textFooter" href="{{route('paquetes','es')}}/aventura">
+                        <a id="textFooter" href="{{route('paquetesCategoriaES','es')}}/aventura">
                          Aventura
                      
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','es')}}/excursiones" id="textFooter">
+                        <a href="{{route('paquetesCategoriaES','es')}}/excursiones" id="textFooter">
                             Excursión
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','es')}}/alta-montania" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaES','es')}}/alta-montania" id="textFooter"> 
                             Alta Montaña
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','es')}}/descubrir" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaES','es')}}/descubrir" id="textFooter"> 
                             Descubrir
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetes','es')}}/viaje-en-grupo" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" id="textFooter"> 
                             Viaje en grupo
                         </a>
                     </li>

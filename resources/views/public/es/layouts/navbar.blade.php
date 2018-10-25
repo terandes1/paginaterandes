@@ -20,15 +20,15 @@
                         <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
                         <h4>TOURS</h4>
                         <ul>
-                            <li><a href="{{route('paquetes','es')}}">Tours</a></li>
+                            <li><a href="{{route('paquetesEs','es')}}">Tours</a></li>
                         </ul>
                         <h4>CATEGORIAS</h4>
                         <ul>
-                            <li><a href="{{route('paquetes','es')}}/descubrir"> Descubrir</a></li>
-                            <li><a href="{{route('paquetes','es')}}/aventura"> Aventura</a></li>
-                            <li><a href="{{route('paquetes','es')}}/alta-montania"> Alta montaña</a></li>
-                            <li><a href="{{route('paquetes','es')}}/excursiones">Excursion</a></li>
-                             <li><a href="{{route('paquetes','es')}}/viaje-en-grupo">Viaje en grupo</a></li>
+                            <li><a href="{{route('paquetesCategoriaES','es')}}/descubrir"> Descubrir</a></li>
+                            <li><a href="{{route('paquetesCategoriaES','es')}}/aventura"> Aventura</a></li>
+                            <li><a href="{{route('paquetesCategoriaES','es')}}/alta-montania"> Alta montaña</a></li>
+                            <li><a href="{{route('paquetesCategoriaES','es')}}/excursiones">Excursion</a></li>
+                             <li><a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo">Viaje en grupo</a></li>
                         </ul>
                         <h4>Eventos</h4>
                         <ul>
@@ -87,7 +87,7 @@
                         <ul>
                            
                             <li class="about-menu">
-                                <a href="{{route('paquetes','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
+                                <a href="{{route('paquetesEs','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
                             </li>
                             <li class="admi-menu">
 
@@ -99,7 +99,7 @@
                                         <div class="m-menu-inn">
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/descubrir">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/5.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Descubrimiento</span>
                                                     </a>
@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/aventura">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/2.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Aventura</span>
                                                     </a>
@@ -117,7 +117,7 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/alta-montania">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/3.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Alta Montaña</span>
                                                     </a>
@@ -126,7 +126,7 @@
                                             
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/excursiones">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/4.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Excursiones</span>
                                                     </a>
@@ -134,7 +134,7 @@
                                             </div>
                                              <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetes','es')}}/viaje-en-grupo">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/1.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Viaje en grupo</span>
                                                     </a>

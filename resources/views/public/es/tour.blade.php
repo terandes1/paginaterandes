@@ -100,7 +100,7 @@ color: #999999;
               {
 				
 				$htmlTemp.='<li data-target="#myCarousel1" data-slide-to="'.$i.'">'.
-	              				'<img src="../../'.$item->path.'" alt="Chania">'.
+	              				'<img src="../../../'.$item->path.'" alt="Chania">'.
 	            			 '</li>';
 	            $i=$i+1;
               }
@@ -117,12 +117,12 @@ color: #999999;
 				if($i==0)
 				{
 					$htmlTemp1.='<div class="item active">'.
-		              	'<img src="../../'.$item->path.'" alt="Chania" width="460" height="345" style="width:850px;height:450px">'.
+		              	'<img src="../../../'.$item->path.'" alt="Chania" width="460" height="345" style="width:850px;height:450px">'.
 		            '</div>';
 
 				}else {
 					$htmlTemp1.='<div class="item">'.
-		              			'<img src="../../'.$item->path.'" alt="Chania" width="460" height="345" style="width:850px;height:450px">'.
+		              			'<img src="../../../'.$item->path.'" alt="Chania" width="460" height="345" style="width:850px;height:450px">'.
 		            		'</div>';
 				}
 				
@@ -154,7 +154,7 @@ color: #999999;
         <li><a href="#inner-page-title" id="subtitulo">Inicio</a>
         </li>
         <li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
-        <li><a href="{{route('paquetes','es')}}" class="bread-acti" id="subtitulo">Tours</a>
+        <li><a href="{{route('paquetesEs','es')}}" class="bread-acti" id="subtitulo">Tours</a>
         </li>
       </ul>
       <!--p style="text-shadow: 2px 2px 4px #000;color: #fff; font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;" id="subtitulo">{!! $tour->description_short !!}</p> -->
@@ -468,25 +468,22 @@ color: #999999;
 								@foreach($toursRelacionados  as $item)
 								<li>
 									<div class="tr-room-type-list">
-										 <a  href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}">
+										 <a  href="{{url('es/tour/detalle',['lang' => 'es','slug' => $item->slug])}}">
                         <div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
 
     										</div>
                      </a>
 										<div class="col-md-6 tr-room-type-list-2">
-                       <a  href="{{url('es/tour',['slug' => $item->slug])}}">
+                       <a  href="{{url('es/tour/detalle',['slug' => $item->slug])}}">
   											<h4 id="tituloTous" style="color: #F27612;">
                           {!! $item->name !!}
                         </h4>
                       </a>
-											<p><b>Description:
+											<p><b>Descripción:
 											 </b>
 												{!! str_limit($item->description_short, 150) !!}
 												
-                                            <div class="col-md-12" style="margin: 15px;">
-                                                    <a class="link-btn" style="text-align:center;color: #f15a23;" href="{{url('es/tour',['slug' => $item->slug])}}">VER MÁS DETALLE
-                                                    </a>
-                                            </div>
+                                            
 										</div>
 										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
 									</div>
@@ -534,13 +531,13 @@ color: #999999;
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1" style="text-align: center;"> 
               
-              <a style="text-align: center;" href="{{url('tour',['lang' => 'es','slug' => $item->slug])}}" >
+              <a style="text-align: center;" href="{{url('es/tour/detalle',['lang' => 'es','slug' => $item->slug])}}" >
                 <img src="/{{$item->img}}" alt="" />
               </a> 
 	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
 	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->name, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('es/tour',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
+	            </p> <a style="text-align: center;" href="{{url('es/tour/detalle',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
 	          </div>
 	          @endforeach
         </div>
@@ -681,7 +678,7 @@ color: #999999;
                               position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
                               map: map,
                               icon: {
-                                         url: "../../assets/content/iconos/"+marcadores[i][3]+"."+marcadores[i][4]+"",
+                                         url: "../../../assets/content/iconos/"+marcadores[i][3]+"."+marcadores[i][4]+"",
                                          scaledSize: new google.maps.Size(30, 30), 
                                          origin: new google.maps.Point(0,0), 
                                          anchor: new google.maps.Point(0, 0) 

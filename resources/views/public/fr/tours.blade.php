@@ -140,7 +140,7 @@
                           <div class="hot-page2-alp-r-list">
 
                             <div class="col-md-3 hot-page2-alp-r-list-re-sp">
-                              <a href="{{url('fr/tour',['slug' => $item->slug])}}">
+                              <a href="{{url('fr/nos-voyages/details',['slug' => $item->slug])}}">
                                 <div class="hotel-list-score">4.5</div>
                                 <div class="hot-page2-hli-1">  
                                      <img src="/{{$item->img}}" alt=""> 
@@ -157,7 +157,7 @@
 
                             <div class="col-md-6">
                               <div class="trav-list-bod">
-                                <a href="{{url('fr/tour',['slug' => $item->slug])}}"><h3  id="tituloTousPrincipal">{{ $item->name }}</h3></a>
+                                <a href="{{url('fr/nos-voyages/details',['slug' => $item->slug])}}"><h3  id="tituloTousPrincipal">{{ $item->name }}</h3></a>
                               <p style="text-align: justify;" id="subtituloTousPrincipal">{!! str_limit($item->description_short, 150) !!}</p>
                               </div>
                               
@@ -234,7 +234,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../es/tour/"+element.slug+"'>"+
+                                                         "<a href='../es/nos-voyages/details/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -242,7 +242,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../fr/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../fr/nos-voyages/details/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
@@ -312,7 +312,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../fr/tour/"+element.slug+"'>"+
+                                                         "<a href='../fr//nos-voyages/details/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -320,7 +320,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../fr/tour/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../fr/nos-voyages/details/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+

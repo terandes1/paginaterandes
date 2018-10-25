@@ -163,7 +163,7 @@ input[type=radio]:checked + label>img {
          
          $htmltemp.='<div class="db-1">'.
 
-                    '<a href="tour/es/'.$item->slug.'">'.
+                    '<a href="/es/tour/detalle/'.$item->slug.'">'.
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
@@ -286,7 +286,7 @@ input[type=radio]:checked + label>img {
 
                                         <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                         </div>
-                             <a class="course-overlay" href="{{route('paquetes','es')}}/descubrir">    
+                             <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/descubrir">    
                                  <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/6.jpg')}}" /> 
                             </a>
                                   <div class="tour-mig-lc-con" style="text-align: center;">
@@ -322,7 +322,7 @@ input[type=radio]:checked + label>img {
                             <div style="text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">            
                                                
                             </div>
-                        <a class="course-overlay" href="{{route('paquetes','es')}}/aventura">
+                        <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/aventura">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -355,7 +355,7 @@ input[type=radio]:checked + label>img {
                                             
                                                
                                         </div>
-                        <a class="course-overlay" href="{{route('paquetes','es')}}/alta-montania">
+                        <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/alta-montania">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/8.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -388,7 +388,7 @@ input[type=radio]:checked + label>img {
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                                  
                                         </div>
-                          <a class="course-overlay" href="{{route('paquetes','es')}}/excursiones">
+                          <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/excursiones">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/9.jpg')}}" /> 
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -516,16 +516,16 @@ input[type=radio]:checked + label>img {
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetes','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
                             </li>               
                           </ul>
                         </div>
@@ -536,7 +536,7 @@ input[type=radio]:checked + label>img {
                                           <ul>
                                            
                                             <li>
-                                              <a href="{{route('paquetes','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
                                                   <h4>VER TOURS  </h4>   
                                                </a>
                                             </li>
