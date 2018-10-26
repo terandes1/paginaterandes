@@ -7,7 +7,7 @@
         <div class="ed-mob-menu-con">
             <div class="ed-mm-left">
                 <div class="wed-logo"  style="width: 130px;" >
-                    <a href="{{('/es')}}"><img  id="logoTerandes" src="/assets/public/images/logo.png" alt="" />
+                    <a href="{{('/en')}}"><img  id="logoTerandes" src="/assets/public/images/logo.png" alt="" />
                      </a>
                 </div>
 
@@ -20,31 +20,32 @@
                         <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
                         <h4>TOURS</h4>
                         <ul>
-                            <li><a href="{{route('paquetesEs','es')}}">Tours</a></li>
+                            <li><a href="{{route('paquetesEn','en')}}">Tours</a></li>
                         </ul>
-                        <h4>CATEGORIAS</h4>
+                        <h4>CATEGORIES</h4>
                         <ul>
-                            <li><a href="{{route('paquetesCategoriaES','es')}}/descubrir"> Descubrir</a></li>
-                            <li><a href="{{route('paquetesCategoriaES','es')}}/aventura"> Aventura</a></li>
-                            <li><a href="{{route('paquetesCategoriaES','es')}}/alta-montania"> Alta montaña</a></li>
-                            <li><a href="{{route('paquetesCategoriaES','es')}}/excursiones">Excursion</a></li>
-                             <li><a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo">Viaje en grupo</a></li>
+                            <li><a href="{{route('paquetesCategoriaEn','en')}}/discovery"> Discovery</a></li>
+                            <li><a href="{{route('paquetesCategoriaEn','en')}}/adventure"> Adventure</a></li>
+                            <li><a href="{{route('paquetesCategoriaEn','en')}}/High-mountain"> High mountain</a></li>
+                            <li><a href="{{route('paquetesCategoriaEn','en')}}/excursion">Excursion</a></li>
+                            <li><a href="{{route('paquetesCategoriaEn','en')}}/Group-travel">Group travel</a></li>
                         </ul>
-                        <h4>Eventos</h4>
+                        <h4>Events</h4>
                         <ul>
-                            <li><a href="{{route('paginas','es')}}/eventos" style="font-family: Lovelo Black;">EVENTOS</a></li>
+                            <li><a href="{{route('paginas','en')}}/events" style="font-family: Lovelo Black;">EVENTS</a></li>
                         </ul>
-                        <h4>Empresa</h4>
+                        <h4>Company</h4>
                         <ul>
-                            <li><a href="{{route('paginas','es')}}/nosotros" style="font-family: Lovelo Black;">NOSOTROS</a></li>
+                            <li><a href="{{route('paginas','en')}}/we" style="font-family: Lovelo Black;">WE</a></li>
                         </ul>
 
                          <h4>Contacto</h4>
                         <ul>
-                           <li><a href="{{route('paginas','es')}}/contacto" style="font-family: Lovelo Black;">CONTACTO</a></li>
+                           <li><a href="{{route('paginas','en')}}/contact" style="font-family: Lovelo Black;">Contact</a></li>
                         </ul>
-                        <h4>Idiomas</h4>
+                        <h4>Languages</h4>
                         <ul>
+                            
                             <li>
                                 
                                     <a class="route-language" href="{{route('idiomas',$abbr)}}">
@@ -56,7 +57,9 @@
                                     </a>
                                     @endforeach
                             </li>
-                           
+
+
+                            
                            
                         </ul>
                        
@@ -74,18 +77,18 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="wed-logo" style="margin-top: -1px;">
-                        <a href="{{('/es')}}"><img style="width:100%;height: 80px;"  src="/assets/public/images/logo.png" alt="" />
+                        <a href="{{('/en')}}"><img style="width:100%;height: 80px;"  src="/assets/public/images/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="main-menu" style="margin-top: 10px;">
                         <ul>
                            
                             <li class="about-menu">
-                                <a href="{{route('paquetesEs','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
+                                <a href="{{route('paquetesEn','en')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
                             </li>
                             <li class="admi-menu">
 
-                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> CATEGORIAS <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
+                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> CATEGORY <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                 </a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">
@@ -93,44 +96,44 @@
                                         <div class="m-menu-inn">
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/descubrir">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaEn','en')}}/discovery">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/5.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Descubrimiento</span>
+                                                        <span style="font-family: Lovelo Black;">Discovery</span>
                                                     </a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/aventura">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaEn','en')}}/adventure">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/2.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Aventura</span>
+                                                        <span style="font-family: Lovelo Black;">Adventure</span>
                                                     </a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/alta-montania">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaEn','en')}}/high-mountain">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/3.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Alta Montaña</span>
+                                                        <span style="font-family: Lovelo Black;">High mountain</span>
                                                     </a>
                                                 </div>
                                              </div>
                                             
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/excursiones">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaEn','en')}}/excursions">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/4.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Excursiones</span>
+                                                        <span style="font-family: Lovelo Black;">Excursions</span>
                                                     </a>
                                                 </div>
                                             </div>
                                              <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaEn','en')}}/group-travel">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/1.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Viaje en grupo</span>
+                                                        <span style="font-family: Lovelo Black;">Group travel</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -140,12 +143,12 @@
                                 </div>
 
                             </li>
-                            <li><a href="{{route('paginas','es')}}/eventos" style="font-family: Lovelo Black;">EVENTOS</a>
+                            <li><a href="{{route('paginas','en')}}/events" style="font-family: Lovelo Black;">EVENTS</a>
                             </li> 
-                            <li><a href="{{route('paginas','es')}}/nosotros" style="font-family: Lovelo Black;">NOSOTROS</a>
+                            <li><a href="{{route('paginas','en')}}/we" style="font-family: Lovelo Black;">WE</a>
                             </li>
                             
-                            <li><a href="{{route('paginas','es')}}/contacto" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> CONTACTO</a>
+                            <li><a href="{{route('paginas','en')}}/contact" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> CONTACT</a>
                             </li>   
         
                             <li class="cour-menu">
@@ -177,45 +180,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="search-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="search-form">
-                        <form>
-                            <div class="sf-type">
-                                <div class="sf-input">
-                                    <input type="text" id="sf-box" placeholder="Search course and discount courses">
-                                </div>
-                                <div class="sf-list">
-                                    <ul>
-                                        <li><a href="course-details.html">Accounting/Finance</a></li>
-                                        <li><a href="course-details.html">civil engineering</a></li>
-                                        <li><a href="course-details.html">Art/Design</a></li>
-                                        <li><a href="course-details.html">Marine Engineering</a></li>
-                                        <li><a href="course-details.html">Business Management</a></li>
-                                        <li><a href="course-details.html">Journalism/Writing</a></li>
-                                        <li><a href="course-details.html">Physical Education</a></li>
-                                        <li><a href="course-details.html">Political Science</a></li>
-                                        <li><a href="course-details.html">Sciences</a></li>
-                                        <li><a href="course-details.html">Statistics</a></li>
-                                        <li><a href="course-details.html">Web Design/Development</a></li>
-                                        <li><a href="course-details.html">SEO</a></li>
-                                        <li><a href="course-details.html">Google Business</a></li>
-                                        <li><a href="course-details.html">Graphics Design</a></li>
-                                        <li><a href="course-details.html">Networking Courses</a></li>
-                                        <li><a href="course-details.html">Information technology</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sf-submit">
-                                <input type="submit" value="Search Course">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
+   
 </section>
 <!--END HEADER SECTION-->

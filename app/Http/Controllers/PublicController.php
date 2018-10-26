@@ -28,7 +28,7 @@ class PublicController extends Controller
 
     public function lang($abbr='es'){
 
-    	if($abbr =='es' || $abbr=='fr')
+    	if($abbr =='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de')
       {
     	     
             $toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
@@ -323,7 +323,7 @@ class PublicController extends Controller
     public function paginasIndependientes($abbr='es',$pagina)
     {
       
-       if($pagina=='evenements' || $pagina=='eventos')
+       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events')
        {
           $eventos=Event::all();
           $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
@@ -332,7 +332,7 @@ class PublicController extends Controller
        }
      
       
-      if($pagina=='nosotros' || $pagina=='nous')
+      if($pagina=='nosotros' || $pagina=='nous' || $pagina=='we')
       {
              $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
              return view('public.'.$abbr.'.our-team',['lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
@@ -342,7 +342,7 @@ class PublicController extends Controller
       {
             
            
-            if($abbr=='es' || $abbr=='fr')
+            if($abbr=='es' || $abbr=='fr' || $abbr=='en')
              {
                  $tour = DB::table('tours')
                           ->select('tours.name')
@@ -362,7 +362,7 @@ class PublicController extends Controller
 
       }
 
-      if($pagina=='testimonios' || $pagina=='temoignages')
+      if($pagina=='testimonios' || $pagina=='temoignages' || $pagina=='testimonies')
       {
         
          $estadoHabilitado='approve';

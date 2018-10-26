@@ -128,22 +128,29 @@ Route::resource('contacto-reserva','ContactController');
 Route::get('/reservations/moverAtendido/{id?}','ReservationController@moverAtendido')->name('moveraAtendido');
 
 //lista de reservas por idiomas
-Route::get('{lang?}/reservacion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservacion');
-Route::get('{lang?}/reservation/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');
+Route::get('{lang?}/reservacion/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservacion');//es
+Route::get('{lang?}/reservation/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservation');//fr
+Route::get('{lang?}/reserve/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reserve');//in
 //fin
 
+
 //lista de tours categoria idiomas
-Route::get('{lang?}/category/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaFr');
+Route::get('{lang?}/categorie/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaFr');
 Route::get('{lang?}/categoria/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaES');
+Route::get('{lang?}/category/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaEn');
+Route::get('{lang?}/Kategorie/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaDe');
 //fin
 
 //lista tours
 Route::get('{lang?}/nos-voyages/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesFr');
-Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesEs');
+Route::get('{lang?}/nuestro-viaje/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesEs');
+Route::get('{lang?}/tours/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesEn');
+Route::get('{lang?}/unsere-reise/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesDe');
 //fin 
 
 //tour por idiomas
 Route::get('{lang?}/tour/detalle/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+Route::get('{lang?}/tours/detail/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
 Route::get('{lang?}/nos-voyages/details/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
 //fin
 

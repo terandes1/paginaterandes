@@ -46,24 +46,16 @@
                         <h4>Idiomas</h4>
                         <ul>
                             <li>
-                                
-                                    <a class="route-language" href="{{route('idiomas','es')}}">
-                                        <img lass="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/es.png')}}" alt="Idioma">
+                                 <a class="route-language" href="{{route('idiomas',$abbr)}}">
+                                        <img lass="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon')}}/{!! $abbr !!}.png" alt="Idioma">
                                     </a>
+                                     @foreach($lenguajeFaltantes as $item)
+                                    <a class="route-language" href="{{route('idiomas',$item)}}">
+                                        <img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/')}}/{!! $item !!}.png" alt="Idioma">
+                                    </a>
+                                    @endforeach
                             </li>
-                             <li>
-                                  <a class="route-language" href=""><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/de.png')}}" alt="Idioma"></a>
-                            </li>
-                            <li>
-                                 <a class="route-language" href="{{ route('idiomas','en')}}"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/en.png')}}" alt="Idioma"></a>
-                            </li>
-                            <li>
-                                 <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/fr.png')}}" alt="Idioma"></a>
-                            </li>
-                             <li>
-                                 <a class="route-language" href="https://www.terandes.com"><img class="img-lng" style="margin-left: -6px;" src="{{URL::asset('assets/public/images/icon/it.png')}}" alt="Idioma"></a>
-                            </li>
-                           
+                            
                         </ul>
                        
                           

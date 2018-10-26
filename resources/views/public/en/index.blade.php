@@ -1,4 +1,4 @@
-@extends('public.es.layouts.master')
+@extends('public.en.layouts.master')
 
 @section('content')
 <!--HEADER SECTION-->
@@ -217,9 +217,9 @@ input[type=radio]:checked + label>img {
              <source src="{{URL::asset('assets/public/video/Definitivo.mp4')}}" type="video/mp4"></video>
         </div>
          <dir id="texto" style="font-family: Lovelo Black;">
-             AVENTURA
+             ADVENTURE 
             
-             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;font-family: 'Linotype Textra', sans-serif;50px;font-size: 20px;">Para los amantes del trekking en lugares aún auténticos y salvajes</div>
+             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Linotype Textra', sans-serif;50px;font-size: 20px;">FOR LOVERS OF TREKKING IN AUTHENTIC AND WILD PLACES</div>
        </dir>
        
    
@@ -233,7 +233,7 @@ input[type=radio]:checked + label>img {
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title" style="z-index: -1000;">
                 <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">
-                    Tours sudamericanos de lujo
+                    SOUTH AMERICAN LUXURY TOURS
                 </h2>
                 <div class="title-line">
                     <div class="tl-1"></div>
@@ -241,7 +241,7 @@ input[type=radio]:checked + label>img {
                     <div class="tl-3"></div>
                 </div>
                 <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">
-                    Tierras de los Andes es una S.A.C. (Sociedad privada cerrada) que abrió sus puertas en el año 2000. Tour operador peruano especializado en viajes de aventura, tiene como objetivo principal la creación de viajes a medida.
+                    Tierra de los Anades S.A.C. (Private closed company) that opened its doors in the year 2000. Peruvian tour operator specialized in adventure travel, has as main objective the creation of customized trips.
                 </p>
                      
                            
@@ -254,7 +254,7 @@ input[type=radio]:checked + label>img {
                             <div class="input-field col s4" >
                                   <a style="color:white;font-size: 15px;" href="{{route('paginas','es')}}/nosotros">
                                         <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper">
-                                            <span id="aprendaMas">¡MÁS SOBRE TERANDES!</span>
+                                            <span id="aprendaMas">¡MORE ABOUT TERANDES!</span>
                                         </i>
                                  </a>
                             </div>
@@ -268,15 +268,14 @@ input[type=radio]:checked + label>img {
     <section>
      <div class="db" style="margin-left: 0px;">
                 <div class="spe-title">
-                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Categoría</h2>
+                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">CATEGORY</h2>
                     <div class="title-line">
                         <div class="tl-1"></div>
                         <div class="tl-2"></div>
                         <div class="tl-3"></div>
                     </div>
                     <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">
-                    Privado y completamente personalizado 
-                    vea todas las categorias.</p>
+                    Private and completely customized see all categories.</p>
                 </div>
                 <div>
                     <!-- TOUR PLACE 1 -->
@@ -292,7 +291,7 @@ input[type=radio]:checked + label>img {
                                   <div class="tour-mig-lc-con" style="text-align: center;">
                                       
                                         <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">
-                                            Descubrir
+                                            Discover
                                         </span>
                                         <div>
                                             <span class="tour_star">
@@ -306,7 +305,7 @@ input[type=radio]:checked + label>img {
                                         <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
                                             <div style="border: 1px solid #fff; line-height: 1em; background-color: rgba(0,0,0,.65);padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
                                                      
-                                                      <span class="fa fa-film"></span>  Ver video
+                                                      <span class="fa fa-film"></span>  Watch video
                                                    
                                             </div>
                                          </a>
@@ -327,7 +326,7 @@ input[type=radio]:checked + label>img {
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Aventura</span>
+                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Adventure</span>
                                     <div>
                                         <span class="tour_star">
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -340,7 +339,7 @@ input[type=radio]:checked + label>img {
                                        <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
                                             <div style="border: 1px solid #fff; line-height: 1em;background-color: rgba(0,0,0,.65); padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
                                                   
-                                                      <span class="fa fa-film"></span>  Ver video
+                                                      <span class="fa fa-film"></span>  Watch video
                                                     
                                             </div>
                                         </a>
@@ -360,7 +359,7 @@ input[type=radio]:checked + label>img {
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Alta montaña</span>
+                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">High mountain</span>
                                     <div>
                                         <span class="tour_star">
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -374,7 +373,7 @@ input[type=radio]:checked + label>img {
                                     <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
                                         <div style="border: 1px solid #fff; line-height: 1em;background-color: rgba(0,0,0,.65); padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
                                                 
-                                                  <span class="fa fa-film"></span>  Ver video
+                                                  <span class="fa fa-film"></span>  Watch video
                                                 
                                         </div>
                                     </a>
@@ -393,7 +392,7 @@ input[type=radio]:checked + label>img {
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Excursiones</span>
+                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Excursions</span>
                                     <div>
                                         <span class="tour_star">
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -406,7 +405,7 @@ input[type=radio]:checked + label>img {
                                      <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
                                         <div style="border: 1px solid #fff; line-height: 1em;background-color: rgba(0,0,0,.65); padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
                                                
-                                                  <span class="fa fa-film"></span>  Ver video
+                                                  <span class="fa fa-film"></span>  Watch video
                                               
                                         
                                         </div>
@@ -427,20 +426,20 @@ input[type=radio]:checked + label>img {
 <!--====== SECTION: FREE CONSULTANT ==========-->
 <section style="margin-top: 50px;">
     <div class="spe-title" style="z-index: -1000;">
-        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Oferta del mes</h2>
+        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Month's offer</h2>
         <div class="title-line">
             <div class="tl-1"></div>
             <div class="tl-2"></div>
             <div class="tl-3"></div>
         </div>
-        <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">Estamos cada día trabajando para poder ofrecerte las mejores ofertas en tours.</p>
+        <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">We are working every day to offer you the best deals on tours.</p>
     </div>
     <div class="offer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="offer-l"> <span class="ol-1"></span> <span class="ol-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> <span class="ol-4">
-                      GRAN VIAJE AL SUR DE PERÚ - EN GRUPO
+                      GREAT TRIP TO THE SOUTH OF PERU - IN GROUP
                     </span>                            <span class="ol-3"></span> <span class="ol-5">$99/-</span>
                         <ul>
                             <li class="wow fadeInUp" data-wow-duration="0.5s">
@@ -454,7 +453,7 @@ input[type=radio]:checked + label>img {
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis3.png" alt=""> </a><span>Pool</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="1.1s">
-                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis4.png" alt=""> </a><span>Television</span>
+                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis4.png" alt=""> </a><span>TV</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="1.3s">
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis5.png" alt=""> </a><span>GYM</span>
@@ -465,7 +464,7 @@ input[type=radio]:checked + label>img {
                 <div class="col-md-6">
                     <div class="offer-r">
                         <div class="or-1"> <span class="or-11">Ir</span> <span class="or-12">Stays</span> </div>
-                        <div class="or-2"> <span class="or-21">Obten un</span> <span class="or-22">70%</span> <span class="or-23">Off</span> <span class="or-24">Código: RG5481WERQ</span> <span class="or-25"></span> </div>
+                        <div class="or-2"> <span class="or-21">Get a</span> <span class="or-22">70%</span> <span class="or-23">Off</span> <span class="or-24">Code: RG5481WERQ</span> <span class="or-25"></span> </div>
                     </div>
                 </div>
             </div>
@@ -476,13 +475,13 @@ input[type=radio]:checked + label>img {
 <!--====== HOME HOTELS ==========-->
 <section style="margin-top: 50px;">
      <div class="spe-title" style="z-index: -1000;">
-                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Tour lujos </h2>
+                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Tour luxuries </h2>
                     <div class="title-line">
                         <div class="tl-1"></div>
                         <div class="tl-2"></div>
                         <div class="tl-3"></div>
                     </div>
-                    <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
+                    <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">The world's leading reservations and travel reservations website, more than 30,000 tourist packages around the world</p>
                 </div>
         <div class="db">
             <!--LEFT SECTION-->
@@ -492,7 +491,7 @@ input[type=radio]:checked + label>img {
 </section><br><br><br>
 <section>
      <div class="spe-title spe-title-1">
-        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Viaje en grupo</h2>
+        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Group travel</h2>
         <div class="title-line">
             <div class="tl-1"></div>
             <div class="tl-2"></div>
@@ -510,22 +509,22 @@ input[type=radio]:checked + label>img {
              </div>  
              <div class="col-md-8">
                 <div class="v2-ho-se-ri">
-                <h5>TERANDES LIDES EN PAQUETES TURÍSTICOS.</h5>
-                <h1>VIAJE EN GRUPO</h1>
-                <h1 style="font-size: 1.3em;font-family: Lovelo Black;text-align: justify;">Como diseñadores de viajes personalizados, <br>estamos aquí para hacer su viaje único.</h1>
+                <h5>TERANDES LIDES IN TOURIST PACKAGES.</h5>
+                <h1>GROUP JOURNEY</h1>
+                <h1 style="font-size: 1.3em;font-family: Lovelo Black;text-align: justify;">As a custom travel designer, <br>We are here to make your trip unique.</h1>
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Family</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groups</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Couples</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> friends</a>
                             </li>               
                           </ul>
                         </div>
@@ -537,7 +536,7 @@ input[type=radio]:checked + label>img {
                                            
                                             <li>
                                               <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
-                                                  <h4>VER TOURS  </h4>   
+                                                  <h4>VIEW TOURS </h4>   
                                                </a>
                                             </li>
                                                         
@@ -571,7 +570,7 @@ input[type=radio]:checked + label>img {
             <!-- TITLE & DESCRIPTION -->
 
             <div class="spe-title spe-title-1">
-                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">TOP TESTIMONIOS DE ESTE MES</h2>
+                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">TOP TESTIMONIES OF THIS MONTH</h2>
                 
                 <div class="title-line">
                      <div class="tour_head">
@@ -594,7 +593,7 @@ input[type=radio]:checked + label>img {
                                  </h2> 
                              </div>
                 </div>
-                <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;"> Comparte experiencias de viaje con nosotros. </p>
+                <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;"> Share travel experiences with us. </p>
 
             </div>
              
@@ -643,7 +642,7 @@ input[type=radio]:checked + label>img {
                               <h2 style="color:black; font-size: 15px;font-family: Lovelo Black;">{{$item->name}} - {{$item->nationality}}</h2>
 
                               <h4 style="text-align: justify;margin:5%;font-family: 'NewsGoth CN BT';font-size:1em; ">{!!str_limit($item->testimonial, 135)!!}</h4>
-                                <a href="/es/testimonios" style="background: #253d52;" class="db-done">{{$item->date}}</a>
+                                <a href="/en/testimonies" style="background: #253d52;" class="db-done">{{$item->date}}</a>
                             </div>
                           </li>
                           <?php
@@ -674,7 +673,7 @@ input[type=radio]:checked + label>img {
 
                      <div >
                         <div  style="padding: 15px" class="col-md-2 col-md-offset-10 col-sm-12 ">
-                            <a href="/es/testimonios"> <strong><u> &#62;&#62; Leer Más</u> </strong> </a>
+                            <a href="/en/testimonies"> <strong><u> &#62;&#62; Read more</u> </strong> </a>
                         </div>
                         
                          <div class="col-sm-12">
@@ -684,7 +683,7 @@ input[type=radio]:checked + label>img {
                             <div class="col-sm-4">
                                  <a style="color:white;" data-toggle="modal" data-target="#idTestimonio">
                                                     <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style="height: 50px;">
-                                                         <span>INGRESE SU TESTIMONIO</span>
+                                                         <span>ENTER YOUR TESTIMONY</span>
                                                     </i>
                                 </a>
                                 
@@ -714,7 +713,7 @@ input[type=radio]:checked + label>img {
         <div class="db" style="margin-top: 49px;" >
  
              <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;  ">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">AFILIADOS</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">AFFILIATES</h3>
                 <ul>
                     <li style="border-bottom: 1px solid #fff;">
                         <a href="https://www.asta.org/" style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/asta.jpg') }}" alt="" />
@@ -737,7 +736,7 @@ input[type=radio]:checked + label>img {
                 </ul>
             </div>
              <div class="db-3" style="width: 280px; border: 1px solid #ffffff;">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">SOCIOS</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">PARTNERS</h3>
                 <ul>
                     <li style="border-bottom: 1px solid #fff;">
                         <a href="http://www.illapa.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaA.jpg') }}" white="20px;" alt="" />
@@ -755,7 +754,7 @@ input[type=radio]:checked + label>img {
                 </ul>
             </div>
               <div class="db-3" style="width: 280px;border: 1px solid #ffffff; ">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">CERTIFICACIONES</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">CERTIFICATIONS</h3>
                 <ul>
                    <li style="border-bottom: 1px solid #fff;">
                         <a href="https://www.indecopi.gob.pe/inicio"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/indecopi.jpg') }}" alt="" />
@@ -783,7 +782,7 @@ input[type=radio]:checked + label>img {
             </div>
              
              <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;padding: 2PX;">RESPONSABILIDAD SOCIAL Y EMPRESARIAL</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;padding: 2PX;">SOCIAL AND BUSINESS RESPONSIBILITY</h3>
              <ul>
                    <li>
                         <a href="https://www.patronatomachupicchu.org/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/patronato.png') }}" alt="" />

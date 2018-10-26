@@ -1,4 +1,4 @@
-@extends('public.es.layouts.master')
+@extends('public.de.layouts.master')
 
 @section('content')
 <!--HEADER SECTION-->
