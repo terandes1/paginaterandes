@@ -71,8 +71,10 @@ class PublicController extends Controller
    public function tours($abbr='es',$searchCategoria='')
    {
 
-   		if($searchCategoria=='viaje-en-grupo')
+
+   		if($searchCategoria=='viaje-en-grupo' || $searchCategoria=='gruppenreisen' || $searchCategoria=='nos-voyages'|| $searchCategoria=='group-travel')
       {
+       
         $searchCategoria='series';
       }
 
@@ -323,8 +325,10 @@ class PublicController extends Controller
     public function paginasIndependientes($abbr='es',$pagina)
     {
       
-       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events')
+     
+       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events' || $pagina=='Kontakt')
        {
+          
           $eventos=Event::all();
           $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
          
@@ -332,17 +336,18 @@ class PublicController extends Controller
        }
      
       
-      if($pagina=='nosotros' || $pagina=='nous' || $pagina=='we')
+      if($pagina=='nosotros' || $pagina=='nous' || $pagina=='we' || $pagina=='uns' )
       {
+
              $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
              return view('public.'.$abbr.'.our-team',['lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
       }
 
-      if($pagina=='contacto' || $pagina=='contact')
+      if($pagina=='contacto' || $pagina=='contact' || $pagina=='kontakt')
       {
             
            
-            if($abbr=='es' || $abbr=='fr' || $abbr=='en')
+            if($abbr=='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de')
              {
                  $tour = DB::table('tours')
                           ->select('tours.name')

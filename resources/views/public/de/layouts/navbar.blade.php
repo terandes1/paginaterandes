@@ -24,24 +24,24 @@
                         </ul>
                         <h4>KATEGORIEN</h4>
                         <ul>
-                            <li><a href="{{route('paquetesCategoriaDe','de')}}/descubrir"> Entdecken</a></li>
-                            <li><a href="{{route('paquetesCategoriaDe','de')}}/aventura"> Abenteuer</a></li>
-                            <li><a href="{{route('paquetesCategoriaDe','de')}}/alta-montania"> Hoher Berg</a></li>
-                            <li><a href="{{route('paquetesCategoriaDe','de')}}/excursiones">Ausflug</a></li>
-                             <li><a href="{{route('paquetesCategoriaDe','de')}}/viaje-en-grupo">Gruppenreisen</a></li>
+                            <li><a href="{{route('paquetesCategoriaDe','de')}}/entdecken"> Entdecken</a></li>
+                            <li><a href="{{route('paquetesCategoriaDe','de')}}/abenteuer"> Abenteuer</a></li>
+                            <li><a href="{{route('paquetesCategoriaDe','de')}}/hoher-berg"> Hoher Berg</a></li>
+                            <li><a href="{{route('paquetesCategoriaDe','de')}}/ausflüge">Ausflüge</a></li>
+                             <li><a href="{{route('paquetesCategoriaDe','de')}}/Gruppenreisen">Gruppenreisen</a></li>
                         </ul>
                         <h4>Ereignisse</h4>
                         <ul>
-                            <li><a href="{{route('paginas','de')}}/eventos" style="font-family: Lovelo Black;">EREIGNISSE</a></li>
+                            <li><a href="{{route('paginas','de')}}/ereignisse" style="font-family: Lovelo Black;">EREIGNISSE</a></li>
                         </ul>
                         <h4>Geschäft</h4>
                         <ul>
-                            <li><a href="{{route('paginas','de')}}/nosotros" style="font-family: Lovelo Black;">WIR</a></li>
+                            <li><a href="{{route('paginas','de')}}/uns" style="font-family: Lovelo Black;">UNS</a></li>
                         </ul>
 
                          <h4>Kontakt</h4>
                         <ul>
-                           <li><a href="{{route('paginas','de')}}/contacto" style="font-family: Lovelo Black;">KONTAKT</a></li>
+                           <li><a href="{{route('paginas','de')}}/kontakt" style="font-family: Lovelo Black;">KONTAKT</a></li>
                         </ul>
                         <h4>Sprachen</h4>
                         <ul>
@@ -93,7 +93,7 @@
                                         <div class="m-menu-inn">
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/descubrir">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/entdeckung">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/5.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Entdeckung</span>
                                                     </a>
@@ -102,16 +102,16 @@
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/aventura">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/abenteuer">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/2.jpg')}}" alt="">
-                                                        <span style="font-family: Lovelo Black;">Aventura</span>
+                                                        <span style="font-family: Lovelo Black;">Abenteuer</span>
                                                     </a>
                                                 </div>
                                                 
                                             </div>
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/alta-montania">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/hoher-berg">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/3.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Hoher Berg</span>
                                                     </a>
@@ -120,7 +120,7 @@
                                             
                                             <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/excursiones">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/ausflüge">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/4.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Ausflüge</span>
                                                     </a>
@@ -128,7 +128,7 @@
                                             </div>
                                              <div class="mm2-com mm1-com mm1-s1">
                                                 <div class="ed-course-in">
-                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/viaje-en-grupo">
+                                                    <a class="course-overlay" href="{{route('paquetesCategoriaDe','de')}}/gruppenreisen">
                                                         <img src="{{URL::asset('assets/public/images/category/menu/1.jpg')}}" alt="">
                                                         <span style="font-family: Lovelo Black;">Gruppenreisen</span>
                                                     </a>
@@ -140,12 +140,12 @@
                                 </div>
 
                             </li>
-                            <li><a href="{{route('paginas','de')}}/eventos" style="font-family: Lovelo Black;">EREIGNISSE</a>
+                            <li><a href="{{route('paginas','de')}}/ereignisse" style="font-family: Lovelo Black;">EREIGNISSE</a>
                             </li> 
-                            <li><a href="{{route('paginas','de')}}/nosotros" style="font-family: Lovelo Black;">WIR</a>
+                            <li><a href="{{route('paginas','de')}}/uns" style="font-family: Lovelo Black;">UNS</a>
                             </li>
                             
-                            <li><a href="{{route('paginas','de')}}/contacto" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> KONTAKT</a>
+                            <li><a href="{{route('paginas','de')}}/kontakt" style="font-family: Lovelo Black;"><span class="fa fa-phone-square" style="color: #D98886;"></span> KONTAKT</a>
                             </li>   
         
                             <li class="cour-menu">

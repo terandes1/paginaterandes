@@ -328,7 +328,8 @@
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
                                                      " <div class='hot-page2-alp-r-hot-page-rat'>25% discount</div> "+"<br><span class='hot-list-p3-4'><strong>Since</strong></span> "+
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route(''reserve','en')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVE</a>"+
+                                                       " <a href='{{route('reserve','en')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVE</a>"+
+                                                       
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+

@@ -18,7 +18,7 @@
 
             <!--RIGHT SECTION-->
             <div class="db-3" id="footerContact" style="width: 280px; ">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">REDES SOCIALES</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">Soziale Netzwerke</h3>
                
                                   
                     <ul>
@@ -43,7 +43,7 @@
                        
                              
                         <h3 style="font-family: NewsGoth CN BT;;font-size: 1.1em;">
-                                     CONTACTO 
+                                     KONTAKT 
                         </h3>
 
                         <ul>
@@ -92,37 +92,37 @@
             </div>
 
             <div class="db-3" id="footerContact" style="width: 280px;">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">CATEGORÍA</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">KATEGORIE</h3>
                 <ul>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a id="textFooter" href="{{route('paquetesCategoriaES','es')}}/aventura">
-                         Aventura
+                        <a id="textFooter" href="{{route('paquetesCategoriaDe','de')}}/aventura">
+                          Abenteuer
                      
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/excursiones" id="textFooter">
-                            Excursión
+                        <a href="{{route('paquetesCategoriaDe','de')}}/Ausflüge" id="textFooter">
+                            Ausflüge
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/alta-montania" id="textFooter"> 
-                            Alta Montaña
+                        <a href="{{route('paquetesCategoriaDe','de')}}/alta-montania" id="textFooter"> 
+                            Hoher Berg
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/descubrir" id="textFooter"> 
-                            Descubrir
+                        <a href="{{route('paquetesCategoriaDe','de')}}/Entdeckung" id="textFooter"> 
+                            Entdeckung
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" id="textFooter"> 
-                            Viaje en grupo
+                        <a href="{{route('paquetesCategoriaDe','de')}}/gruppenreisen" id="textFooter"> 
+                            Gruppenreisen
                         </a>
                     </li>
 
@@ -132,7 +132,7 @@
             </div>
 
             <div class="db-3" id="footerContact" style="width: 280px;">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">UBICACIÓN</h3>
+                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">Standort</h3>
                  
                 <ul>
                     <h3 style="font-family: NewsGoth CN BT;;font-size: 1.1em;">
@@ -141,11 +141,11 @@
                     <li>
                         <a id="textFooter" href="#!"> 
                            
-                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
+                            <h5 id="textFooter" style="color: #a1a2a7;">Adresse:</h5>
                             Calle Turquezas E-11 Urb. Kennedy A - Cusco
                         </a>
                         <a id="textFooter" href="#!"> 
-                            <h5 id="textFooter"  style="font-size: 1.1em; color: #a1a2a7;">Teléfono: <span style="font-size: 10px;color:#ffffff;" >00 51 84 247277</span></h5>
+                            <h5 id="textFooter"  style="font-size: 1.1em; color: #a1a2a7;">Telefon: <span style="font-size: 10px;color:#ffffff;" >00 51 84 247277</span></h5>
                              
                         </a>
                     </li>
@@ -155,11 +155,11 @@
                     <li>
                         <a id="textFooter" href="#!"> 
                            
-                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
+                            <h5 id="textFooter" style="color: #a1a2a7;">Adresse:</h5>
                             Calle Bolivar 221 Oficina 4 1er piso Miraflores - Lima - Perú
                         </a>
                         <a id="textFooter" href="#!"> 
-                            <h5 id="textFooter" style="font-size: 1.1em; color: #a1a2a7;">Teléfono: <span  style="font-size: 10px;color:#ffffff;">00 51 1 2434475</span></h5>
+                            <h5 id="textFooter" style="font-size: 1.1em; color: #a1a2a7;">Telefon: <span  style="font-size: 10px;color:#ffffff;">00 51 1 2434475</span></h5>
                             
                         </a>
                     </li>
@@ -169,7 +169,7 @@
                     <li>
                         <a id="textFooter" href="#!"> <img src="" alt="" />
                            
-                            <h5 id="textFooter" style="color: #a1a2a7;">Dirección:</h5>
+                            <h5 id="textFooter" style="color: #a1a2a7;">Adresse:</h5>
                             Jr. Puno 633 - 2do piso - barrio central-puno
                         </a>
                        
@@ -260,7 +260,7 @@
     <section>
         <div class="rows copy" style="background-color: #161614;">
             <div class="container" >
-                <p>Copyrights © 2018 Terandes. Todos los derechos reservados</p>
+                <p>Copyrights © 2018 Terandes. Alle Rechte vorbehalten</p>
             </div>
         </div>
     </section>

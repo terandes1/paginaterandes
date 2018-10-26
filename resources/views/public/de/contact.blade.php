@@ -1,4 +1,4 @@
-@extends('public.es.layouts.master')
+@extends('public.de.layouts.master')
 
 @section('content')
 <style type="text/css">
@@ -28,13 +28,13 @@ width:100%!important;
 		<div class="container">
 			<!-- TITLE & DESCRIPTION -->
 			<div class="spe-title col-md-12">
-				<h2 id="titulo">CONTACTENOS</h2>
+				<h2 id="titulo">Kontaktieren Sie uns</h2>
 				<div class="title-line">
 					<div class="tl-1"></div>
 					<div class="tl-2"></div>
 					<div class="tl-3"></div>
 				</div>
-				<p id="subtitulo">Tierras de los andes  líder mundial en tours, más de 30,000 paquetes en todo el mundo. Reserve paquetes de viaje y disfrute de sus vacaciones con una experiencia única</p>
+				<p id="subtitulo">Tierras de los andes  Weltweit führend in Touren, mehr als 30.000 Pakete auf der ganzen Welt. Buchen Sie Reisepakete und genießen Sie Ihren Urlaub mit einer einzigartigen Erfahrung</p>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12 form_1 wow fadeInLeft" data-wow-duration="1s">
 				<!--====== THANK YOU MESSAGE ==========-->
@@ -48,11 +48,11 @@ width:100%!important;
 				  	{!! Form::open(['route' => ['contacto-reserva.store'] , 'method' => 'POST']) !!}
 					<ul>
 						<li>
-							<input type="text" name="name"  id="name" value="{{ old('name') }}" placeholder="Escriba su nombre" required>
+							<input type="text" name="name"  id="name" value="{{ old('name') }}" placeholder="Schreibe deinen Namen" required>
 							<p class="errorValidacion">{{ $errors->first('name') }}</p>
 						 </li>
 						<li>
-							<input type="tel" name="telefono"  id="telefono" value="{{ old('telefono') }}" placeholder="Número de telephone" required> 
+							<input type="tel" name="telefono"  id="telefono" value="{{ old('telefono') }}" placeholder="Telefonnummer" required> 
 							<p class="errorValidacion">{{ $errors->first('telefono') }}</p>
 						</li>
 						<li>
@@ -75,12 +75,12 @@ width:100%!important;
 						<li>
 							<input type="text" name="ecount" value="" id="ecount" placeholder="Country" required> </li> -->
 						<li style="width: 100%;text-align: center;">
-							<textarea class="form-control" name="message"  cols="120" rows="3"  placeholder="Ingrese su mensaje">{{ old('message') }}</textarea>
+							<textarea class="form-control" name="message"  cols="120" rows="3"  placeholder="Gib deine Nachricht ein">{{ old('message') }}</textarea>
 							<p class="errorValidacion">{{ $errors->first('message') }}</p>
 							
 										{!! Recaptcha::render() !!}
  										<p class="errorValidacion">{{ $errors->first('g-recaptcha-response') }}</p>
-							<input  style="text-align: center;" type="submit" value="Enviar" id="send_button">
+							<input  style="text-align: center;" type="submit" value="einreichen" id="send_button">
 						</li>							
 					</ul>
 				{!! Form::close() !!}  <br>

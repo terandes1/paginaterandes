@@ -1,4 +1,4 @@
-@extends('public.es.layouts.master')
+@extends('public.de.layouts.master')
 
 @section('content')
 <section>
@@ -10,7 +10,7 @@
     <div class="container">
       <div class="banner_book_1">
       
-          <h3 class="dl4">PERÚ TOURS DE LUJO EN AMÉRICA DEL SUR <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+          <h3 class="dl4">PERU LUXURY TOURS IN SÜDAMERIKA <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
 
            <span class="tour_rat" style="text-shadow: 2px 2px 4px #000;color: #fff;">4.5</span><h3>
         
@@ -31,12 +31,12 @@
       <!--LEFT LISTINGS-->
       <div class="col-md-3 hot-page2-alp-con-left">
         <div class="hot-page2-alp-con-left-1">
-            <h3 id="tituloTous">FILTRO POR CATEGORIA Y PRECIO</h3> </div>
+            <h3 id="tituloTous">FILTER NACH KATEGORIE UND PREIS</h3> </div>
         <!--PART 7 : LEFT LISTINGS-->
         
         <!--PART 4 : LEFT LISTINGS-->
         <div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-          <h4 id="subtitulo"><i class="fa fa-map-marker" aria-hidden="true"></i>  SELECCIONE CATEGORIA</h4>
+          <h4 id="subtitulo"><i class="fa fa-map-marker" aria-hidden="true"></i>  KATEGORIE WÄHLEN</h4>
           <div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
                 <form>
                   <ul>
@@ -55,7 +55,7 @@
         </div>
         <!--END PART 4 : LEFT LISTINGS-->
     <div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-        <h4 id="subtitulo"><i class="fa fa-dollar" aria-hidden="true"></i>RANGO DE PRECIOS</h4>
+        <h4 id="subtitulo"><i class="fa fa-dollar" aria-hidden="true"></i>Preisspanne</h4>
         <div class="hot-page2-alp-l-com1 hot-page2-alp-p6">
             <form>
                 <ul>
@@ -124,15 +124,15 @@
           <div class="row" id="tours">
             @if (count($todoTours) == 0)<br>
                <div class="spe-title col-md-12">
-          <h2>Lo sentimos</h2>
-          <h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
+          <h2>Es tut uns leid</h2>
+          <h2> Wir arbeiten daran, Ihre Tour-Pakete zu decken<h2>
           <div class="title-line">
             <div class="tl-1"></div>
             <div class="tl-2"></div>
             <div class="tl-3"></div>
           </div>
           <p>
-            <a href="/es" type="button" class="btn btn-link">Volver a buscar</a>
+            <a href="/es" type="button" class="btn btn-link">Suche noch einmal</a>
           </p>
         </div>
             @else
@@ -164,22 +164,22 @@
                             </div>
                             <div class="col-md-3">
                               <div class="hot-page2-alp-ri-p3 tour-alp-ri-p3">
-                                <div class="hot-page2-alp-r-hot-page-rat">25% de descuento</div> <br><span class="hot-list-p3-4"><strong>Desde</strong></span>
+                                <div class="hot-page2-alp-r-hot-page-rat">25% Rabatt</div> <br><span class="hot-list-p3-4"><strong>Von</strong></span>
                                 <!-- <span class="hot-list-p3-1" style="text-decoration:line-through;">$ {{(int)$item->price+200}}</span>-->
                                  <span class="hot-list-p3-2">$ {{($item->price)}}</span> <span class="hot-list-p3-4">
-                                  <a href="{{route('reservacion','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVAR</a>
+                                  <a href="{{route('reservieren','de')}}/{{$item->id}}" class="hot-page2-alp-quot-btn" id="tituloTous">RESERVIEREN</a>
                                 </span> </div>
                             </div>
                             <div>
                               <div class="trav-ami">
-                                <h4 id="tituloTous">Detalle e Incluye</h4>
+                                <h4 id="tituloTous">Detail und Includes</h4>
                                 <ul>
-                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Duración:{{ $item->dias }} Días / {{ (int)$item->dias-1}} Noches</span></li>
+                                  <li><img src="/assets/public/images/icon/a14.png" alt=""> <span>Dauer:{{ $item->dias }} Días / {{ (int)$item->dias-1}} Nächte</span></li>
                                   <li><img src="/assets/public/images/icon/a15.png" alt=""> <span>Hotel</span></li>
-                                  <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Transferir</span></li>
-                                  <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Equipaje</span></li>
-                                  <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Guía de excursiones</span></li>
-                                  <li><img src="/assets/public/images/icon/a5.png" alt=""> <span>Menú</span></li>
+                                  <li><img src="/assets/public/images/icon/a16.png" alt=""> <span>Übertragung</span></li>
+                                  <li><img src="/assets/public/images/icon/a17.png" alt=""> <span>Gepäck</span></li>
+                                  <li><img src="/assets/public/images/icon/a18.png" alt=""> <span>Reiseleiter</span></li>
+                                  <li><img src="/assets/public/images/icon/a5.png" alt=""> <span>Menü</span></li>
                                 </ul>
                               </div>
                             </div>
@@ -203,7 +203,7 @@
     function tourOpcionPrecio(precio1,precio2,element)
     {
 
-         $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Cargando...</h4>');
+         $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Laden...</h4>');
         element.checked = !element.checked;
         if(element.checked==true)
         {
@@ -234,7 +234,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../es/tour/detalle/"+element.slug+"'>"+
+                                                         "<a href='../de/unsere-reises/einzelheiten/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -242,29 +242,29 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../es/tour/detalle/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../de/unsere-reises/einzelheiten/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
                                                   "<div class='col-md-3'>"+
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
-                                                     " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+
-                                                      "<br><span class='hot-list-p3-4'><strong>Desde</strong></span> "+
+                                                     " <div class='hot-page2-alp-r-hot-page-rat'>25% Rabatt</div> "+
+                                                      "<br><span class='hot-list-p3-4'><strong>Von</strong></span> "+
                                                        
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route('reservation','es')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
+                                                       " <a href='{{route('reservieren','de')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVIEREN </a>"+
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+
                                                     "<div class='trav-ami'>"+
-                                                     " <h4>Detalle e Incluye</h4>"+
+                                                     " <h4>Detail und Includes</h4>"+
                                                     "  <ul>"+
-                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>"+element.dias+" Días / "+(parseInt(element.dias)-1)+" Noches</span></li>"+
+                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>"+element.dias+" Tage / "+(parseInt(element.dias)-1)+" Nächte</span></li>"+
                                                       "  <li><img src='/assets/public/images/icon/a15.png' alt=''> <span>Hotel</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a16.png' alt=''> <span>Transferir</span></li>"+
-                                                        "<li><img src='/assets/public/images/icon/a17.png' alt=''> <span>Equipaje</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Guía de excursiones</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a5.png' alt=''> <span>Menú</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a16.png' alt=''> <span>Übertragung</span></li>"+
+                                                        "<li><img src='/assets/public/images/icon/a17.png' alt=''> <span>Gepäck</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Reiseleiter</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a5.png' alt=''> <span>Menü</span></li>"+
                                                       "</ul>"+
                                                     "</div>"+
                                                  " </div>"+
@@ -280,7 +280,7 @@
    
      function tourOpcionCategoria(id,element)
     {
-         $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Cargando...</h4>');
+         $('#carga').append('<img style="width: 50px;margin-top:100px;" src="{!! URL::asset("assets/public/images/carga/carga.gif") !!}" alt="loading" /><br><h4>Laden...</h4>');
 
         element.checked = !element.checked;
         if(element.checked==true)
@@ -312,7 +312,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../es/tour/detalle/"+element.slug+"'>"+
+                                                         "<a href='../de/unsere-reises/einzelheiten/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -320,27 +320,27 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../es/tour/detalle/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../de/unsere-reises/einzelheiten/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
                                                   "<div class='col-md-3'>"+
                                                    " <div class='hot-page2-alp-ri-p3 tour-alp-ri-p3'>"+
-                                                     " <div class='hot-page2-alp-r-hot-page-rat'>25% de descuento</div> "+"<br><span class='hot-list-p3-4'><strong>Desde</strong></span> "+
+                                                     " <div class='hot-page2-alp-r-hot-page-rat'>25% Rabatt</div> "+"<br><span class='hot-list-p3-4'><strong>Von</strong></span> "+
                                                       "<span class='hot-list-p3-2'>$ "+element.price+" </span><span class='hot-list-p3-4'>"+
-                                                       " <a href='{{route('reservation','es')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVAR</a>"+
+                                                       " <a href='{{route('reservieren','de')}}/"+element.id+"' class='hot-page2-alp-quot-btn'>RESERVIEREN</a>"+
                                                      " </span> </div>"+
                                                 "  </div>"+
                                                  " <div>"+
                                                     "<div class='trav-ami'>"+
-                                                     " <h4>Detalle e Incluye</h4>"+
+                                                     " <h4>Detail und Includes</h4>"+
                                                     "  <ul>"+
-                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>"+element.dias+" Días / "+(parseInt(element.dias)-1)+" Noches</span></li>"+
+                                                        "<li><img src='/assets/public/images/icon/a14.png' alt=''> <span>"+element.dias+" Tage / "+(parseInt(element.dias)-1)+" Nächte</span></li>"+
                                                       "  <li><img src='/assets/public/images/icon/a15.png' alt=''> <span>Hotel</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a16.png' alt=''> <span>Transferir</span></li>"+
-                                                        "<li><img src='/assets/public/images/icon/a17.png' alt=''> <span>Equipaje</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Guía de excursiones</span></li>"+
-                                                       " <li><img src='/assets/public/images/icon/a5.png' alt=''> <span>Menú</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a16.png' alt=''> <span>Übertragung</span></li>"+
+                                                        "<li><img src='/assets/public/images/icon/a17.png' alt=''> <span>Gepäck</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a18.png' alt=''> <span>Reiseleiter</span></li>"+
+                                                       " <li><img src='/assets/public/images/icon/a5.png' alt=''> <span>Menü</span></li>"+
                                                       "</ul>"+
                                                     "</div>"+
                                                  " </div>"+
