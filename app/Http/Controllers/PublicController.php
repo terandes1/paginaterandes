@@ -28,7 +28,7 @@ class PublicController extends Controller
 
     public function lang($abbr='es'){
 
-    	if($abbr =='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de')
+    	if($abbr =='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de' || $abbr=='it')
       {
     	     
             $toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
@@ -72,9 +72,8 @@ class PublicController extends Controller
    {
 
 
-   		if($searchCategoria=='viaje-en-grupo' || $searchCategoria=='gruppenreisen' || $searchCategoria=='nos-voyages'|| $searchCategoria=='group-travel')
+      if($searchCategoria=='viaje-en-grupo' || $searchCategoria=='gruppenreisen' || $searchCategoria=='nos-voyages'|| $searchCategoria=='group-travel' || $searchCategoria=='viaggi-di-gruppo')
       {
-       
         $searchCategoria='series';
       }
 
@@ -326,7 +325,7 @@ class PublicController extends Controller
     {
       
      
-       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events' || $pagina=='Kontakt')
+       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events' || $pagina=='Kontakt' || $pagina=='eventi')
        {
           
           $eventos=Event::all();
@@ -336,18 +335,18 @@ class PublicController extends Controller
        }
      
       
-      if($pagina=='nosotros' || $pagina=='nous' || $pagina=='we' || $pagina=='uns' )
+      if($pagina=='nosotros' || $pagina=='nous' || $pagina=='we' || $pagina=='uns' || $pagina=='noi' )
       {
 
              $lenguajeFaltantes=languageUsers::lenguajeFaltantes($abbr);
              return view('public.'.$abbr.'.our-team',['lenguajeFaltantes' => $lenguajeFaltantes,'abbr'=>$abbr]);
       }
 
-      if($pagina=='contacto' || $pagina=='contact' || $pagina=='kontakt')
+      if($pagina=='contacto' || $pagina=='contact' || $pagina=='kontakt' || $pagina=='contatto')
       {
             
            
-            if($abbr=='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de')
+            if($abbr=='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de' || $abbr=='it')
              {
                  $tour = DB::table('tours')
                           ->select('tours.name')
@@ -367,7 +366,7 @@ class PublicController extends Controller
 
       }
 
-      if($pagina=='testimonios' || $pagina=='temoignages' || $pagina=='testimonies')
+      if($pagina=='testimonios' || $pagina=='temoignages' || $pagina=='testimonies' || $pagina=='testimonianze')
       {
         
          $estadoHabilitado='approve';
