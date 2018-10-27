@@ -366,7 +366,7 @@ class PublicController extends Controller
 
       }
 
-      if($pagina=='testimonios' || $pagina=='temoignages' || $pagina=='testimonies' || $pagina=='testimonianze')
+      if($pagina=='testimonios' || $pagina=='temoignages' || $pagina=='testimonies' || $pagina=='testimonianze' || $pagina=='zeugnis')
       {
         
          $estadoHabilitado='approve';

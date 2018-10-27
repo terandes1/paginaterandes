@@ -1,4 +1,4 @@
-@extends('public.es.layouts.master')
+@extends('public.de.layouts.master')
 
 @section('content')
 <style type="text/css">
@@ -52,21 +52,21 @@ input[type=radio]:checked + label>img {
     <div class="container tb-space inn-page-con-bg pad-bot-redu" id="inner-page-title">
       <!-- TITLE & DESCRIPTION -->
       <div class="spe-title">
-        <h2>TESTIMONIOS <span> </span></h2>
+        <h2>Zeugnisse <span> </span></h2>
         <div class="title-line">
           <div class="tl-1"></div>
           <div class="tl-2"></div>
           <div class="tl-3"></div>
         </div>
-        <p>Comparte experiencias de viaje con nosotros</p>
+        <p>Teilen Sie Reiseerfahrungen mit uns</p>
         
       </div>
 
       <div class="p_testimonial">
       	 @if (count($testimonials) == 0)<br>
                <div class="spe-title col-md-12">
-					<h2>Lo sentimos</h2>
-					<h2> Estamos trabajando para coberturar tus paquetes turísticos<h2>
+					<h2>Es tut uns leid</h2>
+					<h2> Wir arbeiten daran, Ihre Tour-Pakete zu decken<h2>
 		@else				
  		@foreach($testimonials as $item)
 	        <div class="col-md-12">

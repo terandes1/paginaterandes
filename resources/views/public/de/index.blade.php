@@ -12,7 +12,7 @@
          
          $htmltemp.='<div class="db-1">'.
 
-                    '<a href="/es/tour/detalle/'.$item->slug.'">'.
+                    '<a href="/de/tours/detail/'.$item->slug.'">'.
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
@@ -98,7 +98,7 @@
                      </div>
                       
                             <div class="input-field col s4" >
-                                  <a style="color:white;font-size: 15px;" href="{{route('paginas','es')}}/nosotros">
+                                  <a style="color:white;font-size: 15px;" href="{{route('paginas','de')}}/uns">
                                         <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper">
                                             <span id="aprendaMas">MEHR ÜBER TERANDEN!</span>
                                         </i>
@@ -489,7 +489,7 @@
                               <h2 style="color:black; font-size: 15px;font-family: Lovelo Black;">{{$item->name}} - {{$item->nationality}}</h2>
 
                               <h4 style="text-align: justify;margin:5%;font-family: 'NewsGoth CN BT';font-size:1em; ">{!!str_limit($item->testimonial, 135)!!}</h4>
-                                <a href="/es/testimonios" style="background: #253d52;" class="db-done">{{$item->date}}</a>
+                                <a href="/de/zeugnis" style="background: #253d52;" class="db-done">{{$item->date}}</a>
                             </div>
                           </li>
                           <?php
@@ -520,7 +520,7 @@
 
                      <div >
                         <div  style="padding: 15px" class="col-md-2 col-md-offset-10 col-sm-12 ">
-                            <a href="/es/testimonios"> <strong><u> &#62;&#62; Lesen Sie mehr</u> </strong> </a>
+                            <a href="/de/zeugnis"> <strong><u> &#62;&#62; Lesen Sie mehr</u> </strong> </a>
                         </div>
                         
                          <div class="col-sm-12">
