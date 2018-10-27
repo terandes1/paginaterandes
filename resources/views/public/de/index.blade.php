@@ -562,68 +562,21 @@
              <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;  ">
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">VERBUNDENE</h3>
                 <ul>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.asta.org/" style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/asta.jpg') }}" alt="" />
-                          <!-- ASTA -->
-                     
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.cantturperu.org/es"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/cantur.jpg') }}" alt="" />
-                          <!--  DATA -->
-                        </a>
-                    </li>
-                    
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://udgart.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/atr.jpg') }}" alt="" />
-                         <!--   ART -->
-                        </a>
-                    </li>
+                       @include('public.partials.paginaInicio.afiliados')
                    
                 </ul>
             </div>
              <div class="db-3" style="width: 280px; border: 1px solid #ffffff;">
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">PARTNER</h3>
                 <ul>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://www.illapa.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaA.jpg') }}" white="20px;" alt="" />
-                           <!--  ILLAPA TRANSPORTE -->
-                     
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://illapatransportes.com/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/illapaT.jpg') }}" alt="" />
-                           <!--  ILLAPA CULTURAS ANDINA -->
-                        </a>
-                    </li>
-                    
+                        @include('public.partials.paginaInicio.socios')
                    
                 </ul>
             </div>
               <div class="db-3" style="width: 280px;border: 1px solid #ffffff; ">
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">ZERTIFIZIERUNGEN</h3>
                 <ul>
-                   <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.indecopi.gob.pe/inicio"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/indecopi.jpg') }}" alt="" />
-                           <!--  INDECOPI -->
-                     
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="https://www.gob.pe/mincetur"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/mincetur.png') }}" alt="" />
-                          <!--  MINCETUR -->
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://dirceturcusco.gob.pe/"  style="color:black;"> <img style="background: #b61632;" src="{{URL::asset('assets/public/images/socios/dircusco.png') }}" alt="" />
-                            <!--  DIRCETUR CUSCO -->
-                        </a>
-                    </li>
-                    <li style="border-bottom: 1px solid #fff;">
-                        <a href="http://www.sernanp.gob.pe/cusco"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/sernanp.png') }}" alt="" />
-                          <!--   SERNANP -->
-                        </a>
-                    </li>
+                    @include('public.partials.paginaInicio.certificacion')
                    
                 </ul>
             </div>
@@ -631,12 +584,7 @@
              <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;">
                 <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;padding: 2PX;">SOZIALE UND UNTERNEHMENSVERANTWORTUNG</h3>
              <ul>
-                   <li>
-                        <a href="https://www.patronatomachupicchu.org/"  style="color:black;"> <img src="{{URL::asset('assets/public/images/socios/patronato.png') }}" alt="" />
-                            <!-- PATRONATO DE CULTURA MACHUPICCHU -->
-                        </a>
-                    </li>
-                    
+                     @include('public.partials.paginaInicio.responsabilidad')
                    
                 </ul>
             </div>
@@ -660,21 +608,7 @@
     </script>
     @endif
 
-    <script>
-
-     $(window).resize(function() {
-          var width = $(window).width();
-          if (width < 598){
-                $( "#videoId" ).remove();
-                $( ".contenedor_video" ).html( "<div id='portada'><img src='{{URL::asset('assets/public/images/portada-movil/portada.jpg')}}'></img> </div>" );
-          }else{
-             $( "#portada" ).remove();
-             var video="<source src='{{URL::asset('assets/public/video/Definitivo.mp4')}}' type='video/mp4'>";
-             var html= "<video id='videoId' playsinline='' autoplay='' loop='' preload='auto' muted=''>"+video+"</video>";
-             $( ".contenedor_video" ).html(html);
-          }
-    });
-    </script>
+     {!!Html::script('assets/public/js/videoPortada.js')!!}
   
 
 @endsection

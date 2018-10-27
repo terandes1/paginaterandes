@@ -234,7 +234,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../es/nos-voyages/details/"+element.slug+"'>"+
+                                                         "<a href='../../fr/nos-voyages/details/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -242,7 +242,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../fr/nos-voyages/details/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../../fr/nos-voyages/details/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
@@ -312,7 +312,7 @@
                         { 
                            htmlTours=htmlTours + "<div class='hot-page2-alp-r-list'>"+ 
                                                      " <div class='col-md-3 hot-page2-alp-r-list-re-sp'>"+ 
-                                                         "<a href='../fr//nos-voyages/details/"+element.slug+"'>"+
+                                                         "<a href='../../fr/nos-voyages/details/"+element.slug+"'>"+
                                                              " <div class='hotel-list-score'>4.5</div>"+
                                                                "<div class='hot-page2-hli-1'> <img src='/"+element.img+"' alt=''> </div>"+
                                                          "</a>"+
@@ -320,7 +320,7 @@
                                                      "</div>"+
                                                      "<div class='col-md-6'>"+
                                                     "<div class='trav-list-bod'>"+
-                                                   " <a href='../fr/nos-voyages/details/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
+                                                   " <a href='../../fr/nos-voyages/details/"+element.slug+"'><h3>"+element.name+"</h3></a>"+
                                                     "<p>"+element.description_short.substring(0,150)+"</p>"+
                                                    " </div>"+
                                                   "</div>"+
