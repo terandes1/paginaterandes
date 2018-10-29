@@ -4,18 +4,19 @@
 <head>
     
         <!--========= metaetiquetas ===========-->
-        <TITLE> Viajes de lujo y medida a Perú, Bolivia; especialistas en viajes privados, tickets de tren a Machupicchu, Puno y Arequipa, hoteles, ofertas de viaje, Tierra de los Andes</TITLE>
+        <TITLE>Tierras de los Andes</TITLE>
         <meta http-equiv="Content-Type" content="text/html; ISO-8859-1">
-		<META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
-		<META NAME="AUTHOR" CONTENT="Tierra de los Andes">
-		<META NAME="REPLY-TO" CONTENT="seo-sistemas@terandes.com">
-		<LINK REV="made" href="mailto:seo-sistemas@terandes.com">
-		<META NAME="DESCRIPTION" CONTENT="Machu Picchu es una ciudadela inca ubicada en las alturas de las montañas de los Andes en Perú, sobre el valle del río Urubamba. Se construyó en el siglo XV y luego fue abandonada.">
-		<META NAME="KEYWORDS" CONTENT="+tour de lujo cusco,+viaje +de +lujo +a +Perú +Bolivia,+Machu picchu, +agencias de viajes cusco,+tour cusco,+atrapalo,+renfe,+Ryanair,+Vueling,+guia+campsa,+travel +agency,+5 mejores agencias +del +cusco,+5 +mejores +agencias +del +Perú">
-		<META NAME="Resource-type" CONTENT="Document">
-		<META NAME="DateCreated" CONTENT="Wed, 19 September 2018 00:00:00 GMT+5">
-		<META NAME="Revisit-after" CONTENT="1 days">
-		<META NAME="robots" content="ALL">
+        <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="German">
+        <META NAME="AUTHOR" CONTENT="Tierras de los Andes">
+        <META NAME="REPLY-TO" CONTENT="terandes@terandes.com">
+        <LINK REV="made" href="mailto:terandes@terandes.com">
+        <META NAME="DESCRIPTION" CONTENT="Tierras de los Andes Wir sind ein Reisebüro in Peru. Unsere Spezialität in Machu Picchu sind Abenteuerreisen, wir erstellen individuelle Touren von konventionellen Routen.">
+        <META NAME="KEYWORDS" CONTENT="reise machu picchu,trekking machu picchu,peru machu picchu tour,cusco machu picchu tour,peru machu picchu reise,reise nach machu picchu,tour machu picchu from cusco,matschu pitschu reisen,reise nach peru machu picchu,reise nach matschu pitschu,peru reise machu picchu,reise zum machu picchu">
+        <META NAME="Resource-type" CONTENT="Homepage">
+        <META NAME="DateCreated" CONTENT="Thu, 25 October 2018 00:00:00 GMT-5">
+        <META NAME="Revisit-after" CONTENT="10 days">
+        <META NAME="robots" content="ALL">
+
 
         <!--========= fin  ===========-->
 
