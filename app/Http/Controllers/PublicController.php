@@ -71,8 +71,9 @@ class PublicController extends Controller
    public function tours($abbr='es',$searchCategoria='')
    {
 
-
-      if($searchCategoria=='viaje-en-grupo' || $searchCategoria=='gruppenreisen' || $searchCategoria=='nos-voyages'|| $searchCategoria=='group-travel' || $searchCategoria=='viaggi-di-gruppo')
+     
+      
+      if($searchCategoria=='viaje-en-grupo' || $searchCategoria=='gruppenreisen' || $searchCategoria=='voyage-en-groupe'|| $searchCategoria=='group-travel' || $searchCategoria=='viaggi-di-gruppo')
       {
         $searchCategoria='series';
       }

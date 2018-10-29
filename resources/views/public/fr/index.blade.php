@@ -12,7 +12,7 @@
          
          $htmltemp.='<div class="db-1">'.
 
-                    '<a href="tour/es/'.$item->slug.'">'.
+                    '<a href="fr/nos-voyages/detail/'.$item->slug.'">'.
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
@@ -65,7 +65,7 @@
          <dir id="texto" style="font-family: Lovelo Black;">
              AVENTURE 
             
-             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Linotype Textra', sans-serif;50px;font-size: 20px;">Pour les amateurs de trekking dans des endroits encore authentiques et sauvages</div>
+             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;text-transform: capitalize;    font-family: 'Linotype Textra', sans-serif;50px;font-size: 20px;">POUR LES AMOUREUX DE TREKKING DANS DES LIEUX AUTHENTIQUES ET SAUVAGES</div>
        </dir>
        
    
@@ -87,7 +87,7 @@
                     <div class="tl-3"></div>
                 </div>
                 <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">
-                    Terres des Andes est un S.A.C. (Société fermée privée) qui a ouvert ses portes en 2000. Un tour opérateur péruvien spécialisé dans les voyages d'aventure a pour objectif principal la création de voyages sur mesure.
+                   Tierra de los Andes S.A.C. (Société fermée privée) qui a ouvert ses portes en 2000. Un tour opérateur péruvien spécialisé dans les voyages d'aventure a pour objectif principal la création de voyages sur mesure.
                 </p>
                      
                            
@@ -98,7 +98,7 @@
                      </div>
                       
                             <div class="input-field col s4" >
-                                  <a style="color:white;font-size: 15px;" href="">
+                                  <a style="color:white;font-size: 15px;" href="{{route('paginas',$abbr)}}/nous">
                                         <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper">
                                             <span id="aprendaMas">PLUS SUR TERANDES!</span>
                                         </i>
@@ -131,7 +131,7 @@
 
                                         <div style="/*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                         </div>
-                             <a class="course-overlay" href="{{route('paquetesFr','fr')}}/decouvrir">    
+                             <a class="course-overlay" href="{{route('paquetesCategoriaFr',$abbr)}}/decouvrir">    
                                  <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/6.jpg')}}" /> 
                             </a>
                                   <div class="tour-mig-lc-con" style="text-align: center;">
@@ -167,7 +167,7 @@
                             <div style="text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">            
                                                
                             </div>
-                        <a class="course-overlay" href="{{route('paquetesCategoriaFr','fr')}}/aventure">
+                        <a class="course-overlay" href="{{route('paquetesCategoriaFr',$abbr)}}/aventure">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/10.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -200,7 +200,7 @@
                                             
                                                
                                         </div>
-                        <a class="course-overlay" href="{{route('paquetesCategoriaFr','fr')}}/haute-montagne">
+                        <a class="course-overlay" href="{{route('paquetesCategoriaFr',$abbr)}}/haute-montagne">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/8.jpg')}}" /> 
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -233,7 +233,7 @@
                             <div style=" /*background-color: rgba(9, 74, 108, 0.65);*/text-align: center;width: 100%;position: absolute;z-index: 1000;padding:6px; ">
                                                  
                                         </div>
-                          <a class="course-overlay" href="{{route('paquetesCategoriaFr','fr')}}/excursions">
+                          <a class="course-overlay" href="{{route('paquetesCategoriaFr',$abbr)}}/excursions">
                              <img  style="height: 540px;" src="{{URL::asset('assets/public/images/category/9.jpg')}}" /> 
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
@@ -361,16 +361,16 @@
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> La famille</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> La famille</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groupes</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Groupes</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Les couples</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Les couples</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Les amis</a>
+                              <a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Les amis</a>
                             </li>               
                           </ul>
                         </div>
@@ -381,7 +381,7 @@
                                           <ul>
                                            
                                             <li>
-                                              <a href="{{route('paquetesCategoriaFr','fr')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                              <a href="{{route('paquetesCategoriaFr','fr')}}/voyage-en-groupe" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
                                                   <h4>VOIR LES TOURS </h4>   
                                                </a>
                                             </li>

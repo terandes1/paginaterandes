@@ -6,8 +6,8 @@
     <div class="rows inner_banner inner_banner_5">
       <div class="container" style="background-color: rgba(22, 23, 19, 0.57)">
 
-	        <h2><span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; ">Conoce a la familia de Tierras de los Andes </span></h2>
-        <p style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; text-align: center;">" Cada uno de nuestros miembros únicos del equipo "</p>
+	        <h2><span style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; ">Meet the family of Tierras de los Andes </span></h2>
+        <p style="text-shadow: 2px 2px 4px #000;color: #fff;    font-size: 1.4em; text-align: center;">" Each of our unique team members "</p>
       </div>
     </div>
   </section>

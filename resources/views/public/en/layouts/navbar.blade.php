@@ -22,7 +22,7 @@
                         <ul>
                             <li><a href="{{route('paquetesEn','en')}}">Tours</a></li>
                         </ul>
-                        <h4>CATEGORIES</h4>
+                        <h4>CATÉGORIES</h4>
                         <ul>
                             <li><a href="{{route('paquetesCategoriaEn','en')}}/discovery"> Discovery</a></li>
                             <li><a href="{{route('paquetesCategoriaEn','en')}}/adventure"> Adventure</a></li>
@@ -88,7 +88,7 @@
                             </li>
                             <li class="admi-menu">
 
-                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> CATEGORY <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
+                                <a href="#" class="mm-arr" style="font-family: Lovelo Black;"> <span class="fa fa-map-marker" style="color: #696B73;"></span> CATÉGORIES <span style="margin-left: 4px;" class="fa fa-sort-desc"></span>
                                 </a>
                                 <!-- MEGA MENU 1 -->
                                 <div class="mm-pos">

@@ -14,7 +14,7 @@
          
          $htmltemp.='<div class="db-1">'.
 
-                    '<a href="/es/tour/detalle/'.$item->slug.'">'.
+                    '<a href="/es/nuestros-viajes/detalle/'.$item->slug.'">'.
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
@@ -293,19 +293,19 @@
                         <ul>
                             <li class="wow fadeInUp" data-wow-duration="0.5s">
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis1.png" alt="">
-                                </a><span>Free WiFi</span>
+                                </a><span>WiFi</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="0.7s">
-                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis2.png" alt=""> </a><span>Breakfast</span>
+                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis2.png" alt=""> </a><span>Desayuno</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="0.9s">
-                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis3.png" alt=""> </a><span>Pool</span>
+                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis3.png" alt=""> </a><span>Piscina</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="1.1s">
                                 <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis4.png" alt=""> </a><span>Television</span>
                             </li>
                             <li class="wow fadeInUp" data-wow-duration="1.3s">
-                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis5.png" alt=""> </a><span>GYM</span>
+                                <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="/assets/public/images/icon/dis5.png" alt=""> </a><span>GIMNASIO</span>
                             </li>
                         </ul>
                     </div>
@@ -364,16 +364,16 @@
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/series" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
                             </li>               
                           </ul>
                         </div>

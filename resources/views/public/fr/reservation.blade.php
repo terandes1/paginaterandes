@@ -232,7 +232,7 @@ width:100%!important;
 						<div class="tour_right tour_rela tour-ri-com">
 							<h3 style="font-family: Lovelo Black;">VISITES CONNEXES</h3>
 							@foreach($toursRelacionados as $itemp)
-							<a href="{{url('fr/nos-voyages/details',['slug' => $itemp->slug])}}">
+							<a href="{{url('fr/nos-voyages/detail',['slug' => $itemp->slug])}}">
 								<div class="tour_rela_1"> <img  src="{{URL::asset($itemp->img)}}" alt="" />
 									<h4 style="font-family: Lovelo Black;text-align: center;">{{$itemp->name}}<br>
 									<span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>

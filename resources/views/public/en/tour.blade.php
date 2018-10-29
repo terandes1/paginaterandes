@@ -259,10 +259,10 @@ color: #999999;
                         <table class="responsive-table">
                             <thead>
                                 <tr>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">LLEGADAS A LIMA</h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">SALIDAS DE LIMA </h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">DISPONIBILIDAD</h4></th>
-                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">ESTADO</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">ARRIVALS TO LIMA</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">OUTPUTS OF LIMA </h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">AVAILABILITY</h4></th>
+                                    <th><h4 style="font-size: 15px;    font-family: Lovelo Black;">STATE</h4></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -309,14 +309,14 @@ color: #999999;
                                 <ul class="nav nav-tabs">
                                     <li class="active" style="">
                                         <a href="#letters" data-toggle="tab"><i style="color:black;" class="fa fa-address-card-o"></i>
-                                            <span style="font-family: Lovelo Black;">ITINERARIO</span>
+                                            <span style="font-family: Lovelo Black;">ITINERARY</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#emails" data-toggle="tab">
                                             <i style="color:black;" class="fa fa-users"></i> 
                                             <span style="font-family: Lovelo Black;">
-                                                 ORGANIZACIÓN
+                                                 ORGANIZATION
                                             </span>
                                         </a>
                                     </li>
@@ -324,7 +324,7 @@ color: #999999;
                                         <a href="#loglist" data-toggle="tab" id="ubicacion">
                                             <i style="color:black;" class="fa fa-map-marker"></i> 
                                             <span style="font-family: Lovelo Black;">
-                                                 UBICACIÓN
+                                                 LOCATION
                                             </span>
                                         </a>
                                     </li>
@@ -406,8 +406,8 @@ color: #999999;
         <div>
             <div class="dir-rat">
                 <div class="dir-rat-inn dir-rat-title">
-                  <h3 style="text-align: center;">CONTÁCTENOS</h3>
-                  <p>Gracias por su interés en tener una experiencia de viaje personalizada con Tierra de los Andes Perú.</p>
+                  <h3 style="text-align: center;">CONTACT US</h3>
+                  <p>Thank you for your interest in having a personalized travel experience with Tierra de los Andes Peru.</p>
                    <div id="carga" style="text-align:center;">
                        
                     </div>
@@ -422,26 +422,26 @@ color: #999999;
                  <form class ='dir-rat-form'>
                     <div class="form-group col-md-12 pad-left-o">
                       <input type="text" class="form-control" id="nameTour" name="nameTour" value="{!! $tour->name !!}"> 
-                      <input type="hidden"  id="abbr"  name="abbr" value="es"> 
+                      <input type="hidden"  id="abbr"  name="abbr" value="{{$abbr}}"> 
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="nameCategoria" name="nameCategoria" placeholder="Ingrese su nombre"> 
+                      <input type="text" class="form-control" id="nameCategoria" name="nameCategoria" placeholder="Enter your name"> 
                       <p class="errorValidacion" id="errorCategoria"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="number" class="form-control" id="numero"  name="numero" placeholder="Ingresa móvil">
+                      <input type="number" class="form-control" id="numero"  name="numero" placeholder="Enter mobile">
                       <p class="errorValidacion" id="errorNumero"></p>
                      </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Ingresar correo electrónico"> 
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"> 
                       <p class="errorValidacion" id="errorEmail"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
-                      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad"> 
+                      <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Enter your city"> 
                       <p class="errorValidacion" id="errorCiudad"></p>
                     </div>
                     <div class="form-group col-md-12 pad-left-o">
-                      <textarea placeholder="Escribe tu mensaje" id="mensaje" name="mensaje"></textarea>
+                      <textarea placeholder="Write your message" id="mensaje" name="mensaje"></textarea>
                         <p class="errorValidacion" id="errorMensaje"></p>
                     </div>
                     <div class="form-group col-md-6 pad-left-o">
@@ -450,7 +450,7 @@ color: #999999;
                     </div>
                     
                     <div class="form-group col-md-12 pad-left-o" style="text-align: center;">
-                      <input type="submit" value="Enviar" id="EnviarReservationTour" name="EnviarReservationTour" class="link-btn"> </div>
+                      <input type="submit" value="Submit" id="EnviarReservationTour" name="EnviarReservationTour" class="link-btn"> </div>
                   </form>
                 </div>
 

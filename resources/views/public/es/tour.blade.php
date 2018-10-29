@@ -468,13 +468,13 @@ color: #999999;
 								@foreach($toursRelacionados  as $item)
 								<li>
 									<div class="tr-room-type-list">
-										 <a  href="{{url('es/tour/detalle',['lang' => 'es','slug' => $item->slug])}}">
+										 <a  href="{{url('es/nuestros-viajes/detalle',['lang' => 'es','slug' => $item->slug])}}">
                         <div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
 
     										</div>
                      </a>
 										<div class="col-md-6 tr-room-type-list-2">
-                       <a  href="{{url('es/tour/detalle',['slug' => $item->slug])}}">
+                       <a  href="{{url('es/nuestros-viajes/detalle',['slug' => $item->slug])}}">
   											<h4 id="tituloTous" style="color: #F27612;">
                           {!! $item->name !!}
                         </h4>
@@ -531,13 +531,13 @@ color: #999999;
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1" style="text-align: center;"> 
               
-              <a style="text-align: center;" href="{{url('es/tour/detalle',['lang' => 'es','slug' => $item->slug])}}" >
+              <a style="text-align: center;" href="{{url('es/nuestros-viajes/detalle',['lang' => 'es','slug' => $item->slug])}}" >
                 <img src="/{{$item->img}}" alt="" />
               </a> 
 	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} DIAS / {{ ((int)($item->dias)-1)}} NOCHES </h5>
 	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->name, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('es/tour/detalle',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
+	            </p> <a style="text-align: center;" href="{{url('es/nuestros-viajes/detalle',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Ver más detalle</a> 
 	          </div>
 	          @endforeach
         </div>

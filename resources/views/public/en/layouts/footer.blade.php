@@ -96,32 +96,32 @@
                 <ul>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a id="textFooter" href="{{route('paquetesCategoriaES','es')}}/aventura">
+                        <a id="textFooter" href="{{route('paquetesCategoriaEn','es')}}/adventure">
                          Adventure
                      
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/excursiones" id="textFooter">
+                        <a href="{{route('paquetesCategoriaEn','es')}}/excursion" id="textFooter">
                             Excursions
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/alta-montania" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaEn','es')}}/high-mountain" id="textFooter"> 
                             High mountain
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/descubrir" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaEn','es')}}/discovery" id="textFooter"> 
                             Discover
                         </a>
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaEn','es')}}/group-travel" id="textFooter"> 
                             Group travel
                         </a>
                     </li>

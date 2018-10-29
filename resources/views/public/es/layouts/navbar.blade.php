@@ -20,7 +20,7 @@
                         <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
                         <h4>TOURS</h4>
                         <ul>
-                            <li><a href="{{route('paquetesEs','es')}}">Tours</a></li>
+                            <li><a href="{{route('paquetesEs','es')}}">Nuestros viajes</a></li>
                         </ul>
                         <h4>CATEGORIAS</h4>
                         <ul>
@@ -81,7 +81,7 @@
                         <ul>
                            
                             <li class="about-menu">
-                                <a href="{{route('paquetesEs','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> TOURS</a>
+                                <a href="{{route('paquetesEs','es')}}" class="mm-arr" style="font-family: Lovelo Black;"><span class="fa fa-train" style="color: #084959;"></span> Nuestros viajes</a>
                             </li>
                             <li class="admi-menu">
 

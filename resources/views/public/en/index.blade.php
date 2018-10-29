@@ -547,7 +547,7 @@
 
         </div>
     </div>
-    @include('public.es.testimonials.formTestimonials')
+    @include('public.en.testimonials.formTestimonials')
 </section>
 
 <!--====== socios ==========-->
