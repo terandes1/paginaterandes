@@ -242,27 +242,63 @@ class TourController extends Controller
 
     public function publicarPrincipal($id)
     { 
-        $tour = Tour::find($id);
-        if ((int)$tour->principal== 0)
+       
+        
+        if(languageUsers::languageTestimonioEncuesta()->abbr=='all')
         {
-            $NroTourLujo=  DB::table('tours')
-                        ->where('principal', 1)
-                        ->where('status', 'A')
-                        ->count();
 
-            if ($NroTourLujo<6){
-                $tour->principal =1;
-                $tour->save();
-                return response()->json(['rpta'=>'Publicado en la portada principal' ]);
-            }
-            else{
-                return response()->json(['rpta'=>'No se publicó, Máximo 6 tours en la portada principal' ]);
-            }
+
+                $tour = Tour::find($id);
+
+                if ((int)$tour->principal== 0)
+                {
+                    
+                        $tour->principal =1;
+                        $tour->save();
+                        return response()->json(['rpta'=>'Publicado en la portada principal' ]);
+                }
+                else{
+                    $tour->principal =0;
+                    $tour->save();
+                    return response()->json(['rpta'=>'Se quitó de la portada principal']);
+                }
+
+
+
+        }else {
+
+                $tour = Tour::find($id);
+                if ((int)$tour->principal== 0)
+                {
+                    
+
+                 $contarTurLujos = DB::table('languages')
+                      ->select('tours.id','languages.name as nameLenguage')
+                      ->join('categories', 'languages.id', '=', 'categories.language_id')
+                      ->join('categories_has_tours as cat_t', 'cat_t.categorie_id', '=', 'categories.id')
+                      ->join('tours', 'cat_t.tour_id', '=', 'tours.id')
+                      ->where('languages.id',languageUsers::idLanguage())
+                      ->where('tours.status','A')
+                      ->orderBy('tours.id', 'desc')
+                      ->get();
+
+                    if ( count($contarTurLujos)<6){
+                        $tour->principal =1;
+                        $tour->save();
+                        return response()->json(['rpta'=>'Publicado en la portada principal' ]);
+                    }
+                    else{
+                        return response()->json(['rpta'=>'No se publicó, Máximo 6 tours en la portada principal' ]);
+                    }
+                }
+                else{
+                    $tour->principal =0;
+                    $tour->save();
+                    return response()->json(['rpta'=>'Se quitó de la portada principal']);
+                }
+
         }
-        else{
-            $tour->principal =0;
-            $tour->save();
-            return response()->json(['rpta'=>'Se quitó de la portada principal']);
-        }
+
+       
     }     
 }
