@@ -51,7 +51,7 @@ width:100%!important;
 							<a href="{{route('paquetesCategoriaDe','de')}}/ausflüge" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Excursiones.png')}}" alt="" /> Ausflüge</a>
 						</li>
 						<li>
-							<a href="{{route('paquetesCategoriaDe','de')}}/viaje-en-grupo" style="font-size: 0.8em;font-family: Lovelo Black;">Gruppenreisen</a>
+							<a href="{{route('paquetesCategoriaDe','de')}}/gruppenreisen" style="font-size: 0.8em;font-family: Lovelo Black;">Gruppenreisen</a>
 						</li>
 						<li>
 							<a href="{{route('paquetesCategoriaDe','de')}}/abenteuer" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Aventura.png')}}" alt="" /> Abenteuer</a>
@@ -234,7 +234,7 @@ width:100%!important;
 						<div class="tour_right tour_rela tour-ri-com">
 							<h3 style="font-family: Lovelo Black;">VERWANDTE TOUREN</h3>
 							@foreach($toursRelacionados as $itemp)
-							<a href="/../de/unsere-reises/einzelheiten/{{ $itemp->slug}}">
+							<a href="/../de/unsere-reises/mehr-sehen/{{ $itemp->slug}}">
 								<div class="tour_rela_1"> <img  src="{{URL::asset($itemp->img)}}" alt="" />
 									<h4 style="font-family: Lovelo Black;text-align: center;">{{$itemp->name}}<br>
 									<span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>

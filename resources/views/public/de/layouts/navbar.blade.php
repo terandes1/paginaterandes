@@ -28,7 +28,7 @@
                             <li><a href="{{route('paquetesCategoriaDe','de')}}/abenteuer"> Abenteuer</a></li>
                             <li><a href="{{route('paquetesCategoriaDe','de')}}/hoher-berg"> Hoher Berg</a></li>
                             <li><a href="{{route('paquetesCategoriaDe','de')}}/ausflüge">Ausflüge</a></li>
-                             <li><a href="{{route('paquetesCategoriaDe','de')}}/Gruppenreisen">Gruppenreisen</a></li>
+                             <li><a href="{{route('paquetesCategoriaDe','de')}}/gruppenreisen">Gruppenreisen</a></li>
                         </ul>
                         <h4>Ereignisse</h4>
                         <ul>

@@ -45,7 +45,7 @@ width:100%!important;
 							<a href="{{route('paquetesCategoriaIt',$abbr)}}/avventura" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Aventura.png')}}" alt="" /> Avventura</a>
 						</li>
 						<li>
-							<a href="{{route('paquetesCategoriaIt',$abbr)}}/Alta-montagna" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/AltaMontania.png')}}" alt="" /> Alta montagna</a>
+							<a href="{{route('paquetesCategoriaIt',$abbr)}}/alta-montagna" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/AltaMontania.png')}}" alt="" /> Alta montagna</a>
 						</li>
 						<li>
 							<a href="{{route('paquetesCategoriaIt',$abbr)}}/escursioni" style="font-size: 0.8em;font-family: Lovelo Black;"><img src="{{URL::asset('assets/public/images/icons/tours/Excursiones.png')}}" alt="" /> Escursioni</a>

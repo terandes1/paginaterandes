@@ -12,7 +12,7 @@
          
          $htmltemp.='<div class="db-1">'.
 
-                    '<a href="/es/tour/detalle/'.$item->slug.'">'.
+                    '<a href="/it/il-nostro-viaggio/dettaglio/'.$item->slug.'">'.
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
@@ -121,8 +121,7 @@
                         <div class="tl-3"></div>
                     </div>
                     <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">
-                   Privato e completamente personalizzato
-                     vedere tutte le categorie.</p>
+                   Privato e completamente personalizzato vedere tutte le categorie.</p>
                 </div>
                 <div>
                     <!-- TOUR PLACE 1 -->
@@ -382,7 +381,7 @@
                                           <ul>
                                            
                                             <li>
-                                              <a href="{{route('paquetesCategoriaIt',$abbr)}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
+                                              <a href="{{route('paquetesCategoriaIt',$abbr)}}/viaggi-di-gruppo" class="waves-effect waves-light btn-large tourz-pop-ser-btn text-center" style="width: 300px;height: 65px; padding: 15px;">
                                                   <h4>VISUALIZZA I TOUR </h4>   
                                                </a>
                                             </li>

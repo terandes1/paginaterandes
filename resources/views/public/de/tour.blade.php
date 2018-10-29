@@ -468,13 +468,13 @@ color: #999999;
 								@foreach($toursRelacionados  as $item)
 								<li>
 									<div class="tr-room-type-list">
-										 <a  href="{{url('de/unsere-reises/einzelheiten',['lang' => 'es','slug' => $item->slug])}}">
+										 <a  href="{{url('de/unsere-reises/mehr-sehen',['lang' => 'es','slug' => $item->slug])}}">
                         <div class="col-md-3 tr-room-type-list-1"><img src="/{{$item->img}}" alt="" />
 
     										</div>
                      </a>
 										<div class="col-md-6 tr-room-type-list-2">
-                       <a  href="{{url('de/unsere-reises/einzelheiten',['slug' => $item->slug])}}">
+                       <a  href="{{url('de/unsere-reises/mehr-sehen',['slug' => $item->slug])}}">
   											<h4 id="tituloTous" style="color: #F27612;">
                           {!! $item->name !!}
                         </h4>
@@ -527,17 +527,17 @@ color: #999999;
         </div>
         <!--====== PUPULAR TOUR PACKAGES ==========-->
         <div class="tour_right tour_rela tour-ri-com">
-          <h3 id="tituloTouLateral">BELIEBTE TOUREN</h3>
+          <h3 id="tituloTouLateral">BELIEBTE TOURENss</h3>
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1" style="text-align: center;"> 
               
-              <a style="text-align: center;" href="{{url('de/unsere-reises/einzelheiten',['lang' => 'es','slug' => $item->slug])}}" >
+              <a style="text-align: center;" href="{{url('de/unsere-reises/mehr-sehen',['slug' => $item->slug])}}" >
                 <img src="/{{$item->img}}" alt="" />
               </a> 
 	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} Tage / {{ ((int)($item->dias)-1)}} Nächte </h5>
 	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->name, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('de/unsere-reises/einzelheiten',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Siehe mehr Details</a> 
+	            </p> <a style="text-align: center;" href="{{url('de/unsere-reises/mehr-sehen',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Siehe mehr Details</a> 
 	          </div>
 	          @endforeach
         </div>

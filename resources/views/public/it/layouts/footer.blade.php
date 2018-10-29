@@ -121,7 +121,7 @@
                     </li>
                     <li>
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                        <a href="{{route('paquetesCategoriaIt',$abbr)}}/Viaggi-di-gruppo" id="textFooter"> 
+                        <a href="{{route('paquetesCategoriaIt',$abbr)}}/viaggi-di-gruppo" id="textFooter"> 
                             Viaggi di gruppo
                         </a>
                     </li>

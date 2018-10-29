@@ -148,32 +148,21 @@ Route::get('{lang?}/category/{search?}', [ 'uses' => 'PublicController@tours' ])
 Route::get('{lang?}/reserve/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reserve');//en
 
 //FIN
-//lista de reservas por idiomas
 
-
-
-Route::get('{lang?}/reservieren/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservieren');//de
-Route::get('{lang?}/prenotazione/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('prenotazione');//it
-//fin
-
-
-//lista de tours categoria idiomas
-
-
-Route::get('{lang?}/kategorie/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaDe');
-Route::get('{lang?}/classificazione/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaIt');
-//fin
-
-//lista tours
-
+// URL GERMAN
+Route::get('{lang?}/unsere-reises/mehr-sehen/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
 Route::get('{lang?}/unsere-reise/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesDe');
-Route::get('{lang?}/il-nostro-viaggio/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesIt');
-//fin 
+Route::get('{lang?}/kategorie/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaDe');
+Route::get('{lang?}/reservieren/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('reservieren');//de
 
-//tour por idiomas
+//FIN
 
-Route::get('{lang?}/unsere-reises/einzelheiten/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+//URL ITALIA
 Route::get('{lang?}/il-nostro-viaggio/dettaglio/{slug?}', ['as' => 'tour','uses' => 'PublicController@tour']);
+Route::get('{lang?}/il-nostro-viaggio/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesIt');
+Route::get('{lang?}/classificazione/{search?}', [ 'uses' => 'PublicController@tours' ])->name('paquetesCategoriaIt');
+Route::get('{lang?}/prenotazione/{idTour?}', [ 'uses' => 'PublicController@reservation' ])->name('prenotazione');//it
+
 //fin
 
 Route::post('toursOpcion/', [ 'uses' => 'PublicController@toursOpcion' ])->name('toursOpcion');

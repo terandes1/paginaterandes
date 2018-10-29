@@ -28,7 +28,7 @@ class PublicController extends Controller
 
     public function lang($abbr='es'){
 
-    	if($abbr =='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de' || $abbr=='it')
+      if($abbr =='es' || $abbr=='fr' || $abbr=='en' || $abbr=='de' || $abbr=='it')
       {
     	     
             $toursLujos=publicTours::toursIndex($abbr,'1');//Retoro de  turs de lujos (es y 1)
@@ -326,7 +326,7 @@ class PublicController extends Controller
     {
       
      
-       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events' || $pagina=='Kontakt' || $pagina=='eventi')
+       if($pagina=='evenements' || $pagina=='eventos' || $pagina=='events' || $pagina=='ereignisse' || $pagina=='eventi') 
        {
           
           $eventos=Event::all();

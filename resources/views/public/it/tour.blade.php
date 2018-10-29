@@ -505,7 +505,7 @@ color: #999999;
           <p>   &nbsp  </p><br>
           <h4>   ${{ $tour->price}}
                
-            </h4> <a href="{{route('prenotazione','es')}}/{{$item->id}}" class="link-btn">Prenota ora</a> </div>
+            </h4> <a href="{{route('prenotazione',$abbr)}}/{{$item->id}}" class="link-btn">Prenota ora</a> </div>
         <!--====== TRIP INFORMATION ==========-->
         
         <!--====== PACKAGE SHARE ==========-->
@@ -531,13 +531,13 @@ color: #999999;
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1" style="text-align: center;"> 
               
-              <a style="text-align: center;" href="{{url('es/tour/detalle',['lang' => 'es','slug' => $item->slug])}}" >
+              <a style="text-align: center;" href="{{url('it/il-nostro-viaggio/dettaglio',['slug' => $item->slug])}}" >
                 <img src="/{{$item->img}}" alt="" />
               </a> 
 	             <h5  style="color: #1d2129;text-align: center;">{!! $item->dias!!} GIORNI / {{ ((int)($item->dias)-1)}} NOTTI </h5>
 	            <p style="text-align: justify;color: #F27612;font-family: 'NewsGoth CN BT', sans-serif;">
 	            	 {!! str_limit($item->name, 150) !!}
-	            </p> <a style="text-align: center;" href="{{url('es/tour/detalle',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Vedi più dettagli</a> 
+	            </p> <a style="text-align: center;" href="{{url('it/il-nostro-viaggio/dettaglio',['slug' => $item->slug])}}" class="link-btn" id="tituloTouLateral">Vedi più dettagli</a> 
 	          </div>
 	          @endforeach
         </div>

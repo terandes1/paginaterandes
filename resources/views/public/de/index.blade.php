@@ -12,7 +12,7 @@
          
          $htmltemp.='<div class="db-1">'.
 
-                    '<a href="/de/tours/detail/'.$item->slug.'">'.
+                    '<a href="/de/unsere-reises/mehr-sehen/'.$item->slug.'">'.
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
