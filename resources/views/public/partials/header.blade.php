@@ -16,7 +16,7 @@
     {!!Html::style('assets/public/css/animate.css')!!}
     {!!Html::style('assets/public/video/css/video.css')!!}
     {!!Html::style('assets/public/css/select2.min.css')!!}
-
+    {!!Html::style('assets/public/css/stylePersonalizado.css')!!}
 
 
     

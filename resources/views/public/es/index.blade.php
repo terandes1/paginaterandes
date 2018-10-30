@@ -2,7 +2,7 @@
 
 @section('content')
 
-  {!!Html::style('assets/public/css/stylePersonalizado.css')!!}
+ 
 
 <?php 
  function DostourDeLujos($toursLujos)
@@ -80,7 +80,7 @@
             
             <!-- TITLE & DESCRIPTION -->
             <div class="spe-title" style="z-index: -1000;">
-                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">
+                <h2 id="FuenteTitulo">
                     Tours sudamericanos de lujo
                 </h2>
                 <div class="title-line">
@@ -88,7 +88,7 @@
                     <div class="tl-2"></div>
                     <div class="tl-3"></div>
                 </div>
-                <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">
+                <p id="fuenteSuptitulo">
                     Tierras de los Andes es una S.A.C. (Sociedad privada cerrada) que abrió sus puertas en el año 2000. Tour operador peruano especializado en viajes de aventura, tiene como objetivo principal la creación de viajes a medida.
                 </p>
                      
@@ -116,13 +116,13 @@
     <section>
      <div class="db" style="margin-left: 0px;">
                 <div class="spe-title">
-                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Categoría</h2>
+                    <h2 id="FuenteTitulo">Categoría</h2>
                     <div class="title-line">
                         <div class="tl-1"></div>
                         <div class="tl-2"></div>
                         <div class="tl-3"></div>
                     </div>
-                    <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">
+                    <p id="fuenteSuptitulo">
                     Privado y completamente personalizado 
                     vea todas las categorias.</p>
                 </div>
@@ -275,13 +275,13 @@
 <!--====== SECTION: FREE CONSULTANT ==========-->
 <section style="margin-top: 50px;">
     <div class="spe-title" style="z-index: -1000;">
-        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Oferta del mes</h2>
+        <h2 id="FuenteTitulo">Oferta del mes</h2>
         <div class="title-line">
             <div class="tl-1"></div>
             <div class="tl-2"></div>
             <div class="tl-3"></div>
         </div>
-        <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">Estamos cada día trabajando para poder ofrecerte las mejores ofertas en tours.</p>
+        <p id='fuenteSuptitulo'>Estamos cada día trabajando para poder ofrecerte las mejores ofertas en tours.</p>
     </div>
     <div class="offer">
         <div class="container">
@@ -419,7 +419,7 @@
             <!-- TITLE & DESCRIPTION -->
 
             <div class="spe-title spe-title-1">
-                <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">TOP TESTIMONIOS DE ESTE MES</h2>
+                <h2 id="FuenteTitulo" >TOP TESTIMONIOS DE ESTE MES</h2>
                 
                 <div class="title-line">
                      <div class="tour_head">
@@ -442,7 +442,7 @@
                                  </h2> 
                              </div>
                 </div>
-                <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;"> Comparte experiencias de viaje con nosotros. </p>
+                <p id="fuenteSuptitulo"> Comparte experiencias de viaje con nosotros. </p>
 
             </div>
              

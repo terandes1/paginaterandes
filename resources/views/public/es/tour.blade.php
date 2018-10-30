@@ -184,17 +184,17 @@ color: #999999;
  		
         <div class="tour_head1" style="text-align: justify;">
 
-	        <h3 >Descripción</h3>
+	        <h2 id="FuenteTitulo3">DESCRIPCIÓN</h2>
 	           
-            <p id="subtitulo" style="margin-top: -28px;color: black; font-size:larger">
-          	{!! strip_tags($tour->description_complete) !!}.
+            <p id="fuenteSuptitulo">
+          	{!! strip_tags($tour->description_complete) !!}. que abrió sus puertas en el año 2000
             </p>
          </div>
         <!--====== ROOMS: HOTEL BOOKING ==========-->
         <div class="tour_head1 hotel-book-room">
 
           
-	          <h3 >Galería de fotos</h3>
+	          <h2 id="FuenteTitulo3">Galería</h2>
 	          
           <div id="myCarousel1" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -240,7 +240,7 @@ color: #999999;
                             <tbody>
                                 <tr>
                                     @foreach($pricesTour as $itemprices)
-                                    <td style="font-size: 15px;padding-left: 15px">{!!  $itemprices->monto  !!} USD</td>  @endforeach                                  
+                                    <td style="font-size: 14px;padding-left: 15px" id="fuenteSuptitulo1"> {!!  $itemprices->monto  !!} USD </td>  @endforeach                                  
                                 </tr>
                                
                             </tbody>
@@ -268,18 +268,18 @@ color: #999999;
                             <tbody>
                                 @foreach($seriesTour as $items)
                                 <tr>
-                                    <td style="font-size: 14px;padding-left: 15px">
+                                    <td style="font-size: 14px;padding-left: 15px" id="fuenteSuptitulo1">
 
                                         <?=fecha($items->date_start);?>
                                        
                                     </td>
-                                    <td style="font-size: 14px;padding-left: 15px">
+                                    <td style="font-size: 14px;padding-left: 15px" id="fuenteSuptitulo1">
                                          <?=fecha($items->date_end);?>
                                     </td>
-                                    <td style="font-size: 14px;padding-left: 15px">
+                                    <td style="font-size: 14px;padding-left: 15px" id="fuenteSuptitulo1">
                                         {!!  $items->cant_person !!} VACANTES
                                     </td>
-                                    <td style="font-size: 14px;padding-left: 15px"><span class="db-done" style="text-transform: capitalize;">{!!  $items->status !!}</span></td>
+                                    <td style="font-size: 14px;padding-left: 15px" id="fuenteSuptitulo1"><span class="db-done" style="text-transform: capitalize;">{!!  $items->status !!}</span></td>
                                 </tr>
                                 @endforeach
                                
@@ -309,13 +309,13 @@ color: #999999;
                                 <ul class="nav nav-tabs">
                                     <li class="active" style="">
                                         <a href="#letters" data-toggle="tab"><i style="color:black;" class="fa fa-address-card-o"></i>
-                                            <span style="font-family: Lovelo Black;">ITINERARIO</span>
+                                            <span id="FuenteTitulo1">ITINERARIO</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#emails" data-toggle="tab">
                                             <i style="color:black;" class="fa fa-users"></i> 
-                                            <span style="font-family: Lovelo Black;">
+                                            <span id="FuenteTitulo1">
                                                  ORGANIZACIÓN
                                             </span>
                                         </a>
@@ -323,7 +323,7 @@ color: #999999;
                                     <li>
                                         <a href="#loglist" data-toggle="tab" id="ubicacion">
                                             <i style="color:black;" class="fa fa-map-marker"></i> 
-                                            <span style="font-family: Lovelo Black;">
+                                            <span id="FuenteTitulo1">
                                                  UBICACIÓN
                                             </span>
                                         </a>
@@ -364,14 +364,14 @@ color: #999999;
                                                 <div class="panel-heading">
                                                   <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse{!! $itemp->day !!}"">
-                                                      <h4><span>D{!!  $itemp->day !!} - {!! $itemp->name !!}:</span></span> 
-                                                       </h4>
+                                                      <h4 ><span id="FuenteTitulo2">D{!!  $itemp->day !!} - {!! $itemp->name !!}:</span></span> 
+                                                       </h2>
                                                     </a>
                                                   </h4>
                                                 </div>
                                                 <div id="collapse{!! $itemp->day !!}" class="panel-collapse collapse">
                                                   <div class="panel-body">
-                                                      <p>
+                                                      <p id="fuenteSuptitulo" style="text-align: justify;">
                                                         {!!  $itemp->description !!}
                                                       </p>
                                                   </div>
@@ -406,8 +406,8 @@ color: #999999;
         <div>
             <div class="dir-rat">
                 <div class="dir-rat-inn dir-rat-title">
-                  <h3 style="text-align: center;">CONTÁCTENOS</h3>
-                  <p>Gracias por su interés en tener una experiencia de viaje personalizada con Tierra de los Andes Perú.</p>
+                  <h2  id="FuenteTitulo" style="text-align: center;">CONTÁCTENOS</h2>
+                  <p id="fuenteSuptitulo">Gracias por su interés en tener una experiencia de viaje personalizada con Tierra de los Andes Perú.</p>
                    <div id="carga" style="text-align:center;">
                        
                     </div>
@@ -485,7 +485,7 @@ color: #999999;
 												
                                             
 										</div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="tituloTouRelacionados">Reservar ahora</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1"> </span> <span class="hot-list-p3-2">$ {{ $item->price}}</span> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="hot-page2-alp-quot-btn spec-btn-text" id="FuenteTitulo">Reservar ahora</a> </div>
 									</div>
 								</li>
 								@endforeach
@@ -505,12 +505,13 @@ color: #999999;
           <p>   &nbsp  </p><br>
           <h4>   ${{ $tour->price}}
                
-            </h4> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="link-btn">RESERVAR AHORA</a> </div>
+            </h4> <a href="{{route('reservacion','es')}}/{{$item->id}}" class="link-btn" id="FuenteTitulo1">RESERVAR AHORA</a>
+       </div>
         <!--====== TRIP INFORMATION ==========-->
         
         <!--====== PACKAGE SHARE ==========-->
         <div class="tour_right head_right tour_social tour-ri-com">
-          <h3 id="tituloTouLateral">COMPARTE ESTE PAQUETE</h3>
+          <h3  id="FuenteTitulo4">COMPARTE ESTE PAQUETE</h3>
           <ul>
             <li><a href="https://www.facebook.com/tierrasdelosandes" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
             <li><a href="https://www.youtube.com/channel/UC0MniFzf-lvtteI9CIKTQnw" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
@@ -520,14 +521,14 @@ color: #999999;
         </div>
         <!--====== HELP PACKAGE ==========-->
         <div class="tour_right head_right tour_help tour-ri-com">
-          <h3 id="tituloTouLateral">SERVICIO DE ASISTENCIA</h3>
+          <h3 id="FuenteTitulo4">SERVICIO DE ASISTENCIA</h3>
           <div class="tour_help_1">
             
             <h4><i class="fa fa-phone" aria-hidden="true"></i>  00-51-84-247277</h4> </div>
         </div>
         <!--====== PUPULAR TOUR PACKAGES ==========-->
         <div class="tour_right tour_rela tour-ri-com">
-          <h3 id="tituloTouLateral">TOURS POPULARES</h3>
+          <h3 id="FuenteTitulo4">TOURS POPULARES</h3>
           	@foreach($toursPrincipal as $item)
 	          <div class="tour_rela_1" style="text-align: center;"> 
               

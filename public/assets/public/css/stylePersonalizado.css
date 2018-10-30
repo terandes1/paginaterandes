@@ -104,8 +104,6 @@ background: #679E02 ;margin-top: -101px;z-index: 0;position: relative;
    
 }
 
-</style>
-<style type="text/css">
 
 
 .radio{
@@ -146,3 +144,74 @@ input[type=radio]:checked + label>img {
 }
 
  
+#FuenteTitulo{ /* spe-title tiene que estar en h2 */ 
+
+    color:#121214;
+    font-size: 1.8em;
+    font-family: Lovelo Black;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1.4em;
+    text-transform: uppercase
+}
+#FuenteTitulo1{ /* spe-title tiene que estar en h2 */ 
+
+    color:#121214;
+    font-size: 1.0em;
+    font-family: Lovelo Black;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1.4em;
+    text-transform: uppercase
+}
+#FuenteTitulo2{ /* spe-title tiene que estar en h2 */ 
+
+    color:#121214;
+    font-size: 0.7em;
+    font-family: Lovelo Black;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1.4em;
+    text-transform: uppercase
+}
+#FuenteTitulo3{ /* spe-title tiene que estar en h2 */ 
+
+    color:#121214;
+    font-size: 1.6em;
+    font-family: Lovelo Black;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1.4em;
+    text-transform: uppercase
+}
+#FuenteTitulo4{ /* spe-title tiene que estar en h2 */ 
+
+    color:#121214;
+    font-size: 0.9em;
+    font-family: Lovelo Black;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1.4em;
+    text-transform: uppercase
+}
+#fuenteSuptitulo{ /* spe-title tiene que estar en p */
+  font-family: 'NewsGoth CN BT', 
+  sans-serif;
+  font-weight: 300;
+  color:#303030;
+  font-size: 20px;
+}
+#fuenteSuptitulo1{ /* spe-title tiene que estar en p */
+  font-family: 'NewsGoth CN BT', 
+  sans-serif;
+  font-weight: 300;
+  color:#303030;
+  font-size: 24px;
+}
+#fuenteSuptitulo2{ /* spe-title tiene que estar en p */
+  font-family: 'NewsGoth CN BT', 
+  sans-serif;
+  font-weight: 300;
+  color:#303030;
+  font-size: 15px;
+}
