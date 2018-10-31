@@ -18,14 +18,14 @@
 
                     '<div class="col-md-4 col-sm-6 col-xs-12 b_packages wow fadeInUp" data-wow-duration="0.9s">'.
 
-                        '<div style="text-align: center;width: 100%;position: absolute;z-index: 2000;padding:6px; ">'.
-                            '<i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 32px; height: 32px; background:rgba(11, 168, 51, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-child" aria-hidden="true">'.
+                        '<div id="DivTourLujosIcons">'.
+                            '<i id="iTourLujosIcons" class="fa fa-child" aria-hidden="true">'.
                              '</i>&nbsp '.
-                             '<i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 32px; height: 32px; background:rgba(11, 168, 51, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-car" aria-hidden="true">'.
+                             '<i id="iTourLujosIcons" class="fa fa-car" aria-hidden="true">'.
                              '</i> &nbsp'.
-                             '<i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 32px; height: 32px; background:rgba(11, 168, 51, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-plane" aria-hidden="true">'.
+                             '<i id="iTourLujosIcons" class="fa fa-plane" aria-hidden="true">'.
                              '</i> &nbsp'.
-                             '<i style="padding: 9px;border-radius: 25px; box-shadow: 5px 5px 5px #000; width: 32px; height: 32px; background:rgba(11, 168, 51, 0.5); color: #1a2e3c;  font-size: 15px; " class="fa fa-ship" aria-hidden="true">'.
+                             '<i id="iTourLujosIcons" class="fa fa-ship" aria-hidden="true">'.
                              '</i>&nbsp'.
                             
                         '</div>'.
@@ -35,7 +35,7 @@
                      '</div>'.
                     '<div class="tour-mig-lc-con" style="text-align: center;">'.
                                       
-                                       ' <span style="font-size: 25px;text-align: center; color: #fff; letter-spacing: -2px;text-shadow: 0 4px 5px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">'.$item->name.'</span>'.
+                                       ' <span id="nameTourLujos">'.$item->name.'</span>'.
                                      '<div>'.
                                         '<span class="tour_star">'.
                                             '<i class="fa fa-star" aria-hidden="true"></i>'.
@@ -67,7 +67,7 @@
          <dir id="texto" style="font-family: Lovelo Black;">
              AVENTURA
             
-             <div class="descrip_video" style="margin-bottom: 5%;font-style: italic;    text-align: center;color: white;font-family: 'Linotype Textra', sans-serif;50px;font-size: 20px;">Para los amantes del trekking en lugares auténticos y salvajes</div>
+             <div class="descrip_video" id="textSubTituloVideo">Para los amantes del trekking en lugares auténticos y salvajes</div>
        </dir>
        
    
@@ -139,7 +139,7 @@
                             </a>
                                   <div class="tour-mig-lc-con" style="text-align: center;">
                                       
-                                        <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">
+                                        <span id="idCategoriaPrincipalTitulo">
                                             Descubrir
                                         </span>
                                         <div>
@@ -152,7 +152,7 @@
                                             </span> 
                                         </div>
                                         <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
-                                            <div style="border: 1px solid #fff; line-height: 1em; background-color: rgba(0,0,0,.65);padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
+                                            <div id="idCategoriaPrincipalVideo">
                                                      
                                                       <span class="fa fa-film"></span>  Ver video
                                                    
@@ -175,7 +175,7 @@
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Aventura</span>
+                                    <span id="idCategoriaPrincipalTitulo">Aventura</span>
                                     <div>
                                         <span class="tour_star">
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -186,7 +186,7 @@
                                         </span> 
                                     </div>
                                        <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
-                                            <div style="border: 1px solid #fff; line-height: 1em;background-color: rgba(0,0,0,.65); padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
+                                            <div id="idCategoriaPrincipalVideo">
                                                   
                                                       <span class="fa fa-film"></span>  Ver video
                                                     
@@ -208,7 +208,7 @@
                         </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Alta montaña</span>
+                                    <span id="idCategoriaPrincipalTitulo">Alta montaña</span>
                                     <div>
                                         <span class="tour_star">
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -220,7 +220,7 @@
                                     </div>
                                     
                                     <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
-                                        <div style="border: 1px solid #fff; line-height: 1em;background-color: rgba(0,0,0,.65); padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
+                                        <div id="idCategoriaPrincipalVideo">
                                                 
                                                   <span class="fa fa-film"></span>  Ver video
                                                 
@@ -241,7 +241,7 @@
                           </a>
                               <div class="tour-mig-lc-con" style="text-align: center;">
                                   
-                                    <span style="text-align: center; color: #fff; letter-spacing: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); line-height: 1.1em;font-family: Lovelo Black;">Excursiones</span>
+                                    <span id="idCategoriaPrincipalTitulo">Excursiones</span>
                                     <div>
                                         <span class="tour_star">
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -252,7 +252,7 @@
                                         </span> 
                                     </div>
                                      <a  style="color: white;" class="js-video-button" data-video-id='_g2n5k2OwMM' href="">
-                                        <div style="border: 1px solid #fff; line-height: 1em;background-color: rgba(0,0,0,.65); padding: 10px; height: 40px;position: relative; font-family: 'NewsGoth CN BT'">
+                                        <div id="idCategoriaPrincipalVideo">
                                                
                                                   <span class="fa fa-film"></span>  Ver video
                                               
@@ -324,13 +324,13 @@
 <!--====== HOME HOTELS ==========-->
 <section style="margin-top: 50px;">
      <div class="spe-title" style="z-index: -1000;">
-                    <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Tour lujos </h2>
+                    <h2 id="FuenteTitulo">Tour lujos </h2>
                     <div class="title-line">
                         <div class="tl-1"></div>
                         <div class="tl-2"></div>
                         <div class="tl-3"></div>
                     </div>
-                    <p style="font-family: 'NewsGoth CN BT', sans-serif;font-weight: 300;color:#303030;">El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
+                    <p id="fuenteSuptitulo">El sitio web de reservas y viajes líder mundial en reservas, más de 30,000 paquetes turisticos en todo el mundo</p>
                 </div>
         <div class="db">
             <!--LEFT SECTION-->
@@ -340,7 +340,7 @@
 </section><br><br><br>
 <section>
      <div class="spe-title spe-title-1">
-        <h2 style="color:#121214; font-size: 1.8em;font-family: Lovelo Black;font-weight: 100;letter-spacing: 3px;line-height: 1.4em; text-transform: uppercase">Viaje en grupo</h2>
+        <h2 id="FuenteTitulo">Viaje en grupo</h2>
         <div class="title-line">
             <div class="tl-1"></div>
             <div class="tl-2"></div>
@@ -364,16 +364,16 @@
                         <div class="tourz-hom-ser v2-hom-ser">
                           <ul>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" alt=""> Familia</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/2.png')!!}" id="FuenteTitulo" alt=""> Familia</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" alt=""> Grupos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/3.png')!!}" id="FuenteTitulo" alt=""> Grupos</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" alt=""> Parejas</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/4.png')!!}" id="FuenteTitulo" alt=""> Parejas</a>
                             </li>
                             <li>
-                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}" alt=""> Amigos</a>
+                              <a href="{{route('paquetesCategoriaES','es')}}/viaje-en-grupo" class="waves-effect waves-light btn-large tourz-pop-ser-btn"><img src="{!! URL::asset('assets/public/images/5.png')!!}"  id="FuenteTitulo" alt=""> Amigos</a>
                             </li>               
                           </ul>
                         </div>
@@ -488,9 +488,9 @@
                                      <span class="tour_rat">{{$item->impresion_global}} </span>
                                  </h2> 
                              </div>
-                              <h2 style="color:black; font-size: 15px;font-family: Lovelo Black;">{{$item->name}} - {{$item->nationality}}</h2>
+                              <h2 id="divTestimonioName">{{$item->name}} - {{$item->nationality}}</h2>
 
-                              <h4 style="text-align: justify;margin:5%;font-family: 'NewsGoth CN BT';font-size:1em; ">{!!str_limit($item->testimonial, 135)!!}</h4>
+                              <h4 id="divTestimonioDescripcion" >{!!str_limit($item->testimonial, 135)!!}</h4>
                                 <a href="/es/testimonios" style="background: #253d52;" class="db-done">{{$item->date}}</a>
                             </div>
                           </li>
@@ -561,31 +561,31 @@
        
         <div class="db" style="margin-top: 49px;" >
  
-             <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;  ">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">AFILIADOS</h3>
+             <div class="db-3" id="divAfiliadosFoter">
+                <h3 id='divTextoAfiliadosFoter'>AFILIADOS</h3>
                 <ul>
                     @include('public.partials.paginaInicio.afiliados')
                    
                 </ul>
             </div>
-             <div class="db-3" style="width: 280px; border: 1px solid #ffffff;">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">SOCIOS</h3>
+             <div class="db-3" id="divAfiliadosFoter">
+                <h3 id='divTextoAfiliadosFoter'>SOCIOS</h3>
                 <ul>
                   
                      @include('public.partials.paginaInicio.socios')
                    
                 </ul>
             </div>
-              <div class="db-3" style="width: 280px;border: 1px solid #ffffff; ">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;">CERTIFICACIONES</h3>
+              <div class="db-3" id="divAfiliadosFoter">
+                <h3 id='divTextoAfiliadosFoter'>CERTIFICACIONES</h3>
                 <ul>
                    
                      @include('public.partials.paginaInicio.certificacion')
                 </ul>
             </div>
              
-             <div class="db-3" style=" width: 280px;border: 1px solid #ffffff;">
-                <h3 style="text-align: center;font-family:  'NewsGoth CN BT';font-size: 1.1em;padding: 2PX;">RESPONSABILIDAD SOCIAL Y EMPRESARIAL</h3>
+             <div class="db-3" id="divAfiliadosFoter">
+                <h3 id='divTextoAfiliadosFoter'>RESPONSABILIDAD SOCIAL Y EMPRESARIAL</h3>
              <ul>
                   
                     @include('public.partials.paginaInicio.responsabilidad')
